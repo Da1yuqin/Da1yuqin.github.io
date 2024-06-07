@@ -4,9 +4,18 @@
 - *2020.01 - 2020.05*, Visiting Student(Founded by IGSF, 国家留学基金委公派留学), University of Dayton
 - *2018.09 - 2022.06*, 本科, 钱学森学院 南京理工大学
 - 
+<span class='anchor' id='-gzsx'></span>
+
+# 👨‍👩‍👧‍👦 科研经历
+- *2024.06 - 至今*, 清华深圳研究院(THU), 深圳, 论文合作者
+- *2024.06 - 至今*, 光明实验室, 深圳, 论文合作者
+- *2024.05 - 至今*, 南京大学苏州校区, 江苏苏州, 访问学生(Visiting Student) 
+- *2024.3 - 2024.4*, 香港科技大学(HKUST), 中国香港, 科研助理(RA)
+- *2023.4 - 2024.3*, 清华深圳研究院(THU), 深圳, 科研助理(RA)
+
 <span class='anchor' id='-xshy'></span>
 
-  # 🏛️ 学术会议
+# 🏛️ 学术会议
 - *2023.4*, ICASSP2024, 韩国首尔, 共一身份发表 Poster 一篇, Oral 一篇, 清华深圳研究院为合作者及第一机构.
 
 <span class='anchor' id='-xl'></span>
