@@ -1,19 +1,19 @@
 
-# 📖 Educations
-- *2019.06 - 2022.04*, Master, Zhejiang University, Hangzhou.
-- *2015.09 - 2019.06*, Undergraduate, Chu Kochen Honors College, Zhejiang Univeristy, Hangzhou.
-- *2012.09 - 2015.06*, Luqiao Middle School, Taizhou.
+# 🎓 学历
+- *2022.06 - 至今*, 硕士生, 计算机科学与工程学院 南京理工大学
+- *2020.01 - 2020.05*, Visiting Student(Founded by IGSF, 国家留学基金委公派留学), University of Dayton
+- *2018.09 - 2022.06*, 本科, 钱学森学院 南京理工大学
+- 
+<span class='anchor' id='-xshy'></span>
 
-# 💬 Invited Talks
-- *2022.02*, Hosted MLNLP seminar \| [\[Video\]](https://www.bilibili.com/video/BV1wF411x7qh)
-- *2021.06*, Audio & Speech Synthesis, Huawei internal talk
-- *2021.03*, Non-autoregressive Speech Synthesis, PaperWeekly & biendata \| [\[video\]](https://www.bilibili.com/video/BV1uf4y1t7Hr/)
-- *2020.12*, Non-autoregressive Speech Synthesis, Huawei Noah's Ark Lab internal talk
+  # 🏛️ 学术会议
+- *2023.4*, ICASSP2024, 韩国首尔, 共一身份发表 Poster 一篇, Oral 一篇, 清华深圳研究院为合作者及第一机构.
 
-# 💻 Internships
-- *2021.06 - 2021.09*, Alibaba, Hangzhou.
-- *2019.05 - 2020.02*, [EnjoyMusic](https://enjoymusic.ai/), Hangzhou.
-- *2019.02 - 2019.05*, [YiWise](https://www.yiwise.com/), Hangzhou.
-- *2018.08 - 2019.02*, [MSRA, machine learning Group](https://www.microsoft.com/en-us/research/group/machine-learning-research-group/), Beijing.
-- *2018.01 - 2018.06*, [NetEase, AI department](https://hr.163.com/zc/12-ai/index.html), Hangzhou.
-- *2017.08 - 2018.12*, DashBase (acquired by [Cisco](https://blogs.cisco.com/news/349511)), Hangzhou.
+<span class='anchor' id='-xl'></span>
+
+# 🔥 相关技能
+- <font color="#9bbb59">*IELTS 6.5*</font> in 2024.05.25.(L7.0, R6.0, W6.0, S7.0)
+- <font color="#9bbb59">*IELTS 7.0*</font> in 2019, 2020.
+- <font color="#9bbb59">*CET6 575*</font> in 2020.
+- <font color="#9bbb59">*CET4 623*</font> in 2019.
+- <font color="#9bbb59">*CCF 200*</font> in 2020.
