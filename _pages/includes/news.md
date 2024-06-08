@@ -1,6 +1,4 @@
 # 🔥 News
-- *2024.03*: 🎉 Two papers are accepted by ICLR 2024
-- *2023.05*: 🎉 Five papers are accepted by ACL 2023
-- *2023.01*: DiffSinger was introduced in [a very popular video](https://www.bilibili.com/video/BV1uM411t7ZJ) (2000k+ views) in Bilibili!
-- *2023.01*: I join TikTok <img src='./images/tiktok.png' style='width: 6em;'> as a speech research scientist in Singapore!
-- *2022.02*: I release a modern and responsive academic personal [homepage template](https://github.com/RayeRen/acad-homepage.github.io). Welcome to STAR and FORK!
+- *2024.06*: 🎉 以访问学生身份加入南京大学苏州校区(NJU)!
+- *2024.04*: 🎉 两篇论文被 ICASSP 2024 接收(1 Oral, 1 Poster)!
+- *2024.03*: 🎉 以研究助理身份加入香港科技大学(HKUST)!
