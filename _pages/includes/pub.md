@@ -20,7 +20,7 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024 Oral</div><img src='images/mainfig_text2avatar.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[ICASSP24 Oral][Text2Avatar: Text to 3D Human Avatar Generation with Codebook-Driven Body Controllable Attribute](https://arxiv.org/abs/2401.00711)
+[ICASSP24 Oral][Text2Avatar: Text to 3D Human Avatar Generation with Codebook-Driven Body Controllable Attribute](https://ieeexplore.ieee.org/document/10446237)
 
  Chaoqun Gong\*, __Yuqin Dai__\*, Ronghui Li, Achun Bao, Jun Li, Jian Yang, Yachao Zhang, Xiu L. 
 - Text2Avatar 是第一个基于复杂耦合的输入文本提示生成逼真风格的 3D Avatar 的模型，实现了多属性可控和逼真的 3D 人头像生成。
@@ -33,7 +33,7 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024</div><img src='images/DanceControl_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[ICASSP24][EXPLORING MULTI-MODAL CONTROL IN MUSIC-DRIVEN DANCE GENERATION](https://arxiv.org/abs/2401.00711)
+[ICASSP24][EXPLORING MULTI-MODAL CONTROL IN MUSIC-DRIVEN DANCE GENERATION](https://ieeexplore.ieee.org/document/10447825)
 
 Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li. 
 - 提出了第一个统一的框架，能够生成高质量的舞蹈动作，并支持多模态控制，包括同时进行流派控制、语义控制和空间控制。
