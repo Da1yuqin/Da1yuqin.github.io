@@ -4,7 +4,7 @@ main:
     url: "/#about-me"
 
   - title: "Internship"
-    url: "/#-Internship"
+    url: "/#-internship"
 
   - title: "News"
     url: "/#-news"
@@ -16,10 +16,10 @@ main:
     url: "/#-honors-and-awards"
 
   - title: "Educations"
-    url: "/#-Educations"
+    url: "/#-educations"
     
   - title: "Conference"
-    url: "/#-Conference"
+    url: "/#-conference"
 
   - title: "Relevant Skils"
-    url: "/#-Relevant-Skils"
+    url: "/#-relevant-skils"
