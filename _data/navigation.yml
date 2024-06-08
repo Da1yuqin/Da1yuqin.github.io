@@ -3,8 +3,8 @@ main:
   - title: "About Me"
     url: "/#about-me"
 
-  - title: "Intership"
-    url: "/#-科研经历"
+  - title: "Internship"
+    url: "/#-Internship"
 
   - title: "News"
     url: "/#-news"
@@ -16,8 +16,10 @@ main:
     url: "/#-honors-and-awards"
 
   - title: "Educations"
-    url: "/#-学历"
-
+    url: "/#-Educations"
+    
+   - title: "Conference"
+    url: "/#-Conference"
 
   - title: "Relevant Skils"
-    url: "/#-相关技能"
+    url: "/#-Relevant-Skils"
