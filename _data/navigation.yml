@@ -3,6 +3,9 @@ main:
   - title: "About Me"
     url: "/#about-me"
 
+  - title: "科研经历"
+    url: "/#-科研经历"
+
   - title: "News"
     url: "/#-news"
 
@@ -12,11 +15,9 @@ main:
   - title: "Honors and Awards"
     url: "/#-honors-and-awards"
 
-  - title: "Educations"
-    url: "/#-educations"
+  - title: "学历"
+    url: "/#-学历"
 
-  - title: "Invited Talks"
-    url: "/#-invited-talks"
 
-  - title: "Internships"
-    url: "/#-internships"
+  - title: "相关技能"
+    url: "/#-相关技能"
