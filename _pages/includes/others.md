@@ -11,7 +11,7 @@
 
 <span class='anchor' id='-xl'></span>
 
-# 🏋️ Relevant Skils
+# 🏋️ Skils
 ## 英语能力
 - <font color="#9bbb59">IELTS 6.5</font> in 2024.05.25.(L7.0, R6.0, W6.0, S7.0)
 - <font color="#9bbb59">IELTS 7.0</font> in 2019, 2020.
