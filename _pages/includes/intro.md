@@ -16,7 +16,7 @@
 <span class='anchor' id='-gzsx'></span>
 
 
-# 👨‍👩‍👧‍👦 Intership
+# 👨‍👩‍👧‍👦 Internship
 - *2024.06 - 至今*, 清华深圳研究院(THU), 深圳, 论文合作者
 - *2024.06 - 至今*, 光明实验室, 深圳, 论文合作者
 - *2024.05 - 至今*, 南京大学苏州校区, 江苏苏州, 访问学生(Visiting Student) 
