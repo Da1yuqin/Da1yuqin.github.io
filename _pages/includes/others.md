@@ -18,4 +18,4 @@
 - <font color="#9bbb59">CET6 575</font> in 2020.
 - <font color="#9bbb59">CET4 623</font> in 2019.
 
-![](images/10001-0150.gif)
+![](https://github.com/Da1yuqin/Da1yuqin.github.io/blob/main/images/10001-0150.gif)
