@@ -14,7 +14,7 @@
 
 <img src="images/pleaseupload.png" loading="lazy" alt="想笑就笑吧:)">
 
-![](https://github.com/Da1yuqin/Da1yuqin.github.io/blob/main/images/10001-0150.gif)
+![](images/10001-0150.gif)
 
 
 如果您对我的研究方向感兴趣并有意向合作, 也随时欢迎联系我😆! 我非常喜欢合作, 会成为你非常好的合作伙伴!
