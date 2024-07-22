@@ -12,7 +12,7 @@
 
 如果您觉得我的研究方向很难理解，下面这个 VCR 可以很好的概述我的研究历程，即**先重建我的人体，后根据一段音乐，生成我的舞蹈动作，最终，我和一个机器人一起跳舞，实现群舞的效果**:
 
-<img src="https://github.com/Da1yuqin/Da1yuqin.github.io/blob/main/images/pleaseupload.png" loading="lazy" alt="想笑就笑吧:)">
+<img src="images/pleaseupload.png" loading="lazy" alt="想笑就笑吧:)">
 
 ![](https://github.com/Da1yuqin/Da1yuqin.github.io/blob/main/images/10001-0150.gif)
 
