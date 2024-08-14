@@ -5,11 +5,11 @@
 
  __我的研究方向目前集中于__: 
  - AIGC 内容生成领域
- - 多媒体信息处理(Multi-Media)
- - 多模态/跨模态(Multi-Modal) 
- - 数字人动作生成(Motion Generation). 
- - 三维渲染(3D Rendering)
- - 脑机接口信号处理
+ - 多媒体信息处理 (Multi-Media)
+ - 多模态/跨模态 (Multi-Modal) 
+ - 数字人动作生成 (Motion Generation). 
+ - 三维渲染 (3D Rendering)
+ - 脑机接口交叉研究 (Brain-to-X)
 
 如果您觉得我的研究方向很难理解，下面这个 VCR 可以很好的概述我的研究历程，即**先重建我的人体，后根据一段音乐，生成我的舞蹈动作，最终，我和一个机器人一起跳舞，实现群舞的效果**:
 
