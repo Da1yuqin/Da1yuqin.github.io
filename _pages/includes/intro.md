@@ -1,6 +1,6 @@
 目前我是上海浦江实验室的一名实习生，同时也是 NJUST 的研二学生😁, 为 PCALab 实验室的一员, 我的导师为 [Prof. Yang Jian](http://www.patternrecognition.asia/jian/). 同时我正在南京大学 (NJU) 进行访问学习, 指导老师为 [Prof. Zhang Zhenyu](https://jessezhang92.github.io/). 此前我曾在香港科技大学 (HKUST) 担任过短期研究助理(一个月), 曾在清华大学 (THU) 进行过长期实习, 所在实验室为 [THUSIGSICLAB](https://thusigsclub.github.io/thu.github.io/), 指导老师为 [Prof. Li Xiu](https://scholar.google.com/citations?user=Xrh1OIUAAAAJ&hl=zh-CN). 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 在研究生阶段我已经发表 3 篇一作/共一的学术论文.  <a href='https://scholar.google.com/citations?user=lTE-iwYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a> 
 
-<font color="#ff0000"><u>✨我将在 2025 年 4 月份毕业, 目前已确定 25 Fall PhD 去向(感恩每一位帮助过我的人❤️), 希望能在入学前就能攒一些论文, 继续努力科研中.
+<font color="#ff0000"><u>✨我将在 2025 年 4 月份毕业, 目前已确定 25 Fall PhD 去向(感恩每一位帮助过我的人❤️), 目标能在入学前攒够毕业论文, 继续努力科研中.
 
  __我的研究方向目前集中于__: 
  - AIGC 内容生成领域
