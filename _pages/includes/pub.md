@@ -7,7 +7,7 @@
 
 <a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Forks" /></a>
-[[Github]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file) [[Project Page]](https://wanluzhu.github.io/TCDiffusion/)
+[[Github]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file) [[Project Page]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file)
 
 Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzhuang Liu,Zhensong Zhang,Minglei Li,Jian Yang,Fei Ma,Zhiyong Wu,Changpeng Yang,Zonghong Dai,Fei Richard Yu. 
 - 数字人视频生成领域综述. 
