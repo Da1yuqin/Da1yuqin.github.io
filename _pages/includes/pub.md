@@ -12,7 +12,7 @@
 Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzhuang Liu,Zhensong Zhang,Minglei Li,Jian Yang,Fei Ma,Zhiyong Wu,Changpeng Yang,Zonghong Dai,Fei Richard Yu. 
 - 数字人视频生成领域综述. 
 - 总结了超过300篇最新数字人视频生成了领域相关文献的内容.
-- 总结了现有数字人视频生成了领域范式.
+- 总结了现有数字人视频生成领域范式.
 
 </div>
 </div>
