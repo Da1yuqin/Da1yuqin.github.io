@@ -1,6 +1,22 @@
 
 # 📝 Publications 
 ## 国际会议
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TechRxiv 2024</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[TechRxiv24][Human Motion Video Generation: A Survey](https://arxiv.org/pdf/2403.06189)
+
+<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiff?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiff?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file) [[Project Page]](https://wanluzhu.github.io/TCDiffusion/)
+
+Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzhuang Liu,Zhensong Zhang,Minglei Li,Jian Yang,Fei Ma,Zhiyong Wu,Changpeng Yang,Zonghong Dai,Fei Richard Yu. 
+- 数字人视频生成领域综述. 
+- 总结了超过300篇最新数字人视频生成了领域相关文献的内容.
+- 总结了现有数字人视频生成了领域范式.
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2024</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv24][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
