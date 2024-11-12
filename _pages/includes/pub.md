@@ -1,7 +1,7 @@
 
 # 📝 Publications 
 ## 国际会议
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TechRxiv 2024</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TechRxiv 2024</div><img src='images/hvsurvey_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [TechRxiv24][Human Motion Video Generation: A Survey](https://arxiv.org/pdf/2403.06189)
 
