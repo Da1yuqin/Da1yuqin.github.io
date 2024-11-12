@@ -5,8 +5,8 @@
 <div class='paper-box-text' markdown="1">
 [TechRxiv24][Human Motion Video Generation: A Survey](https://arxiv.org/pdf/2403.06189)
 
-<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file) [[Project Page]](https://wanluzhu.github.io/TCDiffusion/)
 
 Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzhuang Liu,Zhensong Zhang,Minglei Li,Jian Yang,Fei Ma,Zhiyong Wu,Changpeng Yang,Zonghong Dai,Fei Richard Yu. 
