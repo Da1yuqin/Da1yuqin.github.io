@@ -19,7 +19,7 @@ Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzh
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2024</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv24][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
+[AAAI25][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
 
 <a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiff?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiff?style=social" alt="GitHub Forks" /></a>
