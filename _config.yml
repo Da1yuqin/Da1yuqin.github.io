@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Dai Yuqin(戴语琴, Harper)"
-description              : "南京大学(NJU) 科研实习中"
+description              : "上海浦江实验室 实习中"
 repository               : "da1yuqin/AboutMe/"
 google_scholar_stats_use_cdn : True
 
@@ -23,8 +23,8 @@ google_analytics_id      : G-PRZP1TVEV
 author:
   name             : "戴语琴 Harper"
   avatar           : "images/1_512x512.png"
-  bio              : "南京理工大学 研二"
-  location         : "江苏 南京|苏州"
+  bio              : "清华大学 博0"
+  location         : "上海 徐汇区"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=lTE-iwYAAAAJ&hl=zh-CN"
