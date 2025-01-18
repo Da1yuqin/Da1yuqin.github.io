@@ -17,7 +17,7 @@ Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzh
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [AAAI25][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
 
