@@ -1,9 +1,9 @@
 
 # 📝 Publications 
 ## 国际会议
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arxiv25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
+[arXiv25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
 
 **Yuqin Dai**\*, Zhouheng Yao\*, Chunfeng Song, Qihao Zheng, Weijian Mai, Kunyu Peng, Shuai Lu, Wanli Ouyang, Jian Yang, Jiamin Wu.
 - 我们提出了MindAligner，这是第一个显式的大脑对齐框架，能够在数据有限的情况下实现跨个体的视觉解码和大脑功能分析。
@@ -33,7 +33,7 @@ Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzh
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[AAAI25][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
+[AAAI25 Oral][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
 
 <a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiff?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiff?style=social" alt="GitHub Forks" /></a>
