@@ -1,7 +1,7 @@
 
 # 📝 Publications 
 ## 国际会议
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/hvsurvey_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arxiv25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
 
