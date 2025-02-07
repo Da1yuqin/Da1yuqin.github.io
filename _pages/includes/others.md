@@ -17,4 +17,5 @@
 - <font color="#9bbb59">IELTS 7.0</font> in 2019, 2020.
 - <font color="#9bbb59">CET6 575</font> in 2020.
 - <font color="#9bbb59">CET4 623</font> in 2019.
-
+## 社交技能
+乒乓>唱歌>桌游>>羽毛球
