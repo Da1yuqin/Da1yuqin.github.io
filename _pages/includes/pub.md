@@ -5,7 +5,7 @@
 <div class='paper-box-text' markdown="1">
 [arxiv25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
 
-**Yuqin Dai**, Zhouheng Yao, Chunfeng Song, Qihao Zheng, Weijian Mai, Kunyu Peng, Shuai Lu, Wanli Ouyang, Jian Yang, Jiamin Wu.
+**Yuqin Dai**\*, Zhouheng Yao\*, Chunfeng Song, Qihao Zheng, Weijian Mai, Kunyu Peng, Shuai Lu, Wanli Ouyang, Jian Yang, Jiamin Wu.
 - 我们提出了MindAligner，这是第一个显式的大脑对齐框架，能够在数据有限的情况下实现跨个体的视觉解码和大脑功能分析。
 - 我们提出了一种大脑转移矩阵，用于建立不同个体之间的细粒度功能对应关系。该矩阵通过大脑功能对齐模块进行优化，采用多层次对齐损失实现软性跨个体映射。
 - 实验表明，MindAligner在视觉解码任务中，只有6%的模型参数被学习时，便超越了现有的最先进方法。
