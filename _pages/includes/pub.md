@@ -3,7 +3,7 @@
 ## 国际会议
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
+[arXiv25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/pdf/2502.05034)
 
 **Yuqin Dai**\*, Zhouheng Yao\*, Chunfeng Song, Qihao Zheng, Weijian Mai, Kunyu Peng, Shuai Lu, Wanli Ouyang, Jian Yang, Jiamin Wu.
 - 我们提出了MindAligner，这是第一个显式的大脑对齐框架，能够在数据有限的情况下实现跨个体的视觉解码和大脑功能分析。
