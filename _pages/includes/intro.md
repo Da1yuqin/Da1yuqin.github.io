@@ -1,4 +1,4 @@
-目前我是上海浦江实验室的一名实习生，同时也清华大学的博0学生😁, 目前为 PCALab 实验室的一员, 我的导师为 [Prof. Yang Jian](http://www.patternrecognition.asia/jian/). 同时我曾在南京大学 (NJU) 进行访问学习, 指导老师为 [Prof. Zhang Zhenyu](https://jessezhang92.github.io/). 此前我曾在香港科技大学 (HKUST) 担任过短期研究助理(一个月), 曾在清华大学 (THU) 进行过长期实习, 所在实验室为 [THUSIGSICLAB](https://thusigsclub.github.io/thu.github.io/), 指导老师为 [Prof. Li Xiu](https://scholar.google.com/citations?user=Xrh1OIUAAAAJ&hl=zh-CN). 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 在研究生阶段我已经有 3 篇一作/共一的学术论文被国际会议接收，同时也有若干篇在投的工作.  <a href='https://scholar.google.com/citations?user=lTE-iwYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a> 
+目前我是🐜蚂蚁集团的一名研究型实习生（RI），同时也清华大学的博0学生😁, 此前硕士为 PCALab 实验室的一员, 我的导师为 [Prof. Yang Jian](http://www.patternrecognition.asia/jian/). 同时我曾在南京大学 (NJU) 进行访问学习, 指导老师为 [Prof. Zhang Zhenyu](https://jessezhang92.github.io/). 此前我曾在香港科技大学 (HKUST) 担任过短期研究助理(一个月), 曾在清华大学 (THU) 进行过长期实习, 所在实验室为 [THUSIGSICLAB](https://thusigsclub.github.io/thu.github.io/), 指导老师为 [Prof. Li Xiu](https://scholar.google.com/citations?user=Xrh1OIUAAAAJ&hl=zh-CN). 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 在研究生阶段我已经有 3 篇一作/共一的学术论文被国际会议接收，同时也有若干篇在投的工作.  <a href='https://scholar.google.com/citations?user=lTE-iwYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a> 
 
 ✨我将在 2025 年 4 月份毕业, 目前已确定 25 Fall PhD 去向( to 清华大学, 感恩每一位帮助过我的人❤️), 目标能在入学前攒够毕业论文, 继续努力科研中.
 
@@ -22,7 +22,8 @@
 
 
 # 👨‍👩‍👧‍👦 Internship
-- *2024.09 - 至今 🔛*, 上海 AI Lab 浦江实验室, 上海, 实习生 (Intern)  💡产出: 论文在投\*1 
+- *2025.03 - 至今 🔛*, 🐜蚂蚁集团, 杭州, 研究型实习生 (Research Intern)  
+- *2024.09 - 2025.03*, 上海 AI Lab 浦江实验室, 上海, 实习生 (Intern)  💡产出: ICML\*1 
 - *2024.06 - 2024.09*, 光明实验室, 深圳, 论文合作者, 💡产出: TPAMI 在投 
 - *2024.05 - 2024.09*, 南京大学苏州校区, 江苏苏州, 科研助理 (RA), 💡产出: AAAI2025 oral\*1 
-- *2023.4 - 2024.3*, 清华大学深圳国际研究生院(THU), 深圳, 科研助理 (RA), 💡产出:ICASSP2024 oral\*1, ICASSP2024 poster\*1
+- *2023.4 - 2024.03*, 清华大学深圳国际研究生院(THU), 深圳, 科研助理 (RA), 💡产出:ICASSP2024 oral\*1, ICASSP2024 poster\*1
