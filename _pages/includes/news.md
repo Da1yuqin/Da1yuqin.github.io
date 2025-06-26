@@ -1,6 +1,6 @@
 # 🔥 News
 - *2025.06*: 🎉 公开一篇新的 arxiv 论文！
-- *2025.06*: 🎉 一篇论文被 ACL 2025 接收为 Oral！
+- *2025.06*: 🎉 FloorPlan-Lamma ACL 2025 接收为 Oral！
 - *2025.05*: 🎉 MindAligner 被 ICML 2025 接收!
 - *2024.12*: 🎉 TCDiff 被 AAAI2025 接收为 Oral!
 - *2024.08*: 🎉 公开一篇新的 TechRxiv 论文!
