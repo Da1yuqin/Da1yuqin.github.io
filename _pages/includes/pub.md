@@ -1,6 +1,17 @@
 
 # 📝 Publications 
 ## 国际会议
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[arXiv25][RealFactBench: A Benchmark for Evaluating Large Language Models in Real-World Fact-Checking](https://arxiv.org/pdf/2506.12538)
+
+Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhenzhe Ying, Weiqiang Wang, Edith CH Ngai.
+- 我们提出 RealFactBench 基准测试集：构建了一个涵盖知识验证、谣言检测和事件核查等多种真实世界任务的综合性基准，用于评估大语言模型（LLMs）和多模态大模型（MLLMs）的事实核查能力。
+- 引入新的评估指标 Unknown Rate (UnR)：该指标用于更细致地衡量模型在不确定性处理方面的表现，帮助评估模型在保守性与自信程度之间的平衡。
+- 开展大规模实证研究：在7个典型LLMs和4个MLLMs上进行了系统评估，揭示了当前模型在事实核查任务中的局限性，并为后续研究提供了有价值的洞察。
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ICML25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/pdf/2502.05034)
