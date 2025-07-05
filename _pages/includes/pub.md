@@ -3,6 +3,19 @@
 ## 国际会议
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/realfactbentch_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
+[arXiv25][TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography](https://arxiv.org/pdf/2506.18671)
+
+ **Yuqin Dai***, Wanlu Zhu*, Ronghui Li, Xiu Li, Zhenyu Zhang, Jun Li,Jian Yang
+- 我们提出TCDiff++, 一种端到端版本的群舞生成模型。
+- 我们引入位置嵌入和一致性损失，防止碰撞并保持合理间距。
+- 模型加入换位信息和脚步自适应器，减少脚滑并提升一致性。
+- 优化长时生成效果，提出长序列采样与解码器，优化长舞蹈生成的连贯性。
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/realfactbentch_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 [arXiv25][RealFactBench: A Benchmark for Evaluating Large Language Models in Real-World Fact-Checking](https://arxiv.org/pdf/2506.12538)
 
 Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhenzhe Ying, Weiqiang Wang, Edith CH Ngai.
@@ -83,6 +96,7 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 </div>
 
+<!-- 
 ## 中文论文
 [基于Encoder-Decoder注意力网络的异常驾驶行为在线识别方法](http://bzxb.cqut.edu.cn/paperinfo.aspx?paperid=11163)，兵器装备工程学报2023(核心期刊) 
 - 唐坤(指导老师)，__戴语琴__，徐永能，郭唐仪，邵飞
@@ -91,6 +105,7 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 [转动惯量平行轴定理验证实验的改进方案](https://dxwl.bnu.edu.cn/CN/10.16854%20/j.cnki.1000-0712.190392)，大学物理2020(核心期刊)
 - 闫敏，__戴语琴__，袁俊，王晓雄
 - 我们找到了一种比目前的教学方法更准确的方法，可以显着减少实验中测量刚体转动惯量时引入的误差量。这将有助于大学生更有效地进行实验，更好地理解实验原理。
+-->
 
 
 ## 专利
