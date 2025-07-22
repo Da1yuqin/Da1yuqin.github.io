@@ -4,7 +4,9 @@
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/TCDiffpp_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv25][TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography](https://arxiv.org/pdf/2506.18671)
-
+<a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiffpp?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiffpp?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/Da1yuqin/TCDiff) [[Project Page]](https://da1yuqin.github.io/TCDiffpp.website/)
  **Yuqin Dai***, Wanlu Zhu*, Ronghui Li, Xiu Li, Zhenyu Zhang, Jun Li,Jian Yang
 - 我们提出TCDiff++, 一种端到端版本的群舞生成模型。
 - 我们引入位置嵌入和一致性损失，防止碰撞并保持合理间距。
@@ -28,7 +30,10 @@ Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhen
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ICML25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/pdf/2502.05034)
-
+<a href="https://github.com/Da1yuqin/MindAligner"><img src="https://img.shields.io/github/stars/Da1yuqin/MindAligner?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/MindAligner"><img src="https://img.shields.io/github/forks/Da1yuqin/MindAligner?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/Da1yuqin/TCDiff) 
+ 
 **Yuqin Dai**\*, Zhouheng Yao\*, Chunfeng Song, Qihao Zheng, Weijian Mai, Kunyu Peng, Shuai Lu, Wanli Ouyang, Jian Yang, Jiamin Wu.
 - 我们提出了MindAligner，这是第一个显式的大脑对齐框架，能够在数据有限的情况下实现跨个体的视觉解码和大脑功能分析。
 - 我们提出了一种大脑转移矩阵，用于建立不同个体之间的细粒度功能对应关系。该矩阵通过大脑功能对齐模块进行优化，采用多层次对齐损失实现软性跨个体映射。
