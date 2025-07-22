@@ -8,6 +8,7 @@
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiffpp?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiffpp?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/TCDiff) [[Project Page]](https://da1yuqin.github.io/TCDiffpp.website/)
+
  **Yuqin Dai***, Wanlu Zhu*, Ronghui Li, Xiu Li, Zhenyu Zhang, Jun Li,Jian Yang
 - 我们提出TCDiff++, 一种端到端版本的群舞生成模型。
 - 我们引入位置嵌入和一致性损失，防止碰撞并保持合理间距。
