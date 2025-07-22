@@ -4,6 +4,7 @@
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/TCDiffpp_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv25][TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography](https://arxiv.org/pdf/2506.18671)
+ 
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiffpp?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiffpp?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/TCDiff) [[Project Page]](https://da1yuqin.github.io/TCDiffpp.website/)
@@ -30,6 +31,7 @@ Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhen
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ICML25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/pdf/2502.05034)
+ 
 <a href="https://github.com/Da1yuqin/MindAligner"><img src="https://img.shields.io/github/stars/Da1yuqin/MindAligner?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/MindAligner"><img src="https://img.shields.io/github/forks/Da1yuqin/MindAligner?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/TCDiff) 
