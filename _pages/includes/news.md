@@ -1,7 +1,7 @@
 # 🔥 News
 - *2025.07*: 🎉 数字人综述 被 TPAMI 接收！
 - *2025.07*: 🎉 MERD-14 被 ACM MM 接收为 👑Oral！
-- *2025.06*: 🎉 公开两篇新的 arxiv 论文！
+- *2025.06*: 🎉 公开三篇新的 arxiv 论文！
 - *2025.06*: 🎉 FloorPlan-Lamma ACL 2025 接收为 👑Oral！
 - *2025.05*: 🎉 MindAligner 被 ICML 2025 接收!
 - *2024.12*: 🎉 TCDiff 被 AAAI2025 接收为 👑Oral!
