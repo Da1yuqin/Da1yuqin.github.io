@@ -47,9 +47,9 @@ Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhen
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TechRxiv 2024</div><img src='images/hvsurvey_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025</div><img src='images/hvsurvey_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[TechRxiv24][Human Motion Video Generation: A Survey](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
+[TPAMI25][Human Motion Video Generation: A Survey](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
 
 <a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/stars/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/forks/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Forks" /></a>
