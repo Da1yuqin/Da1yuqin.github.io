@@ -7,8 +7,9 @@
 
 <span class='anchor' id='-xshy'></span>
 
-# 🏛️ Conference
-- *2023.4*, ICASSP2024, 韩国首尔, 共一身份发表 Poster 一篇, Oral 一篇, 清华深圳研究院为合作者及第一机构.
+# 🏛️Professional Services
+Student Reviewers:
+AAAI Conference on Artificial Intelligence (AAAI)
 
 <span class='anchor' id='-xl'></span>
 
