@@ -29,6 +29,18 @@ Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhen
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL25 Oral🥇, SAC Highlights⭐</div><img src='images/FloorPlan-LLaMa_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[ACL25 Oral][FloorPlan-LLaMa: Aligning Architects’ Feedback and Domain Knowledge in Architectural Floor Plan Generation](https://aclanthology.org/2025.acl-long.331/)
+
+Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao Zhang, Shuai Lu
+- 提出了ArchiMetricsNet数据集与FloorPlan-MPS评价模型：首次构建了一个包含功能性、流线性和整体性评估得分的楼面图数据集，并配有详细的文本分析，用以更贴近建筑专业知识地评估生成结果。
+- 开发了FloorPlan-LLaMa生成模型并引入RLHF机制：设计了基于自回归框架的楼面图生成模型FloorPlan-LLaMa，并通过引入FloorPlan-MPS作为奖励模型，借助人类反馈强化学习（RLHF）机制使模型更符合建筑师的专业偏好。
+- 实验证明方法优于现有基线并获专业认可：在文本条件和类别条件的生成任务中均优于现有基线模型，且经专业建筑师验证，其生成结果更为合理，契合人类设计偏好。
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ICML25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/pdf/2502.05034)
@@ -63,7 +75,7 @@ Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzh
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral🥇</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [AAAI25 Oral][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
 
@@ -80,7 +92,7 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024 Oral</div><img src='images/mainfig_text2avatar.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024 Oral🥇</div><img src='images/mainfig_text2avatar.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ICASSP24 Oral][Text2Avatar: Text to 3D Human Avatar Generation with Codebook-Driven Body Controllable Attribute](https://ieeexplore.ieee.org/document/10446237)
 
