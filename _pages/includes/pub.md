@@ -1,6 +1,6 @@
 
 # 📝 Publications 
-## 国际会议
+## 一作/共一论文(5)
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/TCDiffpp_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv25][TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography](https://arxiv.org/pdf/2506.18671)
@@ -18,28 +18,6 @@
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/realfactbentch_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[arXiv25][RealFactBench: A Benchmark for Evaluating Large Language Models in Real-World Fact-Checking](https://arxiv.org/pdf/2506.12538)
-
-Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhenzhe Ying, Weiqiang Wang, Edith CH Ngai.
-- 我们提出 RealFactBench 基准测试集：构建了一个涵盖知识验证、谣言检测和事件核查等多种真实世界任务的综合性基准，用于评估大语言模型（LLMs）和多模态大模型（MLLMs）的事实核查能力。
-- 引入新的评估指标 Unknown Rate (UnR)：该指标用于更细致地衡量模型在不确定性处理方面的表现，帮助评估模型在保守性与自信程度之间的平衡。
-- 开展大规模实证研究：在7个典型LLMs和4个MLLMs上进行了系统评估，揭示了当前模型在事实核查任务中的局限性，并为后续研究提供了有价值的洞察。
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL25 Oral🥇, SAC Highlights⭐</div><img src='images/FloorPlan-LLaMa_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[ACL25 Oral][FloorPlan-LLaMa: Aligning Architects’ Feedback and Domain Knowledge in Architectural Floor Plan Generation](https://aclanthology.org/2025.acl-long.331/)
-
-Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao Zhang, Shuai Lu
-- 提出了ArchiMetricsNet数据集与FloorPlan-MPS评价模型：首次构建了一个包含功能性、流线性和整体性评估得分的楼面图数据集，并配有详细的文本分析，用以更贴近建筑专业知识地评估生成结果。
-- 开发了FloorPlan-LLaMa生成模型并引入RLHF机制：设计了基于自回归框架的楼面图生成模型FloorPlan-LLaMa，并通过引入FloorPlan-MPS作为奖励模型，借助人类反馈强化学习（RLHF）机制使模型更符合建筑师的专业偏好。
-- 实验证明方法优于现有基线并获专业认可：在文本条件和类别条件的生成任务中均优于现有基线模型，且经专业建筑师验证，其生成结果更为合理，契合人类设计偏好。
-</div>
-</div>
-
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -54,26 +32,11 @@ Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao 
 - 我们提出了一种大脑转移矩阵，用于建立不同个体之间的细粒度功能对应关系。该矩阵通过大脑功能对齐模块进行优化，采用多层次对齐损失实现软性跨个体映射。
 - 实验表明，MindAligner在视觉解码任务中，只有6%的模型参数被学习时，便超越了现有的最先进方法。
 - 我们进行了跨个体的大脑功能可视化研究，发现早期视觉皮层在不同个体间活动相似，而与记忆和空间导航相关的高级视觉皮层则表现出显著的个体间差异。
-
-
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025</div><img src='images/hvsurvey_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[TPAMI25][Human Motion Video Generation: A Survey](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
 
-<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/stars/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/forks/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Forks" /></a>
-[[Github]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file) [[Project Page]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file)
 
-Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzhuang Liu,Zhensong Zhang,Minglei Li,Jian Yang,Fei Ma,Zhiyong Wu,Changpeng Yang,Zonghong Dai,Fei Richard Yu. 
-- 数字人视频生成领域综述. 
-- 总结了超过300篇最新数字人视频生成了领域相关文献的内容.
-- 总结了现有数字人视频生成领域范式.
-
-</div>
-</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral🥇</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -92,6 +55,7 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 </div>
 
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024 Oral🥇</div><img src='images/mainfig_text2avatar.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ICASSP24 Oral][Text2Avatar: Text to 3D Human Avatar Generation with Codebook-Driven Body Controllable Attribute](https://ieeexplore.ieee.org/document/10446237)
@@ -104,7 +68,6 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 </div>
 
-
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024</div><img src='images/DanceControl_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ICASSP24][EXPLORING MULTI-MODAL CONTROL IN MUSIC-DRIVEN DANCE GENERATION](https://ieeexplore.ieee.org/document/10447825)
@@ -115,6 +78,49 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 
 </div>
 </div>
+
+## 参与工作
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/realfactbentch_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[arXiv25][RealFactBench: A Benchmark for Evaluating Large Language Models in Real-World Fact-Checking](https://arxiv.org/pdf/2506.12538)
+
+Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhenzhe Ying, Weiqiang Wang, Edith CH Ngai.
+- 我们提出 RealFactBench 基准测试集：构建了一个涵盖知识验证、谣言检测和事件核查等多种真实世界任务的综合性基准，用于评估大语言模型（LLMs）和多模态大模型（MLLMs）的事实核查能力。
+- 引入新的评估指标 Unknown Rate (UnR)：该指标用于更细致地衡量模型在不确定性处理方面的表现，帮助评估模型在保守性与自信程度之间的平衡。
+- 开展大规模实证研究：在7个典型LLMs和4个MLLMs上进行了系统评估，揭示了当前模型在事实核查任务中的局限性，并为后续研究提供了有价值的洞察。
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025</div><img src='images/hvsurvey_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[TPAMI25][Human Motion Video Generation: A Survey](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
+
+<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/stars/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/forks/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file) [[Project Page]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file)
+
+Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzhuang Liu,Zhensong Zhang,Minglei Li,Jian Yang,Fei Ma,Zhiyong Wu,Changpeng Yang,Zonghong Dai,Fei Richard Yu. 
+- 数字人视频生成领域综述. 
+- 总结了超过300篇最新数字人视频生成了领域相关文献的内容.
+- 总结了现有数字人视频生成领域范式.
+
+</div>
+</div>
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL25 Oral🥇, SAC Highlights⭐</div><img src='images/FloorPlan-LLaMa_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[ACL25 Oral][FloorPlan-LLaMa: Aligning Architects’ Feedback and Domain Knowledge in Architectural Floor Plan Generation](https://aclanthology.org/2025.acl-long.331/)
+
+Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao Zhang, Shuai Lu
+- 提出了ArchiMetricsNet数据集与FloorPlan-MPS评价模型：首次构建了一个包含功能性、流线性和整体性评估得分的楼面图数据集，并配有详细的文本分析，用以更贴近建筑专业知识地评估生成结果。
+- 开发了FloorPlan-LLaMa生成模型并引入RLHF机制：设计了基于自回归框架的楼面图生成模型FloorPlan-LLaMa，并通过引入FloorPlan-MPS作为奖励模型，借助人类反馈强化学习（RLHF）机制使模型更符合建筑师的专业偏好。
+- 实验证明方法优于现有基线并获专业认可：在文本条件和类别条件的生成任务中均优于现有基线模型，且经专业建筑师验证，其生成结果更为合理，契合人类设计偏好。
+</div>
+</div>
+
 
 <!-- 
 ## 中文论文
