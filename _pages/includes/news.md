@@ -6,5 +6,7 @@
 - *2025.06*: 🎉 FloorPlan-Lamma ACL 2025 接收为 👑Oral, ⭐SAC Highlight！
 - *2025.05*: 🎉 MindAligner 被 ICML 2025 接收!
 - *2024.12*: 🎉 TCDiff 被 AAAI2025 接收为 👑Oral!
-- *2024.04*: 🎉 两篇论文发表于 ICASSP 2024 (1 👑Oral, 1 Poster)!
 
+<!--
+- *2024.04*: 🎉 两篇论文发表于 ICASSP 2024 (1 👑Oral, 1 Poster)!
+-->
