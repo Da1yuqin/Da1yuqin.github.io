@@ -9,7 +9,7 @@
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/GuoqingWang1/WebFilter?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/GuoqingWang1/WebFilter)
 
- **Yuqin Dai***, Shuo Yang*, Guoqing Wang*, Yong Deng, Zhanwei Zhang, Jun Yin, Pengyu Zeng, Zhenzhe Ying, Changhua Meng, Can Yi, Yuchen Zhou, Weiqiang Wang, Shuai Lu
+ **Yuqin Dai**\*, Shuo Yang\*, Guoqing Wang\*, Yong Deng, Zhanwei Zhang, Jun Yin, Pengyu Zeng, Zhenzhe Ying, Changhua Meng, Can Yi, Yuchen Zhou, Weiqiang Wang, Shuai Lu
 - 我们提出了 WebFilter 框架，将检索过程建模为马尔可夫决策过程，并通过强化学习训练大语言模型使用高级网页搜索操作符，从而在真实网络环境中有效过滤虚假信息。
 - 设计了信息过滤奖励策略，结合“来源限制奖励”和“检索精度奖励”，同时优化查询行为与检索结果质量，显著提高了检索精准度与可信度。
 - 实验表明，WebFilter 在多项问答基准上取得了最优性能，高级搜索操作符的使用率由 10% 提升至 75%，并在域内与跨域任务中均展现出强泛化能力。
@@ -24,7 +24,7 @@
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiffpp?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/TCDiff) [[Project Page]](https://da1yuqin.github.io/TCDiffpp.website/)
 
- **Yuqin Dai***, Wanlu Zhu*, Ronghui Li, Xiu Li, Zhenyu Zhang, Jun Li,Jian Yang
+ **Yuqin Dai**\*, Wanlu Zhu\*, Ronghui Li, Xiu Li, Zhenyu Zhang, Jun Li,Jian Yang
 - 我们提出TCDiff++, 一种端到端版本的群舞生成模型。
 - 我们引入位置嵌入和一致性损失，防止碰撞并保持合理间距。
 - 模型加入换位信息和脚步自适应器，减少脚滑并提升一致性。
