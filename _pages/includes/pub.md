@@ -109,7 +109,11 @@ Shuo Yang, Zijian Yu, Zhenzhe Ying, **Yuqin Dai**, Guoqing Wang, Jun Lan, Jinfen
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM25 Datasets</div><img src='images/realfactbentch_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ACMMM25 Datasets][RealFactBench: A Benchmark for Evaluating Large Language Models in Real-World Fact-Checking](https://arxiv.org/pdf/2506.12538)
-
+ 
+<a href="https://github.com/kalendsyang/RealFactBench"><img src="https://img.shields.io/github/stars/kalendsyang/RealFactBench?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Dkalendsyang/RealFactBench"><img src="https://img.shields.io/github/forks/kalendsyang/RealFactBench?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/kalendsyang/RealFactBench) 
+ 
 Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhenzhe Ying, Weiqiang Wang, Edith CH Ngai.
 - 我们提出 RealFactBench 基准测试集：构建了一个涵盖知识验证、谣言检测和事件核查等多种真实世界任务的综合性基准，用于评估大语言模型（LLMs）和多模态大模型（MLLMs）的事实核查能力。
 - 引入新的评估指标 Unknown Rate (UnR)：该指标用于更细致地衡量模型在不确定性处理方面的表现，帮助评估模型在保守性与自信程度之间的平衡。
