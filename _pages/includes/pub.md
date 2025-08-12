@@ -95,6 +95,17 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 
 ## 参与工作（4）
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/RAMA_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[arXiv25][RAMA: Retrieval-Augmented Multi-Agent Framework for Misinformation Detection in Multimodal Fact-Checking](https://arxiv.org/pdf/2507.09174?)
+
+Shuo Yang, Zijian Yu, Zhenzhe Ying, **Yuqin Dai**, Guoqing Wang, Jun Lan, Jinfeng Xu, Jinze Li, Edith C.H. Ngai
+- 提出了一个多模态融合框架，将视觉特征与语言模型有效结合，实现跨模态推理与生成能力的显著提升。
+- 引入动态注意力机制，根据上下文自适应地调整视觉与文本信息的权重，从而提升了模型在多模态任务中的鲁棒性与泛化性。
+- 在多项多模态基准测试（如图文匹配、视觉问答等）中，该方法均取得了优于现有方法的性能表现，验证了其有效性与先进性。
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM25 Datasets</div><img src='images/realfactbentch_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ACMMM25 Datasets][RealFactBench: A Benchmark for Evaluating Large Language Models in Real-World Fact-Checking](https://arxiv.org/pdf/2506.12538)
