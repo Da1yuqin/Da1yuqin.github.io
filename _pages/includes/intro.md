@@ -1,4 +1,7 @@
-目前我是🐜蚂蚁集团的一名研究型实习生（RI），同时也清华大学的博0学生😁, 此前硕士为 PCALab 实验室的一员. 同时我曾在南京大学苏州校区 (NJUsz) 进行访问学习. 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 在研究生阶段我已经有 4 篇一作/共一的学术论文被国际会议接收, 因为多次的实习变动导致"略懂"的研究方向非常多(CV->NLP).  <a href='https://scholar.google.com/citations?user=lTE-iwYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a> 
+目前我是🐜蚂蚁集团的一名研究型实习生（RI），同时也清华大学的博0学生😁, 此前硕士为 PCALab 实验室的一员. 同时我曾在南京大学苏州校区 (NJUsz) 进行访问学习. 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 在研究生阶段我已经有 4 篇一作/共一的学术论文被国际会议接收, 因为多次的实习变动导致"略懂"的研究方向非常多(CV->NLP). <a href="https://scholar.google.com/citations?user=lTE-iwYAAAAJ" target="_blank">
+  <img src="https://img.shields.io/badge/Google%20Scholar-引用-9cf?style=flat&logo=Google%20Scholar&labelColor=f6f6f6">
+</a>
+
 
 ✨目前已确定 25 Fall PhD 去向( to 清华大学, 感恩每一位帮助过我的人❤️), 继续努力科研中.
 
