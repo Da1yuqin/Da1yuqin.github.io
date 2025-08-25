@@ -5,8 +5,8 @@
 <div class='paper-box-text' markdown="1">
 [arXiv25][Careful Queries, Credible Results: Teaching RAG Models Advanced Web Search Tools with Reinforcement Learning](https://arxiv.org/pdf/2508.07956)
  
-<a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/stars/GuoqingWang1/WebFilter?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/GuoqingWang1/WebFilter?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/GuoqingWang1/WebFilter"><img src="https://img.shields.io/github/stars/GuoqingWang1/WebFilter?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/GuoqingWang1/WebFilter"><img src="https://img.shields.io/github/forks/GuoqingWang1/WebFilter?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/GuoqingWang1/WebFilter)
 
  **Yuqin Dai**\*, Shuo Yang\*, Guoqing Wang\*, Yong Deng, Zhanwei Zhang, Jun Yin, Pengyu Zeng, Zhenzhe Ying, Changhua Meng, Can Yi, Yuchen Zhou, Weiqiang Wang, Shuai Lu
