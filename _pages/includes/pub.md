@@ -94,7 +94,39 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 </div>
 
-## 参与工作（4）
+## 参与工作（6）
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/atom_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[arXiv25][Atom-Searcher: Enhancing Agentic Deep Research via Fine-Grained Atomic Thought Reward](https://arxiv.org/pdf/2508.12800)
+
+<a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/forks/antgroup/Research-Venus?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/antgroup/Research-Venus) 
+
+Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wenwen Xiong, **Yuqin Dai**, Shuo Yang, Zhanwei Zhang, Qiwen Wang, Yang Qin, Changhua Meng
+- 提出全新的“原子思维”范式：将大模型的推理过程拆解为细粒度的功能单元，从而引导模型进行更清晰、更深入的推理。
+- 设计原子思维奖励机制（ATR）及课程式聚合策略：通过将 ATR 与最终结果奖励结合，缓解了策略优化中的梯度冲突和奖励稀疏问题。
+- 构建 Atom-Searcher 框架并验证效果：基于原子思维与奖励聚合策略，提出了一个新的强化学习框架 Atom-Searcher，在七个基准测试上超越现有最优方法，并展现出多方面优势。
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM25 Datasets</div><img src='images/realfactbentch_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[ACMMM25 Datasets][RealFactBench: A Benchmark for Evaluating Large Language Models in Real-World Fact-Checking](https://arxiv.org/pdf/2506.12538)
+ 
+<a href="https://github.com/kalendsyang/RealFactBench"><img src="https://img.shields.io/github/stars/kalendsyang/RealFactBench?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Dkalendsyang/RealFactBench"><img src="https://img.shields.io/github/forks/kalendsyang/RealFactBench?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/kalendsyang/RealFactBench) 
+ 
+Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhenzhe Ying, Weiqiang Wang, Edith CH Ngai.
+- 我们提出 RealFactBench 基准测试集：构建了一个涵盖知识验证、谣言检测和事件核查等多种真实世界任务的综合性基准，用于评估大语言模型（LLMs）和多模态大模型（MLLMs）的事实核查能力。
+- 引入新的评估指标 Unknown Rate (UnR)：该指标用于更细致地衡量模型在不确定性处理方面的表现，帮助评估模型在保守性与自信程度之间的平衡。
+- 开展大规模实证研究：在7个典型LLMs和4个MLLMs上进行了系统评估，揭示了当前模型在事实核查任务中的局限性，并为后续研究提供了有价值的洞察。
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/RAMA_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv25][RAMA: Retrieval-Augmented Multi-Agent Framework for Misinformation Detection in Multimodal Fact-Checking](https://arxiv.org/pdf/2507.09174?)
