@@ -1,6 +1,6 @@
-目前我是🐜蚂蚁集团的一名研究型实习生（RI），同时也清华大学的博0学生😁, 此前硕士为 PCALab 实验室的一员. 同时我曾在南京大学 (NJU) 进行访问学习，曾在香港科技大学 (HKUST) 担任过短期研究助理(一个月), 曾在清华大学 (THU) 进行过长期实习. 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 在研究生阶段我已经有 4 篇一作/共一的学术论文被国际会议接收，同时也有若干篇在投的工作.  <a href='https://scholar.google.com/citations?user=lTE-iwYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a> 
+目前我是🐜蚂蚁集团的一名研究型实习生（RI），同时也清华大学的博0学生😁, 此前硕士为 PCALab 实验室的一员. 同时我曾在南京大学苏州校区 (NJUsz) 进行访问学习. 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 在研究生阶段我已经有 4 篇一作/共一的学术论文被国际会议接收, 因为多次的实习变动导致"略懂"的研究方向非常多(CV->NLP).  <a href='https://scholar.google.com/citations?user=lTE-iwYAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=引用"></a> 
 
-✨我将在 2025 年 4 月份毕业, 目前已确定 25 Fall PhD 去向( to 清华大学, 感恩每一位帮助过我的人❤️), 继续努力科研中.
+✨目前已确定 25 Fall PhD 去向( to 清华大学, 感恩每一位帮助过我的人❤️), 继续努力科研中.
 
 我是一个横向发展，纵向研究的人。我在多个略有相关的领域展开了广泛的研究，并发表了一些还不错的论文。
  __我的研究方向包括但不限于__: 
@@ -21,7 +21,7 @@
 
 
 # 👨‍👩‍👧‍👦 Internship
-- *2025.03 - 至今 🔛*, 🐜蚂蚁集团, 杭州, 研究型实习生 (Research Intern)  
+- *2025.03 - 至今 🔛*, 🐜蚂蚁集团, 杭州, 研究型实习生 (Research Intern)  💡产出: AAAI 在投\*1  ICLR 在投\*1 
 - *2024.09 - 2025.03*, 上海 AI Lab 浦江实验室, 上海, 实习生 (Intern)  💡产出: ICML\*1 
 - *2024.06 - 2024.09*, 光明实验室, 深圳, 论文合作者, 💡产出: TPAMI 在投 
 - *2024.05 - 2024.09*, 南京大学苏州校区, 江苏苏州, 科研助理 (RA), 💡产出: AAAI2025 oral\*1 
