@@ -1,6 +1,22 @@
 
 # 📝 Publications 
-## 一作/共一论文(6)
+## 一作/共一论文(7)
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/WebFilter_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[arXiv25][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
+ 
+<a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/stars/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/forks/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/Da1yuqin/EviNoteRAG)
+
+** Yuqin Dai**\*, Guoqing Wang\*, Yuan Wang\*, Kairan Dou, Kaichen Zhou, Zhanwei Zhang, Shuo Yang, Fei Tang, Jun Yin, Pengyu Zeng, Zhenzhe Ying, Can Yi, Changhua Meng, Yuchen Zhou, Yongliang Shen, Shuai Lu
+- 我们提出了 WebFilter 框架，将检索过程建模为马尔可夫决策过程，并通过强化学习训练大语言模型使用高级网页搜索操作符，从而在真实网络环境中有效过滤虚假信息。
+- 设计了信息过滤奖励策略，结合“来源限制奖励”和“检索精度奖励”，同时优化查询行为与检索结果质量，显著提高了检索精准度与可信度。
+- 实验表明，WebFilter 在多项问答基准上取得了最优性能，高级搜索操作符的使用率由 10% 提升至 75%，并在域内与跨域任务中均展现出强泛化能力。
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/WebFilter_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv25][Careful Queries, Credible Results: Teaching RAG Models Advanced Web Search Tools with Reinforcement Learning](https://arxiv.org/pdf/2508.07956)
