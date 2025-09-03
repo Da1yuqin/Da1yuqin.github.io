@@ -10,9 +10,9 @@
 [[Github]](https://github.com/Da1yuqin/EviNoteRAG)
 
 ** Yuqin Dai**\*, Guoqing Wang\*, Yuan Wang\*, Kairan Dou, Kaichen Zhou, Zhanwei Zhang, Shuo Yang, Fei Tang, Jun Yin, Pengyu Zeng, Zhenzhe Ying, Can Yi, Changhua Meng, Yuchen Zhou, Yongliang Shen, Shuai Lu
-- 我们提出了 WebFilter 框架，将检索过程建模为马尔可夫决策过程，并通过强化学习训练大语言模型使用高级网页搜索操作符，从而在真实网络环境中有效过滤虚假信息。
-- 设计了信息过滤奖励策略，结合“来源限制奖励”和“检索精度奖励”，同时优化查询行为与检索结果质量，显著提高了检索精准度与可信度。
-- 实验表明，WebFilter 在多项问答基准上取得了最优性能，高级搜索操作符的使用率由 10% 提升至 75%，并在域内与跨域任务中均展现出强泛化能力。
+-我们提出 EviNote-RAG 框架，将“检索-回答”模式改为“检索-笔记-回答”，提升信息提炼和推理可靠性。
+- 引入类人类的检索式摘要机制，生成支持性证据笔记（SENs），突出关键信息和不确定点，减少噪音、提升聚焦。
+- 方法在多个问答基准上达到 SOTA，不仅效果显著提升，还大幅增强训练稳定性和效率，例如在 HotpotQA、Bamboogle、2Wiki 上分别提升 F1 20% (+0.093)、40% (+0.151)、91% (+0.256)。
 </div>
 </div>
 
