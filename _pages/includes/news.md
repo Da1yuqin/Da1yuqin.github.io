@@ -1,4 +1,5 @@
 # 🔥 News
+- *2025.08*: 🎉 公开1篇新的 arxiv 论文!
 - *2025.08*: 🎉 RealFactBench 被 ACMMM Datasets Track 接收, 公开3篇新的 arxiv 论文!
 - *2025.07*: 🎉 数字人综述被 TPAMI 接收, MERD-14 被 ACM MM 接收为 👑Oral！
 - *2025.06*: 🎉 FloorPlan-Lamma ACL 2025 接收为 👑Oral, ⭐SAC Highlight, 公开三篇新的 arxiv 论文!
