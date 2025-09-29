@@ -8,6 +8,7 @@
 <a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/stars/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/forks/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/EviNoteRAG)
+[[机器之心]](https://mp.weixin.qq.com/s/FOo38trc3OSEx2EXqVwyFA)
 
 **Yuqin Dai**\*, Guoqing Wang\*, Yuan Wang\*, Kairan Dou, Kaichen Zhou, Zhanwei Zhang, Shuo Yang, Fei Tang, Jun Yin, Pengyu Zeng, Zhenzhe Ying, Can Yi, Changhua Meng, Yuchen Zhou, Yongliang Shen, Shuai Lu
 
