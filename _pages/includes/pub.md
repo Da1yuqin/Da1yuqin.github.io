@@ -132,6 +132,7 @@ Yuchen Zhou, Jiayu Tang, Shuo Yang, Xiaoyan Xiao, **Yuqin Dai**, Wenhao Yang, Ch
 <a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/forks/antgroup/Research-Venus?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/antgroup/Research-Venus) 
+[[机器之心]](https://zhuanlan.zhihu.com/p/1944058738945291292)
 
 Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wenwen Xiong, **Yuqin Dai**, Shuo Yang, Zhanwei Zhang, Qiwen Wang, Yang Qin, Changhua Meng
 - 提出全新的“原子思维”范式：将大模型的推理过程拆解为细粒度的功能单元，从而引导模型进行更清晰、更深入的推理。
@@ -193,6 +194,11 @@ Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzh
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL25 Oral🥇, SAC Highlights⭐</div><img src='images/FloorPlan-LLaMa_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ACL25 Oral][FloorPlan-LLaMa: Aligning Architects’ Feedback and Domain Knowledge in Architectural Floor Plan Generation](https://aclanthology.org/2025.acl-long.331/)
+
+<a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img src="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img src="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/TsinghuaJunYin/FloorPlan-LLaMa) 
+[[新智元]](https://mp.weixin.qq.com/s/bmfeBXVqOn4e6NvQOdkklw)
 
 Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao Zhang, Shuai Lu
 - 提出了ArchiMetricsNet数据集与FloorPlan-MPS评价模型：首次构建了一个包含功能性、流线性和整体性评估得分的楼面图数据集，并配有详细的文本分析，用以更贴近建筑专业知识地评估生成结果。
