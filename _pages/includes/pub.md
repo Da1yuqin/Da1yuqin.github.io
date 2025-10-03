@@ -146,6 +146,10 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/RAMA_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv25][RAMA: Retrieval-Augmented Multi-Agent Framework for Misinformation Detection in Multimodal Fact-Checking](https://arxiv.org/pdf/2507.09174?)
+ 
+<a href="https://github.com/kalendsyang/RAMA"><img src="https://github.com/kalendsyang/RAMA?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/kalendsyang/RAMA"><img src="https://github.com/kalendsyang/RAMA?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/kalendsyang/RAMA) 
 
 Shuo Yang, Zijian Yu, Zhenzhe Ying, **Yuqin Dai**, Guoqing Wang, Jun Lan, Jinfeng Xu, Jinze Li, Edith C.H. Ngai
 - 提出了一个多模态融合框架，将视觉特征与语言模型有效结合，实现跨模态推理与生成能力的显著提升。
