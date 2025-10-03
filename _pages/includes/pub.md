@@ -147,8 +147,8 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 <div class='paper-box-text' markdown="1">
 [arXiv25][RAMA: Retrieval-Augmented Multi-Agent Framework for Misinformation Detection in Multimodal Fact-Checking](https://arxiv.org/pdf/2507.09174?)
  
-<a href="https://github.com/kalendsyang/RAMA"><img src="https://img.shields.io/github/starskalendsyang/RAMA?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/kalendsyang/RAMA"><img src="https://img.shields.io/github/stars/kalendsyang/RAMA?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/kalendsyang/RAMA"><img src="https://img.shields.io/github/stars/kalendsyang/RAMA?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/kalendsyang/RAMA"><img src="https://img.shields.io/github/forks/kalendsyang/RAMA?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/kalendsyang/RAMA) 
 
 Shuo Yang, Zijian Yu, Zhenzhe Ying, **Yuqin Dai**, Guoqing Wang, Jun Lan, Jinfeng Xu, Jinze Li, Edith C.H. Ngai
@@ -200,7 +200,7 @@ Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzh
 [ACL25 Oral][FloorPlan-LLaMa: Aligning Architects’ Feedback and Domain Knowledge in Architectural Floor Plan Generation](https://aclanthology.org/2025.acl-long.331/)
 
 <a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img src="https://img.shields.io/github/stars/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img src="https://img.shields.io/github/stars/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img src="https://img.shields.io/github/forks/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/TsinghuaJunYin/FloorPlan-LLaMa) 
 [[新智元]](https://mp.weixin.qq.com/s/bmfeBXVqOn4e6NvQOdkklw)
 
