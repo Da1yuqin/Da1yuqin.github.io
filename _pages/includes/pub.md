@@ -19,9 +19,9 @@
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/WebFilter_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='images/WebFilter_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv25][Careful Queries, Credible Results: Teaching RAG Models Advanced Web Search Tools with Reinforcement Learning](https://arxiv.org/pdf/2508.07956)
+[AAAI26][Careful Queries, Credible Results: Teaching RAG Models Advanced Web Search Tools with Reinforcement Learning](https://arxiv.org/pdf/2508.07956)
  
 <a href="https://github.com/GuoqingWang1/WebFilter"><img src="https://img.shields.io/github/stars/GuoqingWang1/WebFilter?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/GuoqingWang1/WebFilter"><img src="https://img.shields.io/github/forks/GuoqingWang1/WebFilter?style=social" alt="GitHub Forks" /></a>
@@ -34,9 +34,9 @@
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCV 2025</div><img src='images/TCDiffpp_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/TCDiffpp_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[IJCV25][TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography](https://arxiv.org/pdf/2506.18671)
+[arXiv][TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography](https://arxiv.org/pdf/2506.18671)
  
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiffpp?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiffpp?style=social" alt="GitHub Forks" /></a>
@@ -112,10 +112,10 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 </div>
 
-## 参与工作（6）
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
+## 参与工作（8）
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026 Oral👑</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv25][Logic Unseen: Revealing the Logical Blindspots of Vision-Language Models](https://arxiv.org/pdf/2508.11317)
+[AAAI26][Logic Unseen: Revealing the Logical Blindspots of Vision-Language Models](https://arxiv.org/pdf/2508.11317)
 
 Yuchen Zhou, Jiayu Tang, Shuo Yang, Xiaoyan Xiao, **Yuqin Dai**, Wenhao Yang, Chao Gou, Xiaobo Xia, Tat-Seng Chua
 - 提出 LogicBench 基准：构建了一个涵盖 9 类逻辑关系、4 种应用场景和 2 种评测任务的综合基准，包含超过 5 万对逻辑视觉-语言样本，用于系统性评估多模态大模型的逻辑理解能力。
@@ -123,7 +123,6 @@ Yuchen Zhou, Jiayu Tang, Shuo Yang, Xiaoyan Xiao, **Yuqin Dai**, Wenhao Yang, Ch
 - 提出 LogicCLIP 框架：设计了一种新型训练方法，有效增强模型的逻辑敏感性。实验表明，LogicCLIP 在多个领域显著提升逻辑理解能力的同时，还保持甚至超越了在标准视觉-语言基准上的表现。
 </div>
 </div>
-
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/atom_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -141,7 +140,16 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2026 Oral👑</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[ACM MM26][Logic Unseen: Revealing the Logical Blindspots of Vision-Language Models](https://arxiv.org/pdf/2508.11317)
 
+Yuchen Zhou, Jiayu Tang, Shuo Yang, Xiaoyan Xiao, **Yuqin Dai**, Wenhao Yang, Chao Gou, Xiaobo Xia, Tat-Seng Chua
+- 提出 LogicBench 基准：构建了一个涵盖 9 类逻辑关系、4 种应用场景和 2 种评测任务的综合基准，包含超过 5 万对逻辑视觉-语言样本，用于系统性评估多模态大模型的逻辑理解能力。
+- 开展系统性诊断评测：首次系统性分析多模态大模型在逻辑推理方面的表现，揭示了其在理解复杂逻辑结构时存在的显著“逻辑盲点”和固有限制。
+- 提出 LogicCLIP 框架：设计了一种新型训练方法，有效增强模型的逻辑敏感性。实验表明，LogicCLIP 在多个领域显著提升逻辑理解能力的同时，还保持甚至超越了在标准视觉-语言基准上的表现。
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/RAMA_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
