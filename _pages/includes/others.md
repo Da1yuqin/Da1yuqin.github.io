@@ -9,8 +9,8 @@
 
 # 🏛️Professional Services
 Student Reviewers:
-
-AAAI Conference on Artificial Intelligence (AAAI)
+AAAI 2026
+ICLR 2026
 
 <span class='anchor' id='-xl'></span>
 
