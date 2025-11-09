@@ -151,7 +151,7 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025 Oral👑</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025 Oral👑</div><img src='images/MERD14_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ACM MM25][MRED-14: A Benchmark for Low-Energy Residential Floor Plan Generation with 14 Flexible Inputs](https://dl.acm.org/doi/pdf/10.1145/3746027.3754949)
 
