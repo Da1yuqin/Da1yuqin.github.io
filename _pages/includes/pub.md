@@ -112,7 +112,7 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 </div>
 
-## 参与工作（9）
+## 参与工作（8）
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026 Oral👑</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [AAAI26][Logic Unseen: Revealing the Logical Blindspots of Vision-Language Models](https://arxiv.org/pdf/2508.11317)
