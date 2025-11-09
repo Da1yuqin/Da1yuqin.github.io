@@ -9,8 +9,8 @@
 
 # 🏛️Professional Services
 Student Reviewers:
-AAAI 2026
-ICLR 2026
+- AAAI 2026
+- ICLR 2026
 
 <span class='anchor' id='-xl'></span>
 
