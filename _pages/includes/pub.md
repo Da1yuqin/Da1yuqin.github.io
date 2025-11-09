@@ -142,12 +142,12 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2026 Oral👑</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[ACM MM26][Logic Unseen: Revealing the Logical Blindspots of Vision-Language Models](https://arxiv.org/pdf/2508.11317)
+[ACM MM26][MRED-14: A Benchmark for Low-Energy Residential Floor Plan Generation with 14 Flexible Inputs](https://dl.acm.org/doi/pdf/10.1145/3746027.3754949)
 
-Yuchen Zhou, Jiayu Tang, Shuo Yang, Xiaoyan Xiao, **Yuqin Dai**, Wenhao Yang, Chao Gou, Xiaobo Xia, Tat-Seng Chua
-- 提出 LogicBench 基准：构建了一个涵盖 9 类逻辑关系、4 种应用场景和 2 种评测任务的综合基准，包含超过 5 万对逻辑视觉-语言样本，用于系统性评估多模态大模型的逻辑理解能力。
-- 开展系统性诊断评测：首次系统性分析多模态大模型在逻辑推理方面的表现，揭示了其在理解复杂逻辑结构时存在的显著“逻辑盲点”和固有限制。
-- 提出 LogicCLIP 框架：设计了一种新型训练方法，有效增强模型的逻辑敏感性。实验表明，LogicCLIP 在多个领域显著提升逻辑理解能力的同时，还保持甚至超越了在标准视觉-语言基准上的表现。
+Pengyu Zeng, Jun Yin, Haoyuan Sun, **Yuqin Dai**, Maowei Jiang, Miao Zhang, Shuai Lu
+- 构建首个包含14种输入类型的多模态住宅能耗数据集 MRED-14。
+- 提出可灵活适配多输入的低能耗户型生成模型 LER-net。
+- 实验验证模型能降低户型能耗并优于现有方法，具有实际设计可行性。
 </div>
 </div>
 
