@@ -1,5 +1,5 @@
 # 🔥 News
-- *2025.11*: 🎉 一作论文 WebFilter 被 AAAI26 接收 一作论文 TCDiff++ 被 IJCV 接收, 参与工作 LogicBench/LogicCLIP 被 AAAI 2026 接收为 👑Oral!
+- *2025.11*: 🎉 一作论文 WebFilter, TCDiff++ 分别被 AAAI26, IJCV25 接收! 参与工作 LogicBench/LogicCLIP 被 AAAI 2026 接收为 👑Oral!
 - *2025.10*: 🎉 公开1篇新的 arxiv 论文!
 - *2025.09*: 🎉 公开2篇新的 arxiv 论文!
 - *2025.08*: 🎉 RealFactBench 被 ACMMM Datasets Track 接收, CARD 被 EMNLP 接收, 公开3篇新的 arxiv 论文!
