@@ -41,6 +41,7 @@
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiffpp?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiffpp?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/TCDiffpp) [[Project Page]](https://da1yuqin.github.io/TCDiffpp.website/)
+[[新智元]](https://mp.weixin.qq.com/s/8iZuFqae_sRgTBlHLOJGMg)
 
  **Yuqin Dai**\*, Wanlu Zhu\*, Ronghui Li, Xiu Li, Zhenyu Zhang, Jun Li,Jian Yang
 - 我们提出TCDiff++, 一种端到端版本的群舞生成模型。
