@@ -2,6 +2,25 @@
 # 📝 Publications 
 ## 一作/共一论文(8)
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral🥇</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[AAAI25 Oral][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
+
+<a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiff?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiff?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/Da1yuqin/TCDiff) [[Project Page]](https://wanluzhu.github.io/TCDiffusion/)
+
+__Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun Li, Jian Yang. 
+- 发现并提出领域内存在的问题: 舞者混淆(Dancer Ambiguity)现象. 为后续研究提供指引与思路. 
+- TCDiff 是当前 SOTA 的多人舞蹈生成模型, 能够较好的解决舞者混淆(Dancer Ambiguity)现象.
+- 提出了 Footwork Adaptor 模块, 能有效缓解多人舞蹈生成中的脚步滑动问题(Foot Slide).
+- 提出了 Fusion Projection 插件, 该插件占用较小的计算资源, 能够有效解决舞者混淆(Dancer Ambiguity)现象
+
+</div>
+</div>
+
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv25][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
@@ -35,6 +54,7 @@
 </div>
 </div>
 
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCV 2025</div><img src='images/TCDiffpp_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [IJCV25][TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography](https://arxiv.org/pdf/2506.18671)
@@ -67,25 +87,6 @@
 - 我们提出了一种大脑转移矩阵，用于建立不同个体之间的细粒度功能对应关系。该矩阵通过大脑功能对齐模块进行优化，采用多层次对齐损失实现软性跨个体映射。
 - 实验表明，MindAligner在视觉解码任务中，只有6%的模型参数被学习时，便超越了现有的最先进方法。
 - 我们进行了跨个体的大脑功能可视化研究，发现早期视觉皮层在不同个体间活动相似，而与记忆和空间导航相关的高级视觉皮层则表现出显著的个体间差异。
-</div>
-</div>
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral🥇</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[AAAI25 Oral][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
-
-<a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiff?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiff?style=social" alt="GitHub Forks" /></a>
-[[Github]](https://github.com/Da1yuqin/TCDiff) [[Project Page]](https://wanluzhu.github.io/TCDiffusion/)
-
-__Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun Li, Jian Yang. 
-- 发现并提出领域内存在的问题: 舞者混淆(Dancer Ambiguity)现象. 为后续研究提供指引与思路. 
-- TCDiff 是当前 SOTA 的多人舞蹈生成模型, 能够较好的解决舞者混淆(Dancer Ambiguity)现象.
-- 提出了 Footwork Adaptor 模块, 能有效缓解多人舞蹈生成中的脚步滑动问题(Foot Slide).
-- 提出了 Fusion Projection 插件, 该插件占用较小的计算资源, 能够有效解决舞者混淆(Dancer Ambiguity)现象
-
 </div>
 </div>
 
