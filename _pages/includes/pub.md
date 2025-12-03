@@ -131,27 +131,6 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 
 ## 参与工作（9）
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026 Oral👑</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[AAAI26][Logic Unseen: Revealing the Logical Blindspots of Vision-Language Models](https://arxiv.org/pdf/2508.11317)
-
-Yuchen Zhou, Jiayu Tang, Shuo Yang, Xiaoyan Xiao, **Yuqin Dai**, Wenhao Yang, Chao Gou, Xiaobo Xia, Tat-Seng Chua
-- 提出 LogicBench 基准：构建了一个涵盖 9 类逻辑关系、4 种应用场景和 2 种评测任务的综合基准，包含超过 5 万对逻辑视觉-语言样本，用于系统性评估多模态大模型的逻辑理解能力。
-- 开展系统性诊断评测：首次系统性分析多模态大模型在逻辑推理方面的表现，揭示了其在理解复杂逻辑结构时存在的显著“逻辑盲点”和固有限制。
-- 提出 LogicCLIP 框架：设计了一种新型训练方法，有效增强模型的逻辑敏感性。实验表明，LogicCLIP 在多个领域显著提升逻辑理解能力的同时，还保持甚至超越了在标准视觉-语言基准上的表现。
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2025</div><img src='images/card_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[EMNLP25][Card: Cross-modal agent framework for generative and editable residential design](https://aclanthology.org/2025.emnlp-main.473.pdf)
-
-Pengyu Zeng, Jun Yin, Miao Zhang, **Yuqin Dai**, Jizhizi Li, ZhanXiang Jin, Shuai Lu
-- 提出 CARD 跨模态住宅设计框架，可从自然语言生成并编辑住宅布局。
-- 设计 CMI-P 跨模态空间表示与 Text2FloorEdit 生成模型，实现标准化与可迭代设计。
-- 构建包含规范审查、需求验证与 3D 可视化的多代理系统，支持普通用户无专业背景进行住宅设计。
-</div>
-</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/atom_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -169,14 +148,14 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025 Oral👑</div><img src='images/MERD14_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/NVC_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[ACM MM25][MRED-14: A Benchmark for Low-Energy Residential Floor Plan Generation with 14 Flexible Inputs](https://dl.acm.org/doi/pdf/10.1145/3746027.3754949)
+[arxiv25][NCV: A Node-Wise Consistency Verification Approach for Low-Cost Structured Error Localization in LLM Reasoning](https://arxiv.org/pdf/2510.02816)
 
-Pengyu Zeng, Jun Yin, Haoyuan Sun, **Yuqin Dai**, Maowei Jiang, Miao Zhang, Shuai Lu
-- 构建首个包含14种输入类型的多模态住宅能耗数据集 MRED-14。
-- 提出可灵活适配多输入的低能耗户型生成模型 LER-net。
-- 实验验证模型能降低户型能耗并优于现有方法，具有实际设计可行性。
+Zhang, Yulong; Wang, Li; Du, Wei; Li, Peilin; **Yuqin Dai**; Zhao, Zhiyuan; Fang, Lingyong; Liu, Ziniu; Zhang, Ru; Zhu, Huijia; Liu, Gongshen
+- 提出了一种名为 NCV 的免训练框架，通过将复杂的思维链推理重构为结构化的节点级二元一致性检查，解决了长链推理中错误定位不准和注意力分散的难题。
+- 通过将验证任务分解为轻量级的节点检查，该方法实现了精确的错误定位，并避免了昂贵的长文本生成与多重采样，显著增强了系统的可解释性与计算效率。
+- 实验结果显示该方法在多个公共数据集上的 F1 分数相比基线提升了 10% 至 25%，同时 Token 消耗量比传统方法减少了 6 到 58 倍。
 </div>
 </div>
 
@@ -192,6 +171,44 @@ Shuo Yang, Zijian Yu, Zhenzhe Ying, **Yuqin Dai**, Guoqing Wang, Jun Lan, Jinfen
 - 提出了一个多模态融合框架，将视觉特征与语言模型有效结合，实现跨模态推理与生成能力的显著提升。
 - 引入动态注意力机制，根据上下文自适应地调整视觉与文本信息的权重，从而提升了模型在多模态任务中的鲁棒性与泛化性。
 - 在多项多模态基准测试（如图文匹配、视觉问答等）中，该方法均取得了优于现有方法的性能表现，验证了其有效性与先进性。
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026 Oral👑</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[AAAI26][Logic Unseen: Revealing the Logical Blindspots of Vision-Language Models](https://arxiv.org/pdf/2508.11317)
+
+Yuchen Zhou, Jiayu Tang, Shuo Yang, Xiaoyan Xiao, **Yuqin Dai**, Wenhao Yang, Chao Gou, Xiaobo Xia, Tat-Seng Chua
+- 提出 LogicBench 基准：构建了一个涵盖 9 类逻辑关系、4 种应用场景和 2 种评测任务的综合基准，包含超过 5 万对逻辑视觉-语言样本，用于系统性评估多模态大模型的逻辑理解能力。
+- 开展系统性诊断评测：首次系统性分析多模态大模型在逻辑推理方面的表现，揭示了其在理解复杂逻辑结构时存在的显著“逻辑盲点”和固有限制。
+- 提出 LogicCLIP 框架：设计了一种新型训练方法，有效增强模型的逻辑敏感性。实验表明，LogicCLIP 在多个领域显著提升逻辑理解能力的同时，还保持甚至超越了在标准视觉-语言基准上的表现。
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2025</div><img src='images/card_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[EMNLP25][Card: Cross-modal agent framework for generative and editable residential design](https://aclanthology.org/2025.emnlp-main.473.pdf)
+
+Pengyu Zeng, Jun Yin, Miao Zhang, **Yuqin Dai**, Jizhizi Li, ZhanXiang Jin, Shuai Lu
+- 提出 CARD 跨模态住宅设计框架，可从自然语言生成并编辑住宅布局。
+- 设计 CMI-P 跨模态空间表示与 Text2FloorEdit 生成模型，实现标准化与可迭代设计。
+- 构建包含规范审查、需求验证与 3D 可视化的多代理系统，支持普通用户无专业背景进行住宅设计。
+</div>
+</div>
+
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025 Oral👑</div><img src='images/MERD14_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[ACM MM25][MRED-14: A Benchmark for Low-Energy Residential Floor Plan Generation with 14 Flexible Inputs](https://dl.acm.org/doi/pdf/10.1145/3746027.3754949)
+
+Pengyu Zeng, Jun Yin, Haoyuan Sun, **Yuqin Dai**, Maowei Jiang, Miao Zhang, Shuai Lu
+- 构建首个包含14种输入类型的多模态住宅能耗数据集 MRED-14。
+- 提出可灵活适配多输入的低能耗户型生成模型 LER-net。
+- 实验验证模型能降低户型能耗并优于现有方法，具有实际设计可行性。
 </div>
 </div>
 
@@ -248,16 +265,6 @@ Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/NVC_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[arxiv25][NCV: A Node-Wise Consistency Verification Approach for Low-Cost Structured Error Localization in LLM Reasoning](https://arxiv.org/pdf/2510.02816)
-
-Zhang, Yulong; Wang, Li; Du, Wei; Li, Peilin; **Yuqin Dai**; Zhao, Zhiyuan; Fang, Lingyong; Liu, Ziniu; Zhang, Ru; Zhu, Huijia; Liu, Gongshen
-- 提出了一种名为 NCV 的免训练框架，通过将复杂的思维链推理重构为结构化的节点级二元一致性检查，解决了长链推理中错误定位不准和注意力分散的难题。
-- 通过将验证任务分解为轻量级的节点检查，该方法实现了精确的错误定位，并避免了昂贵的长文本生成与多重采样，显著增强了系统的可解释性与计算效率。
-- 实验结果显示该方法在多个公共数据集上的 F1 分数相比基线提升了 10% 至 25%，同时 Token 消耗量比传统方法减少了 6 到 58 倍。
-</div>
-</div>
 
 
 
