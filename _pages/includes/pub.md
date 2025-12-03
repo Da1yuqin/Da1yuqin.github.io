@@ -248,6 +248,18 @@ Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao 
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/NVC_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[arxiv25][NCV: A Node-Wise Consistency Verification Approach for Low-Cost Structured Error Localization in LLM Reasoning](https://arxiv.org/pdf/2510.02816)
+
+Zhang, Yulong; Wang, Li; Du, Wei; Li, Peilin; **Yuqin Dai**; Zhao, Zhiyuan; Fang, Lingyong; Liu, Ziniu; Zhang, Ru; Zhu, Huijia; Liu, Gongshen
+- 提出了一种名为 NCV 的免训练框架，通过将复杂的思维链推理重构为结构化的节点级二元一致性检查，解决了长链推理中错误定位不准和注意力分散的难题。
+- 通过将验证任务分解为轻量级的节点检查，该方法实现了精确的错误定位，并避免了昂贵的长文本生成与多重采样，显著增强了系统的可解释性与计算效率。
+- 实验结果显示该方法在多个公共数据集上的 F1 分数相比基线提升了 10% 至 25%，同时 Token 消耗量比传统方法减少了 6 到 58 倍。
+</div>
+</div>
+
+
 
 <!-- 
 ## 中文论文
