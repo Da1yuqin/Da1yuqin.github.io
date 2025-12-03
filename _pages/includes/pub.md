@@ -1,20 +1,6 @@
 
 # 📝 Publications 
-## 一作/共一论文(7)
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/GreenPlanner_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[arXiv25][GreenPlanner: Practical Floorplan Layout Generation via an Energy-Aware and Function-Feasible Generative Framework](https://www.arxiv.org/pdf/2512.00406)
- 
-
-Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi, ZhanXiang Jin, Maowei Jiang, Yuxing Han, Shuai Lu†
-
-- 提出了 GreenPlanner 框架：将“设计评估”与“生成”统一起来的节能住宅设计框架。它解决了现有生成方法缺乏自动评估机制、容易产生不符合现实约束（如能耗过高或空间功能缺陷）的布局的问题，实现了兼顾可持续性和空间功能合理性的自动化设计。
-- 构建了两个关键数据集：DesignFD（设计可行性数据集）：包含带有专家验证的能耗和空间功能标签，用于学习设计约束的先验知识。GreenPD（绿色平面图数据集）：基于 DesignFD 并通过评估器筛选和修正得到的，它将用户需求与符合法规的布局配对，消除了无效样本（从 60% 降至 0%），为训练提供了高质量数据。
-- 开发了核心模型 PDE 与 GreenFlow：PDE（实用设计评估器）：能够快速预测能耗表现和空间功能有效性，准确率超过 99%。GreenFlow 生成器：一种基于流（flow-based）的生成模型，利用 PDE 的反馈进行训练，实现了在现实约束下的可控布局生成，相比专业建筑师的设计效率提升了 87%。
-</div>
-</div>
-
-
+## 一作/共一论文(8)
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv25][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
@@ -102,6 +88,20 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 
 </div>
 </div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/GreenPlanner_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[arXiv25][GreenPlanner: Practical Floorplan Layout Generation via an Energy-Aware and Function-Feasible Generative Framework](https://www.arxiv.org/pdf/2512.00406)
+ 
+
+Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi, ZhanXiang Jin, Maowei Jiang, Yuxing Han, Shuai Lu†
+
+- 提出了 GreenPlanner 框架：将“设计评估”与“生成”统一起来的节能住宅设计框架。它解决了现有生成方法缺乏自动评估机制、容易产生不符合现实约束（如能耗过高或空间功能缺陷）的布局的问题，实现了兼顾可持续性和空间功能合理性的自动化设计。
+- 构建了两个关键数据集：DesignFD（设计可行性数据集）：包含带有专家验证的能耗和空间功能标签，用于学习设计约束的先验知识。GreenPD（绿色平面图数据集）：基于 DesignFD 并通过评估器筛选和修正得到的，它将用户需求与符合法规的布局配对，消除了无效样本（从 60% 降至 0%），为训练提供了高质量数据。
+- 开发了核心模型 PDE 与 GreenFlow：PDE（实用设计评估器）：能够快速预测能耗表现和空间功能有效性，准确率超过 99%。GreenFlow 生成器：一种基于流（flow-based）的生成模型，利用 PDE 的反馈进行训练，实现了在现实约束下的可控布局生成，相比专业建筑师的设计效率提升了 87%。
+</div>
+</div>
+
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024 Oral🥇</div><img src='images/mainfig_text2avatar.jpg' alt="sym" width="100%"></div></div>
