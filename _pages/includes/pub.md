@@ -1,6 +1,21 @@
 
 # 📝 Publications 
-## 一作/共一论文(8)
+## 一作/共一论文(9)
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[arXiv26][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
+
+<a href="https://github.com/Da1yuqin/SEAD"><img src="https://img.shields.io/github/stars/Da1yuqin/SEAD?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/SEAD"><img src="https://img.shields.io/github/forks/Da1yuqin/SEAD?style=social" alt="GitHub Forks" /></a>
+[[Github]](https://github.com/Da1yuqin/SEAD)
+
+**Yuqin Dai**, Ning Gao, Wei Zhang, Jie Wang, Zichen Luo, Jinpeng Wang, Yujie Wang, Ruiyuan Wu, Chaozheng Wang. 
+- 提出SEAD框架：首个面向服务对话的自进化智能体，无需大规模人工标注数据，有效解决数据稀缺与质量差的难题。
+- 创新解耦机制：将用户画像控制与角色扮演分离，构建公平的对抗博弈与自适应课程学习环境，避免训练失衡。
+- 性能显著领先：任务完成率提升17.6%，对话效率提升11.1%，效果显著优于现有开源基座及商业闭源模型。
+
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral🥇</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -159,9 +174,9 @@ Zhang, Yulong; Wang, Li; Du, Wei; Li, Peilin; **Yuqin Dai**; Zhao, Zhiyuan; Fang
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/RAMA_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">WWW26 Workshop</div><img src='images/RAMA_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv25][RAMA: Retrieval-Augmented Multi-Agent Framework for Misinformation Detection in Multimodal Fact-Checking](https://arxiv.org/pdf/2507.09174?)
+[WWW26 Workshop][RAMA: Retrieval-Augmented Multi-Agent Framework for Misinformation Detection in Multimodal Fact-Checking](https://arxiv.org/pdf/2507.09174?)
  
 <a href="https://github.com/kalendsyang/RAMA"><img src="https://img.shields.io/github/stars/kalendsyang/RAMA?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/kalendsyang/RAMA"><img src="https://img.shields.io/github/forks/kalendsyang/RAMA?style=social" alt="GitHub Forks" /></a>
