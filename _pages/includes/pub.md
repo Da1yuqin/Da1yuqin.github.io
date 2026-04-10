@@ -1,9 +1,9 @@
 
 # 📝 Publications 
 ## 一作/共一论文(9)
-<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv26][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
+[ACL26 Findings][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
 
 <a href="https://github.com/Da1yuqin/SEAD"><img src="https://img.shields.io/github/stars/Da1yuqin/SEAD?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/SEAD"><img src="https://img.shields.io/github/forks/Da1yuqin/SEAD?style=social" alt="GitHub Forks" /></a>
@@ -15,7 +15,7 @@
 - 性能显著领先：任务完成率提升17.6%，对话效率提升11.1%，效果显著优于现有开源基座及商业闭源模型。
 
 </div>
-</div> -->
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral🥇</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -147,7 +147,7 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 
 ## 参与工作（9）
 
-<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv26][Reinforcing Real-world Service Agents: Balancing Utility and Cost in Task-oriented Dialogue](https://arxiv.org/abs/2602.22697)
 <a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a>
@@ -159,7 +159,7 @@ Ning Gao, Wei Zhang, **Yuqin Dai**, Ling Shi, Ziyin Wang, Yujie Wang, Wei He, Ji
 - 建立以用户为中心的高保真环境，支持动态策略探索。
 - 引入CMPO算法，有效平衡用户奖励与全局成本约束。
 </div>
-</div> -->
+</div> 
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/atom_mainfig.png' alt="sym" width="100%"></div></div>
