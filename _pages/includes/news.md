@@ -1,7 +1,7 @@
 # 🔥 News
-- *2025.04*: 🎉 公开一篇共一 arxiv 论文, 一作论文 SEAD (Findings) 被 ACL26 接收!
-- *2025.02*: 🎉 NeuroFlow, 共一论文 GreenPlanner (Findings) 被 CVPR26, 接收, 公开论文两篇（一篇独立一作）!
-- *2025.01*: 🎉 RAMA 被 WWW Workshop 接收!
+- *2025.04*: 🎉 公开一篇共一 arxiv 论文, 一作论文 SEAD 被 ACL26 接收!
+- *2025.02*: 🎉 NeuroFlow, 共一论文 GreenPlanner 被 CVPR26, 接收, 公开论文两篇（一篇独立一作）!
+- *2025.01*: 🎉 RAMA 被 WWW 接收!
 - *2025.12*: 🎉 公开1篇共一 arxiv 论文
 - *2025.11*: 🎉 一作论文 WebFilter, TCDiff++ 分别被 AAAI26, IJCV25 接收! 参与工作 LogicBench/LogicCLIP 被 AAAI 2026 接收为 👑Oral!
 - *2025.10*: 🎉 公开1篇新的 arxiv 论文!
