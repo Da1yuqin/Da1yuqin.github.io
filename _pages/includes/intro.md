@@ -1,4 +1,4 @@
-目前我是清华大学的博1学生😁. 此前我曾在🐜担任研究型实习生. 我的本硕均在南京理工大学, 是 PCALab 的一员. 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 目前我已经有 7 篇一作/共一的学术论文被国际会议接收 (4A2B+1Findings), 因为多次的实习变动导致"略懂"的研究方向非常多(CV->NLP). 
+目前我是清华大学的博1学生😁. 此前我曾在🐜担任研究型实习生. 我的本硕均在南京理工大学, 是 PCALab 的一员. 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 目前我已经有 8 篇一作/共一的学术论文被国际会议接收 (4A2B+2Findings), 因为多次的实习变动导致"略懂"的研究方向非常多(CV->NLP). 
 <a href="https://scholar.google.com/citations?user=lTE-iwYAAAAJ&hl=zh-CN" target="_blank">
   <img src="https://img.shields.io/badge/dynamic/json?label=Paper%20Citations&query=total_citations&url=https%3A%2F%2Fcse.bth.se%2F~fer%2Fgooglescholar-api%2Fgooglescholar.php%3Fuser%3DlTE-iwYAAAAJ&logo=googlescholar&style=social" alt="Google Scholar">
 </a>
@@ -12,7 +12,7 @@
  - 数字人动作生成 (Motion Generation): ICASSP24，AAAI25 👑Oral
  - 三维渲染 (3D Rendering): ICASSP24 👑Oral
  - 脑机接口交叉研究 (AI4Neuro): ICML25
- - Agentic RAG & RL (LLM): AAAI26.
+ - Agentic RAG & RL (LLM): AAAI26, ACL26
 
 
 如果您觉得我的研究方向很难理解，下面这个 VCR 可以很好的概述我的研究历程，即**先重建我的人体，后根据一段音乐，生成我的舞蹈动作，最终，我和一个机器人一起跳舞，实现群舞的效果**:
