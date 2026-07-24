@@ -39,9 +39,9 @@
 
 <strong>🏅 K-Star 人才计划（快手校招顶级人才项目）</strong>
 
-📄 产出: OneReason Tech Report (Core Contributor)
+📄 产出: OneReason 技术报告已公开，GitHub 获得 300+ Stars
 
-💼 参与快手推荐推理基座模型全流程开发：多轮 RFT/OPD/GRPO 训练策略迭代，百卡集群训练；构建的 CoT 方案为组内唯一有效版本并被最终论文采用
+💼 参与快手推荐推理基座模型全流程开发：按日迭代训练与评测，使用千卡级集群协同推进，不到一个月取得行业领先结果；构建的 CoT 方案为组内唯一有效版本并被最终论文采用
 </div>
 </div>
 
@@ -63,7 +63,9 @@
 
 <strong>🏅 研究型实习（杭州）</strong>
 
-📄 产出: AAAI 2026\*1, EMNLP 2026 在投\*1
+📄 产出: AAAI 2026\*1, EMNLP 2026 在投\*1, DAGENT / Rehearsal-RL 等多跳推理工作流工作
+
+✨ 亮点: 参与的技术报告已公开，GitHub 获得 300+ Stars
 
 💼 RAG + RL 方向研究：提出 WebFilter 知识过滤框架（AAAI26）、EviNote-RAG 证据笔记增强方法
 </div>
