@@ -33,9 +33,41 @@
 </summary>
 <div markdown="1">
 
-- <img src="https://img.shields.io/badge/快手-Kuaishou-FF6600?style=flat-square&logo=kwai&logoColor=white" alt="快手" style="vertical-align:middle;"> *2026.03 - 2026.06*, 快手 OneRec 核心部门, 北京, K-Star人才计划 💡产出: OneReason Tech Report (Core Contributor)
-- <img src="https://img.shields.io/badge/美团-Meituan-FFD100?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRleHQgeD0iNCIgeT0iMTgiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMwMDAiPue+jjwvdGV4dD48L3N2Zz4=&logoColor=black" alt="美团" style="vertical-align:middle;"> *2025.08 - 2026.02*, 美团, 北京, 北斗实习生(人才计划) 💡产出: ACL26\*1, EMNLP26在投\*2, SAGE Benchmark
-- <img src="https://img.shields.io/badge/蚂蚁集团-Ant_Group-1677FF?style=flat-square&logo=antdesign&logoColor=white" alt="蚂蚁集团" style="vertical-align:middle;"> *2025.03 - 2025.08*, 蚂蚁集团, 杭州, 研究型实习生 (Research Intern) 💡产出: AAAI26\*1, EMNLP26在投\*1
+<div class='paper-box'><div class='paper-box-image'><div><img src='https://logo.clearbit.com/kuaishou.com' alt="快手" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**快手 Kuaishou · OneRec 核心部门** &nbsp; *2026.03 - 2026.06*
+
+🏅 K-Star 人才计划（快手校招顶级人才项目）
+
+📄 产出: OneReason Tech Report (Core Contributor)
+
+💼 参与快手推荐推理基座模型全流程开发：多轮 RFT/OPD/GRPO 训练策略迭代，百卡集群训练；构建的 CoT 方案为组内唯一有效版本并被最终论文采用
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='https://logo.clearbit.com/meituan.com' alt="美团" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**美团 Meituan · 对话智能体方向** &nbsp; *2025.08 - 2026.02*
+
+🏅 北斗人才计划（美团顶级实习生项目）
+
+📄 产出: ACL 2026\*1, EMNLP 2026 在投\*2, SAGE Benchmark
+
+💼 主导 Agentic RAG 与服务对话 Agent 研究：提出 SEAD 自进化 Agent 框架（ACL26）、DAGENT 多跳推理工作流、SAGE 服务对话评测基准
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg' alt="蚂蚁集团" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**蚂蚁集团 Ant Group · 研究型实习生** &nbsp; *2025.03 - 2025.08*
+
+🏅 研究型实习（杭州）
+
+📄 产出: AAAI 2026\*1, EMNLP 2026 在投\*1
+
+💼 RAG + RL 方向研究：提出 WebFilter 知识过滤框架（AAAI26）、EviNote-RAG 证据笔记增强方法
+</div>
+</div>
 
 </div>
 </details>
