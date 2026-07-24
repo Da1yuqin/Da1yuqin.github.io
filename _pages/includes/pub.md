@@ -10,8 +10,8 @@
 
 OneRec Team (Core Contributor, including **Yuqin Dai**)
 - 业界首个在工业推荐场景中让 thinking 模式稳定优于 non-thinking 模式的推荐推理基座模型。
-- 经历全流程模型开发：多轮 RFT、OPD、GRPO 等训练策略迭代，百卡集群训练。
-- 构建的 CoT 方案被论文最终版本采用，是组内唯一有效的 CoT 版本。
+- 经历全流程模型开发：多轮 RFT、OPD、GRPO 等训练策略迭代，千卡集群训练。
+- 构建的 CoT 方案被论文最终版本采用，在多方案验证中取得最佳效果。
 
 </div>
 </div>
@@ -190,9 +190,9 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2027 Under Review</div><img src='images/UrbanZero_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/UrbanZero_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[AAAI27 Under Review][Empowering a Self-Evolving LLM for Urban Land-Use Planning without Expert Supervision]
+[arXiv][Empowering a Self-Evolving LLM for Urban Land-Use Planning without Expert Supervision]
 
 [Chaoyang Shi](https://openreview.net/profile?id=~Chaoyang_Shi1)\*, [**Yuqin Dai**](https://openreview.net/profile?id=~Yuqin_Dai1)\*, [Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1), [Jun Yin](https://openreview.net/profile?id=~Jun_Yin13), [Ziyang Han](https://openreview.net/profile?id=~Ziyang_Han1), [Yuchen Zhou](https://openreview.net/profile?id=~Yuchen_Zhou3), [Shuai Lu](https://openreview.net/profile?id=~Shuai_Lu3), [Yuxing Han](https://openreview.net/profile?id=~Yuxing_Han2)
 
@@ -203,9 +203,9 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2027 Under Review</div><img src='images/PlanCraft_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/PlanCraft_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[AAAI27 Under Review][PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation]
+[arXiv][PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation]
 
 [Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1)\*, **Yuqin Dai**\*, Jun Yin\*, Ziyang Han, Ng Cheuk Hei, Jing Zhong, Chaoyang Shi, ZhanXiang Jin, Maowei Jiang, Yuxing Han, Shuai Lu†
 
@@ -215,9 +215,9 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2027 Under Review</div><img src='images/RenoCAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/RenoCAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[AAAI27 Under Review][RenoCAD: Residential Floorplan Renovation via Constraint-Preserving Editable Vector Generation](https://openreview.net/forum?id=tYPjoIj2yC&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DAAAI.org%2F2027%2FConference%2FAuthors%23your-submissions))
+[arXiv][RenoCAD: Residential Floorplan Renovation via Constraint-Preserving Editable Vector Generation]
 
 [Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1)\*, [Jun Yin](https://openreview.net/profile?id=~Jun_Yin13)\*, [**Yuqin Dai**](https://openreview.net/profile?id=~Yuqin_Dai1)\*, [Peilin Li](https://openreview.net/profile?id=~Peilin_Li3), [Ng Cheuk Hei](https://openreview.net/profile?id=~Ng_Cheuk_Hei1), [Han Zheng](https://openreview.net/profile?id=~Han_Zheng9), [Haoyuan Sun](https://openreview.net/profile?id=~Haoyuan_Sun2), [Ziyang Han](https://openreview.net/profile?id=~Ziyang_Han1), [Jing Zhong](https://openreview.net/profile?id=~Jing_Zhong1), [Tiancheng Zeng](https://openreview.net/profile?id=~Tiancheng_Zeng1), [ZhanXiang Jin](https://openreview.net/profile?id=~ZhanXiang_Jin1), [Chaoyang Shi](https://openreview.net/profile?id=~Chaoyang_Shi1), [Shuai Lu](https://openreview.net/profile?id=~Shuai_Lu3)
 
