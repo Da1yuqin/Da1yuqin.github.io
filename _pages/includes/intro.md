@@ -26,7 +26,7 @@
 </summary>
 <div markdown="1">
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='https://logo.clearbit.com/kuaishou.com' alt="快手" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/logo_kuaishou.png' alt="快手" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 **快手 Kuaishou · 核心推荐部门 / 基模算法部门** &nbsp; *2026.03 - 2026.06*
 
@@ -38,7 +38,7 @@
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='https://logo.clearbit.com/meituan.com' alt="美团" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/logo_meituan.png' alt="美团" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 **美团 Meituan · 对话智能体方向** &nbsp; *2025.08 - 2026.02*
 
@@ -50,7 +50,7 @@
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg' alt="蚂蚁集团" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/logo_antgroup.png' alt="蚂蚁集团" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 **蚂蚁集团 Ant Group · 研究型实习生** &nbsp; *2025.03 - 2025.08*
 
