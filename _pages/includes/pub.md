@@ -1,5 +1,21 @@
 
 # 📝 Publications 
+
+## Tech Reports
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[Tech Report][OneReason: A System Report on Reasoning-Enhanced LLM for Recommendation](https://arxiv.org/abs/2606.06260)
+[[arXiv]](https://arxiv.org/abs/2606.06260) [[机器之心]](https://www.jiqizhixin.com/articles/2026-06-09-18) [[智东西]](https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-06-12%2Fdoc-iniceccr2137617.shtml)
+
+OneRec Team (Core Contributor, including **Yuqin Dai**)
+- 业界首个在工业推荐场景中让 thinking 模式稳定优于 non-thinking 模式的推荐推理基座模型。
+- 经历全流程模型开发：多轮 RFT、OPD、GRPO 等训练策略迭代，百卡集群训练。
+- 构建的 CoT 方案被论文最终版本采用，是组内唯一有效的 CoT 版本。
+
+</div>
+</div>
+
 ## 一作/共一论文(12)
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -182,20 +198,8 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 </div>
 
-## 参与工作（12）
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[Tech Report][OneReason: A System Report on Reasoning-Enhanced LLM for Recommendation]
-[[arXiv]](https://arxiv.org/abs/2606.06260) [[机器之心]](https://www.jiqizhixin.com/articles/2026-06-09-18) [[智东西]](https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-06-12%2Fdoc-iniceccr2137617.shtml)
-
-OneRec Team (Core Contributor, including **Yuqin Dai**)
-- 业界首个在工业推荐场景中让 thinking 模式稳定优于 non-thinking 模式的推荐推理基座模型。
-- 经历全流程模型开发：多轮 RFT、OPD、GRPO 等训练策略迭代，百卡集群训练。
-- 构建的 CoT 方案被论文最终版本采用，是组内唯一有效的 CoT 版本。
-
-</div>
-</div>
+<details>
+<summary>参与工作（11篇）</summary>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -344,6 +348,7 @@ Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao 
 
 
 
+</details>
 
 <!-- 
 ## 中文论文

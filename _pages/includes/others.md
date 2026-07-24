@@ -9,8 +9,11 @@
 
 # 🏛️Professional Services
 Student Reviewers:
-- AAAI 2026
+- AAAI 2026, AAAI 2027
 - ICLR 2026
+- NeurIPS 2027
+- Pattern Recognition (PR)
+- NeuroComputing
 
 <span class='anchor' id='-xl'></span>
 

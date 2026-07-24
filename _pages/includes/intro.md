@@ -3,19 +3,14 @@
   <img src="https://img.shields.io/badge/dynamic/json?label=Paper%20Citations&query=total_citations&url=https%3A%2F%2Fcse.bth.se%2F~fer%2Fgooglescholar-api%2Fgooglescholar.php%3Fuser%3DlTE-iwYAAAAJ&logo=googlescholar&style=social" alt="Google Scholar">
 </a>
 
-
-
-
-
-我是一个横向发展，纵向研究的人。我在多个略有相关的领域展开了广泛的研究，并发表了一些还不错的论文。
  __我的研究方向包括但不限于__: 
- - 数字人动作生成 (Motion Generation): ICASSP24，AAAI25 👑Oral
- - 三维渲染 (3D Rendering): ICASSP24 👑Oral
- - 脑机接口交叉研究 (AI4Neuro): ICML25
- - Agentic RAG & RL (LLM): AAAI26, ACL26
+ - 🕺 数字人动作生成 (Motion Generation): ICASSP24，AAAI25 👑Oral
+ - 🎨 三维渲染 (3D Rendering): ICASSP24 👑Oral
+ - 🧠 脑机接口交叉研究 (AI4Neuro): ICML25
+ - 🤖 Agentic RAG & RL (LLM): AAAI26, ACL26
 
 
-如果您觉得我的研究方向很难理解，下面这个 VCR 可以很好的概述我的研究历程，即**先重建我的人体，后根据一段音乐，生成我的舞蹈动作，最终，我和一个机器人一起跳舞，实现群舞的效果**:
+我做过很多有意思的方向，学习能力很快，最后我发现学的东西实在太杂了，机缘巧合拿我当时在做的群舞模型做了一个这样的 vcr：
 
 ![](images/30001-0150.gif)
 
