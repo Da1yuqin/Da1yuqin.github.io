@@ -192,9 +192,9 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/UrbanZero_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv][Empowering a Self-Evolving LLM for Urban Land-Use Planning without Expert Supervision]
+Empowering a Self-Evolving LLM for Urban Land-Use Planning without Expert Supervision
 
-[Chaoyang Shi](https://openreview.net/profile?id=~Chaoyang_Shi1)\*, [**Yuqin Dai**](https://openreview.net/profile?id=~Yuqin_Dai1)\*, [Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1), [Jun Yin](https://openreview.net/profile?id=~Jun_Yin13), [Ziyang Han](https://openreview.net/profile?id=~Ziyang_Han1), [Yuchen Zhou](https://openreview.net/profile?id=~Yuchen_Zhou3), [Shuai Lu](https://openreview.net/profile?id=~Shuai_Lu3), [Yuxing Han](https://openreview.net/profile?id=~Yuxing_Han2)
+Chaoyang Shi\*, **Yuqin Dai**\*, Pengyu Zeng, Jun Yin, Ziyang Han, Yuchen Zhou, Shuai Lu, Yuxing Han
 
 - 将可执行城市规划定义为紧凑型 LLM 可从空间反馈中学习、无需专家标签的任务，并指出朴素自进化会受“直接生成城市级任务”和“直接求解全图”两类失败模式阻碍。
 - 构建 UrbanBench：基于 OSM 的可执行基准，覆盖 53 个真实城市窗口和 8,834 个规划单元，通过 5 类可程序验证的空间目标实现标准化比较。
@@ -205,9 +205,9 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/PlanCraft_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv][PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation]
+PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation
 
-[Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1)\*, **Yuqin Dai**\*, Jun Yin\*, Ziyang Han, Ng Cheuk Hei, Jing Zhong, Chaoyang Shi, ZhanXiang Jin, Maowei Jiang, Yuxing Han, Shuai Lu†
+Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Ziyang Han, Ng Cheuk Hei, Jing Zhong, Chaoyang Shi, ZhanXiang Jin, Maowei Jiang, Yuxing Han, Shuai Lu†
 
 - 识别“设计是渐进式过程”和“平面图是空间先验”两点被忽视的结构性洞察，并提出 PlanCraft：首个将不完整设计草图连接到完整带家具 3D 住宅场景的统一系统。
 - 构建 SketchPlan 自动化数据流水线，通过回放建筑师绘图过程生成不同完成度的局部草图训练对；提出 PlanCraft-Diff 统一图像域扩散模型，结合两阶段粗到细训练与连通性候选过滤，使 FID 相比 2D 基线降低 2.6–11 倍。
@@ -217,9 +217,9 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/RenoCAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv][RenoCAD: Residential Floorplan Renovation via Constraint-Preserving Editable Vector Generation]
+RenoCAD: Residential Floorplan Renovation via Constraint-Preserving Editable Vector Generation
 
-[Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1)\*, [Jun Yin](https://openreview.net/profile?id=~Jun_Yin13)\*, [**Yuqin Dai**](https://openreview.net/profile?id=~Yuqin_Dai1)\*, [Peilin Li](https://openreview.net/profile?id=~Peilin_Li3), [Ng Cheuk Hei](https://openreview.net/profile?id=~Ng_Cheuk_Hei1), [Han Zheng](https://openreview.net/profile?id=~Han_Zheng9), [Haoyuan Sun](https://openreview.net/profile?id=~Haoyuan_Sun2), [Ziyang Han](https://openreview.net/profile?id=~Ziyang_Han1), [Jing Zhong](https://openreview.net/profile?id=~Jing_Zhong1), [Tiancheng Zeng](https://openreview.net/profile?id=~Tiancheng_Zeng1), [ZhanXiang Jin](https://openreview.net/profile?id=~ZhanXiang_Jin1), [Chaoyang Shi](https://openreview.net/profile?id=~Chaoyang_Shi1), [Shuai Lu](https://openreview.net/profile?id=~Shuai_Lu3)
+Pengyu Zeng\*, Jun Yin\*, **Yuqin Dai**\*, Peilin Li, Ng Cheuk Hei, Han Zheng, Haoyuan Sun, Ziyang Han, Jing Zhong, Tiancheng Zeng, ZhanXiang Jin, Chaoyang Shi, Shuai Lu
 
 - 将住宅改造建模为选择性向量生成，提出区别于完整户型合成的“保留、编辑、验证”三难问题，并构建包含 10,451 个案例的 RenoCAD-DS。
 - 提出 RenoCAD-IR，显式区分固定建筑基元与可编辑布局对象；进一步开发泄漏受控的自回归流水线，包含结构化解析、确定性固定元素合并和向量级验证。
