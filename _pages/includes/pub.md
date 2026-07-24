@@ -3,7 +3,7 @@
 
 ## Tech Reports（2）
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2026</div><img src='images/onereason_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [Tech Report][OneReason: A System Report on Reasoning-Enhanced LLM for Recommendation](https://arxiv.org/abs/2606.06260)
 [[arXiv]](https://arxiv.org/abs/2606.06260) [[机器之心]](https://www.jiqizhixin.com/articles/2026-06-09-18) [[智东西]](https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-06-12%2Fdoc-iniceccr2137617.shtml)
