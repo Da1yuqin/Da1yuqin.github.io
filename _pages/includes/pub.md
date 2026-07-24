@@ -31,7 +31,7 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
-## 一作/共一论文(12)
+## 一作/共一论文(15)
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ACL26 Findings][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
@@ -189,6 +189,43 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 </div>
 
 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2027 Under Review</div><img src='images/UrbanZero_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[AAAI27 Under Review][Empowering a Self-Evolving LLM for Urban Land-Use Planning without Expert Supervision]
+
+[Chaoyang Shi](https://openreview.net/profile?id=~Chaoyang_Shi1)\*, [**Yuqin Dai**](https://openreview.net/profile?id=~Yuqin_Dai1)\*, [Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1), [Jun Yin](https://openreview.net/profile?id=~Jun_Yin13), [Ziyang Han](https://openreview.net/profile?id=~Ziyang_Han1), [Yuchen Zhou](https://openreview.net/profile?id=~Yuchen_Zhou3), [Shuai Lu](https://openreview.net/profile?id=~Shuai_Lu3), [Yuxing Han](https://openreview.net/profile?id=~Yuxing_Han2)
+
+- 将可执行城市规划定义为紧凑型 LLM 可从空间反馈中学习、无需专家标签的任务，并指出朴素自进化会受“直接生成城市级任务”和“直接求解全图”两类失败模式阻碍。
+- 构建 UrbanBench：基于 OSM 的可执行基准，覆盖 53 个真实城市窗口和 8,834 个规划单元，通过 5 类可程序验证的空间目标实现标准化比较。
+- 提出 UrbanZero 空间自进化框架：单一模型同时担任任务提出者与求解者，生成语义规划简报，编译为地块级任务并以 patch-wise planning 求解，再用程序验证器的结果反馈调节后续任务。
+- 实验表明 UrbanZero 将规划能力内化到紧凑本地模型中，使基础规划器提升 25.9%，原始总分超过最强 API 参考模型，并验证 patch-wise solving 与 outcome-conditioned feedback 对城市级 LLM 规划有效。
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2027 Under Review</div><img src='images/PlanCraft_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[AAAI27 Under Review][PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation]
+
+[Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1)\*, **Yuqin Dai**\*, Jun Yin\*, Ziyang Han, Ng Cheuk Hei, Jing Zhong, Chaoyang Shi, ZhanXiang Jin, Maowei Jiang, Yuxing Han, Shuai Lu†
+
+- 识别“设计是渐进式过程”和“平面图是空间先验”两点被忽视的结构性洞察，并提出 PlanCraft：首个将不完整设计草图连接到完整带家具 3D 住宅场景的统一系统。
+- 构建 SketchPlan 自动化数据流水线，通过回放建筑师绘图过程生成不同完成度的局部草图训练对；提出 PlanCraft-Diff 统一图像域扩散模型，结合两阶段粗到细训练与连通性候选过滤，使 FID 相比 2D 基线降低 2.6–11 倍。
+- 设计 PlanCraft-Agent：一个扎根于 3D 场景的装配阶段，将语言模型约束生成、规则扩展与碰撞感知摆放求解器结合，并以验证过的房间边界为锚点；专家评估显示其在合理性、实用性和个性化上超过此前语言模型式 3D 系统。
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2027 Under Review</div><img src='images/RenoCAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[AAAI27 Under Review][RenoCAD: Residential Floorplan Renovation via Constraint-Preserving Editable Vector Generation](https://openreview.net/forum?id=tYPjoIj2yC&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DAAAI.org%2F2027%2FConference%2FAuthors%23your-submissions))
+
+[Pengyu Zeng](https://openreview.net/profile?id=~Pengyu_Zeng1)\*, [Jun Yin](https://openreview.net/profile?id=~Jun_Yin13)\*, [**Yuqin Dai**](https://openreview.net/profile?id=~Yuqin_Dai1)\*, [Peilin Li](https://openreview.net/profile?id=~Peilin_Li3), [Ng Cheuk Hei](https://openreview.net/profile?id=~Ng_Cheuk_Hei1), [Han Zheng](https://openreview.net/profile?id=~Han_Zheng9), [Haoyuan Sun](https://openreview.net/profile?id=~Haoyuan_Sun2), [Ziyang Han](https://openreview.net/profile?id=~Ziyang_Han1), [Jing Zhong](https://openreview.net/profile?id=~Jing_Zhong1), [Tiancheng Zeng](https://openreview.net/profile?id=~Tiancheng_Zeng1), [ZhanXiang Jin](https://openreview.net/profile?id=~ZhanXiang_Jin1), [Chaoyang Shi](https://openreview.net/profile?id=~Chaoyang_Shi1), [Shuai Lu](https://openreview.net/profile?id=~Shuai_Lu3)
+
+- 将住宅改造建模为选择性向量生成，提出区别于完整户型合成的“保留、编辑、验证”三难问题，并构建包含 10,451 个案例的 RenoCAD-DS。
+- 提出 RenoCAD-IR，显式区分固定建筑基元与可编辑布局对象；进一步开发泄漏受控的自回归流水线，包含结构化解析、确定性固定元素合并和向量级验证。
+- 实验揭示语法有效性与几何正确性之间存在明显差距。RenoCAD 在房间与门恢复方面显著优于直接提示的 LLM/VLM，并持续提升 CV-Bench 与 BLINK 上的平面空间推理能力。
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024 Oral🥇</div><img src='images/mainfig_text2avatar.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
