@@ -16,6 +16,21 @@ OneRec Team (Core Contributor, including **Yuqin Dai**)
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2025</div><img src='images/atom_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[Tech Report][Atom-Searcher: Enhancing Agentic Deep Research via Fine-Grained Atomic Thought Reward](https://arxiv.org/pdf/2508.12800)
+[[arXiv]](https://arxiv.org/pdf/2508.12800) [[Github]](https://github.com/antgroup/Research-Venus) [[机器之心]](https://zhuanlan.zhihu.com/p/1944058738945291292)
+
+<a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a>
+
+Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wenwen Xiong, **Yuqin Dai**, Shuo Yang, Zhanwei Zhang, Qiwen Wang, Yang Qin, Changhua Meng
+- 提出全新的"原子思维"范式：将大模型的推理过程拆解为细粒度的功能单元，从而引导模型进行更清晰、更深入的推理。
+- 设计原子思维奖励机制（ATR）及课程式聚合策略：通过将 ATR 与最终结果奖励结合，缓解了策略优化中的梯度冲突和奖励稀疏问题。
+- 构建 Atom-Searcher 框架并验证效果：基于原子思维与奖励聚合策略，在七个基准测试上超越现有最优方法。
+
+</div>
+</div>
+
 ## 一作/共一论文(12)
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -199,7 +214,7 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 
 <details>
-<summary>参与工作（11篇）</summary>
+<summary>参与工作（10篇）</summary>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -212,22 +227,6 @@ Ning Gao, Wei Zhang, **Yuqin Dai**, Ling Shi, Ziyin Wang, Yujie Wang, Wei He, Ji
 </div>
 </div> 
 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/atom_mainfig.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-[arXiv25][Atom-Searcher: Enhancing Agentic Deep Research via Fine-Grained Atomic Thought Reward](https://arxiv.org/pdf/2508.12800)
-
-<a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/forks/antgroup/Research-Venus?style=social" alt="GitHub Forks" /></a>
-[[Github]](https://github.com/antgroup/Research-Venus) 
-[[机器之心]](https://zhuanlan.zhihu.com/p/1944058738945291292)
-
-Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wenwen Xiong, **Yuqin Dai**, Shuo Yang, Zhanwei Zhang, Qiwen Wang, Yang Qin, Changhua Meng
-- 提出全新的“原子思维”范式：将大模型的推理过程拆解为细粒度的功能单元，从而引导模型进行更清晰、更深入的推理。
-- 设计原子思维奖励机制（ATR）及课程式聚合策略：通过将 ATR 与最终结果奖励结合，缓解了策略优化中的梯度冲突和奖励稀疏问题。
-- 构建 Atom-Searcher 框架并验证效果：基于原子思维与奖励聚合策略，提出了一个新的强化学习框架 Atom-Searcher，在七个基准测试上超越现有最优方法，并展现出多方面优势。
-</div>
-</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/NVC_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
