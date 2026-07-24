@@ -89,10 +89,45 @@ __我的研究方向包括但不限于__:
 </summary>
 <div markdown="1">
 
-- *2024.09 - 2025.03*, 上海 AI Lab 浦江实验室, 上海, 实习生 (Intern) 💡产出: ICML25\*1
-- *2024.06 - 2024.09*, 光明实验室, 深圳, 论文合作者 💡产出: TPAMI25\*1
-- *2024.05 - 2024.08*, 南京大学苏州校区, 江苏苏州, 科研助理 (RA) 💡产出: AAAI25 Oral\*1
-- *2023.04 - 2024.03*, 清华大学深圳国际研究生院(THU), 深圳, 科研助理 (RA) 💡产出: ICASSP24 Oral\*1, ICASSP24\*1
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/logo_shailab.png' alt="上海AI Lab" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**上海人工智能实验室 Shanghai AI Lab · 浦江实验室** &nbsp; *2024.09 - 2025.03*
+
+📍 上海 · 实习生 (Intern)
+
+💡 产出: ICML 2025 \*1
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/logo_guangming.png' alt="光明实验室" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**光明实验室 Guangming Laboratory** &nbsp; *2024.06 - 2024.09*
+
+📍 深圳 · 论文合作者
+
+💡 产出: TPAMI 2025 \*1
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/logo_nju.png' alt="南京大学" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**南京大学 NJU · 苏州校区** &nbsp; *2024.05 - 2024.08*
+
+📍 江苏苏州 · 科研助理 (RA)
+
+💡 产出: AAAI 2025 👑Oral \*1
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/logo_thugsz.png' alt="清华深研院" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**清华大学深圳国际研究生院 SIGS** &nbsp; *2023.04 - 2024.03*
+
+📍 深圳 · 科研助理 (RA)
+
+💡 产出: ICASSP 2024 👑Oral \*1, ICASSP 2024 \*1
+</div>
+</div>
 
 </div>
 </details>

@@ -6,11 +6,22 @@
 - *2026.06*: 🎉 4篇一作/共一论文投稿至 EMNLP 2026!
 - *2026.03*: 🚀 加入快手 OneRec 核心团队, 入选 K-Star 人才计划!
 
+<details>
+<summary><strong>2025</strong></summary>
+<div markdown="1">
+
 ### 2025
 - *2025.08*: 🚀 加入美团, 入选北斗人才计划!
 - *2025.05*: 🎉 一作论文 SEAD 被 ACL 2026 Findings 接收!
 - *2025.02*: 🎉 共一论文 GreenPlanner 被 CVPR 2026 Findings 接收!
 - *2025.01*: 🎉 RAMA 被 WWW 2026 Workshop 接收!
+
+</div>
+</details>
+
+<details>
+<summary><strong>2024</strong></summary>
+<div markdown="1">
 
 ### 2024
 - *2024.12*: 🎉 一作论文 WebFilter, TCDiff++ 分别被 AAAI 2026, IJCV 2025 接收! 参与工作 LogicBench/LogicCLIP 被 AAAI 2026 接收为 👑Oral!
@@ -21,3 +32,6 @@
 - *2024.06*: 🎉 FloorPlan-LLaMa 被 ACL 2025 接收为 👑Oral, ⭐SAC Highlight!
 - *2024.05*: 🎉 MindAligner 被 ICML 2025 接收!
 - *2024.01*: 🎉 TCDiff 被 AAAI 2025 接收为 👑Oral!
+
+</div>
+</details>
