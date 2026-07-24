@@ -1,5 +1,7 @@
 2025年3月，我正式进入 LLM 领域，并很快在工业界发表了多篇论文、展开了有效实践，具备较快的学习加速度。目前我是清华大学的博1学生😁. 此前我曾在快手、美团、蚂蚁集团担任研究型实习生. 我的本硕均在南京理工大学, 是 PCALab 的一员. 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 目前我已经有 8 篇一作/共一的学术论文被国际会议/期刊接收 (4A+2B+2Findings), 4篇在投. 我的跨领域研究经历使我形成了从多模态生成到智能体推理的连续研究视角. 
-[[Google Scholar]](https://scholar.google.com/citations?user=lTE-iwYAAAAJ&hl=zh-CN)
+<a href="https://scholar.google.com/citations?user=lTE-iwYAAAAJ&hl=zh-CN" target="_blank">
+  <img src="https://img.shields.io/badge/dynamic/json?label=Paper%20Citations&query=total_citations&url=https%3A%2F%2Fcse.bth.se%2F~fer%2Fgooglescholar-api%2Fgooglescholar.php%3Fuser%3DlTE-iwYAAAAJ&logo=googlescholar&style=social" alt="Google Scholar">
+</a>
 
  __我的研究方向包括但不限于__: 
  - 🕺 数字人动作生成 (Motion Generation): ICASSP24，AAAI25 👑Oral
@@ -30,9 +32,9 @@
 <div class='paper-box-text' markdown="1">
 **快手 Kuaishou · 核心推荐部门 / 基模算法部门** &nbsp; *2026.03 - 2026.06*
 
-<strong>🏅 K-Star 人才计划</strong>
+<strong>🏅 K-Star 人才计划（快手校招顶级人才项目）</strong>
 
-📄 产出: OneReason 技术报告已公开
+📄 产出: OneReason 技术报告已公开，GitHub 获得 300+ Stars
 
 💼 参与快手推荐推理基座模型全流程开发：按日迭代训练与评测，使用千卡级集群协同推进，不到一个月取得行业领先结果；构建的 CoT 方案为组内唯一有效版本并被最终论文采用
 </div>
@@ -42,7 +44,7 @@
 <div class='paper-box-text' markdown="1">
 **美团 Meituan · 对话智能体方向** &nbsp; *2025.08 - 2026.02*
 
-<strong>🏅 北斗人才计划</strong>
+<strong>🏅 北斗人才计划（美团顶级实习生项目）</strong>
 
 📄 产出: ACL 2026\*1, EMNLP 2026 在投\*2, SAGE Benchmark
 
