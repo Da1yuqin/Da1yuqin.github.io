@@ -35,9 +35,9 @@
 
 <div class='paper-box'><div class='paper-box-image'><div><img src='https://logo.clearbit.com/kuaishou.com' alt="快手" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-**快手 Kuaishou · OneRec 核心部门** &nbsp; *2026.03 - 2026.06*
+**快手 Kuaishou · 核心推荐部门 / 基模算法部门** &nbsp; *2026.03 - 2026.06*
 
-🏅 K-Star 人才计划（快手校招顶级人才项目）
+<strong>🏅 K-Star 人才计划（快手校招顶级人才项目）</strong>
 
 📄 产出: OneReason Tech Report (Core Contributor)
 
@@ -49,7 +49,7 @@
 <div class='paper-box-text' markdown="1">
 **美团 Meituan · 对话智能体方向** &nbsp; *2025.08 - 2026.02*
 
-🏅 北斗人才计划（美团顶级实习生项目）
+<strong>🏅 北斗人才计划（美团顶级实习生项目）</strong>
 
 📄 产出: ACL 2026\*1, EMNLP 2026 在投\*2, SAGE Benchmark
 
@@ -61,7 +61,7 @@
 <div class='paper-box-text' markdown="1">
 **蚂蚁集团 Ant Group · 研究型实习生** &nbsp; *2025.03 - 2025.08*
 
-🏅 研究型实习（杭州）
+<strong>🏅 研究型实习（杭州）</strong>
 
 📄 产出: AAAI 2026\*1, EMNLP 2026 在投\*1
 

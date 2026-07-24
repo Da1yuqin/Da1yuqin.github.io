@@ -187,6 +187,7 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [Tech Report][OneReason: A System Report on Reasoning-Enhanced LLM for Recommendation]
+[[arXiv]](https://arxiv.org/abs/2606.06260)
 
 OneRec Team (Core Contributor, including **Yuqin Dai**)
 - 业界首个在工业推荐场景中让 thinking 模式稳定优于 non-thinking 模式的推荐推理基座模型。
