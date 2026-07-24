@@ -1,6 +1,6 @@
 
 # 📝 Publications 
-## 一作/共一论文(10)
+## 一作/共一论文(12)
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ACL26 Findings][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
@@ -36,9 +36,9 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review 2026</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv25][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
+[Under Review][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
  
 <a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/stars/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/forks/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Forks" /></a>
@@ -106,15 +106,39 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review 2026</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv26][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
+[Under Review][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
 [[Github]](https://anonymous.4open.science/r/SAGE-Bench-4CD3/README.md)
 
-Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Yujie Wang, Wei He, Jinpeng Wang, Deiyi Xiong
+Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xinwei Wu, Yujie Wang, Wei He, Jinpeng Wang, Linlong Xu, Deiyi Xiong
 - 提出SAGE基准，将非结构化SOP形式化为动态对话图，实现逻辑合规与路径覆盖验证。
 - 引入对抗意图分类与扩展机制，支持低成本跨域部署及自动对话数据合成。
 - 发现模型存在"执行鸿沟"与"共情韧性"：能识别意图但执行错误，对抗下仍礼貌。
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review 2026</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[Under Review][DAGENT: Optimizing Multi-Hop RAG as Executable Reasoning Workflows]
+
+**Jingyu He**\*, **Yuqin Dai**\*, Kaiwen Zhang, Hang Zhang, Shangke Lyu, Yuchen Yan, Haiwen Hong, Hong Zhao, Yao Fu, Weiming Lu, Yiquan Wu, Yongliang Shen
+- 提出 DAGENT 框架，将多跳 RAG 过程建模为可执行推理工作流，实现结构化的检索-推理路径规划。
+- 通过工作流优化策略，显著提升多跳问答场景下的检索精度与推理质量。
+- 在多个多跳问答基准上取得优于现有 RAG 方法的性能。
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review 2026</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[Under Review][Have LLMs Truly Learned to Search? Rehearsal-Guided Execution for Robust Agentic RAG]
+
+**Jinyan Chen**\*, **Yuqin Dai**\*, Yijun Li, Yuchen Yan, Zhipiao Liu, Hongwei Yang, Yiquan Wu, Wenqi Zhang, Weiming Lu, Yongliang Shen
+- 提出 Rehearsal-RL 框架，通过"排练-执行"两阶段范式增强 LLM 的搜索规划能力与鲁棒性。
+- 引入排练引导机制，让模型在正式执行检索前先进行轻量预演，减少无效搜索与推理偏差。
+- 在多个 RAG 基准上验证了方法的有效性，显著提升 Agentic RAG 在复杂查询场景下的表现。
 
 </div>
 </div>
@@ -158,7 +182,19 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 </div>
 
-## 参与工作（10）
+## 参与工作（12）
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+[Tech Report][OneReason: A System Report on Reasoning-Enhanced LLM for Recommendation]
+
+OneRec Team (Core Contributor, including **Yuqin Dai**)
+- 业界首个在工业推荐场景中让 thinking 模式稳定优于 non-thinking 模式的推荐推理基座模型。
+- 经历全流程模型开发：多轮 RFT、OPD、GRPO 等训练策略迭代，百卡集群训练。
+- 构建的 CoT 方案被论文最终版本采用，是组内唯一有效的 CoT 版本。
+
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
