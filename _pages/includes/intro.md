@@ -8,8 +8,9 @@
 __我的研究方向包括但不限于__:
 
 **🤖 LLM 方向**
- - 🔍 Agentic RAG & 多跳推理: AAAI26, ACL26
- - 🎯 LLM 推理与 RL 训练: 快手实习产出
+ - 🔍 Agentic RAG & 多跳推理（蚂蚁 + 美团实习产出）
+ - 🎯 LLM 推理与 RL 训练: WebFilter (AAAI26), EviNote-RAG, DAGENT, Rehearsal-RL, OneReason Tech Report
+ - 🛒 LLM4RAG（快手实习产出）
  - 📊 对话 Agent 评测 (SAGE Benchmark): 美团实习产出
 
 <details>
@@ -48,7 +49,7 @@ __我的研究方向包括但不限于__:
 
 <strong>🏅 K-Star 人才计划</strong>
 
-📄 产出: OneReason 技术报告已公开，GitHub 获得 300+ Stars
+📄 产出: OneReason 技术报告已公开
 
 💼 参与快手推荐推理基座模型全流程开发：按日迭代训练与评测，使用千卡级集群协同推进，不到一个月取得行业领先结果；构建的 CoT 方案为组内唯一有效版本并被最终论文采用
 </div>
@@ -74,7 +75,7 @@ __我的研究方向包括但不限于__:
 
 📄 产出: AAAI 2026\*1, EMNLP 2026 在投\*1, DAGENT / Rehearsal-RL 等多跳推理工作流工作
 
-✨ 亮点: 参与的技术报告 Atom-Searcher 已公开
+✨ 亮点: 参与的技术报告 Atom-Searcher 已公开，GitHub 获得 300+ Stars
 
 💼 RAG + RL 方向研究：提出 WebFilter 知识过滤框架（AAAI26）、EviNote-RAG 证据笔记增强方法
 </div>
