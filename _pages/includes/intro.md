@@ -3,7 +3,9 @@
   <img src="https://img.shields.io/badge/dynamic/json?label=Paper%20Citations&query=total_citations&url=https%3A%2F%2Fcse.bth.se%2F~fer%2Fgooglescholar-api%2Fgooglescholar.php%3Fuser%3DlTE-iwYAAAAJ&logo=googlescholar&style=social" alt="Google Scholar">
 </a>
 
- __我的研究方向包括但不限于__: 
+ 我的主要研究成果均来自工业界的实习经历，涵盖智能体推理、检索增强生成、数字人动作生成、三维渲染、脑机接口等多个方向。
+
+__我的研究方向包括但不限于__: 
  - 🕺 数字人动作生成 (Motion Generation): ICASSP24，AAAI25 👑Oral
  - 🎨 三维渲染 (3D Rendering): ICASSP24 👑Oral
  - 🧠 脑机接口交叉研究 (AI4Neuro): ICML25
