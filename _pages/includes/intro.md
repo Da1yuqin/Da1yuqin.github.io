@@ -1,4 +1,4 @@
-2025年3月，我正式进入 LLM 领域，并很快在工业界发表了多篇论文、展开了有效实践，具备较快的学习加速度。目前我是清华大学的博1学生😁. 此前我曾在快手、美团、蚂蚁集团担任研究型实习生. 我的本硕均在南京理工大学, 是 PCALab 的一员. 此外, 我曾受到国家公派资助(CSC, IGSF), 作为 [University of Dayton](https://udayton.edu/) 的本科交换生, 进行为期一个学期的访学, 并取得了 4.0/4.0 的成绩, 入选当年 Deans' List. 目前我已经有 8 篇一作/共一的学术论文被国际会议/期刊接收 (4A+2B+2Findings), 4篇在投. 我的跨领域研究经历使我形成了从多模态生成到智能体推理的连续研究视角. 
+2025年3月，我正式进入 LLM 领域，并很快在工业界发表了多篇论文、展开了有效实践，具备较快的学习加速度。目前我是清华大学的博1学生😁. 此前我曾在快手、美团、蚂蚁集团担任研究型实习生. 目前我已经有 8 篇一作/共一的学术论文被国际会议/期刊接收 (4A+2B+2Findings), 4篇在投. 我的跨领域研究经历使我形成了从多模态生成到智能体推理的连续研究视角. 此外，我曾在北京、上海、杭州、深圳、苏州、南京等多个城市生活工作，对每座城市都有深刻的体验与感受。
 <a href="https://scholar.google.com/citations?user=lTE-iwYAAAAJ&hl=zh-CN" target="_blank">
   <img src="https://img.shields.io/badge/dynamic/json?label=Paper%20Citations&query=total_citations&url=https%3A%2F%2Fcse.bth.se%2F~fer%2Fgooglescholar-api%2Fgooglescholar.php%3Fuser%3DlTE-iwYAAAAJ&logo=googlescholar&style=social" alt="Google Scholar">
 </a>
