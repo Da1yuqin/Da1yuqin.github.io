@@ -59,7 +59,7 @@ __我的研究方向包括但不限于__:
 
 <strong>🏅 北斗人才计划</strong>
 
-📄 产出: ACL 2026\*1, EMNLP 2026 在投\*2, SAGE Benchmark
+📄 产出: ACL 2026\*1, ICML26\*1, NeurIPS 2026 在投\*1, SAGE Benchmark
 
 💼 主导 Agentic RAG 与服务对话 Agent 研究：提出 SEAD 自进化 Agent 框架（ACL26）、DAGENT 多跳推理工作流、SAGE 服务对话评测基准
 </div>
