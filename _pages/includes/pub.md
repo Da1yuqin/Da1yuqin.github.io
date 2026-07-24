@@ -36,9 +36,9 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review 2026</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[Under Review][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
+[arXiv25][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
  
 <a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/stars/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/forks/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Forks" /></a>
@@ -106,9 +106,9 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review 2026</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[Under Review][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
+[arXiv26][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
 [[Github]](https://anonymous.4open.science/r/SAGE-Bench-4CD3/README.md)
 
 Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xinwei Wu, Yujie Wang, Wei He, Jinpeng Wang, Linlong Xu, Deiyi Xiong
@@ -119,9 +119,9 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review 2026</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/dagent.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[Under Review][DAGENT: Optimizing Multi-Hop RAG as Executable Reasoning Workflows]
+[arXiv][DAGENT: Optimizing Multi-Hop RAG as Executable Reasoning Workflows]
 
 **Jingyu He**\*, **Yuqin Dai**\*, Kaiwen Zhang, Hang Zhang, Shangke Lyu, Yuchen Yan, Haiwen Hong, Hong Zhao, Yao Fu, Weiming Lu, Yiquan Wu, Yongliang Shen
 - 提出 DAGENT 框架，将多跳 RAG 过程建模为可执行推理工作流，实现结构化的检索-推理路径规划。
@@ -131,9 +131,9 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review 2026</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/rehearsal-rl.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[Under Review][Have LLMs Truly Learned to Search? Rehearsal-Guided Execution for Robust Agentic RAG]
+[arXiv][Have LLMs Truly Learned to Search? Rehearsal-Guided Execution for Robust Agentic RAG]
 
 **Jinyan Chen**\*, **Yuqin Dai**\*, Yijun Li, Yuchen Yan, Zhipiao Liu, Hongwei Yang, Yiquan Wu, Wenqi Zhang, Weiming Lu, Yongliang Shen
 - 提出 Rehearsal-RL 框架，通过"排练-执行"两阶段范式增强 LLM 的搜索规划能力与鲁棒性。
