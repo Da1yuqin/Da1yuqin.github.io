@@ -21,7 +21,7 @@ OneRec Team (Core Contributor, including **Yuqin Dai**)
 [Tech Report][Atom-Searcher: Enhancing Agentic Deep Research via Fine-Grained Atomic Thought Reward](https://arxiv.org/pdf/2508.12800)
 [[arXiv]](https://arxiv.org/pdf/2508.12800) [[Github]](https://github.com/antgroup/Research-Venus) [[机器之心]](https://zhuanlan.zhihu.com/p/1944058738945291292)
 
-<a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a> <a href="https://github.com/antgroup/Research-Venus/forks"><img src="https://img.shields.io/github/forks/antgroup/Research-Venus?style=social" alt="GitHub Forks" /></a>
 
 Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wenwen Xiong, **Yuqin Dai**, Shuo Yang, Zhanwei Zhang, Qiwen Wang, Yang Qin, Changhua Meng
 - 提出全新的"原子思维"范式：将大模型的推理过程拆解为细粒度的功能单元，从而引导模型进行更清晰、更深入的推理。
