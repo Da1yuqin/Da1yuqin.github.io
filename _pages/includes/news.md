@@ -2,6 +2,7 @@
 
 ### 2026
 - *2026.07*: 🎉 OneReason 技术报告公开! 业界首个在工业推荐场景中让 thinking 模式稳定优于 non-thinking 模式的推荐推理基座模型.
+- *2026.07*: 🎉 DAGENT 和 Rehearsal-RL 论文公开至 arXiv!
 - *2026.06*: 🎉 4篇一作/共一论文投稿至 EMNLP 2026!
 - *2026.03*: 🚀 加入快手 OneRec 核心团队, 入选 K-Star 人才计划!
 
@@ -28,7 +29,3 @@
 - *2024.01*: 🎉 TCDiff 被 AAAI 2025 接收为 👑Oral!
 
 </details>
-
-<!--
-- *2024.04*: 🎉 两篇论文发表于 ICASSP 2024 (1 👑Oral, 1 Poster)!
--->

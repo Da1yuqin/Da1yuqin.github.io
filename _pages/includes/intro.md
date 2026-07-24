@@ -32,7 +32,7 @@
 <div class='paper-box-text' markdown="1">
 **快手 Kuaishou · 核心推荐部门 / 基模算法部门** &nbsp; *2026.03 - 2026.06*
 
-<strong>🏅 K-Star 人才计划（快手校招顶级人才项目）</strong>
+<strong>🏅 K-Star 人才计划</strong>
 
 📄 产出: OneReason 技术报告已公开，GitHub 获得 300+ Stars
 
@@ -44,7 +44,7 @@
 <div class='paper-box-text' markdown="1">
 **美团 Meituan · 对话智能体方向** &nbsp; *2025.08 - 2026.02*
 
-<strong>🏅 北斗人才计划（美团顶级实习生项目）</strong>
+<strong>🏅 北斗人才计划</strong>
 
 📄 产出: ACL 2026\*1, EMNLP 2026 在投\*2, SAGE Benchmark
 
