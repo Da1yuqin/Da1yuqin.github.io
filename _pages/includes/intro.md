@@ -1,6 +1,6 @@
-2025年3月，我正式进入 LLM 领域，并很快在工业界发表了多篇论文、展开了有效实践，具备较快的学习加速度。目前我是清华大学的博1学生😁. 此前我曾在快手、美团、蚂蚁集团担任研究型实习生. 目前我已经有 8 篇一作/共一的学术论文被国际会议/期刊接收 (4A+2B+2Findings), 4篇在投. 我的跨领域研究经历使我形成了从多模态生成到智能体推理的连续研究视角. 此外，我曾在北京、上海、杭州、深圳、苏州、南京等多个城市生活工作，对每座城市都有深刻的体验与感受。
+2025年3月，我正式进入 LLM 领域，并很快在工业界发表了多篇论文、展开了有效实践，具备较快的学习加速度。目前我是清华大学的博1学生😁. 此前我曾在快手、美团、蚂蚁集团担任研究型实习生. 目前我已经有 8 篇一作/共一的学术论文被国际会议/期刊接收 (4A+2B+2Findings), 4篇在投（截至 2026.07）. 我的跨领域研究经历使我形成了从多模态生成到智能体推理的连续研究视角. 此外，我曾在北京、上海、杭州、深圳、苏州、南京等多个城市生活工作，对每座城市都有深刻的体验与感受。
 <a href="https://scholar.google.com/citations?user=lTE-iwYAAAAJ&hl=zh-CN" target="_blank">
-  <img src="https://img.shields.io/badge/dynamic/json?label=Paper%20Citations&query=total_citations&url=https%3A%2F%2Fcse.bth.se%2F~fer%2Fgooglescholar-api%2Fgooglescholar.php%3Fuser%3DlTE-iwYAAAAJ&logo=googlescholar&style=social" alt="Google Scholar">
+  <img src="https://img.shields.io/badge/Google%20Scholar-Profile-blue?logo=googlescholar&style=social" alt="Google Scholar">
 </a>
 
  我的主要研究成果均来自工业界的实习经历，涵盖智能体推理、检索增强生成、数字人动作生成、三维渲染、脑机接口等多个方向。
@@ -46,7 +46,7 @@ __我的研究方向包括但不限于__:
 <div class='paper-box-text' markdown="1">
 **快手 Kuaishou · 核心推荐部门 / 基模算法部门** &nbsp; *2026.03 - 2026.06*
 
-<strong>🏅 K-Star 人才计划（快手校招顶级人才项目）</strong>
+<strong>🏅 K-Star 人才计划</strong>
 
 📄 产出: OneReason 技术报告已公开，GitHub 获得 300+ Stars
 
