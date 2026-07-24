@@ -5,11 +5,23 @@
 
  我的主要研究成果均来自工业界的实习经历，涵盖智能体推理、检索增强生成、数字人动作生成、三维渲染、脑机接口等多个方向。
 
-__我的研究方向包括但不限于__: 
+__我的研究方向包括但不限于__:
+
+**🤖 LLM 方向**
+ - 🔍 Agentic RAG & 多跳推理: AAAI26, ACL26
+ - 🎯 LLM 推理与 RL 训练: 快手实习产出
+ - 📊 对话 Agent 评测 (SAGE Benchmark): 美团实习产出
+
+<details>
+<summary><strong>👁️ CV 方向（点击展开）</strong></summary>
+<div markdown="1">
+
  - 🕺 数字人动作生成 (Motion Generation): ICASSP24，AAAI25 👑Oral
  - 🎨 三维渲染 (3D Rendering): ICASSP24 👑Oral
  - 🧠 脑机接口交叉研究 (AI4Neuro): ICML25
- - 🤖 Agentic RAG & RL (LLM): AAAI26, ACL26
+
+</div>
+</details>
 
 
 我做过很多有意思的方向，学习能力很快，最后我发现学的东西实在太杂了，机缘巧合拿我当时在做的群舞模型做了一个这样的 vcr：
