@@ -150,9 +150,9 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/dagent.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/dagent.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv][DAGENT: Optimizing Multi-Hop RAG as Executable Reasoning Workflows]
+[arXiv26][DAGENT: Optimizing Multi-Hop RAG as Executable Reasoning Workflows]
 
 **Jingyu He**\*, **Yuqin Dai**\*, Kaiwen Zhang, Hang Zhang, Shangke Lyu, Yuchen Yan, Haiwen Hong, Hong Zhao, Yao Fu, Weiming Lu, Yiquan Wu, Yongliang Shen
 - 提出 DAGENT 框架，将多跳 RAG 过程建模为可执行推理工作流，实现结构化的检索-推理路径规划。
@@ -162,9 +162,9 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/rehearsal-rl.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/rehearsal-rl.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv][Have LLMs Truly Learned to Search? Rehearsal-Guided Execution for Robust Agentic RAG]
+[arXiv26][Have LLMs Truly Learned to Search? Rehearsal-Guided Execution for Robust Agentic RAG]
 
 **Jinyan Chen**\*, **Yuqin Dai**\*, Yijun Li, Yuchen Yan, Zhipiao Liu, Hongwei Yang, Yiquan Wu, Wenqi Zhang, Weiming Lu, Yongliang Shen
 - 提出 Rehearsal-RL 框架，通过"排练-执行"两阶段范式增强 LLM 的搜索规划能力与鲁棒性。
@@ -190,9 +190,9 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/UrbanZero_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/UrbanZero_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-Empowering a Self-Evolving LLM for Urban Land-Use Planning without Expert Supervision
+[arXiv26][Empowering a Self-Evolving LLM for Urban Land-Use Planning without Expert Supervision]
 
 Chaoyang Shi\*, **Yuqin Dai**\*, Pengyu Zeng, Jun Yin, Ziyang Han, Yuchen Zhou, Shuai Lu, Yuxing Han
 
@@ -203,9 +203,10 @@ Chaoyang Shi\*, **Yuqin Dai**\*, Pengyu Zeng, Jun Yin, Ziyang Han, Yuchen Zhou, 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/PlanCraft_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/PlanCraft_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation
+[arXiv26][PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation](https://arxiv.org/pdf/2607.23491)
+[[arXiv]](https://arxiv.org/pdf/2607.23491)
 
 Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Ziyang Han, Ng Cheuk Hei, Jing Zhong, Chaoyang Shi, ZhanXiang Jin, Maowei Jiang, Yuxing Han, Shuai Lu†
 
@@ -215,9 +216,9 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Ziyang Han, Ng Cheuk Hei, Jing Zhong,
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/RenoCAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/RenoCAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-RenoCAD: Residential Floorplan Renovation via Constraint-Preserving Editable Vector Generation
+[arXiv26][RenoCAD: Residential Floorplan Renovation via Constraint-Preserving Editable Vector Generation]
 
 Pengyu Zeng\*, Jun Yin\*, **Yuqin Dai**\*, Peilin Li, Ng Cheuk Hei, Han Zheng, Haoyuan Sun, Ziyang Han, Jing Zhong, Tiancheng Zeng, ZhanXiang Jin, Chaoyang Shi, Shuai Lu
 
