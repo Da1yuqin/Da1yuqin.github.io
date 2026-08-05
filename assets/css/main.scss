@@ -98,12 +98,155 @@ h1:before, .anchor:before {
 }
 
 .badge {
+
     padding-left: 1rem;
+
     padding-right: 1rem;
+
     position: absolute;
+
     margin-top: .5em;
+
     margin-left: -.5em;
+
     color: white;
+
     background-color: #00369f;
+
     font-size: .8em;
+
+}
+
+
+
+/* =============================
+
+   Custom: background + glass UI
+
+   Inspired by https://blog.azifan.club
+
+   ============================= */
+
+
+
+body {
+
+  background-color: #f5f6f8;
+
+}
+
+
+
+/* fixed full-page background image */
+
+body:before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background-image: url("/images/site-bg.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  opacity: 0.22;
+
+  z-index: -2;
+
+}
+
+
+
+/* subtle white overlay for readability */
+
+body:after {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background: linear-gradient(
+
+    180deg,
+
+    rgba(255, 255, 255, 0.88) 0%,
+
+    rgba(255, 255, 255, 0.78) 40%,
+
+    rgba(255, 255, 255, 0.88) 100%
+
+  );
+
+  z-index: -1;
+
+}
+
+
+
+/* make top nav look like a translucent bar */
+
+.masthead {
+
+  background: rgba(255, 255, 255, 0.65);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+}
+
+
+
+/* content card */
+
+.page .page__inner-wrap {
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+
+  padding: 18px 18px;
+
+}
+
+
+
+/* sidebar card */
+
+.sidebar {
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+
+  padding: 14px 14px;
+
+}
+
+
+
+/* make blog list cards consistent */
+
+.blog-item {
+
+  background: rgba(255, 255, 255, 0.78) !important;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+
 }
