@@ -873,15 +873,527 @@ body:after {
 
 
 
-.blog-empty {
+@media (max-width: 768px) {
 
 
 
-  padding: 12px 2px;
+
+
+
+
+  .page .page__inner-wrap {
+
+
+
+
+
+
+
+    padding: 14px 12px;
+
+
+
+
+
+
+
+    border-radius: 14px;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .sidebar {
+
+
+
+
+
+
+
+    padding: 12px;
+
+
+
+
+
+
+
+    border-radius: 14px;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .masthead {
+
+
+
+
+
+
+
+    backdrop-filter: blur(8px);
+
+
+
+
+
+
+
+    -webkit-backdrop-filter: blur(8px);
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-hero {
+
+
+
+
+
+
+
+    padding: 14px;
+
+
+
+
+
+
+
+    border-radius: 14px;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-hero__inner {
+
+
+
+
+
+
+
+    align-items: flex-start;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-hero__avatar {
+
+
+
+
+
+
+
+    width: 54px;
+
+
+
+
+
+
+
+    height: 54px;
+
+
+
+
+
+
+
+    flex-basis: 54px;
+
+
+
+
+
+
+
+    border-radius: 14px;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-hero__title {
+
+
+
+
+
+
+
+    font-size: 1.6rem;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-hero__desc {
+
+
+
+
+
+
+
+    font-size: .95rem;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-card {
+
+
+
+
+
+
+
+    border-radius: 14px;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-card__cover {
+
+
+
+
+
+
+
+    height: 128px;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-card__body {
+
+
+
+
+
+
+
+    padding: 12px 13px 14px 13px;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-card__title {
+
+
+
+
+
+
+
+    font-size: 1rem;
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .blog-card__excerpt {
+
+
+
+
+
+
+
+    font-size: .94rem;
+
+
+
+
+
+
+
+  }
+
+
+
+
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#live2d-widget,
+
+
+
+
+
+
+
+#live2dcanvas {
+
+
+
+
+
+
+
+  z-index: 35 !important;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
 
 
 

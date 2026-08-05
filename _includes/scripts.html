@@ -1,4 +1,42 @@
-<script src="assets/js/main.min.js"></script>
+<script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+
+<script>
+  (function () {
+    var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) return;
+
+    function loadScript(src, onload) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      script.onload = onload;
+      document.body.appendChild(script);
+    }
+
+    loadScript('https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js', function () {
+      if (!window.L2Dwidget) return;
+      window.L2Dwidget.init({
+        model: {
+          jsonPath: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json'
+        },
+        display: {
+          position: 'right',
+          width: 150,
+          height: 300,
+          hOffset: 18,
+          vOffset: -6
+        },
+        mobile: {
+          show: false
+        },
+        react: {
+          opacityDefault: 0.9,
+          opacityOnHover: 1
+        }
+      });
+    });
+  })();
+</script>
 
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}
