@@ -10,8 +10,7 @@ author_profile: true
 <style>
   body.blog-page {
     min-height: 100vh;
-    background: #f7edf2 url('/images/site-bg.png') center / contain fixed no-repeat !important;
-    background-color: #f7edf2 !important;
+    background: #ffffff !important;
   }
 
   body.blog-page:before,
@@ -22,21 +21,21 @@ author_profile: true
   body.blog-page .masthead {
     margin: 14px auto 0 auto;
     width: min(92vw, 980px);
-    border: 1px solid rgba(255,255,255,.36);
+    border: 1px solid rgba(0,0,0,.08);
     border-radius: 999px;
-    background: rgba(32, 24, 32, .42) !important;
-    box-shadow: 0 18px 48px rgba(28, 18, 30, .18);
-    backdrop-filter: blur(18px) saturate(145%);
-    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    background: rgba(255, 255, 255, .85) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   body.blog-page .masthead a,
   body.blog-page .masthead button {
-    color: rgba(255,255,255,.92) !important;
+    color: rgba(0,0,0,.8) !important;
   }
 
   body.blog-page #main {
-    width: min(1040px, 94vw);
+    width: min(800px, 94vw);
     max-width: none;
     margin: 0 auto;
     padding: 34px 0 80px 0;
@@ -80,8 +79,8 @@ author_profile: true
     height: 116px;
     padding: 5px;
     border-radius: 999px;
-    background: rgba(255,255,255,.82);
-    box-shadow: 0 18px 48px rgba(60, 36, 56, .24);
+    background: rgba(255,255,255,.9);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .1);
   }
 
   .az-blog__avatar img {
@@ -95,13 +94,13 @@ author_profile: true
     width: min(620px, 92vw);
     margin-top: -18px;
     padding: 46px 28px 24px 28px;
-    border: 1px solid rgba(255,255,255,.35);
+    border: 1px solid rgba(0,0,0,.06);
     border-radius: 28px;
-    color: rgba(255,255,255,.96);
-    background: rgba(31, 24, 34, .48);
-    box-shadow: 0 20px 60px rgba(45, 25, 45, .20);
-    backdrop-filter: blur(20px) saturate(145%);
-    -webkit-backdrop-filter: blur(20px) saturate(145%);
+    color: rgba(0,0,0,.85);
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, .06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .az-blog__quote {
@@ -109,11 +108,12 @@ author_profile: true
     font-size: 1.15rem;
     line-height: 1.7;
     font-weight: 650;
+    color: rgba(0,0,0,.9);
   }
 
   .az-blog__sub {
     margin: 10px 0 0 0;
-    color: rgba(255,255,255,.76);
+    color: rgba(0,0,0,.5);
     font-size: .96rem;
   }
 
@@ -132,101 +132,100 @@ author_profile: true
     width: 34px;
     height: 34px;
     border-radius: 999px;
-    color: rgba(255,255,255,.94);
+    color: rgba(0,0,0,.6);
     text-decoration: none;
-    background: rgba(255,255,255,.16);
+    background: rgba(0,0,0,.04);
     transition: transform .18s ease, background .18s ease;
   }
 
   .az-blog__socials a:hover {
     transform: translateY(-2px);
-    background: rgba(255,255,255,.26);
+    background: rgba(0,0,0,.08);
   }
 
   .az-blog__section-title {
     margin: 18px 0 14px 0;
-    color: rgba(255,255,255,.95);
-    text-shadow: 0 2px 16px rgba(0,0,0,.22);
+    color: rgba(0,0,0,.85);
     font-size: 1.45rem;
   }
 
   .az-blog__posts {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .az-post {
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,.34);
+    border: 1px solid rgba(0,0,0,.06);
     border-radius: 24px;
-    color: rgba(255,255,255,.94);
-    background: rgba(31, 24, 34, .46);
-    box-shadow: 0 18px 48px rgba(40, 20, 40, .18);
-    backdrop-filter: blur(18px) saturate(145%);
-    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    color: rgba(0,0,0,.85);
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transition: transform .18s ease, box-shadow .18s ease;
   }
 
   .az-post:hover {
     transform: translateY(-3px);
-    box-shadow: 0 24px 62px rgba(40, 20, 40, .24);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, .1);
   }
 
   .az-post__cover {
     display: block;
-    height: 160px;
-    background: rgba(255,255,255,.16) url('/images/site-bg.png') center / cover no-repeat;
+    height: 200px;
+    background: rgba(0,0,0,.02);
   }
 
   .az-post__body {
-    padding: 16px 18px 18px 18px;
+    padding: 20px 24px 24px 24px;
   }
 
   .az-post__meta {
     font-size: .84rem;
-    color: rgba(255,255,255,.66);
+    color: rgba(0,0,0,.45);
   }
 
   .az-post__title {
     margin: 8px 0 0 0;
-    font-size: 1.12rem;
+    font-size: 1.35rem;
     line-height: 1.28;
   }
 
   .az-post__title a {
-    color: rgba(255,255,255,.96);
+    color: rgba(0,0,0,.9);
     text-decoration: none;
   }
 
   .az-post__excerpt {
-    margin: 10px 0 0 0;
-    color: rgba(255,255,255,.72);
-    font-size: .94rem;
+    margin: 12px 0 0 0;
+    color: rgba(0,0,0,.6);
+    font-size: .98rem;
+    line-height: 1.6;
   }
 
   .az-post__tags {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-top: 12px;
+    margin-top: 16px;
   }
 
   .az-post__tags span {
-    padding: 4px 10px;
+    padding: 4px 12px;
     border-radius: 999px;
-    font-size: .78rem;
-    color: rgba(255,255,255,.78);
-    background: rgba(255,255,255,.14);
+    font-size: .82rem;
+    color: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.04);
   }
 
   .az-blog__empty {
-    padding: 18px 22px;
+    padding: 24px;
     border-radius: 22px;
-    color: rgba(255,255,255,.9);
-    background: rgba(31, 24, 34, .46);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    color: rgba(0,0,0,.5);
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid rgba(0,0,0,.06);
   }
 
   @media (max-width: 768px) {
@@ -269,8 +268,7 @@ author_profile: true
     }
 
     .az-blog__posts {
-      grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 14px;
     }
 
     .az-post {
@@ -292,7 +290,7 @@ author_profile: true
 <div class="az-blog">
   <section class="az-blog__profile">
     <div class="az-blog__avatar">
-      <img src="/{{ site.author.avatar }}" alt="戴语琴 Harper" />
+      <img src="/images/blog-avatar.png" alt="戴语琴 Harper" />
     </div>
     <div class="az-blog__intro">
       <p class="az-blog__quote">请问，你是我的 master 吗？</p>
