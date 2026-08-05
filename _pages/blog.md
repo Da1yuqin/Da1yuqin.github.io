@@ -10,7 +10,8 @@ author_profile: true
 <style>
   body.blog-page {
     min-height: 100vh;
-    background: #f7edf2 url('/images/site-bg.png') center / cover fixed no-repeat !important;
+    background: #f7edf2 url('/images/site-bg.png') center / contain fixed no-repeat !important;
+    background-color: #f7edf2 !important;
   }
 
   body.blog-page:before,
