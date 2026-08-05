@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<header style="margin-bottom: 18px;">
+  <h1 style="margin-bottom: 6px;">{{ page.title }}</h1>
+  <div style="color: rgba(0,0,0,.6); font-size: .95rem;">
+    {% if page.date %}{{ page.date | date: "%Y-%m-%d" }}{% endif %}
+    {% if page.tags and page.tags.size > 0 %}
+      <span style="margin-left: 10px;">Tags: {% for t in page.tags %}<code>{{ t }}</code>{% if forloop.last == false %} {% endif %}{% endfor %}</span>
+    {% endif %}
+  </div>
+  <div style="margin-top: 10px;">
+    <a href="{{ '/blog/' | relative_url }}">← Back to Blog</a>
+  </div>
+  <hr style="margin-top: 14px; opacity: .25;"/>
+</header>
+
+{{ content }}
