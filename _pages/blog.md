@@ -5,40 +5,82 @@ excerpt: ""
 author_profile: true
 ---
 
-<style>
-  .blog-list { margin: 0; padding: 0; list-style: none; }
-  .blog-item {
-    margin: 0 0 16px 0;
-    padding: 14px 16px;
-    border: 1px solid rgba(0,0,0,.08);
-    border-radius: 12px;
-    background: rgba(255,255,255,.7);
-  }
-  .blog-item a { text-decoration: none; }
-  .blog-title { font-size: 1.05rem; font-weight: 700; margin: 0 0 6px 0; }
-  .blog-meta { font-size: .9rem; color: rgba(0,0,0,.6); margin: 0 0 8px 0; }
-  .blog-excerpt { margin: 0; color: rgba(0,0,0,.8); }
-  .blog-tags { margin-top: 8px; font-size: .85rem; color: rgba(0,0,0,.6); }
-  .blog-tags code { font-size: .85rem; }
-</style>
+{% assign blog_posts = site.categories.blog | sort: 'date' | reverse %}
 
-{% assign blog_posts = site.categories.blog %}
+<div class="blog-hero">
+  <div class="blog-hero__inner">
+    <div class="blog-hero__avatar">
+      <img src="/{{ site.author.avatar }}" alt="avatar" />
+    </div>
+    <div class="blog-hero__text">
+      <div class="blog-hero__kicker">Article</div>
+      <h1 class="blog-hero__title">{{ page.title }}</h1>
+      <p class="blog-hero__desc">这里收录我的随笔、项目记录与研究笔记。写得慢，但尽量写清楚。</p>
+      <div class="blog-hero__meta">
+        {% if blog_posts and blog_posts.size > 0 %}
+          <span>{{ blog_posts.size }} 篇文章</span>
+        {% else %}
+          <span>暂无文章</span>
+        {% endif %}
+        <span class="dot">·</span>
+        <span>持续更新</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% if blog_posts and blog_posts.size > 0 %}
-<ul class="blog-list">
-  {% for post in blog_posts %}
-    <li class="blog-item">
-      <div class="blog-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></div>
-      <div class="blog-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
-      {% if post.excerpt %}
-        <p class="blog-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
+  <div class="blog-grid">
+    {% for post in blog_posts %}
+      {% assign words = post.content | strip_html | number_of_words %}
+      {% assign minutes = words | divided_by: 260 | plus: 1 %}
+
+      {% assign cover = nil %}
+      {% if post.header and post.header.teaser %}
+        {% assign cover = post.header.teaser %}
+      {% elsif post.image %}
+        {% assign cover = post.image %}
       {% endif %}
-      {% if post.tags and post.tags.size > 0 %}
-        <div class="blog-tags">Tags: {% for t in post.tags %}<code>{{ t }}</code>{% if forloop.last == false %} {% endif %}{% endfor %}</div>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+
+      <article class="blog-card">
+        <a class="blog-card__cover" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+          {% if cover %}
+            <img src="{{ cover | relative_url }}" alt="cover" loading="lazy" />
+          {% else %}
+            <div class="blog-card__cover--fallback"></div>
+          {% endif %}
+        </a>
+
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            <span class="dot">·</span>
+            <span>{{ minutes }} 分钟</span>
+            <span class="dot">·</span>
+            <span>{{ words }} 字</span>
+          </div>
+
+          <h2 class="blog-card__title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+
+          {% if post.excerpt %}
+            <p class="blog-card__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}</p>
+          {% endif %}
+
+          {% if post.tags and post.tags.size > 0 %}
+            <div class="blog-card__tags">
+              {% for t in post.tags %}
+                <span class="tag">{{ t }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 {% else %}
-<p>这里会展示我的博客文章列表。你可以在仓库的 <code>_posts/</code> 下新增 Markdown 文件（例如 <code>YYYY-MM-DD-title.md</code>），并在 Front Matter 里写上 <code>categories: [blog]</code>，它就会自动出现在这里。</p>
+  <div class="blog-empty">
+    <p>这里会展示我的博客文章列表。你可以在仓库的 <code>_posts/</code> 下新增 Markdown 文件（例如 <code>YYYY-MM-DD-title.md</code>），并在 Front Matter 里写上 <code>categories: [blog]</code> + <code>layout: post</code>，它就会自动出现在这里。</p>
+  </div>
 {% endif %}

@@ -241,12 +241,648 @@ body:after {
 
 
 
-/* make blog list cards consistent */
+/* =============================
 
-.blog-item {
 
-  background: rgba(255, 255, 255, 0.78) !important;
 
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+   Blog page (card layout)
+
+
+
+   ============================= */
+
+
+
+
+
+
+
+.blog-hero {
+
+
+
+  margin: 6px 0 18px 0;
+
+
+
+  padding: 16px;
+
+
+
+  border-radius: 18px;
+
+
+
+  background: rgba(255, 255, 255, 0.78);
+
+
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+
+
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+
+
 
 }
+
+
+
+
+
+
+
+.blog-hero__inner {
+
+
+
+  display: flex;
+
+
+
+  gap: 14px;
+
+
+
+  align-items: center;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-hero__avatar {
+
+
+
+  width: 68px;
+
+
+
+  height: 68px;
+
+
+
+  border-radius: 18px;
+
+
+
+  overflow: hidden;
+
+
+
+  flex: 0 0 68px;
+
+
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+
+
+
+}
+
+
+
+
+
+
+
+.blog-hero__avatar img {
+
+
+
+  width: 100%;
+
+
+
+  height: 100%;
+
+
+
+  object-fit: cover;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-hero__kicker {
+
+
+
+  font-size: .85rem;
+
+
+
+  letter-spacing: .12em;
+
+
+
+  text-transform: uppercase;
+
+
+
+  color: rgba(0, 0, 0, 0.55);
+
+
+
+  margin-bottom: 4px;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-hero__title {
+
+
+
+  margin: 0;
+
+
+
+  padding: 0;
+
+
+
+  border: 0;
+
+
+
+  line-height: 1.1;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-hero__desc {
+
+
+
+  margin: 8px 0 0 0;
+
+
+
+  color: rgba(0, 0, 0, 0.7);
+
+
+
+}
+
+
+
+
+
+
+
+.blog-hero__meta {
+
+
+
+  margin-top: 10px;
+
+
+
+  font-size: .9rem;
+
+
+
+  color: rgba(0, 0, 0, 0.55);
+
+
+
+}
+
+
+
+
+
+
+
+.dot {
+
+
+
+  margin: 0 8px;
+
+
+
+  opacity: .55;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-grid {
+
+
+
+  display: grid;
+
+
+
+  grid-template-columns: 1fr;
+
+
+
+  gap: 14px;
+
+
+
+}
+
+
+
+
+
+
+
+@media (min-width: 900px) {
+
+
+
+  .blog-grid {
+
+
+
+    grid-template-columns: 1fr 1fr;
+
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card {
+
+
+
+  overflow: hidden;
+
+
+
+  border-radius: 18px;
+
+
+
+  background: rgba(255, 255, 255, 0.78);
+
+
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+
+
+  transition: transform .18s ease, box-shadow .18s ease;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card:hover {
+
+
+
+  transform: translateY(-2px);
+
+
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__cover {
+
+
+
+  display: block;
+
+
+
+  height: 150px;
+
+
+
+  overflow: hidden;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__cover img {
+
+
+
+  width: 100%;
+
+
+
+  height: 100%;
+
+
+
+  object-fit: cover;
+
+
+
+  transform: scale(1.02);
+
+
+
+  transition: transform .25s ease;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card:hover .blog-card__cover img {
+
+
+
+  transform: scale(1.06);
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__cover--fallback {
+
+
+
+  width: 100%;
+
+
+
+  height: 100%;
+
+
+
+  background:
+
+
+
+    radial-gradient(1200px 260px at 10% 0%, rgba(255, 144, 109, 0.45), transparent 60%),
+
+
+
+    radial-gradient(1000px 240px at 90% 20%, rgba(109, 177, 255, 0.35), transparent 55%),
+
+
+
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.02));
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__body {
+
+
+
+  padding: 14px 16px 16px 16px;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__meta {
+
+
+
+  font-size: .88rem;
+
+
+
+  color: rgba(0, 0, 0, 0.55);
+
+
+
+  margin-bottom: 8px;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__title {
+
+
+
+  margin: 0;
+
+
+
+  font-size: 1.12rem;
+
+
+
+  line-height: 1.25;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__title a {
+
+
+
+  text-decoration: none;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__excerpt {
+
+
+
+  margin: 10px 0 0 0;
+
+
+
+  color: rgba(0, 0, 0, 0.72);
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__tags {
+
+
+
+  margin-top: 12px;
+
+
+
+  display: flex;
+
+
+
+  gap: 8px;
+
+
+
+  flex-wrap: wrap;
+
+
+
+}
+
+
+
+
+
+
+
+.blog-card__tags .tag {
+
+
+
+  font-size: .82rem;
+
+
+
+  padding: 4px 10px;
+
+
+
+  border-radius: 999px;
+
+
+
+  background: rgba(0, 0, 0, 0.05);
+
+
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+
+
+}
+
+
+
+
+
+
+
+.blog-empty {
+
+
+
+  padding: 12px 2px;
+
+
+
+}
+
+
+
+
