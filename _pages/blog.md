@@ -293,7 +293,7 @@ author_profile: true
       <img src="/images/blog-avatar.png" alt="戴语琴 Harper" />
     </div>
     <div class="az-blog__intro">
-      <p class="az-blog__quote">请问，你是我的 master 吗？</p>
+      <p class="az-blog__quote">维护中...</p>
       <p class="az-blog__sub">这里记录我的随笔、研究笔记和项目复盘。</p>
       <div class="az-blog__socials" aria-label="social links">
         <a href="https://github.com/Da1yuqin" title="GitHub">GH</a>
