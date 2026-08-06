@@ -10,7 +10,10 @@ author_profile: true
 <style>
   body.blog-page {
     min-height: 100vh;
-    background: #ffffff !important;
+    background:
+      linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)),
+      url('/images/site-bg.png') center / contain fixed no-repeat,
+      #f7edf2 !important;
   }
 
   body.blog-page:before,
