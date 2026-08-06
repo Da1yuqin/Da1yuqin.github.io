@@ -71,7 +71,14 @@ author_profile: true
     align-items: center;
     justify-content: center;
     min-height: 54vh;
+    padding: 48px 24px;
+    border-radius: 32px;
+    overflow: hidden;
     text-align: center;
+    background:
+      linear-gradient(rgba(255,255,255,.12), rgba(255,255,255,.18)),
+      url('/images/blog-profile-bg.png') center 38% / cover no-repeat;
+    box-shadow: 0 16px 48px rgba(0,0,0,.08);
   }
 
   .az-blog__avatar {
@@ -248,7 +255,9 @@ author_profile: true
     .az-blog__profile {
       min-height: 58vh;
       justify-content: flex-start;
-      padding-top: 34px;
+      padding: 34px 14px 28px 14px;
+      border-radius: 24px;
+      background-position: center 38%;
     }
 
     .az-blog__avatar {
