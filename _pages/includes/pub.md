@@ -137,7 +137,7 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026 Findings</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [EMNLP26][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
 [[Github]](https://anonymous.4open.science/r/SAGE-Bench-4CD3/README.md)
