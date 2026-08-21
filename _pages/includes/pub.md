@@ -67,9 +67,9 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv25][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
+[EMNLP26][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
  
 <a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/stars/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/forks/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Forks" /></a>
@@ -137,9 +137,9 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv26][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
+[EMNLP26][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
 [[Github]](https://anonymous.4open.science/r/SAGE-Bench-4CD3/README.md)
 
 Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xinwei Wu, Yujie Wang, Wei He, Jinpeng Wang, Linlong Xu, Deiyi Xiong
