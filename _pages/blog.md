@@ -10,10 +10,7 @@ author_profile: true
 <style>
   body.blog-page {
     min-height: 100vh;
-    background:
-      linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)),
-      url('/images/site-bg.png') center / contain fixed no-repeat,
-      #f7edf2 !important;
+    background: #fff !important;
   }
 
   body.blog-page:before,
@@ -69,48 +66,71 @@ author_profile: true
   }
 
   .az-blog__profile {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.25fr);
+    gap: 20px;
     align-items: center;
-    justify-content: center;
-    min-height: 54vh;
-    padding: 48px 24px;
+    min-height: 560px;
+    box-sizing: border-box;
+    padding: 28px;
     border-radius: 32px;
     overflow: hidden;
-    text-align: center;
-    background:
-      linear-gradient(rgba(255,255,255,.12), rgba(255,255,255,.18)),
-      url('/images/blog-profile-bg.png') center 38% / cover no-repeat;
+    text-align: left;
+    background: #fff;
     box-shadow: 0 16px 48px rgba(0,0,0,.08);
   }
 
+  .az-blog__identity {
+    min-width: 0;
+  }
+
+  .az-blog__art {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .az-blog__art img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 640px;
+    object-fit: contain;
+  }
+
+  /* Frame the original screenshot without changing its illustration pixels. */
+  .az-blog__art--original {
+    position: relative;
+    aspect-ratio: 1170 / 1590;
+    overflow: hidden;
+  }
+
+  .az-blog__art--original img {
+    position: absolute;
+    top: -36.164%;
+    left: 0;
+    max-height: none;
+  }
+
   .az-blog__avatar {
-    width: 116px;
-    height: 116px;
-    padding: 5px;
-    border-radius: 999px;
-    background: rgba(255,255,255,.9);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, .1);
+    width: 160px;
+    height: 190px;
+    flex-shrink: 0;
+    padding: 0;
   }
 
   .az-blog__avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 999px;
+    object-fit: contain;
   }
 
   .az-blog__intro {
-    width: min(620px, 92vw);
-    margin-top: -18px;
-    padding: 46px 28px 24px 28px;
-    border: 1px solid rgba(0,0,0,.06);
-    border-radius: 28px;
-    color: rgba(0,0,0,.85);
-    background: rgba(255, 255, 255, .9);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, .06);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    width: min(620px, 100%);
+    margin-top: 14px;
+    padding: 0;
+    color: #333;
+    background: transparent;
   }
 
   .az-blog__quote {
@@ -118,18 +138,18 @@ author_profile: true
     font-size: 1.15rem;
     line-height: 1.7;
     font-weight: 650;
-    color: rgba(0,0,0,.9);
+    color: #333;
   }
 
   .az-blog__sub {
     margin: 10px 0 0 0;
-    color: rgba(0,0,0,.5);
+    color: #666;
     font-size: .96rem;
   }
 
   .az-blog__socials {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 12px;
     margin-top: 18px;
     flex-wrap: wrap;
@@ -256,23 +276,34 @@ author_profile: true
     }
 
     .az-blog__profile {
-      min-height: 58vh;
-      justify-content: flex-start;
-      padding: 34px 14px 28px 14px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+      min-height: 0;
+      padding: 24px 18px;
       border-radius: 24px;
-      background-position: center 38%;
+      text-align: center;
     }
 
     .az-blog__avatar {
-      width: 92px;
-      height: 92px;
+      width: 112px;
+      height: 134px;
+      margin: 0 auto;
+    }
+
+    .az-blog__art {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .az-blog__socials {
+      justify-content: center;
     }
 
     .az-blog__intro {
       width: 100%;
-      margin-top: -14px;
-      padding: 38px 18px 20px 18px;
-      border-radius: 24px;
+      margin-top: 12px;
+      padding: 0;
     }
 
     .az-blog__quote {
@@ -301,12 +332,14 @@ author_profile: true
 
 <div class="az-blog">
   <section class="az-blog__profile">
+    <div class="az-blog__identity">
     <div class="az-blog__avatar">
-      <img src="/images/blog-avatar.png" alt="戴语琴 Harper" />
+      <img src="{{ '/images/blog-day-plush-avatar.png' | relative_url }}" alt="Day 的呆呆小狗玩偶，穿着草莓上衣和绿色流苏裙" />
     </div>
     <div class="az-blog__intro">
-      <p class="az-blog__quote">维护中...</p>
+      <p class="az-blog__quote">表达自己，才能 make influence!</p>
       <p class="az-blog__sub">这里记录我的随笔、研究笔记和项目复盘。</p>
+      <p class="az-blog__sub"><a href="#footprints">读完聊两句，留下你的足迹 🐾</a></p>
       <div class="az-blog__socials" aria-label="social links">
         <a href="https://github.com/Da1yuqin" title="GitHub">GH</a>
         <a href="https://scholar.google.com/citations?user=lTE-iwYAAAAJ&hl=zh-CN" title="Google Scholar">GS</a>
@@ -314,6 +347,10 @@ author_profile: true
         <a href="mailto:{{ site.author.email }}" title="Email">@</a>
       </div>
     </div>
+    </div>
+    <figure class="az-blog__art az-blog__art--original">
+      <img src="{{ '/images/blog-taichi-original.jpg' | relative_url }}" alt="太一骑在暴龙兽头上的原图" />
+    </figure>
   </section>
 
   <h2 class="az-blog__section-title">Articles</h2>
@@ -343,4 +380,5 @@ author_profile: true
   {% else %}
     <div class="az-blog__empty">这里会展示我的博客文章列表。在 <code>_posts/</code> 下新增 Markdown 文件，并设置 <code>categories: [blog]</code> + <code>layout: post</code> 后会自动出现。</div>
   {% endif %}
+  {% include blog-footprints.html %}
 </div>

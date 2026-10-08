@@ -1,0 +1,80 @@
+{% capture feedback_subject %}Blog 留言 · {{ page.title }}{% endcapture %}
+{% capture feedback_body %}读到这里，我想说：
+
+
+文章：{{ page.url | absolute_url }}{% endcapture %}
+<style>
+  .blog-footprints { margin: 32px 0; padding: 28px; border: 1px solid #e9e5df; border-radius: 24px; background: #faf9f6; color: #333; }
+  .blog-footprints h2 { margin: 0 0 12px; font-size: 1.35rem; border: 0; }
+  .blog-footprints p { margin: 10px 0; line-height: 1.8; }
+  .blog-footprints__eyebrow { font-size: .78rem; letter-spacing: .12em; color: #877462; }
+  .blog-footprints__actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0; }
+  .blog-footprints__button { display: inline-block; padding: 10px 18px; border-radius: 14px; background: #3c493e; color: #fff !important; text-decoration: none !important; }
+  .blog-footprints__button:hover { background: #526354; }
+  .blog-footprints__note { font-size: .85rem; color: #777; }
+  .blog-footprints__stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; font-size: .85rem; color: #777; }
+  .blog-footprints__stats strong { color: #3c493e; }
+  .blog-footprints [hidden] { display: none !important; }
+  @media (max-width: 768px) { .blog-footprints { padding: 22px 18px; } }
+</style>
+
+<section class="blog-footprints" id="footprints" aria-labelledby="footprints-title">
+  <p class="blog-footprints__eyebrow">LEAVE A LITTLE TRACE · 来都来了</p>
+  <h2 id="footprints-title">留下你的足迹 🐾</h2>
+  <p>哪句话让你停了一下？有没有不同的看法，或是想分享的经历？<br>一句感想、一个问题，都欢迎。你的表达，也可能成为下一个想法的起点。</p>
+  {% if site.blog_comments.repo_id != empty and site.blog_comments.category_id != empty and site.blog_comments.repo_id and site.blog_comments.category_id %}
+    <p class="blog-footprints__note">登录 GitHub 就能留言、回复或点个表情。欢迎认真讨论，也欢迎随口聊聊。</p>
+    <div class="giscus"></div>
+    <script src="https://giscus.app/client.js"
+      data-repo="{{ site.blog_comments.repo | escape }}"
+      data-repo-id="{{ site.blog_comments.repo_id | escape }}"
+      data-category="{{ site.blog_comments.category | escape }}"
+      data-category-id="{{ site.blog_comments.category_id | escape }}"
+      data-mapping="pathname" data-strict="1" data-reactions-enabled="1"
+      data-emit-metadata="0" data-input-position="top" data-theme="light"
+      data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async></script>
+  {% endif %}
+  <div class="blog-footprints__actions">
+    <a class="blog-footprints__button" data-blog-feedback="email" href="mailto:{{ site.author.email }}?subject={{ feedback_subject | strip | uri_escape }}&amp;body={{ feedback_body | strip | uri_escape }}">给 Day 写几句话 ↗</a>
+    <span class="blog-footprints__note">邮件会直接发给我，欢迎交流。</span>
+  </div>
+  <div class="blog-footprints__stats" aria-live="polite">
+    <span id="footprints-counter-note">每一次阅读，都是一次相遇。</span>
+    <span id="busuanzi_container_page_pv" hidden>本页阅读 <strong id="busuanzi_page_pv"></strong> 次</span>
+    <span id="busuanzi_container_page_uv" hidden>本页来访 <strong id="busuanzi_page_uv"></strong> 人</span>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var localPreview = ['localhost', '127.0.0.1', '::1', '[::1]'].indexOf(location.hostname) !== -1;
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('a');
+      if (!link || localPreview || typeof window.gtag !== 'function') return;
+      if (link.hasAttribute('data-blog-feedback')) {
+        window.gtag('event', 'blog_feedback_open', {method: link.dataset.blogFeedback, page_path: location.pathname});
+      } else if (link.closest('.az-post')) {
+        window.gtag('event', 'blog_article_open', {article_path: new URL(link.href).pathname});
+      }
+    });
+    {% if jekyll.environment == 'production' and site.blog_visit_counter %}
+    if (localPreview) return;
+    var count = document.getElementById('busuanzi_page_pv');
+    var observer = new MutationObserver(function () {
+      if (!/^\d+$/.test(count.textContent)) return;
+      ['page_pv', 'page_uv'].forEach(function (metric) {
+        var value = document.getElementById('busuanzi_' + metric);
+        if (/^\d+$/.test(value.textContent)) document.getElementById('busuanzi_container_' + metric).hidden = false;
+      });
+      document.getElementById('footprints-counter-note').hidden = true;
+      observer.disconnect();
+    });
+    observer.observe(document.querySelector('.blog-footprints__stats'), {childList: true, subtree: true});
+    var counter = document.createElement('script');
+    counter.src = 'https://busuanzi.9420.ltd/js';
+    counter.async = true;
+    document.body.appendChild(counter);
+    setTimeout(function () { observer.disconnect(); }, 15000);
+    {% endif %}
+  }());
+</script>

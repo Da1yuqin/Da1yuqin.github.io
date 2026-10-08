@@ -2,8 +2,10 @@
 
 Student Reviewer:
 - AAAI 2026, AAAI 2027
-- ICLR 2026
-- NeurIPS 2027
+- ICLR 2026, ICLR 2027
+- NeurIPS 2026
+- ACL 2026
+- EMNLP 2026
 - Pattern Recognition (PR)
 - NeuroComputing
 

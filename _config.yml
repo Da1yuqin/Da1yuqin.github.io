@@ -8,11 +8,21 @@
 # Site Settings
 title                    : "Dai Yuqin(戴语琴, Harper)"
 description              : "清华大学"
-repository               : "da1yuqin/AboutMe/"
+repository               : "Da1yuqin/Da1yuqin.github.io"
+url                      : "https://da1yuqin.github.io"
+baseurl                  : ""
 google_scholar_stats_use_cdn : True
 
 # google analytics
 google_analytics_id      : G-PRZP1TVEV
+
+# Blog comments: copy the repository/category IDs from https://giscus.app/.
+blog_comments:
+  repo: "Da1yuqin/Da1yuqin.github.io"
+  repo_id: ""
+  category: "Announcements"
+  category_id: ""
+blog_visit_counter: true
 
 # SEO Related
 # google_site_verification : b_BbOIt7d513ZXYDw-YRMicO6O5tthYiouqWDdWjGTU

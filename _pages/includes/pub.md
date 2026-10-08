@@ -31,7 +31,7 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
-## 一作/共一论文(15)
+## 一作/共一论文(16)
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ACL26 Findings][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
@@ -162,6 +162,15 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">在投</div><img src='images/RemedyRAG_mainfig.png' alt="Discover, Verify, and Assemble workflows for Agentic RAG" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**[在投] Not Every Workflow Helps: Discover, Verify, and Assemble Workflows for Agentic RAG**
+
+**Hua Ye**\*, **Yuqin Dai**\*, Yijun Li, Yuchen Yan, Zhipiao Liu, Hongwei Yang, Yiquan Wu, Wenqi Zhang, Weiming Lu, Yongliang Shen
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/rehearsal-rl.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv26][Have LLMs Truly Learned to Search? Rehearsal-Guided Execution for Robust Agentic RAG]
@@ -252,28 +261,28 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 </div>
 
 <details>
-<summary>参与工作（10篇）</summary>
+<summary>参与工作（9篇）</summary>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arXiv26][Reinforcing Real-world Service Agents: Balancing Utility and Cost in Task-oriented Dialogue](https://arxiv.org/abs/2602.22697)
+[ICML26][Reinforcing Real-world Service Agents: Balancing Utility and Cost in Task-oriented Dialogue](https://arxiv.org/abs/2602.22697)
 
 Ning Gao, Wei Zhang, **Yuqin Dai**, Ling Shi, Ziyin Wang, Yujie Wang, Wei He, Jinpeng Wang, Chaozheng Wang 
-- 将框架重构为任务导向对话重构为多粒度强化学习过程。
+- 将任务导向对话建模为多粒度强化学习过程。
 - 建立以用户为中心的高保真环境，支持动态策略探索。
 - 引入CMPO算法，有效平衡用户奖励与全局成本约束。
 </div>
 </div> 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arxiv 2025</div><img src='images/NVC_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div><img src='images/Proactivity_mainfig.png' alt="主动式任务导向对话的用户模拟与策略优化框架" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[arxiv25][NCV: A Node-Wise Consistency Verification Approach for Low-Cost Structured Error Localization in LLM Reasoning](https://arxiv.org/pdf/2510.02816)
+[NeurIPS26][Unlocking Proactivity in Task-Oriented Dialogue](https://arxiv.org/abs/2605.22240)
 
-Zhang, Yulong; Wang, Li; Du, Wei; Li, Peilin; **Yuqin Dai**; Zhao, Zhiyuan; Fang, Lingyong; Liu, Ziniu; Zhang, Ru; Zhu, Huijia; Liu, Gongshen
-- 提出了一种名为 NCV 的免训练框架，通过将复杂的思维链推理重构为结构化的节点级二元一致性检查，解决了长链推理中错误定位不准和注意力分散的难题。
-- 通过将验证任务分解为轻量级的节点检查，该方法实现了精确的错误定位，并避免了昂贵的长文本生成与多重采样，显著增强了系统的可解释性与计算效率。
-- 实验结果显示该方法在多个公共数据集上的 F1 分数相比基线提升了 10% 至 25%，同时 Token 消耗量比传统方法减少了 6 到 58 倍。
+Azure Zhang, Ning Gao, **Yuqin Dai**, Ruiyuan Wu, Jinpeng Wang, Rena Wei Gao, Bingdong Tan, Shuzheng Gao, Zongjie Li, Chaozheng Wang
+- 构建 Cognitive User Simulator，将可观察的外在人设、隐藏的用户顾虑与逐轮意愿变化结合，为主动式任务导向对话提供训练环境。
+- 提出非对称视角策略优化，将训练时可见的用户顾虑通过自蒸馏迁移到仅观察对话的策略，并结合状态变化分配逐轮训练信号。
+- 在商家与骑手外呼招募两类真实业务基准上评估任务完成能力，并验证对不同用户模拟器的泛化能力。
 </div>
 </div>
 
@@ -402,4 +411,3 @@ Jun Yin, Pengyu Zeng, Haoyuan Sun, **Yuqin Dai**, Han Zheng, Miao Zhang, Yachao 
 ## 专利
 - 唐坤， 杨力， __戴语琴__，郭唐仪，徐永能. [基于编码器-解码器注意力网络和LSTM的异常驾驶在线识别方法](https://xueshu.baidu.com/usercenter/paper/show?paperid=180r0c70ap6800w0hu2t0jn0je340821#:~:text=%E5%BC%82%E5%B8%B8%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E6%98%AF%E8%BD%A6%E8%BE%86%E5%AE%89%E5%85%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E9%87%8D%E5%A4%A7%E5%A8%81%E8%83%81%2C%E5%85%B6%E5%AF%B9%E4%BA%BA%E5%91%98%E4%B8%8E%E7%89%A9%E8%B5%84%E7%9A%84%E5%AE%89%E5%85%A8%E9%AB%98%E6%95%88%E6%8A%95%E9%80%81%E9%80%A0%E6%88%90%E4%B8%A5%E9%87%8D%E5%8D%B1%E5%AE%B3.%E4%BB%A5%E4%BD%8E%E6%88%90%E6%9C%AC%E9%9D%9E%E6%8E%A5%E8%A7%A6%E5%BC%8F%E7%9A%84%E6%89%8B%E6%9C%BA%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E4%B8%BA%E5%9F%BA%E7%A1%80%2C%E9%80%9A%E8%BF%87%E5%AF%B9%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E7%89%B9%E6%80%A7%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%2C%E6%8F%90%E5%87%BA%E4%B8%80%E7%A7%8D%E8%9E%8D%E5%90%88Encoder-Decoder%E6%B7%B1%E5%BA%A6%E7%BD%91%E7%BB%9C%E4%B8%8EAt-tention%E6%9C%BA%E5%88%B6%E7%9A%84%E5%BC%82%E5%B8%B8%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%9C%A8%E7%BA%BF%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95.%E8%AF%A5%E6%96%B9%E6%B3%95%E7%94%B1%E5%9F%BA%E4%BA%8ELSTM%20%28long%20short-term%20memory%29%E7%9A%84Encoder-Decoder%2CAt-tention%E6%9C%BA%E5%88%B6%E4%B8%8E%E5%9F%BA%E4%BA%8ESVM%20%28support%20vector,machine%29%E7%9A%84%E5%88%86%E7%B1%BB%E5%99%A83%20%E4%B8%AA%E6%A8%A1%E5%9D%97%E6%9E%84%E6%88%90.%E8%AF%A5%E7%B3%BB%E7%BB%9F%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E5%8C%85%E6%8B%AC%3A%E8%BE%93%E5%85%A5%E7%BC%96%E7%A0%81%2C%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%AD%A6%E4%B9%A0%2C%E7%89%B9%E5%BE%81%E8%A7%A3%E7%A0%81%2C%E5%BA%8F%E5%88%97%E9%87%8D%E6%9E%84%2C%E6%AE%8B%E5%B7%AE%E8%AE%A1%E7%AE%97%E4%B8%8E%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%88%86%E7%B1%BB%E7%AD%896%20%E4%B8%AA%E6%AD%A5%E9%AA%A4.%E8%AF%A5%E6%8A%80%E6%9C%AF%E6%96%B9%E6%B3%95%E5%88%A9%E7%94%A8%E8%87%AA%E7%84%B6%E9%A9%BE%E9%A9%B6%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%89%80%E9%87%87%E9%9B%86%E7%9A%84%E6%89%8B%E6%9C%BA%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%AE%9E%E9%AA%8C.%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C%E8%A1%A8%E6%98%8E%3A%E2%91%A0%20%E6%89%8B%E6%9C%BA%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E8%9E%8D%E5%90%88%E6%96%B9%E6%B3%95%E5%AF%B9%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E8%AF%86%E5%88%AB%E5%85%B7%E5%A4%87%E6%9C%89%E6%95%88%E6%80%A7%3B%E2%91%A1%20%E5%BC%82%E5%B8%B8%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E5%BF%85%E7%84%B6%E4%BC%9A%E9%80%A0%E6%88%90%E6%95%B0%E6%8D%AE%E5%BC%82%E5%B8%B8%E6%B3%A2%E5%8A%A8%3B%E2%91%A2%20Attention%E6%9C%BA%E5%88%B6%E6%9C%89%E5%8A%A9%E4%BA%8E%E6%8F%90%E5%8D%87%E6%A8%A1%E5%9E%8B%E5%AD%A6%E4%B9%A0%E6%95%88%E6%9E%9C%2C%E5%AF%B9%E6%89%80%E6%8F%90%E5%87%BA%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AF%86%E5%88%AB%E5%87%86%E7%A1%AE%E7%8E%87F1-score%E4%B8%BA0.717%2C%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%90%8C%E7%B1%BB%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83%2C%E5%87%86%E7%A1%AE%E7%8E%87%E5%BE%97%E5%88%B0%E6%98%BE%E8%91%97%E6%8F%90%E5%8D%87%3B%E2%91%A3%E5%AF%B9%E4%BA%8E%E6%B1%BD%E8%BD%A6%E5%BC%82%E5%B8%B8%E9%A9%BE%E9%A9%B6%E8%A1%8C%E4%B8%BA%E6%9D%A5%E8%AF%B4%2CSVM%E6%AF%94Logistic%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E7%AE%97%E6%B3%95%E5%85%B7%E6%9C%89%E6%9B%B4%E4%BC%98%E8%B6%8A%E7%9A%84%E8%AF%86%E5%88%AB%E6%95%88%E6%9E%9C.). 申请编号（专利号）：CN202111675120.8 应用日期：2021-12-31), Pengfei Wei, Lingdong Kong, Xinghua Qu, **Yi Ren**, et al.
 -->
-

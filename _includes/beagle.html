@@ -1,0 +1,157 @@
+{% assign day_pet_name = site.time | date: "Day %d" %}
+<aside class="beagle" aria-label="{{ day_pet_name }}，你的小狗伴侣" hidden>
+  <div class="beagle__bubble" hidden>
+    <div class="beagle__header"><span><span data-day-name>{{ day_pet_name }}</span> 的碎碎念 <span class="beagle__mood" aria-hidden="true">🐾</span></span><button class="beagle__close" type="button" aria-label="收起对话">×</button></div>
+    <p class="beagle__words"></p>
+    <div class="beagle__actions">
+      <button type="button" data-kind="joke">逗我笑</button>
+      <button type="button" data-kind="wisdom">来点鼓励</button>
+      <button type="button" data-kind="sleep">休息一下</button>
+    </div>
+  </div>
+  <button class="beagle__dog" type="button" aria-label="摸摸 {{ day_pet_name }}" title="{{ day_pet_name }} 🐾"><span class="beagle__sprite" aria-hidden="true"></span></button>
+  <button class="beagle__wake" type="button" hidden>🐾 叫醒 <span data-day-name>{{ day_pet_name }}</span></button>
+</aside>
+
+<style>
+  .beagle { position: fixed; right: 20px; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 1000; width: 132px; color: #493329; font-family: inherit; }
+  .beagle [hidden], .beagle[hidden] { display: none !important; }
+  .beagle button { font-family: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .beagle button:focus-visible { outline: 3px solid #aa6331; outline-offset: 4px; }
+  .beagle__dog { display: block; width: 132px; height: 132px; padding: 0; border: 0; background: transparent; touch-action: manipulation; }
+  .beagle__sprite { display: block; width: 100%; height: 100%; background: url('{{ "/images/beagle-sprites.png" | relative_url }}') 0 0 / 300% 100% no-repeat; transform-origin: 50% 90%; transition: transform .15s; animation: beagle-breathe 5s ease-in-out infinite; filter: drop-shadow(0 4px 3px rgba(66, 39, 23, .12)); }
+  .beagle[data-face="laugh"] .beagle__sprite { background-position: 50% 0; }
+  .beagle[data-face="wink"] .beagle__sprite { background-position: 100% 0; }
+  .beagle.is-speaking .beagle__sprite { animation: beagle-hop .6s ease-in-out; }
+  .beagle__dog:hover .beagle__sprite { transform: rotate(-5deg); }
+  .beagle__bubble { position: absolute; right: 0; bottom: 146px; width: min(278px, calc(100vw - 32px)); box-sizing: border-box; padding: 14px 16px 12px; border: 1px solid #e5c5a4; border-radius: 18px 18px 6px 18px; background: #fffaf2; box-shadow: 0 8px 26px rgba(88, 59, 33, .12); animation: beagle-hello .2s ease-out; }
+  .beagle__bubble:after { content: ''; position: absolute; right: 46px; bottom: -7px; width: 12px; height: 12px; background: #fffaf2; border-right: 1px solid #e5c5a4; border-bottom: 1px solid #e5c5a4; transform: rotate(45deg); }
+  .beagle__header { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 11px; letter-spacing: .03em; color: #9a7151; }
+  .beagle__close { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; margin: -6px -8px -4px 0; border: 0; background: transparent; color: #9a7151; font-size: 21px; line-height: 1; }
+  .beagle .beagle__words { margin: 9px 0 13px; font-size: 14px; line-height: 1.7; color: #493329; overflow-wrap: anywhere; }
+  .beagle__actions { display: flex; gap: 6px; justify-content: space-between; }
+  .beagle__actions button, .beagle__wake { padding: 7px 9px; border: 1px solid #ecd8bf; border-radius: 999px; background: #fff3df; color: #785437; font-size: 11px; line-height: 1.3; white-space: nowrap; }
+  .beagle__actions button:hover, .beagle__wake:hover { background: #f8e1bf; }
+  .beagle__wake { float: right; }
+  @keyframes beagle-breathe { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-3px) rotate(1deg); } }
+  @keyframes beagle-hop { 0%, 100% { transform: translateY(0); } 35% { transform: translateY(-10px) rotate(-5deg); } 65% { transform: translateY(-3px) rotate(4deg); } }
+  @keyframes beagle-hello { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .beagle { right: 12px; width: 88px; } .beagle__dog { width: 88px; height: 88px; } .beagle__bubble { bottom: 102px; width: min(260px, calc(100vw - 24px)); } .beagle__bubble:after { right: 31px; } }
+  @media (prefers-reduced-motion: reduce) { .beagle__sprite, .beagle.is-speaking .beagle__sprite, .beagle__bubble { animation: none; } }
+</style>
+
+<script>
+  (function () {
+    var pet = document.querySelector('.beagle');
+    var bubble = pet.querySelector('.beagle__bubble');
+    var dog = pet.querySelector('.beagle__dog');
+    var wake = pet.querySelector('.beagle__wake');
+    var words = pet.querySelector('.beagle__words');
+    var mood = pet.querySelector('.beagle__mood');
+    var isMuted = true;
+    var petName;
+    var dateFormatter = new Intl.DateTimeFormat('en', { timeZone: 'Asia/Shanghai', day: '2-digit' });
+    function updateName() {
+      var name = 'Day ' + dateFormatter.format(new Date());
+      if (name === petName) return;
+      if (petName) words.textContent = words.textContent.replace(petName, name);
+      petName = name;
+      pet.querySelectorAll('[data-day-name]').forEach(function (label) { label.textContent = petName; });
+      pet.setAttribute('aria-label', petName + '，你的小狗伴侣');
+      dog.setAttribute('aria-label', '摸摸 ' + petName + (isMuted ? '' : '，听它说一句'));
+      dog.title = isMuted ? petName + ' 🐾' : '摸摸 ' + petName + '，送你一句好心情 🐾';
+    }
+    updateName();
+    document.addEventListener('visibilitychange', updateName);
+    var hideTimer, hopTimer, nextKind = 'joke';
+    var lines = {
+      joke: [
+        '我的论文也有三个阶段：闻一闻、挠挠头、先去吃饭。🤓',
+        '为什么我不怕 deadline？因为我只认识 dinner time。🍗',
+        '今天的运动量达标了：追着自己的尾巴，完成一个闭环。🌀',
+        '别人有核心竞争力，我有核心汪汪力。汪！🐶',
+        '我的代码没有 bug，只有偶尔跑进来的小跳蚤。🤭',
+        '我刚想通人生，零食袋响了，又想不通了。🍪',
+        '你问我怎么保持专注？把零食放在屏幕后面。👀',
+        '今天也在认真工作：担任你的快乐监督员。😎'
+      ],
+      wisdom: [
+        '表达自己，才能 make influence! ✨',
+        '不必一次走很远，今天往前走一点也很好。🐾',
+        '认真做事，也记得认真休息。你又不是永动机。☕',
+        '先把想法写下来，让它有机会被看见。💡',
+        '允许自己慢慢来，小狗学会握手也练了好多次。🤝',
+        '你可以改变主意，成长本来就会带来新答案。🌱',
+        '今天的小进步，也值得摇摇尾巴庆祝。🎉',
+        '暂时没想明白没关系，散个步，再回来看看。🌿'
+      ]
+    };
+    var decks = { joke: [], wisdom: [] };
+    function remember(asleep) {
+      try { sessionStorage.setItem('beagle-asleep', asleep ? 'yes' : 'no'); } catch (error) {}
+    }
+    function hideLater() {
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(function () {
+        if (pet.matches(':hover') || pet.contains(document.activeElement)) return hideLater();
+        bubble.hidden = true; pet.dataset.face = 'happy';
+      }, 9000);
+    }
+    function say(text, kind) {
+      if (isMuted) return;
+      words.textContent = text;
+      mood.textContent = kind === 'joke' ? '🤭' : '✨';
+      pet.dataset.face = kind === 'joke' ? 'laugh' : 'wink';
+      bubble.hidden = false;
+      pet.classList.remove('is-speaking');
+      void pet.offsetWidth;
+      pet.classList.add('is-speaking');
+      clearTimeout(hopTimer);
+      hopTimer = setTimeout(function () { pet.classList.remove('is-speaking'); }, 650);
+      hideLater();
+    }
+    function chat(kind) {
+      if (isMuted) return;
+      if (!decks[kind].length) {
+        decks[kind] = lines[kind].slice();
+        for (var i = decks[kind].length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var swap = decks[kind][i]; decks[kind][i] = decks[kind][j]; decks[kind][j] = swap;
+        }
+      }
+      say(decks[kind].pop(), kind);
+    }
+    dog.addEventListener('click', function () {
+      chat(nextKind);
+      nextKind = nextKind === 'joke' ? 'wisdom' : 'joke';
+    });
+    pet.querySelector('.beagle__close').addEventListener('click', function () {
+      bubble.hidden = true; pet.dataset.face = 'happy'; clearTimeout(hideTimer); dog.focus();
+    });
+    pet.querySelector('.beagle__actions').addEventListener('click', function (event) {
+      var kind = event.target.dataset.kind;
+      if (!kind) return;
+      if (kind === 'sleep') {
+        bubble.hidden = true; dog.hidden = true; wake.hidden = false;
+        clearTimeout(hideTimer); remember(true); wake.focus();
+      } else chat(kind);
+    });
+    wake.addEventListener('click', function () {
+      dog.hidden = false; wake.hidden = true; remember(false);
+      say('睡醒啦！继续陪你慢慢探索这个世界。🐶', 'wisdom'); dog.focus();
+    });
+    pet.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') { bubble.hidden = true; pet.dataset.face = 'happy'; clearTimeout(hideTimer); (dog.hidden ? wake : dog).focus(); }
+    });
+    pet.hidden = false;
+    var asleep = false;
+    try { asleep = sessionStorage.getItem('beagle-asleep') === 'yes'; } catch (error) {}
+    dog.hidden = asleep; wake.hidden = !asleep;
+    if (!asleep) say('汪！我是 ' + petName + '，陪你过好每一天。摸摸我，送你一句好心情。🐾', 'wisdom');
+    setInterval(function () {
+      updateName();
+      if (isMuted || document.hidden || dog.hidden || !bubble.hidden || pet.matches(':hover') || pet.contains(document.activeElement)) return;
+      chat(nextKind); nextKind = nextKind === 'joke' ? 'wisdom' : 'joke';
+    }, 45000);
+  })();
+</script>

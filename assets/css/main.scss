@@ -87,6 +87,24 @@
 
 }
 
+.internship-box .paper-box-image {
+    justify-content: center;
+    align-items: center;
+
+    > div {
+        width: 200px;
+        max-width: 100%;
+    }
+
+    img {
+        display: block;
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
 $scroll_offset : 2em;
 h1:before, .anchor:before { 
     content: ''; 
