@@ -33,7 +33,7 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 
 ## 一作/共一论文(17)
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">在投</div><img src='images/shoprecbench_mainfig.png' alt="ShopRecBench：变化的购物需求与不确定条件下的案例评价标准" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">在投</div><img src='images/shoprecbench_framework.png' alt="ShopRecBench framework：数据来源、案例选择、评价标准设计与专家标注、回复生成及评价" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 **[在投] ShopRecBench: Evaluating Complex and Ambiguous Shopping Decisions in Conversation**
 
