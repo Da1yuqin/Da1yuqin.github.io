@@ -339,7 +339,7 @@ author_profile: true
     <div class="az-blog__intro">
       <p class="az-blog__quote">表达自己，才能 make influence!</p>
       <p class="az-blog__sub">这里记录我的随笔、研究笔记和项目复盘。</p>
-      <p class="az-blog__sub"><a href="#footprints">读完聊两句，留下你的足迹 🐾</a></p>
+      <p class="az-blog__sub"><a href="#footprints">评论区：聊聊你的想法</a></p>
       <div class="az-blog__socials" aria-label="social links">
         <a href="https://github.com/Da1yuqin" title="GitHub">GH</a>
         <a href="https://scholar.google.com/citations?user=lTE-iwYAAAAJ&hl=zh-CN" title="Google Scholar">GS</a>

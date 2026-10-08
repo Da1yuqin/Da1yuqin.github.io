@@ -16,12 +16,8 @@ google_scholar_stats_use_cdn : True
 # google analytics
 google_analytics_id      : G-PRZP1TVEV
 
-# Blog comments: copy the repository/category IDs from https://giscus.app/.
-blog_comments:
-  repo: "Da1yuqin/Da1yuqin.github.io"
-  repo_id: ""
-  category: "Announcements"
-  category_id: ""
+# Comment service URL.
+blog_comments_api: "https://day-comments.thpv54ng76.workers.dev"
 blog_visit_counter: true
 
 # SEO Related
@@ -75,6 +71,7 @@ include:
   - _pages
   - files
 exclude:
+  - comments-worker
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

@@ -1,45 +1,45 @@
-{% capture feedback_subject %}Blog 留言 · {{ page.title }}{% endcapture %}
-{% capture feedback_body %}读到这里，我想说：
-
-
-文章：{{ page.url | absolute_url }}{% endcapture %}
 <style>
   .blog-footprints { margin: 32px 0; padding: 28px; border: 1px solid #e9e5df; border-radius: 24px; background: #faf9f6; color: #333; }
   .blog-footprints h2 { margin: 0 0 12px; font-size: 1.35rem; border: 0; }
   .blog-footprints p { margin: 10px 0; line-height: 1.8; }
-  .blog-footprints__eyebrow { font-size: .78rem; letter-spacing: .12em; color: #877462; }
-  .blog-footprints__actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0; }
-  .blog-footprints__button { display: inline-block; padding: 10px 18px; border-radius: 14px; background: #3c493e; color: #fff !important; text-decoration: none !important; }
+  .blog-footprints__button { border: 0; cursor: pointer; font: inherit; display: inline-block; padding: 10px 18px; border-radius: 14px; background: #3c493e; color: #fff !important; text-decoration: none !important; }
   .blog-footprints__button:hover { background: #526354; }
-  .blog-footprints__note { font-size: .85rem; color: #777; }
   .blog-footprints__stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; font-size: .85rem; color: #777; }
   .blog-footprints__stats strong { color: #3c493e; }
+  .blog-comments__form label { font-weight: normal; }
+  .blog-comments__form input[type="text"], .blog-comments__form input:not([type]), .blog-comments__form textarea { display: block; width: 100%; box-sizing: border-box; margin: 6px 0 16px; padding: 10px 12px; border: 1px solid #d9ddd8; border-radius: 8px; background: #fff; color: #333; font: inherit; }
+  .blog-comments__form textarea { resize: vertical; }
+  .blog-comments__name { display: block; max-width: 260px; }
+  .blog-comments__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+  .blog-comments__actions fieldset { display: flex; gap: 20px; margin: 0; padding: 0; border: 0; }
+  .blog-comments__actions label { display: inline-flex; align-items: center; gap: 6px; margin: 0; }
+  .blog-comments__actions input[type="radio"] { display: inline-block; width: auto; margin: 0; }
+  .blog-footprints__button:disabled { opacity: .5; cursor: not-allowed; }
+  .blog-comments__privacy, .blog-comments__status { font-size: .85rem; color: #777; }
+  .blog-comments__item { padding: 16px 0; border-top: 1px solid #e5e5e5; }
+  .blog-comments__item p { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .blog-comments__item time { margin-left: 12px; color: #888; font-size: .8rem; }
   .blog-footprints [hidden] { display: none !important; }
   @media (max-width: 768px) { .blog-footprints { padding: 22px 18px; } }
 </style>
 
 <section class="blog-footprints" id="footprints" aria-labelledby="footprints-title">
-  <p class="blog-footprints__eyebrow">LEAVE A LITTLE TRACE · 来都来了</p>
-  <h2 id="footprints-title">留下你的足迹 🐾</h2>
-  <p>哪句话让你停了一下？有没有不同的看法，或是想分享的经历？<br>一句感想、一个问题，都欢迎。你的表达，也可能成为下一个想法的起点。</p>
-  {% if site.blog_comments.repo_id != empty and site.blog_comments.category_id != empty and site.blog_comments.repo_id and site.blog_comments.category_id %}
-    <p class="blog-footprints__note">登录 GitHub 就能留言、回复或点个表情。欢迎认真讨论，也欢迎随口聊聊。</p>
-    <div class="giscus"></div>
-    <script src="https://giscus.app/client.js"
-      data-repo="{{ site.blog_comments.repo | escape }}"
-      data-repo-id="{{ site.blog_comments.repo_id | escape }}"
-      data-category="{{ site.blog_comments.category | escape }}"
-      data-category-id="{{ site.blog_comments.category_id | escape }}"
-      data-mapping="pathname" data-strict="1" data-reactions-enabled="1"
-      data-emit-metadata="0" data-input-position="top" data-theme="light"
-      data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async></script>
-  {% endif %}
-  <div class="blog-footprints__actions">
-    <a class="blog-footprints__button" data-blog-feedback="email" href="mailto:{{ site.author.email }}?subject={{ feedback_subject | strip | uri_escape }}&amp;body={{ feedback_body | strip | uri_escape }}">给 Day 写几句话 ↗</a>
-    <span class="blog-footprints__note">邮件会直接发给我，欢迎交流。</span>
-  </div>
+  <h2 id="footprints-title">评论区</h2>
+  <form class="blog-comments__form">
+    <label class="blog-comments__name">昵称（选填）<input name="name" maxlength="40" autocomplete="nickname" placeholder="匿名也可以" /></label>
+    <label class="blog-comments__content">你的评论<textarea name="content" required maxlength="2000" rows="4" placeholder="写下你的想法…"></textarea></label>
+    <div class="blog-comments__actions">
+      <fieldset><legend class="sr-only">评论可见范围</legend>
+        <label><input type="radio" name="visibility" value="public" /> 公开评论</label>
+        <label><input type="radio" name="visibility" value="private" checked /> 私密评论</label>
+      </fieldset>
+      <button class="blog-footprints__button" type="submit" disabled>发布评论</button>
+    </div>
+    <p class="blog-comments__privacy">私密评论仅 Day 可见。</p>
+    <p class="blog-comments__status" role="status" aria-live="polite"></p>
+  </form>
+  <div class="blog-comments__list" aria-live="polite"></div>
   <div class="blog-footprints__stats" aria-live="polite">
-    <span id="footprints-counter-note">每一次阅读，都是一次相遇。</span>
     <span id="busuanzi_container_page_pv" hidden>本页阅读 <strong id="busuanzi_page_pv"></strong> 次</span>
     <span id="busuanzi_container_page_uv" hidden>本页来访 <strong id="busuanzi_page_uv"></strong> 人</span>
   </div>
@@ -51,9 +51,7 @@
     document.addEventListener('click', function (event) {
       var link = event.target.closest('a');
       if (!link || localPreview || typeof window.gtag !== 'function') return;
-      if (link.hasAttribute('data-blog-feedback')) {
-        window.gtag('event', 'blog_feedback_open', {method: link.dataset.blogFeedback, page_path: location.pathname});
-      } else if (link.closest('.az-post')) {
+      if (link.closest('.az-post')) {
         window.gtag('event', 'blog_article_open', {article_path: new URL(link.href).pathname});
       }
     });
@@ -66,7 +64,6 @@
         var value = document.getElementById('busuanzi_' + metric);
         if (/^\d+$/.test(value.textContent)) document.getElementById('busuanzi_container_' + metric).hidden = false;
       });
-      document.getElementById('footprints-counter-note').hidden = true;
       observer.disconnect();
     });
     observer.observe(document.querySelector('.blog-footprints__stats'), {childList: true, subtree: true});
@@ -76,5 +73,65 @@
     document.body.appendChild(counter);
     setTimeout(function () { observer.disconnect(); }, 15000);
     {% endif %}
+  }());
+</script>
+
+<script>
+  (function () {
+    var section = document.getElementById('footprints');
+    var form = section.querySelector('form');
+    var button = form.querySelector('button');
+    var status = section.querySelector('.blog-comments__status');
+    var privacy = section.querySelector('.blog-comments__privacy');
+    var list = section.querySelector('.blog-comments__list');
+    var api = {{ site.blog_comments_api | default: '' | jsonify }};
+    var page = {{ page.url | jsonify }};
+    form.addEventListener('change', function () {
+      privacy.textContent = form.elements.visibility.value === 'private' ? '私密评论仅 Day 可见。' : '公开评论会显示在下方，所有人可见。';
+    });
+    if (!api) { status.textContent = '评论暂未开放。'; return; }
+    button.disabled = false;
+    async function request(url, options) {
+      var controller = new AbortController();
+      var timeout = setTimeout(function () { controller.abort(); }, 12000);
+      try { return await fetch(url, Object.assign({}, options, {signal: controller.signal})); }
+      finally { clearTimeout(timeout); }
+    }
+    function showComments(comments) {
+      list.replaceChildren();
+      comments.forEach(function (comment) {
+        var item = document.createElement('article'); item.className = 'blog-comments__item';
+        var name = document.createElement('strong'); name.textContent = comment.name || '匿名';
+        var time = document.createElement('time'); time.dateTime = comment.created_at;
+        time.textContent = new Date(comment.created_at).toLocaleDateString('zh-CN');
+        var content = document.createElement('p'); content.textContent = comment.content;
+        item.append(name, time, content); list.append(item);
+      });
+    }
+    async function loadComments() {
+      var response = await request(api.replace(/\/$/, '') + '/comments?page=' + encodeURIComponent(page));
+      if (!response.ok) throw new Error('load');
+      var data = await response.json(); showComments(data.comments);
+    }
+    loadComments().catch(function () { if (!status.textContent) status.textContent = '公开评论暂时加载失败，请稍后刷新。'; });
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault(); if (button.disabled || !form.reportValidity()) return;
+      button.disabled = true; status.textContent = '正在发布…';
+      var visibility = form.elements.visibility.value;
+      try {
+        var response = await request(api.replace(/\/$/, '') + '/comments', {
+          method: 'POST', headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({page: page, name: form.elements.name.value, content: form.elements.content.value, visibility: visibility})
+        });
+        var result = await response.json();
+        if (!response.ok) throw new Error(result.error || '发布失败，请稍后重试。');
+        form.elements.content.value = '';
+        status.textContent = visibility === 'private' ? '私密评论已送达，仅 Day 可见。' : '评论已公开发布。';
+        if (visibility === 'public') {
+          try { await loadComments(); } catch (_) { status.textContent += ' 列表暂时加载失败，可稍后刷新。'; }
+        }
+      } catch (error) { status.textContent = error.name === 'AbortError' || error.message === 'Failed to fetch' ? '连接失败，请稍后重试；输入内容已保留。' : error.message; }
+      finally { button.disabled = false; }
+    });
   }());
 </script>
