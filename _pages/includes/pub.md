@@ -31,7 +31,23 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
-## 一作/共一论文(16)
+## 一作/共一论文(17)
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">在投</div><img src='images/shoprecbench_mainfig.png' alt="ShopRecBench：变化的购物需求与不确定条件下的案例评价标准" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+**[在投] ShopRecBench: Evaluating Complex and Ambiguous Shopping Decisions in Conversation**
+
+**Yuqin Dai**, Zhanwei Zhang, Zhouheng Yao, Yueqi Zhang, Jingyu He, Chaoyang Shi, Boyuan Pan
+
+ACL ARR 2026 October Submission
+
+- 构建面向复杂与模糊购物需求的对话推荐评测基准，覆盖 17 个零售领域、169 个案例和 1,603 条真实商品网页记录。
+- 专家标注并审核 1,325 条案例评价标准，分别评估基础能力、额外决策帮助与安全性，检查需求变化、事实依据及推荐方案的可行性。
+- 评测 7 个商业 API 模型与 3 个本地开源模型，揭示无依据的商品描述、不合理的适用性推断和过早确定模糊需求等共性问题。
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [ACL26 Findings][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
