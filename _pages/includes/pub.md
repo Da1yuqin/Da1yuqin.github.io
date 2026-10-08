@@ -33,13 +33,11 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 
 ## 一作/共一论文(17)
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">在投</div><img src='images/shoprecbench_framework.png' alt="ShopRecBench framework：数据来源、案例选择、评价标准设计与专家标注、回复生成及评价" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/shoprecbench_framework.png' alt="ShopRecBench framework：数据来源、案例选择、评价标准设计与专家标注、回复生成及评价" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-**[在投] ShopRecBench: Evaluating Complex and Ambiguous Shopping Decisions in Conversation**
+**[arXiv26] ShopRecBench: Evaluating Complex and Ambiguous Shopping Decisions in Conversation**
 
 **Yuqin Dai**, Zhanwei Zhang, Zhouheng Yao, Yueqi Zhang, Jingyu He, Chaoyang Shi, Boyuan Pan
-
-ACL ARR 2026 October Submission
 
 - 构建面向复杂与模糊购物需求的对话推荐评测基准，覆盖 17 个零售领域、169 个案例和 1,603 条真实商品网页记录。
 - 专家标注并审核 1,325 条案例评价标准，分别评估基础能力、额外决策帮助与安全性，检查需求变化、事实依据及推荐方案的可行性。
@@ -178,9 +176,9 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">在投</div><img src='images/RemedyRAG_mainfig.png' alt="Discover, Verify, and Assemble workflows for Agentic RAG" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/RemedyRAG_mainfig.png' alt="Discover, Verify, and Assemble workflows for Agentic RAG" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-**[在投] Not Every Workflow Helps: Discover, Verify, and Assemble Workflows for Agentic RAG**
+**[arXiv26] Not Every Workflow Helps: Discover, Verify, and Assemble Workflows for Agentic RAG**
 
 **Hua Ye**\*, **Yuqin Dai**\*, Yijun Li, Yuchen Yan, Zhipiao Liu, Hongwei Yang, Yiquan Wu, Wenqi Zhang, Weiming Lu, Yongliang Shen
 
