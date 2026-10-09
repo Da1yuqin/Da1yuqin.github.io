@@ -1,33 +1,38 @@
 <style>
-  .blog-footprints { margin: 32px 0; padding: 28px; border: 1px solid #e9e5df; border-radius: 24px; background: #faf9f6; color: #333; }
-  .blog-footprints h2 { margin: 0 0 12px; font-size: 1.35rem; border: 0; }
-  .blog-footprints p { margin: 10px 0; line-height: 1.8; }
-  .blog-footprints__button { border: 0; cursor: pointer; font: inherit; display: inline-block; padding: 10px 18px; border-radius: 14px; background: #3c493e; color: #fff !important; text-decoration: none !important; }
-  .blog-footprints__button:hover { background: #526354; }
-  .blog-footprints__stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; font-size: .85rem; color: #777; }
-  .blog-footprints__stats strong { color: #3c493e; }
-  .blog-comments__form label { font-weight: normal; }
-  .blog-comments__form input[type="text"], .blog-comments__form input:not([type]), .blog-comments__form textarea { display: block; width: 100%; box-sizing: border-box; margin: 6px 0 16px; padding: 10px 12px; border: 1px solid #d9ddd8; border-radius: 8px; background: #fff; color: #333; font: inherit; }
-  .blog-comments__form textarea { resize: vertical; }
-  .blog-comments__name { display: block; max-width: 260px; }
-  .blog-comments__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
-  .blog-comments__actions fieldset { display: flex; gap: 20px; margin: 0; padding: 0; border: 0; }
-  .blog-comments__actions label { display: inline-flex; align-items: center; gap: 6px; margin: 0; }
-  .blog-comments__actions input[type="radio"] { display: inline-block; width: auto; margin: 0; }
-  .blog-footprints__button:disabled { opacity: .5; cursor: not-allowed; }
-  .blog-comments__privacy, .blog-comments__status { font-size: .85rem; color: #777; }
-  .blog-comments__item { padding: 16px 0; border-top: 1px solid #e5e5e5; }
-  .blog-comments__item p { white-space: pre-wrap; overflow-wrap: anywhere; }
-  .blog-comments__item time { margin-left: 12px; color: #888; font-size: .8rem; }
+  .blog-footprints { scroll-margin-top: 90px; margin: 48px 0 24px; color: var(--day-ink, #30362e); font-size: 13px; line-height: 1.6; }
+  .blog-footprints h2 { margin: 0 0 14px; padding: 0; border: 0; font-family: inherit; font-size: 14px; font-weight: 500; }
+  .blog-comments__editor { border: 1px solid #dedfd8; border-radius: 3px; background: #fff; }
+  .blog-comments__name { display: block; margin: 0 14px; padding: 9px 0; border-bottom: 1px dashed #e4e4df; }
+  .blog-comments__form input:not([type]), .blog-comments__form textarea { display: block; box-sizing: border-box; width: 100%; margin: 0; padding: 6px 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: #30362e; font: inherit; }
+  .blog-comments__form input:not([type]) { max-width: 260px; font-size: 13px; }
+  .blog-comments__form textarea { padding: 14px; min-height: 145px; resize: vertical; font-size: 14px; line-height: 1.75; }
+  .blog-comments__form input::placeholder, .blog-comments__form textarea::placeholder { color: #737b6b; opacity: 1; }
+  .blog-comments__form input:focus, .blog-comments__form textarea:focus { outline: 0; box-shadow: inset 0 -1px #73826a; }
+  .blog-comments__actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 10px 14px 14px; }
+  .blog-comments__actions fieldset { display: flex; flex-wrap: wrap; gap: 16px; margin: 0; padding: 0; border: 0; }
+  .blog-comments__actions label { display: inline-flex; align-items: center; gap: 5px; margin: 0; font-size: 12px; font-weight: normal; color: #74796f; cursor: pointer; }
+  .blog-comments__actions input[type="radio"] { width: 12px; height: 12px; display: inline-block; margin: 0; accent-color: #526349; }
+  .blog-footprints__button { padding: 6px 16px; margin: 0; border: 1px solid #cdd3c6; border-radius: 3px; background: #fff; color: #526349; font: inherit; font-size: 12px; cursor: pointer; }
+  .blog-footprints__button:hover { background: #f1f4ed; border-color: #73826a; }
+  .blog-footprints__button:disabled { opacity: .45; cursor: not-allowed; }
+  .blog-footprints .blog-comments__privacy, .blog-footprints .blog-comments__status { margin: 9px 0 0; font-size: 12px; color: #737b6b; line-height: 1.6; }
+  .blog-comments__status:empty { display: none; }
+  .blog-footprints .blog-comments__empty { margin: 24px 0; text-align: center; font-size: 13px; color: #737b6b; }
+  .blog-comments__item { padding: 18px 0; border-bottom: 1px solid #e5e7de; font-size: 13px; }
+  .blog-comments__item strong { font-size: 13px; font-weight: 500; }
+  .blog-comments__item p { margin: 8px 0 0; font-size: 14px; line-height: 1.75; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .blog-comments__item time { margin-left: 12px; color: #999c92; font-size: 11px; }
+  .blog-footprints__stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; font-size: 11px; color: #969a90; }
+  .blog-footprints__stats strong { font-weight: normal; }
   .blog-footprints [hidden] { display: none !important; }
-  @media (max-width: 768px) { .blog-footprints { padding: 22px 18px; } }
 </style>
 
 <section class="blog-footprints" id="footprints" aria-labelledby="footprints-title">
   <h2 id="footprints-title">评论区</h2>
   <form class="blog-comments__form">
-    <label class="blog-comments__name">昵称（选填）<input name="name" maxlength="40" autocomplete="nickname" placeholder="匿名也可以" /></label>
-    <label class="blog-comments__content">你的评论<textarea name="content" required maxlength="2000" rows="4" placeholder="写下你的想法…"></textarea></label>
+    <div class="blog-comments__editor">
+    <label class="blog-comments__name"><span class="sr-only">昵称（选填）</span><input name="name" maxlength="40" autocomplete="nickname" placeholder="昵称（选填，匿名也可以）" /></label>
+    <label class="blog-comments__content"><span class="sr-only">你的评论</span><textarea name="content" required maxlength="2000" rows="4" placeholder="写下你的想法…"></textarea></label>
     <div class="blog-comments__actions">
       <fieldset><legend class="sr-only">评论可见范围</legend>
         <label><input type="radio" name="visibility" value="public" /> 公开评论</label>
@@ -35,10 +40,12 @@
       </fieldset>
       <button class="blog-footprints__button" type="submit" disabled>发布评论</button>
     </div>
+    </div>
     <p class="blog-comments__privacy">私密评论仅 Day 可见。</p>
     <p class="blog-comments__status" role="status" aria-live="polite"></p>
   </form>
   <div class="blog-comments__list" aria-live="polite"></div>
+  <p class="blog-comments__empty" hidden>来发评论吧～</p>
   <div class="blog-footprints__stats" aria-live="polite">
     <span id="busuanzi_container_page_pv" hidden>本页阅读 <strong id="busuanzi_page_pv"></strong> 次</span>
     <span id="busuanzi_container_page_uv" hidden>本页来访 <strong id="busuanzi_page_uv"></strong> 人</span>
@@ -99,6 +106,7 @@
     }
     function showComments(comments) {
       list.replaceChildren();
+      section.querySelector('.blog-comments__empty').hidden = comments.length > 0;
       comments.forEach(function (comment) {
         var item = document.createElement('article'); item.className = 'blog-comments__item';
         var name = document.createElement('strong'); name.textContent = comment.name || '匿名';

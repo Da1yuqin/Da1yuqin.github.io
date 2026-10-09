@@ -8,438 +8,74 @@ author_profile: true
 <script>document.body.classList.add('blog-page');</script>
 
 <style>
-  body.blog-page {
-    min-height: 100vh;
-    background: #fff !important;
+  body.blog-page { background: var(--day-paper, #fcfbf8); }
+  body.blog-page .sidebar { display: none !important; }
+  body.blog-page #main { width: min(940px, calc(100% - 48px)); max-width: none; margin: 0 auto; padding: 0 0 64px; }
+  body.blog-page .page { float: none; width: 100%; padding: 0; margin: 0; }
+  body.blog-page .page .page__inner-wrap { padding: 0; border: 0; background: transparent; box-shadow: none; }
+  .az-blog__profile { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.85fr); gap: 64px; align-items: center; padding: 48px 0 56px; border-bottom: 1px solid var(--day-line); }
+  .az-blog__identity { min-width: 0; }
+  .az-blog .az-blog__eyebrow { margin: 0 0 28px; font-size: 11px; letter-spacing: .18em; color: var(--day-accent); }
+  .az-blog__avatar { width: 88px; height: 106px; margin-bottom: 20px; }
+  .az-blog__avatar img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .az-blog .az-blog__quote { margin: 0 0 22px; font-family: "Iowan Old Style", "Palatino Linotype", "Songti SC", "Noto Serif CJK SC", serif; font-size: 34px; font-weight: 500; line-height: 1.55; color: var(--day-ink); }
+  .az-blog__quote em { font-weight: 400; }
+  .az-blog .az-blog__sub { margin: 8px 0 0; font-size: 13px; line-height: 1.8; color: #707667; }
+  .az-blog__socials { display: flex; gap: 18px; margin-top: 22px; }
+  .az-blog__socials a { font-size: 11px; letter-spacing: .06em; color: #626d58; text-decoration: none; border-bottom: 1px solid #bbc3b1; padding-bottom: 2px; }
+  .az-blog__socials a:hover { color: #293e22; border-color: #293e22; }
+  .az-blog__art { min-width: 0; width: 100%; max-width: 330px; margin: 0 auto; }
+  .az-blog__art--original { position: relative; aspect-ratio: 1170 / 1590; overflow: hidden; }
+  .az-blog__art--original img { position: absolute; top: -36.164%; left: 0; display: block; width: 100%; height: auto; }
+  .az-blog .az-blog__section-title { scroll-margin-top: 85px; margin: 36px 0 22px; border: 0; font-size: 25px; font-weight: 500; }
+  .az-blog__categories { display: flex; flex-wrap: wrap; gap: 10px 28px; border-bottom: 1px solid var(--day-line); }
+  .az-blog__categories button { position: relative; margin: 0 0 -1px; padding: 8px 0 12px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: transparent; color: #747c6d; font: inherit; font-size: 13px; cursor: pointer; }
+  .az-blog__categories button[aria-selected="true"] { border-color: #526349; color: #303c2a; }
+  .az-blog__categories button:hover { color: #526349; }
+  .az-blog__category-count { margin-left: 7px; font-size: 10px; opacity: .7; }
+  .az-blog .az-blog__category-description { margin: 14px 0 6px; color: #757d6d; font-size: 12px; }
+  .az-blog__posts { display: flex; flex-direction: column; }
+  .az-post { display: grid; grid-template-columns: 210px minmax(0,1fr); align-items: center; gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--day-line); background: transparent; }
+  .az-post__cover { display: block; position: relative; height: 170px; overflow: hidden; background: #fff; }
+  .az-post__cover img { display: block; width: 100%; height: 170px; object-fit: contain; }
+  .az-post__cover--taichi img { position: absolute; width: 125px; height: auto; top: -36.164%; left: 50%; transform: translateX(-50%); }
+  .az-post__body { min-width: 0; }
+  .az-post__body:only-child { grid-column: 1 / -1; }
+  .az-post__meta { color: #757d6d; font-size: 11px; letter-spacing: .01em; }
+  .az-post .az-post__title { margin: 8px 0 10px; font-size: 22px; font-weight: 600; line-height: 1.5; }
+  .az-post__title a { color: #30362e; text-decoration: none; }
+  .az-post__title a:hover { color: #526349; text-decoration: underline; }
+  .az-post .az-post__excerpt { margin: 0; color: #707667; font-size: 13px; line-height: 1.85; }
+  .az-post__tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; font-size: 11px; color: #68775b; }
+  .az-post__tags span + span:before { content: '·'; margin-right: 10px; color: #b4b7aa; }
+  .az-blog__pagination { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 24px 0; font-size: 12px; color: #747c6d; }
+  .az-blog__pagination button { padding: 6px 0; border: 0; border-bottom: 1px solid #cdd3c6; border-radius: 0; background: transparent; color: #526349; font: inherit; font-size: 12px; cursor: pointer; }
+  .az-blog__pagination button:disabled { opacity: .3; cursor: default; }
+  .az-blog__empty { margin: 34px 0; font-size: 13px; color: #747c6d; }
+  .az-post[hidden], .az-blog__empty[hidden], .az-blog__pagination[hidden] { display: none !important; }
+  @media (max-width: 640px) {
+    body.blog-page #main { width: calc(100% - 40px); }
+    .az-blog__profile { gap: 18px; padding: 32px 0; grid-template-columns: minmax(0,1fr) minmax(0,.8fr); }
+    .az-blog .az-blog__eyebrow { margin-bottom: 18px; font-size: 10px; }
+    .az-blog__avatar { width: 65px; height: 78px; }
+    .az-blog .az-blog__quote { font-size: 23px; }
+    .az-blog .az-blog__sub { font-size: 11px; }
+    .az-blog__art { max-width: 220px; }
+    .az-blog__socials { gap: 12px; }
+    .az-blog__categories { gap: 5px 18px; }
+    .az-blog__categories button { font-size: 12px; }
+    .az-post { grid-template-columns: 110px minmax(0,1fr); gap: 18px; padding: 24px 0; }
+    .az-post__cover, .az-post__cover img { height: 120px; }
+    .az-post__cover--taichi img { width: 88px; height: auto; }
+    .az-post .az-post__title { font-size: 18px; }
+    .az-post .az-post__excerpt { font-size: 12px; }
+    .az-post__tags { margin-top: 9px; }
   }
-
-  body.blog-page:before,
-  body.blog-page:after {
-    display: none !important;
-  }
-
-  body.blog-page .masthead {
-    margin: 14px auto 0 auto;
-    width: min(92vw, 980px);
-    border: 1px solid rgba(0,0,0,.08);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .85) !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, .05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  body.blog-page .masthead a,
-  body.blog-page .masthead button {
-    color: rgba(0,0,0,.8) !important;
-  }
-
-  body.blog-page #main {
-    width: min(800px, 94vw);
-    max-width: none;
-    margin: 0 auto;
-    padding: 34px 0 80px 0;
-  }
-
-  body.blog-page .sidebar {
-    display: none !important;
-  }
-
-  body.blog-page .page {
-    float: none !important;
-    width: 100% !important;
-    max-width: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  body.blog-page .page .page__inner-wrap {
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-
-  .az-blog {
-    min-height: calc(100vh - 140px);
-  }
-
-  .az-blog__profile {
-    display: grid;
-    width: 100%;
-    grid-template-columns: minmax(0, .9fr) minmax(0, 1.25fr);
-    gap: 20px;
-    align-items: center;
-    min-height: 560px;
-    box-sizing: border-box;
-    padding: 28px;
-    border-radius: 32px;
-    overflow: hidden;
-    text-align: left;
-    background: #fff;
-    box-shadow: 0 16px 48px rgba(0,0,0,.08);
-  }
-
-  .az-blog__identity {
-    min-width: 0;
-  }
-
-  .az-blog__art {
-    min-width: 0;
-    margin: 0;
-  }
-
-  .az-blog__art img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 640px;
-    object-fit: contain;
-  }
-
-  /* Frame the original screenshot without changing its illustration pixels. */
-  .az-blog__art--original {
-    position: relative;
-    aspect-ratio: 1170 / 1590;
-    overflow: hidden;
-  }
-
-  .az-blog__art--original img {
-    position: absolute;
-    top: -36.164%;
-    left: 0;
-    max-height: none;
-  }
-
-  .az-blog__avatar {
-    width: 160px;
-    height: 190px;
-    flex-shrink: 0;
-    padding: 0;
-  }
-
-  .az-blog__avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .az-blog__intro {
-    width: min(620px, 100%);
-    margin-top: 14px;
-    padding: 0;
-    color: #333;
-    background: transparent;
-  }
-
-  .az-blog__quote {
-    margin: 0;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    font-weight: 650;
-    color: #333;
-  }
-
-  .az-blog__sub {
-    margin: 10px 0 0 0;
-    color: #666;
-    font-size: .96rem;
-  }
-
-  .az-blog__socials {
-    display: flex;
-    justify-content: flex-start;
-    gap: 12px;
-    margin-top: 18px;
-    flex-wrap: wrap;
-  }
-
-  .az-blog__socials a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 999px;
-    color: rgba(0,0,0,.6);
-    text-decoration: none;
-    background: rgba(0,0,0,.04);
-    transition: transform .18s ease, background .18s ease;
-  }
-
-  .az-blog__socials a:hover {
-    transform: translateY(-2px);
-    background: rgba(0,0,0,.08);
-  }
-
-  .az-blog__section-title {
-    scroll-margin-top: 90px;
-    margin: 18px 0 14px 0;
-    color: rgba(0,0,0,.85);
-    font-size: 1.45rem;
-  }
-
-  .az-blog__posts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .az-blog__categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 0 0 12px;
-    border-bottom: 1px solid #e9e3d9;
-  }
-
-  .az-blog__categories button {
-    margin: 0;
-    padding: 10px 14px;
-    border: 1px solid transparent;
-    border-radius: 12px;
-    color: #70665b;
-    background: transparent;
-    font: inherit;
-    font-size: .9rem;
-    cursor: pointer;
-  }
-
-  .az-blog__categories button[aria-selected="true"] {
-    border-color: #e8d6b5;
-    color: #614c2c;
-    background: #fff3d9;
-  }
-
-  .az-blog__categories button:focus-visible {
-    outline: 2px solid #a47b36;
-    outline-offset: 3px;
-  }
-
-  .az-blog__category-count {
-    margin-left: 6px;
-    opacity: .6;
-    font-size: .8em;
-  }
-
-  .az-blog__category-description {
-    margin: 14px 0 22px;
-    color: #84786a;
-    font-size: .92rem;
-  }
-
-  .az-post[hidden], .az-blog__empty[hidden], .az-blog__pagination[hidden] {
-    display: none;
-  }
-
-  .az-blog__pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    margin: 24px 0;
-    color: #70665b;
-    font-size: .9rem;
-  }
-
-  .az-blog__pagination button {
-    padding: 10px 14px;
-    border: 1px solid #e8d6b5;
-    border-radius: 12px;
-    color: #614c2c;
-    background: #fff3d9;
-    font: inherit;
-    cursor: pointer;
-  }
-
-  .az-blog__pagination button:disabled {
-    opacity: .4;
-    cursor: default;
-  }
-
-  .az-post {
-    overflow: hidden;
-    border: 1px solid rgba(0,0,0,.06);
-    border-radius: 24px;
-    color: rgba(0,0,0,.85);
-    background: rgba(255, 255, 255, .9);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, .05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: transform .18s ease, box-shadow .18s ease;
-  }
-
-  .az-post:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 48px rgba(0, 0, 0, .1);
-  }
-
-  .az-post__cover {
-    display: block;
-    height: 200px;
-    background: rgba(0,0,0,.02);
-  }
-
-  .az-post__cover.az-post__cover--image {
-    height: auto;
-  }
-
-  .az-post__cover img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .az-post__cover.az-post__cover--taichi {
-    position: relative;
-    height: 360px;
-    overflow: hidden;
-    background: #fff;
-  }
-
-  .az-post__cover--taichi img {
-    position: absolute;
-    width: 265px;
-    max-width: 100%;
-    top: -36.164%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .az-post__body {
-    padding: 20px 24px 24px 24px;
-  }
-
-  .az-post__meta {
-    font-size: .84rem;
-    color: rgba(0,0,0,.45);
-  }
-
-  .az-post__title {
-    margin: 8px 0 0 0;
-    font-size: 1.35rem;
-    line-height: 1.28;
-  }
-
-  .az-post__title a {
-    color: rgba(0,0,0,.9);
-    text-decoration: none;
-  }
-
-  .az-post__excerpt {
-    margin: 12px 0 0 0;
-    color: rgba(0,0,0,.6);
-    font-size: .98rem;
-    line-height: 1.6;
-  }
-
-  .az-post__tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 16px;
-  }
-
-  .az-post__tags span {
-    padding: 4px 12px;
-    border-radius: 999px;
-    font-size: .82rem;
-    color: rgba(0,0,0,.5);
-    background: rgba(0,0,0,.04);
-  }
-
-  .az-blog__empty {
-    padding: 24px;
-    border-radius: 22px;
-    color: rgba(0,0,0,.5);
-    background: rgba(255, 255, 255, .9);
-    border: 1px solid rgba(0,0,0,.06);
-  }
-
-  @media (max-width: 768px) {
-    body.blog-page {
-      background-attachment: scroll !important;
-      background-position: center top !important;
-    }
-
-    body.blog-page .masthead {
-      width: calc(100vw - 20px);
-      margin-top: 10px;
-      border-radius: 22px;
-    }
-
-    body.blog-page #main {
-      width: min(100vw - 20px, 560px);
-      padding-top: 24px;
-    }
-
-    .az-blog__profile {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 24px;
-      min-height: 0;
-      padding: 24px 18px;
-      border-radius: 24px;
-      text-align: center;
-    }
-
-    .az-blog__avatar {
-      width: 112px;
-      height: 134px;
-      margin: 0 auto;
-    }
-
-    .az-blog__art {
-      width: 100%;
-      max-width: 360px;
-      margin: 0 auto;
-    }
-
-    .az-blog__socials {
-      justify-content: center;
-    }
-
-    .az-blog__intro {
-      width: 100%;
-      margin-top: 12px;
-      padding: 0;
-    }
-
-    .az-blog__quote {
-      font-size: 1rem;
-    }
-
-    .az-blog__posts {
-      gap: 14px;
-    }
-
-    .az-post {
-      border-radius: 20px;
-    }
-
-    .az-post__cover {
-      height: 122px;
-    }
-
-    .az-post__cover.az-post__cover--taichi {
-    position: relative;
-    height: 360px;
-    overflow: hidden;
-    background: #fff;
-  }
-
-  .az-post__cover--taichi img {
-    position: absolute;
-    width: 265px;
-    max-width: 100%;
-    top: -36.164%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .az-post__body {
-      padding: 14px 15px 16px 15px;
-    }
+  @media (max-width: 380px) {
+    .az-blog__profile { grid-template-columns: 1fr; }
+    .az-blog__art { max-width: 170px; }
+    .az-post { grid-template-columns: 1fr; gap: 12px; }
+    .az-post__cover { width: 100%; }
   }
 </style>
 
@@ -453,11 +89,12 @@ author_profile: true
 <div class="az-blog">
   <section class="az-blog__profile">
     <div class="az-blog__identity">
+    <p class="az-blog__eyebrow">DAY / JOURNAL</p>
     <div class="az-blog__avatar">
       {% include site-image.html src='/images/blog-day-plush-avatar.png' alt='Day 的呆呆小狗玩偶，穿着草莓上衣和绿色流苏裙' sizes='160px' loading='eager' %}
     </div>
     <div class="az-blog__intro">
-      <p class="az-blog__quote">表达自己，才能 make influence!</p>
+      <p class="az-blog__quote">表达自己，才能<br /><em>make influence!</em></p>
       <p class="az-blog__sub">这里记录我的随笔、研究笔记和项目复盘。</p>
       <p class="az-blog__sub"><a href="#footprints">评论区：聊聊你的想法</a></p>
       <div class="az-blog__socials" aria-label="social links">
