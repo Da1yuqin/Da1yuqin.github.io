@@ -291,6 +291,22 @@ author_profile: true
     height: auto;
   }
 
+  .az-post__cover.az-post__cover--taichi {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .az-post__cover--taichi img {
+    position: absolute;
+    width: 265px;
+    max-width: 100%;
+    top: -36.164%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .az-post__body {
     padding: 20px 24px 24px 24px;
   }
@@ -405,7 +421,23 @@ author_profile: true
       height: 122px;
     }
 
-    .az-post__body {
+    .az-post__cover.az-post__cover--taichi {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .az-post__cover--taichi img {
+    position: absolute;
+    width: 265px;
+    max-width: 100%;
+    top: -36.164%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .az-post__body {
       padding: 14px 15px 16px 15px;
     }
   }
@@ -459,7 +491,7 @@ author_profile: true
         {% assign blog_category = 'misc' %}
         {% if post.blog_category == 'travel' or post.blog_category == 'planner' %}{% assign blog_category = post.blog_category %}{% endif %}
         <article class="az-post" data-blog-category="{{ blog_category }}"{% if forloop.index > 5 %} hidden{% endif %}>
-          {% if post.cover %}<a class="az-post__cover az-post__cover--image" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}">{% include site-image.html src=post.cover alt=post.title defer=true %}</a>{% endif %}
+          {% if post.cover %}<a class="az-post__cover az-post__cover--image{% if post.cover_frame == 'taichi' %} az-post__cover--taichi{% endif %}" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}">{% include site-image.html src=post.cover alt=post.title defer=true %}</a>{% endif %}
           <div class="az-post__body">
             <div class="az-post__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ minutes }} min · {{ words }} words</div>
             <h3 class="az-post__title"><a href="{{ post.url | relative_url }}" target="_self">{{ post.title }}</a></h3>

@@ -124,6 +124,12 @@
     "width": 792,
     "height": 264
   },
+  "/images/blog-avatar-chicken-original.jpg": {
+    "src": "/images/blog-avatar-chicken-original-1279.webp",
+    "srcset": "/images/blog-avatar-chicken-original-480.webp 480w, /images/blog-avatar-chicken-original-960.webp 960w, /images/blog-avatar-chicken-original-1279.webp 1279w",
+    "width": 1279,
+    "height": 1706
+  },
   "/images/blog-changsha-comic.png": {
     "src": "/images/blog-changsha-comic-1536.webp",
     "srcset": "/images/blog-changsha-comic-480.webp 480w, /images/blog-changsha-comic-960.webp 960w, /images/blog-changsha-comic-1536.webp 1536w",
