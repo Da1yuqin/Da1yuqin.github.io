@@ -8,6 +8,8 @@ cover: /images/blog-investing-coffee.png
 excerpt: "但是，妈呀，我的基金，发生了什么，为什么黄金都掉了这么多，你不是避险产品吗喂😭"
 ---
 
+所以现在对我来说就是最好的时机（穷鬼）
+
 ![蓝眼睛的女性德牧穿着西装，坐在落地窗旁喝咖啡，身后是股票大屏，画面以白色和暖黄色为主]({{ '/images/blog-investing-coffee.png' | relative_url }})
 
 但是，妈呀，我的基金，发生了什么，为什么黄金都掉了这么多，你不是避险产品吗喂😭
