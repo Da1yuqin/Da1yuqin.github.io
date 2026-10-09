@@ -386,9 +386,11 @@ author_profile: true
 </style>
 
 {% assign blog_posts = site.categories.blog | sort: 'date' | reverse %}
-{% assign travel_posts = blog_posts | where: 'blog_category', 'travel' %}
+{% assign travel_posts = blog_posts | where: 'blog_category', 'travel' | reverse %}
 {% assign planner_posts = blog_posts | where: 'blog_category', 'planner' %}
-{% assign misc_count = blog_posts.size | minus: travel_posts.size | minus: planner_posts.size %}
+{% assign misc_posts = blog_posts | where_exp: 'post', "post.blog_category != 'travel'" | where_exp: 'post', "post.blog_category != 'planner'" %}
+{% assign misc_count = misc_posts.size %}
+{% assign blog_posts = misc_posts | concat: travel_posts | concat: planner_posts %}
 
 <div class="az-blog">
   <section class="az-blog__profile">
