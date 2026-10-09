@@ -3,7 +3,7 @@
 
 ## Tech Reports（2）
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2026</div><img src='images/onereason_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2026</div>{% include site-image.html src='/images/onereason_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [Tech Report][OneReason: A System Report on Reasoning-Enhanced LLM for Recommendation](https://arxiv.org/abs/2606.06260)
 [[arXiv]](https://arxiv.org/abs/2606.06260) [[机器之心]](https://www.jiqizhixin.com/articles/2026-06-09-18) [[智东西]](https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-06-12%2Fdoc-iniceccr2137617.shtml)
@@ -16,12 +16,12 @@ OneRec Team (Core Contributor, including **Yuqin Dai**)
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2025</div><img src='images/atom_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Tech Report 2025</div>{% include site-image.html src='/images/atom_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [Tech Report][Atom-Searcher: Enhancing Agentic Deep Research via Fine-Grained Atomic Thought Reward](https://arxiv.org/pdf/2508.12800)
 [[arXiv]](https://arxiv.org/pdf/2508.12800) [[Github]](https://github.com/antgroup/Research-Venus) [[机器之心]](https://zhuanlan.zhihu.com/p/1944058738945291292)
 
-<a href="https://github.com/antgroup/Research-Venus"><img src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a> <a href="https://github.com/antgroup/Research-Venus/forks"><img src="https://img.shields.io/github/forks/antgroup/Research-Venus?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/antgroup/Research-Venus"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/antgroup/Research-Venus?style=social" alt="GitHub Stars" /></a> <a href="https://github.com/antgroup/Research-Venus/forks"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/antgroup/Research-Venus?style=social" alt="GitHub Forks" /></a>
 
 Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wenwen Xiong, **Yuqin Dai**, Shuo Yang, Zhanwei Zhang, Qiwen Wang, Yang Qin, Changhua Meng
 - 提出全新的"原子思维"范式：将大模型的推理过程拆解为细粒度的功能单元，从而引导模型进行更清晰、更深入的推理。
@@ -33,7 +33,7 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 
 ## 一作/共一论文(17)
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/shoprecbench_framework.png' alt="ShopRecBench framework：数据来源、案例选择、评价标准设计与专家标注、回复生成及评价" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div>{% include site-image.html src='/images/shoprecbench_framework.png' alt='ShopRecBench framework：数据来源、案例选择、评价标准设计与专家标注、回复生成及评价' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **[arXiv26] ShopRecBench: Evaluating Complex and Ambiguous Shopping Decisions in Conversation**
 
@@ -46,12 +46,12 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div><img src='images/SEAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div>{% include site-image.html src='/images/SEAD_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [ACL26 Findings][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
 
-<a href="https://github.com/Da1yuqin/SEAD"><img src="https://img.shields.io/github/stars/Da1yuqin/SEAD?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Da1yuqin/SEAD"><img src="https://img.shields.io/github/forks/Da1yuqin/SEAD?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/Da1yuqin/SEAD"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/Da1yuqin/SEAD?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/SEAD"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/Da1yuqin/SEAD?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/SEAD)
 
 **Yuqin Dai**, Ning Gao, Wei Zhang, Jie Wang, Zichen Luo, Jinpeng Wang, Yujie Wang, Ruiyuan Wu, Chaozheng Wang. 
@@ -62,12 +62,12 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral🥇</div><img src='images/TCDiff_mainfig.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI2025 Oral🥇</div>{% include site-image.html src='/images/TCDiff_mainfig.jpg' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [AAAI25 Oral][Harmonious Group Choreography with Trajectory-Controllable Diffusion](https://arxiv.org/pdf/2403.06189)
 
-<a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiff?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Da1yuqin/TCDiff"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiff?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/Da1yuqin/TCDiff"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/Da1yuqin/TCDiff?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/TCDiff"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/Da1yuqin/TCDiff?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/TCDiff) [[Project Page]](https://wanluzhu.github.io/TCDiffusion/)
 
 __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun Li, Jian Yang. 
@@ -81,12 +81,12 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026</div><img src='images/EviNoteRAG_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026</div>{% include site-image.html src='/images/EviNoteRAG_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [EMNLP26][EviNote-RAG: Enhancing RAG Models via Answer-Supportive Evidence Notes](https://arxiv.org/abs/2509.00877)
  
-<a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/stars/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Da1yuqin/EviNoteRAG"><img src="https://img.shields.io/github/forks/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/Da1yuqin/EviNoteRAG"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/EviNoteRAG"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/Da1yuqin/EviNoteRAG?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/EviNoteRAG)
 [[机器之心]](https://mp.weixin.qq.com/s/FOo38trc3OSEx2EXqVwyFA)
 
@@ -99,12 +99,12 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='images/WebFilter_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div>{% include site-image.html src='/images/WebFilter_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [AAAI26][Careful Queries, Credible Results: Teaching RAG Models Advanced Web Search Tools with Reinforcement Learning](https://arxiv.org/pdf/2508.07956)
  
-<a href="https://github.com/GuoqingWang1/WebFilter"><img src="https://img.shields.io/github/stars/GuoqingWang1/WebFilter?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/GuoqingWang1/WebFilter"><img src="https://img.shields.io/github/forks/GuoqingWang1/WebFilter?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/GuoqingWang1/WebFilter"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/GuoqingWang1/WebFilter?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/GuoqingWang1/WebFilter"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/GuoqingWang1/WebFilter?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/GuoqingWang1/WebFilter)
 
  **Yuqin Dai**\*, Shuo Yang\*, Guoqing Wang\*, Yong Deng, Zhanwei Zhang, Jun Yin, Pengyu Zeng, Zhenzhe Ying, Changhua Meng, Can Yi, Yuchen Zhou, Weiqiang Wang, Shuai Lu
@@ -115,12 +115,12 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCV 2025</div><img src='images/TCDiffpp_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCV 2025</div>{% include site-image.html src='/images/TCDiffpp_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [IJCV25][TCDiff++: An End-to-end Trajectory-Controllable Diffusion Model for Harmonious Music-Driven Group Choreography](https://arxiv.org/pdf/2506.18671)
  
-<a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/stars/Da1yuqin/TCDiffpp?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Da1yuqin/TCDiffpp"><img src="https://img.shields.io/github/forks/Da1yuqin/TCDiffpp?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/Da1yuqin/TCDiffpp"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/Da1yuqin/TCDiffpp?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/TCDiffpp"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/Da1yuqin/TCDiffpp?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/TCDiffpp) [[Project Page]](https://da1yuqin.github.io/TCDiffpp.website/)
 [[新智元]](https://mp.weixin.qq.com/s/8iZuFqae_sRgTBlHLOJGMg)
 
@@ -134,12 +134,12 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div><img src='images/mindaligner_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2025</div>{% include site-image.html src='/images/mindaligner_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [ICML25][MindAligner: Explicit Brain Functional Alignment for Cross-Subject Visual Decoding from Limited fMRI Data](https://arxiv.org/pdf/2502.05034)
  
-<a href="https://github.com/Da1yuqin/MindAligner"><img src="https://img.shields.io/github/stars/Da1yuqin/MindAligner?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Da1yuqin/MindAligner"><img src="https://img.shields.io/github/forks/Da1yuqin/MindAligner?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/Da1yuqin/MindAligner"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/Da1yuqin/MindAligner?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Da1yuqin/MindAligner"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/Da1yuqin/MindAligner?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Da1yuqin/TCDiff) 
  
 **Yuqin Dai**\*, Zhouheng Yao\*, Chunfeng Song, Qihao Zheng, Weijian Mai, Kunyu Peng, Shuai Lu, Wanli Ouyang, Jian Yang, Jiamin Wu.
@@ -151,7 +151,7 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026 Findings</div><img src='images/SAGE_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026 Findings</div>{% include site-image.html src='/images/SAGE_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [EMNLP26][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
 [[Github]](https://anonymous.4open.science/r/SAGE-Bench-4CD3/README.md)
@@ -164,7 +164,7 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/dagent.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div>{% include site-image.html src='/images/dagent.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv26][DAGENT: Optimizing Multi-Hop RAG as Executable Reasoning Workflows]
 
@@ -176,7 +176,7 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/RemedyRAG_mainfig.png' alt="Discover, Verify, and Assemble workflows for Agentic RAG" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div>{% include site-image.html src='/images/RemedyRAG_mainfig.png' alt='Discover, Verify, and Assemble workflows for Agentic RAG' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **[arXiv26] Not Every Workflow Helps: Discover, Verify, and Assemble Workflows for Agentic RAG**
 
@@ -185,7 +185,7 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/rehearsal-rl.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div>{% include site-image.html src='/images/rehearsal-rl.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv26][Have LLMs Truly Learned to Search? Rehearsal-Guided Execution for Robust Agentic RAG]
 
@@ -198,7 +198,7 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026 Findings</div><img src='images/GreenPlanner_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026 Findings</div>{% include site-image.html src='/images/GreenPlanner_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [CVPR26 Findings][GreenPlanner: Practical Floorplan Layout Generation via an Energy-Aware and Function-Feasible Generative Framework](https://www.arxiv.org/pdf/2512.00406)
  
@@ -213,7 +213,7 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi,
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/UrbanZero_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div>{% include site-image.html src='/images/UrbanZero_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv26][Empowering a Self-Evolving LLM for Urban Land-Use Planning without Expert Supervision]
 
@@ -226,7 +226,7 @@ Chaoyang Shi\*, **Yuqin Dai**\*, Pengyu Zeng, Jun Yin, Ziyang Han, Yuchen Zhou, 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/PlanCraft_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div>{% include site-image.html src='/images/PlanCraft_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv26][PlanCraft: Sketch, Refine, and Furnish for Architect-Inspired Progressive 3D Residential Scene Generation](https://arxiv.org/pdf/2607.23491)
 [[arXiv]](https://arxiv.org/pdf/2607.23491)
@@ -239,7 +239,7 @@ Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Ziyang Han, Ng Cheuk Hei, Jing Zhong,
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='images/RenoCAD_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div>{% include site-image.html src='/images/RenoCAD_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [arXiv26][RenoCAD: Residential Floorplan Renovation via Constraint-Preserving Editable Vector Generation]
 
@@ -251,7 +251,7 @@ Pengyu Zeng\*, Jun Yin\*, **Yuqin Dai**\*, Peilin Li, Ng Cheuk Hei, Han Zheng, H
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024 Oral🥇</div><img src='images/mainfig_text2avatar.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024 Oral🥇</div>{% include site-image.html src='/images/mainfig_text2avatar.jpg' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [ICASSP24 Oral][Text2Avatar: Text to 3D Human Avatar Generation with Codebook-Driven Body Controllable Attribute](https://ieeexplore.ieee.org/document/10446237)
 
@@ -263,7 +263,7 @@ Pengyu Zeng\*, Jun Yin\*, **Yuqin Dai**\*, Peilin Li, Ng Cheuk Hei, Han Zheng, H
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024</div><img src='images/DanceControl_mainfig.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP2024</div>{% include site-image.html src='/images/DanceControl_mainfig.jpg' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [ICASSP24][EXPLORING MULTI-MODAL CONTROL IN MUSIC-DRIVEN DANCE GENERATION](https://ieeexplore.ieee.org/document/10447825)
 
@@ -277,7 +277,7 @@ Ronghui Li\*, __Yuqin Dai__\*, Yachao Zhang, Jun Li, Jian Yang, Jie Guo, Xiu Li.
 <details>
 <summary>参与工作（9篇）</summary>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2026</div><img src='images/InteractCS_RL_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2026</div>{% include site-image.html src='/images/InteractCS_RL_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [ICML26][Reinforcing Real-world Service Agents: Balancing Utility and Cost in Task-oriented Dialogue](https://arxiv.org/abs/2602.22697)
 
@@ -289,7 +289,7 @@ Ning Gao, Wei Zhang, **Yuqin Dai**, Ling Shi, Ziyin Wang, Yujie Wang, Wei He, Ji
 </div> 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div><img src='images/Proactivity_mainfig.png' alt="主动式任务导向对话的用户模拟与策略优化框架" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div>{% include site-image.html src='/images/Proactivity_mainfig.png' alt='主动式任务导向对话的用户模拟与策略优化框架' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [NeurIPS26][Unlocking Proactivity in Task-Oriented Dialogue](https://arxiv.org/abs/2605.22240)
 
@@ -300,12 +300,12 @@ Azure Zhang, Ning Gao, **Yuqin Dai**, Ruiyuan Wu, Jinpeng Wang, Rena Wei Gao, Bi
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">WWW26 Workshop</div><img src='images/RAMA_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">WWW26 Workshop</div>{% include site-image.html src='/images/RAMA_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [WWW26 Workshop][RAMA: Retrieval-Augmented Multi-Agent Framework for Misinformation Detection in Multimodal Fact-Checking](https://arxiv.org/pdf/2507.09174?)
  
-<a href="https://github.com/kalendsyang/RAMA"><img src="https://img.shields.io/github/stars/kalendsyang/RAMA?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/kalendsyang/RAMA"><img src="https://img.shields.io/github/forks/kalendsyang/RAMA?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/kalendsyang/RAMA"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/kalendsyang/RAMA?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/kalendsyang/RAMA"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/kalendsyang/RAMA?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/kalendsyang/RAMA) 
 
 Shuo Yang, Zijian Yu, Zhenzhe Ying, **Yuqin Dai**, Guoqing Wang, Jun Lan, Jinfeng Xu, Jinze Li, Edith C.H. Ngai
@@ -316,7 +316,7 @@ Shuo Yang, Zijian Yu, Zhenzhe Ying, **Yuqin Dai**, Guoqing Wang, Jun Lan, Jinfen
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026 Oral👑</div><img src='images/logic_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026 Oral👑</div>{% include site-image.html src='/images/logic_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [AAAI26][Logic Unseen: Revealing the Logical Blindspots of Vision-Language Models](https://arxiv.org/pdf/2508.11317)
 
@@ -328,7 +328,7 @@ Yuchen Zhou, Jiayu Tang, Shuo Yang, Xiaoyan Xiao, **Yuqin Dai**, Wenhao Yang, Ch
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2025</div><img src='images/card_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2025</div>{% include site-image.html src='/images/card_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [EMNLP25][Card: Cross-modal agent framework for generative and editable residential design](https://aclanthology.org/2025.emnlp-main.473.pdf)
 
@@ -342,7 +342,7 @@ Pengyu Zeng, Jun Yin, Miao Zhang, **Yuqin Dai**, Jizhizi Li, ZhanXiang Jin, Shua
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025 Oral👑</div><img src='images/MERD14_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025 Oral👑</div>{% include site-image.html src='/images/MERD14_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [ACM MM25][MRED-14: A Benchmark for Low-Energy Residential Floor Plan Generation with 14 Flexible Inputs](https://dl.acm.org/doi/pdf/10.1145/3746027.3754949)
 
@@ -355,12 +355,12 @@ Pengyu Zeng, Jun Yin, Haoyuan Sun, **Yuqin Dai**, Maowei Jiang, Miao Zhang, Shua
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM25 Datasets</div><img src='images/realfactbentch_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM25 Datasets</div>{% include site-image.html src='/images/realfactbentch_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [ACMMM25 Datasets][RealFactBench: A Benchmark for Evaluating Large Language Models in Real-World Fact-Checking](https://arxiv.org/pdf/2506.12538)
  
-<a href="https://github.com/kalendsyang/RealFactBench"><img src="https://img.shields.io/github/stars/kalendsyang/RealFactBench?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Dkalendsyang/RealFactBench"><img src="https://img.shields.io/github/forks/kalendsyang/RealFactBench?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/kalendsyang/RealFactBench"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/kalendsyang/RealFactBench?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Dkalendsyang/RealFactBench"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/kalendsyang/RealFactBench?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/kalendsyang/RealFactBench) 
  
 Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhenzhe Ying, Weiqiang Wang, Edith CH Ngai.
@@ -372,12 +372,12 @@ Shuo Yang, **Yuqin Dai**, Guoqing Wang, Xinran Zheng, Jinfeng Xu, Jinze Li, Zhen
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025</div><img src='images/hvsurvey_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025</div>{% include site-image.html src='/images/hvsurvey_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [TPAMI25][Human Motion Video Generation: A Survey](https://www.techrxiv.org/users/836049/articles/1228135-human-motion-video-generation-a-survey)
 
-<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/stars/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img src="https://img.shields.io/github/forks/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/Winn1y/Awesome-Human-Motion-Video-Generation?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file) [[Project Page]](https://github.com/Winn1y/Awesome-Human-Motion-Video-Generation?tab=readme-ov-file)
 
 Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzhuang Liu,Zhensong Zhang,Minglei Li,Jian Yang,Fei Ma,Zhiyong Wu,Changpeng Yang,Zonghong Dai,Fei Richard Yu. 
@@ -390,12 +390,12 @@ Haiwei Xue,Xiangyang Luo,Zhanghao Hu,Xin Zhang,Xunzhi Xiang,__Yuqin Dai__,Jianzh
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL25 Oral🥇, SAC Highlights⭐</div><img src='images/FloorPlan-LLaMa_mainfig.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL25 Oral🥇, SAC Highlights⭐</div>{% include site-image.html src='/images/FloorPlan-LLaMa_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [ACL25 Oral][FloorPlan-LLaMa: Aligning Architects’ Feedback and Domain Knowledge in Architectural Floor Plan Generation](https://aclanthology.org/2025.acl-long.331/)
 
-<a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img src="https://img.shields.io/github/stars/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Stars" /></a>
-<a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img src="https://img.shields.io/github/forks/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Forks" /></a>
+<a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Stars" /></a>
+<a href="https://github.com/TsinghuaJunYin/FloorPlan-LLaMa"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/TsinghuaJunYin/FloorPlan-LLaMa?style=social" alt="GitHub Forks" /></a>
 [[Github]](https://github.com/TsinghuaJunYin/FloorPlan-LLaMa) 
 [[新智元]](https://mp.weixin.qq.com/s/bmfeBXVqOn4e6NvQOdkklw)
 

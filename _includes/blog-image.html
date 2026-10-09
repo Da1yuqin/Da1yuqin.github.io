@@ -1,4 +1,0 @@
-{% assign image = site.data.blog_images[include.src] %}
-{% assign image_src = image.src | default: include.src %}
-<img {% if include.defer %}data-src{% else %}src{% endif %}="{{ image_src | relative_url }}"{% if image.srcset %} {% if include.defer %}data-srcset{% else %}srcset{% endif %}="{{ image.srcset }}" sizes="{{ include.sizes | default: '(max-width: 820px) 94vw, 800px' }}" width="{{ image.width }}" height="{{ image.height }}"{% endif %} alt="{{ include.alt | escape }}" loading="{{ include.loading | default: 'lazy' }}" decoding="async" />
-{% if include.defer %}<noscript><img src="{{ image_src | relative_url }}" alt="{{ include.alt | escape }}"{% if image.width %} width="{{ image.width }}" height="{{ image.height }}"{% endif %} loading="lazy" decoding="async" /></noscript>{% endif %}

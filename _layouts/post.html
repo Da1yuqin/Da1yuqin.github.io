@@ -17,10 +17,10 @@ layout: default
 </header>
 
 {% assign post_content = content %}
-{% for entry in site.data.blog_images %}
+{% for entry in site.data.site_images %}
   {% assign image = entry[1] %}
   {% capture original_src %}src="{{ entry[0] | relative_url }}"{% endcapture %}
-  {% capture responsive_src %}src="{{ image.src | relative_url }}" srcset="{{ image.srcset }}" sizes="(max-width: 820px) 94vw, 900px" width="{{ image.width }}" height="{{ image.height }}" loading="lazy" decoding="async"{% endcapture %}
+  {% capture responsive_src %}src="{{ image.src | relative_url }}"{% if image.srcset %} srcset="{{ image.srcset }}" sizes="(max-width: 820px) 94vw, 900px"{% endif %} width="{{ image.width }}" height="{{ image.height }}" loading="lazy" decoding="async"{% endcapture %}
   {% assign post_content = post_content | replace: original_src, responsive_src %}
 {% endfor %}
 {{ post_content }}

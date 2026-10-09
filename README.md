@@ -58,9 +58,9 @@ Some examples:
 
 ## Debug Locally
 
-### Blog images
+### Site images
 
-The blog shows five posts per page and loads covers when their page is opened. After adding or replacing a blog image, run `python3 optimize_blog_images.py` (requires `python3 -m pip install Pillow`). Commit the generated `images/*-[width].webp` files and `_data/blog_images.json` with the post. The script finds PNG/JPEG references in `_posts/` and `_pages/blog.md`, keeps the originals, and builds sizes for phones and desktops. Markdown images inside posts use these variants automatically.
+After adding or replacing an image, run `python3 optimize_images.py` (requires `python3 -m pip install Pillow`). Commit the generated `images/*-[width].webp` files and `_data/site_images.json` with the page. The script scans homepage/blog sources, keeps the originals and animated GIFs, and builds sizes for phones and desktops. Homepage figures use `{% include site-image.html src='/images/example.png' alt='Figure description' defer=true observe=true zoom=true sizes='400px' %}`: thumbnails load near the viewport; clicking opens the original. Markdown images inside blog posts use the optimized variants automatically. The blog still shows five posts per page and loads covers only when their page is opened.
 
 1. Clone your REPO to local using `git clone`.
 1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).

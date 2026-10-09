@@ -5,7 +5,11 @@
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
 
   <div class="author__avatar">
-    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}">
+    {% assign avatar_src = author.avatar | prepend: '/' | replace: '//', '/' %}
+    {% assign avatar_loading = 'lazy' %}
+    {% assign avatar_priority = 'auto' %}
+    {% if page.permalink == '/' %}{% assign avatar_loading = 'eager' %}{% assign avatar_priority = 'high' %}{% endif %}
+    {% include site-image.html src=avatar_src class='author__avatar' alt=author.name sizes='140px' style='height:auto;' loading=avatar_loading priority=avatar_priority %}
   </div>
 
   <div class="author__content">

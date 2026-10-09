@@ -422,7 +422,7 @@ author_profile: true
   <section class="az-blog__profile">
     <div class="az-blog__identity">
     <div class="az-blog__avatar">
-      {% include blog-image.html src='/images/blog-day-plush-avatar.png' alt='Day 的呆呆小狗玩偶，穿着草莓上衣和绿色流苏裙' sizes='160px' loading='eager' %}
+      {% include site-image.html src='/images/blog-day-plush-avatar.png' alt='Day 的呆呆小狗玩偶，穿着草莓上衣和绿色流苏裙' sizes='160px' loading='eager' %}
     </div>
     <div class="az-blog__intro">
       <p class="az-blog__quote">表达自己，才能 make influence!</p>
@@ -437,7 +437,7 @@ author_profile: true
     </div>
     </div>
     <figure class="az-blog__art az-blog__art--original">
-      {% include blog-image.html src='/images/blog-taichi-original.jpg' alt='太一骑在暴龙兽头上的原图' sizes='(max-width: 768px) 360px, 410px' loading='eager' %}
+      {% include site-image.html src='/images/blog-taichi-original.jpg' alt='太一骑在暴龙兽头上的原图' sizes='(max-width: 768px) 360px, 410px' loading='eager' %}
     </figure>
   </section>
 
@@ -459,7 +459,7 @@ author_profile: true
         {% assign blog_category = 'misc' %}
         {% if post.blog_category == 'travel' or post.blog_category == 'planner' %}{% assign blog_category = post.blog_category %}{% endif %}
         <article class="az-post" data-blog-category="{{ blog_category }}"{% if forloop.index > 5 %} hidden{% endif %}>
-          {% if post.cover %}<a class="az-post__cover az-post__cover--image" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}">{% include blog-image.html src=post.cover alt=post.title defer=true %}</a>{% endif %}
+          {% if post.cover %}<a class="az-post__cover az-post__cover--image" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}">{% include site-image.html src=post.cover alt=post.title defer=true %}</a>{% endif %}
           <div class="az-post__body">
             <div class="az-post__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ minutes }} min · {{ words }} words</div>
             <h3 class="az-post__title"><a href="{{ post.url | relative_url }}" target="_self">{{ post.title }}</a></h3>

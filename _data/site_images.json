@@ -1,0 +1,283 @@
+{
+  "/images/1_512x512.png": {
+    "src": "/images/1_512x512-512.webp",
+    "srcset": "/images/1_512x512-160.webp 160w, /images/1_512x512-320.webp 320w, /images/1_512x512-512.webp 512w",
+    "width": 512,
+    "height": 512
+  },
+  "/images/30001-0150.gif": {
+    "src": "/images/30001-0150.gif",
+    "width": 400,
+    "height": 225
+  },
+  "/images/DanceControl_mainfig.jpg": {
+    "src": "/images/DanceControl_mainfig-1600.webp",
+    "srcset": "/images/DanceControl_mainfig-480.webp 480w, /images/DanceControl_mainfig-960.webp 960w, /images/DanceControl_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 631
+  },
+  "/images/EviNoteRAG_mainfig.png": {
+    "src": "/images/EviNoteRAG_mainfig-1151.webp",
+    "srcset": "/images/EviNoteRAG_mainfig-480.webp 480w, /images/EviNoteRAG_mainfig-960.webp 960w, /images/EviNoteRAG_mainfig-1151.webp 1151w",
+    "width": 1151,
+    "height": 626
+  },
+  "/images/FloorPlan-LLaMa_mainfig.png": {
+    "src": "/images/FloorPlan-LLaMa_mainfig-930.webp",
+    "srcset": "/images/FloorPlan-LLaMa_mainfig-480.webp 480w, /images/FloorPlan-LLaMa_mainfig-930.webp 930w",
+    "width": 930,
+    "height": 730
+  },
+  "/images/GreenPlanner_mainfig.png": {
+    "src": "/images/GreenPlanner_mainfig-1600.webp",
+    "srcset": "/images/GreenPlanner_mainfig-480.webp 480w, /images/GreenPlanner_mainfig-960.webp 960w, /images/GreenPlanner_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 811
+  },
+  "/images/InteractCS_RL_mainfig.png": {
+    "src": "/images/InteractCS_RL_mainfig-1600.webp",
+    "srcset": "/images/InteractCS_RL_mainfig-480.webp 480w, /images/InteractCS_RL_mainfig-960.webp 960w, /images/InteractCS_RL_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 659
+  },
+  "/images/MERD14_mainfig.png": {
+    "src": "/images/MERD14_mainfig-1600.webp",
+    "srcset": "/images/MERD14_mainfig-480.webp 480w, /images/MERD14_mainfig-960.webp 960w, /images/MERD14_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 729
+  },
+  "/images/PlanCraft_mainfig.png": {
+    "src": "/images/PlanCraft_mainfig-1160.webp",
+    "srcset": "/images/PlanCraft_mainfig-480.webp 480w, /images/PlanCraft_mainfig-960.webp 960w, /images/PlanCraft_mainfig-1160.webp 1160w",
+    "width": 1160,
+    "height": 672
+  },
+  "/images/Proactivity_mainfig.png": {
+    "src": "/images/Proactivity_mainfig-1038.webp",
+    "srcset": "/images/Proactivity_mainfig-480.webp 480w, /images/Proactivity_mainfig-960.webp 960w, /images/Proactivity_mainfig-1038.webp 1038w",
+    "width": 1038,
+    "height": 422
+  },
+  "/images/RAMA_mainfig.png": {
+    "src": "/images/RAMA_mainfig-788.webp",
+    "srcset": "/images/RAMA_mainfig-480.webp 480w, /images/RAMA_mainfig-788.webp 788w",
+    "width": 788,
+    "height": 593
+  },
+  "/images/RemedyRAG_mainfig.png": {
+    "src": "/images/RemedyRAG_mainfig-1600.webp",
+    "srcset": "/images/RemedyRAG_mainfig-480.webp 480w, /images/RemedyRAG_mainfig-960.webp 960w, /images/RemedyRAG_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 805
+  },
+  "/images/RenoCAD_mainfig.png": {
+    "src": "/images/RenoCAD_mainfig-1086.webp",
+    "srcset": "/images/RenoCAD_mainfig-480.webp 480w, /images/RenoCAD_mainfig-960.webp 960w, /images/RenoCAD_mainfig-1086.webp 1086w",
+    "width": 1086,
+    "height": 466
+  },
+  "/images/SAGE_mainfig.png": {
+    "src": "/images/SAGE_mainfig-1600.webp",
+    "srcset": "/images/SAGE_mainfig-480.webp 480w, /images/SAGE_mainfig-960.webp 960w, /images/SAGE_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 935
+  },
+  "/images/SEAD_mainfig.png": {
+    "src": "/images/SEAD_mainfig-1600.webp",
+    "srcset": "/images/SEAD_mainfig-480.webp 480w, /images/SEAD_mainfig-960.webp 960w, /images/SEAD_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 594
+  },
+  "/images/TCDiff_mainfig.jpg": {
+    "src": "/images/TCDiff_mainfig-1600.webp",
+    "srcset": "/images/TCDiff_mainfig-480.webp 480w, /images/TCDiff_mainfig-960.webp 960w, /images/TCDiff_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 739
+  },
+  "/images/TCDiffpp_mainfig.png": {
+    "src": "/images/TCDiffpp_mainfig-1472.webp",
+    "srcset": "/images/TCDiffpp_mainfig-480.webp 480w, /images/TCDiffpp_mainfig-960.webp 960w, /images/TCDiffpp_mainfig-1472.webp 1472w",
+    "width": 1472,
+    "height": 561
+  },
+  "/images/UrbanZero_mainfig.png": {
+    "src": "/images/UrbanZero_mainfig-1050.webp",
+    "srcset": "/images/UrbanZero_mainfig-480.webp 480w, /images/UrbanZero_mainfig-960.webp 960w, /images/UrbanZero_mainfig-1050.webp 1050w",
+    "width": 1050,
+    "height": 584
+  },
+  "/images/WebFilter_mainfig.png": {
+    "src": "/images/WebFilter_mainfig-1195.webp",
+    "srcset": "/images/WebFilter_mainfig-480.webp 480w, /images/WebFilter_mainfig-960.webp 960w, /images/WebFilter_mainfig-1195.webp 1195w",
+    "width": 1195,
+    "height": 550
+  },
+  "/images/atom_mainfig.png": {
+    "src": "/images/atom_mainfig-1376.webp",
+    "srcset": "/images/atom_mainfig-480.webp 480w, /images/atom_mainfig-960.webp 960w, /images/atom_mainfig-1376.webp 1376w",
+    "width": 1376,
+    "height": 528
+  },
+  "/images/beagle-sprites.png": {
+    "src": "/images/beagle-sprites-792.webp",
+    "srcset": "/images/beagle-sprites-396.webp 396w, /images/beagle-sprites-792.webp 792w",
+    "width": 792,
+    "height": 264
+  },
+  "/images/blog-changsha-comic.png": {
+    "src": "/images/blog-changsha-comic-1536.webp",
+    "srcset": "/images/blog-changsha-comic-480.webp 480w, /images/blog-changsha-comic-960.webp 960w, /images/blog-changsha-comic-1536.webp 1536w",
+    "width": 1536,
+    "height": 1024
+  },
+  "/images/blog-changsha-drawing-outtakes.png": {
+    "src": "/images/blog-changsha-drawing-outtakes-1600.webp",
+    "srcset": "/images/blog-changsha-drawing-outtakes-480.webp 480w, /images/blog-changsha-drawing-outtakes-960.webp 960w, /images/blog-changsha-drawing-outtakes-1600.webp 1600w",
+    "width": 1600,
+    "height": 844
+  },
+  "/images/blog-day-plush-avatar.png": {
+    "src": "/images/blog-day-plush-avatar-1254.webp",
+    "srcset": "/images/blog-day-plush-avatar-480.webp 480w, /images/blog-day-plush-avatar-960.webp 960w, /images/blog-day-plush-avatar-1254.webp 1254w",
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/blog-investing-coffee.png": {
+    "src": "/images/blog-investing-coffee-1600.webp",
+    "srcset": "/images/blog-investing-coffee-480.webp 480w, /images/blog-investing-coffee-960.webp 960w, /images/blog-investing-coffee-1600.webp 1600w",
+    "width": 1600,
+    "height": 800
+  },
+  "/images/blog-taichi-original.jpg": {
+    "src": "/images/blog-taichi-original-1170.webp",
+    "srcset": "/images/blog-taichi-original-480.webp 480w, /images/blog-taichi-original-960.webp 960w, /images/blog-taichi-original-1170.webp 1170w",
+    "width": 1170,
+    "height": 2532
+  },
+  "/images/blog-trinity-habits.png": {
+    "src": "/images/blog-trinity-habits-1600.webp",
+    "srcset": "/images/blog-trinity-habits-480.webp 480w, /images/blog-trinity-habits-960.webp 960w, /images/blog-trinity-habits-1600.webp 1600w",
+    "width": 1600,
+    "height": 800
+  },
+  "/images/card_mainfig.png": {
+    "src": "/images/card_mainfig-1600.webp",
+    "srcset": "/images/card_mainfig-480.webp 480w, /images/card_mainfig-960.webp 960w, /images/card_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 965
+  },
+  "/images/dagent.png": {
+    "src": "/images/dagent-466.webp",
+    "srcset": "/images/dagent-466.webp 466w",
+    "width": 466,
+    "height": 266
+  },
+  "/images/hvsurvey_mainfig.png": {
+    "src": "/images/hvsurvey_mainfig-1600.webp",
+    "srcset": "/images/hvsurvey_mainfig-480.webp 480w, /images/hvsurvey_mainfig-960.webp 960w, /images/hvsurvey_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 931
+  },
+  "/images/logic_mainfig.png": {
+    "src": "/images/logic_mainfig-1600.webp",
+    "srcset": "/images/logic_mainfig-480.webp 480w, /images/logic_mainfig-960.webp 960w, /images/logic_mainfig-1600.webp 1600w",
+    "width": 1600,
+    "height": 653
+  },
+  "/images/logo_antgroup.png": {
+    "src": "/images/logo_antgroup-200.webp",
+    "srcset": "/images/logo_antgroup-200.webp 200w",
+    "width": 200,
+    "height": 200
+  },
+  "/images/logo_bytedance.png": {
+    "src": "/images/logo_bytedance-300.webp",
+    "srcset": "/images/logo_bytedance-200.webp 200w, /images/logo_bytedance-300.webp 300w",
+    "width": 300,
+    "height": 300
+  },
+  "/images/logo_guangming.png": {
+    "src": "/images/logo_guangming-200.webp",
+    "srcset": "/images/logo_guangming-200.webp 200w",
+    "width": 200,
+    "height": 200
+  },
+  "/images/logo_kuaishou.png": {
+    "src": "/images/logo_kuaishou-200.webp",
+    "srcset": "/images/logo_kuaishou-200.webp 200w",
+    "width": 200,
+    "height": 200
+  },
+  "/images/logo_meituan.png": {
+    "src": "/images/logo_meituan-200.webp",
+    "srcset": "/images/logo_meituan-200.webp 200w",
+    "width": 200,
+    "height": 200
+  },
+  "/images/logo_nju.png": {
+    "src": "/images/logo_nju-200.webp",
+    "srcset": "/images/logo_nju-200.webp 200w",
+    "width": 200,
+    "height": 200
+  },
+  "/images/logo_shailab.png": {
+    "src": "/images/logo_shailab-200.webp",
+    "srcset": "/images/logo_shailab-200.webp 200w",
+    "width": 200,
+    "height": 200
+  },
+  "/images/logo_thugsz.png": {
+    "src": "/images/logo_thugsz-200.webp",
+    "srcset": "/images/logo_thugsz-200.webp 200w",
+    "width": 200,
+    "height": 200
+  },
+  "/images/logo_xiaohongshu.png": {
+    "src": "/images/logo_xiaohongshu-180.webp",
+    "srcset": "/images/logo_xiaohongshu-180.webp 180w",
+    "width": 180,
+    "height": 180
+  },
+  "/images/mainfig_text2avatar.jpg": {
+    "src": "/images/mainfig_text2avatar-1600.webp",
+    "srcset": "/images/mainfig_text2avatar-480.webp 480w, /images/mainfig_text2avatar-960.webp 960w, /images/mainfig_text2avatar-1600.webp 1600w",
+    "width": 1600,
+    "height": 894
+  },
+  "/images/mindaligner_mainfig.png": {
+    "src": "/images/mindaligner_mainfig-1544.webp",
+    "srcset": "/images/mindaligner_mainfig-480.webp 480w, /images/mindaligner_mainfig-960.webp 960w, /images/mindaligner_mainfig-1544.webp 1544w",
+    "width": 1544,
+    "height": 562
+  },
+  "/images/onereason_mainfig.png": {
+    "src": "/images/onereason_mainfig-1298.webp",
+    "srcset": "/images/onereason_mainfig-480.webp 480w, /images/onereason_mainfig-960.webp 960w, /images/onereason_mainfig-1298.webp 1298w",
+    "width": 1298,
+    "height": 562
+  },
+  "/images/realfactbentch_mainfig.png": {
+    "src": "/images/realfactbentch_mainfig-1264.webp",
+    "srcset": "/images/realfactbentch_mainfig-480.webp 480w, /images/realfactbentch_mainfig-960.webp 960w, /images/realfactbentch_mainfig-1264.webp 1264w",
+    "width": 1264,
+    "height": 506
+  },
+  "/images/rehearsal-rl.png": {
+    "src": "/images/rehearsal-rl-824.webp",
+    "srcset": "/images/rehearsal-rl-480.webp 480w, /images/rehearsal-rl-824.webp 824w",
+    "width": 824,
+    "height": 696
+  },
+  "/images/shoprecbench_framework.png": {
+    "src": "/images/shoprecbench_framework-1600.webp",
+    "srcset": "/images/shoprecbench_framework-480.webp 480w, /images/shoprecbench_framework-960.webp 960w, /images/shoprecbench_framework-1600.webp 1600w",
+    "width": 1600,
+    "height": 863
+  },
+  "/images/site-bg.png": {
+    "src": "/images/site-bg-686.webp",
+    "srcset": "/images/site-bg-480.webp 480w, /images/site-bg-686.webp 686w",
+    "width": 686,
+    "height": 1206
+  }
+}

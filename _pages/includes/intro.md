@@ -30,7 +30,7 @@ __我的研究方向包括但不限于__:
 
 我做过很多有意思的方向，学习能力很快，最后我发现学的东西实在太杂了，机缘巧合拿我当时在做的群舞模型做了一个这样的 vcr：
 
-![](images/30001-0150.gif)
+{% include site-image.html src='/images/30001-0150.gif' alt='群舞动作生成演示' defer=true observe=true style='max-width:100%;height:auto;' %}
 
 
 如果您对我的研究方向感兴趣(或者对我感兴趣)并有意向合作, 也随时欢迎联系我😆! 我非常喜欢合作, 会成为你非常好的合作伙伴!
@@ -46,7 +46,7 @@ __我的研究方向包括但不限于__:
 </summary>
 <div markdown="1">
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_xiaohongshu.png' alt="小红书" width="200" height="200" style="width:200px; height:200px; object-fit:contain;"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_xiaohongshu.png' alt='小红书' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **小红书 Xiaohongshu · 电商搜索部门** &nbsp; *2026.08 - 至今*
 
@@ -60,7 +60,7 @@ __我的研究方向包括但不限于__:
 </div>
 </div>
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_bytedance.png' alt="字节跳动 ByteDance" width="200" height="200" style="width:200px; height:200px; object-fit:contain;"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_bytedance.png' alt='字节跳动 ByteDance' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **字节跳动 ByteDance · 国际电商部门** &nbsp; *2026.06 - 2026.08*
 
@@ -73,7 +73,7 @@ __我的研究方向包括但不限于__:
 </div>
 </div>
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_kuaishou.png' alt="快手" width="100%"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_kuaishou.png' alt='快手' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **快手 Kuaishou · 核心推荐部门 / 基模算法部门** &nbsp; *2026.03 - 2026.06*
 
@@ -85,7 +85,7 @@ __我的研究方向包括但不限于__:
 </div>
 </div>
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_meituan.png' alt="美团" width="100%"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_meituan.png' alt='美团' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **美团 Meituan · 对话智能体方向** &nbsp; *2025.08 - 2026.02*
 
@@ -97,7 +97,7 @@ __我的研究方向包括但不限于__:
 </div>
 </div>
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_antgroup.png' alt="蚂蚁集团" width="100%"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_antgroup.png' alt='蚂蚁集团' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **蚂蚁集团 Ant Group · 研究型实习生** &nbsp; *2025.03 - 2025.08*
 
@@ -120,7 +120,7 @@ __我的研究方向包括但不限于__:
 </summary>
 <div markdown="1">
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_shailab.png' alt="上海AI Lab" width="100%"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_shailab.png' alt='上海AI Lab' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **上海人工智能实验室 Shanghai AI Lab · 浦江实验室** &nbsp; *2024.09 - 2025.03*
 
@@ -130,7 +130,7 @@ __我的研究方向包括但不限于__:
 </div>
 </div>
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_guangming.png' alt="光明实验室" width="100%"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_guangming.png' alt='光明实验室' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **光明实验室 Guangming Laboratory** &nbsp; *2024.06 - 2024.09*
 
@@ -140,7 +140,7 @@ __我的研究方向包括但不限于__:
 </div>
 </div>
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_nju.png' alt="南京大学" width="100%"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_nju.png' alt='南京大学' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **南京大学 NJU · 苏州校区** &nbsp; *2024.05 - 2024.08*
 
@@ -150,7 +150,7 @@ __我的研究方向包括但不限于__:
 </div>
 </div>
 
-<div class='paper-box internship-box'><div class='paper-box-image'><div><img src='images/logo_thugsz.png' alt="清华深研院" width="100%"></div></div>
+<div class='paper-box internship-box'><div class='paper-box-image'><div>{% include site-image.html src='/images/logo_thugsz.png' alt='清华深研院' defer=true observe=true sizes='200px' %}</div></div>
 <div class='paper-box-text' markdown="1">
 **清华大学深圳国际研究生院 SIGS** &nbsp; *2023.04 - 2024.03*
 

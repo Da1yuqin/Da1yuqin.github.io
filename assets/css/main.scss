@@ -55,6 +55,13 @@
         display: flex;
         width: 100%;
         order: 2;
+        > div {
+            width: 100%;
+            max-width: 400px;
+        }
+        .image-popup {
+            display: block;
+        }
         img {
             max-width: 400px;
             box-shadow: 3px 3px 6px #888;
@@ -165,7 +172,7 @@ body:before {
 
   inset: 0;
 
-  background-image: url("/images/site-bg.png");
+  background-image: url("{{ site.data.site_images['/images/site-bg.png'].src | relative_url }}");
 
   background-size: cover;
 
@@ -1404,8 +1411,6 @@ body:after {
 
 
 }
-
-
 
 
 

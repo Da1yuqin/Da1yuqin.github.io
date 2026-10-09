@@ -71,7 +71,7 @@ include:
   - _pages
   - files
 exclude:
-  - optimize_blog_images.py
+  - optimize_images.py
   - AGENTS.md
   - comments-worker
   - "*.sublime-project"
