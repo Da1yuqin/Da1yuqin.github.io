@@ -58,6 +58,10 @@ Some examples:
 
 ## Debug Locally
 
+### Blog images
+
+The blog shows five posts per page and loads covers when their page is opened. After adding or replacing a blog image, run `python3 optimize_blog_images.py` (requires `python3 -m pip install Pillow`). Commit the generated `images/*-[width].webp` files and `_data/blog_images.json` with the post. The script finds PNG/JPEG references in `_posts/` and `_pages/blog.md`, keeps the originals, and builds sizes for phones and desktops. Markdown images inside posts use these variants automatically.
+
 1. Clone your REPO to local using `git clone`.
 1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
 1. Run `bash run_server.sh` to start Jekyll livereload server.

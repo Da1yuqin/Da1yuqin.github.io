@@ -174,6 +174,7 @@ author_profile: true
   }
 
   .az-blog__section-title {
+    scroll-margin-top: 90px;
     margin: 18px 0 14px 0;
     color: rgba(0,0,0,.85);
     font-size: 1.45rem;
@@ -228,8 +229,33 @@ author_profile: true
     font-size: .92rem;
   }
 
-  .az-post[hidden], .az-blog__empty[hidden] {
+  .az-post[hidden], .az-blog__empty[hidden], .az-blog__pagination[hidden] {
     display: none;
+  }
+
+  .az-blog__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 24px 0;
+    color: #70665b;
+    font-size: .9rem;
+  }
+
+  .az-blog__pagination button {
+    padding: 10px 14px;
+    border: 1px solid #e8d6b5;
+    border-radius: 12px;
+    color: #614c2c;
+    background: #fff3d9;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .az-blog__pagination button:disabled {
+    opacity: .4;
+    cursor: default;
   }
 
   .az-post {
@@ -396,7 +422,7 @@ author_profile: true
   <section class="az-blog__profile">
     <div class="az-blog__identity">
     <div class="az-blog__avatar">
-      <img src="{{ '/images/blog-day-plush-avatar.png' | relative_url }}" alt="Day 的呆呆小狗玩偶，穿着草莓上衣和绿色流苏裙" />
+      {% include blog-image.html src='/images/blog-day-plush-avatar.png' alt='Day 的呆呆小狗玩偶，穿着草莓上衣和绿色流苏裙' sizes='160px' loading='eager' %}
     </div>
     <div class="az-blog__intro">
       <p class="az-blog__quote">表达自己，才能 make influence!</p>
@@ -411,7 +437,7 @@ author_profile: true
     </div>
     </div>
     <figure class="az-blog__art az-blog__art--original">
-      <img src="{{ '/images/blog-taichi-original.jpg' | relative_url }}" alt="太一骑在暴龙兽头上的原图" />
+      {% include blog-image.html src='/images/blog-taichi-original.jpg' alt='太一骑在暴龙兽头上的原图' sizes='(max-width: 768px) 360px, 410px' loading='eager' %}
     </figure>
   </section>
 
@@ -432,8 +458,8 @@ author_profile: true
         {% assign minutes = words | divided_by: 260 | plus: 1 %}
         {% assign blog_category = 'misc' %}
         {% if post.blog_category == 'travel' or post.blog_category == 'planner' %}{% assign blog_category = post.blog_category %}{% endif %}
-        <article class="az-post" data-blog-category="{{ blog_category }}">
-          {% if post.cover %}<a class="az-post__cover az-post__cover--image" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}"><img src="{{ post.cover | relative_url }}" alt="{{ post.title }}" loading="lazy" /></a>{% endif %}
+        <article class="az-post" data-blog-category="{{ blog_category }}"{% if forloop.index > 5 %} hidden{% endif %}>
+          {% if post.cover %}<a class="az-post__cover az-post__cover--image" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}">{% include blog-image.html src=post.cover alt=post.title defer=true %}</a>{% endif %}
           <div class="az-post__body">
             <div class="az-post__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ minutes }} min · {{ words }} words</div>
             <h3 class="az-post__title"><a href="{{ post.url | relative_url }}" target="_self">{{ post.title }}</a></h3>
@@ -453,6 +479,12 @@ author_profile: true
     <div class="az-blog__empty">这里还没有文章。</div>
   {% endif %}
   <p class="az-blog__empty" id="blog-category-empty" hidden>这个分类还没有文章。</p>
+  <nav class="az-blog__pagination" id="blog-pagination" aria-label="文章翻页" hidden>
+    <button type="button" id="blog-page-prev" aria-controls="blog-posts">上一页</button>
+    <span id="blog-page-status" role="status" aria-live="polite"></span>
+    <button type="button" id="blog-page-next" aria-controls="blog-posts">下一页</button>
+  </nav>
+  <noscript><style>.az-post[hidden] { display: block; } .az-post img[data-src] { display: none; }</style></noscript>
   {% include blog-footprints.html %}
 </div>
 
@@ -463,22 +495,57 @@ author_profile: true
     var panel = document.getElementById('blog-posts');
     var description = document.getElementById('blog-category-description');
     var empty = document.getElementById('blog-category-empty');
+    var pagination = document.getElementById('blog-pagination');
+    var previous = document.getElementById('blog-page-prev');
+    var nextPage = document.getElementById('blog-page-next');
+    var status = document.getElementById('blog-page-status');
+    var category = 'all';
+    var page = 1;
+    var pageSize = 5;
+
+    function renderPage() {
+      var filtered = posts.filter(function (post) { return category === 'all' || post.dataset.blogCategory === category; });
+      var pageCount = Math.max(1, Math.ceil(filtered.length / pageSize));
+      page = Math.max(1, Math.min(page, pageCount));
+      var visible = filtered.slice((page - 1) * pageSize, page * pageSize);
+      posts.forEach(function (post) {
+        post.hidden = visible.indexOf(post) === -1;
+        if (!post.hidden) {
+          post.querySelectorAll('img[data-src]').forEach(function (image) {
+            if (image.dataset.srcset) image.srcset = image.dataset.srcset;
+            image.src = image.dataset.src;
+            image.removeAttribute('data-src');
+            image.removeAttribute('data-srcset');
+          });
+        }
+      });
+      empty.hidden = filtered.length > 0;
+      pagination.hidden = filtered.length <= pageSize;
+      previous.disabled = page === 1;
+      nextPage.disabled = page === pageCount;
+      status.textContent = '第 ' + page + ' / ' + pageCount + ' 页';
+    }
+
     function selectTab(tab) {
-      var category = tab.dataset.blogFilter;
+      category = tab.dataset.blogFilter;
+      page = 1;
       tabs.forEach(function (item) {
         var selected = item === tab;
         item.setAttribute('aria-selected', String(selected));
         item.tabIndex = selected ? 0 : -1;
       });
-      var visible = 0;
-      posts.forEach(function (post) {
-        post.hidden = category !== 'all' && post.dataset.blogCategory !== category;
-        if (!post.hidden) visible++;
-      });
       description.textContent = tab.dataset.description;
       if (panel) panel.setAttribute('aria-labelledby', tab.id);
-      empty.hidden = visible > 0;
+      renderPage();
     }
+    function turnPage(direction) {
+      page += direction;
+      renderPage();
+      document.getElementById('articles').scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
+    previous.addEventListener('click', function () { turnPage(-1); });
+    nextPage.addEventListener('click', function () { turnPage(1); });
+    renderPage();
     tabs.forEach(function (tab, index) {
       tab.addEventListener('click', function () { selectTab(tab); });
       tab.addEventListener('keydown', function (event) {
