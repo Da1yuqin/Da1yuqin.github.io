@@ -15,14 +15,8 @@ main:
   - title: "Publications"
     url: "/#-publications"
 
-  - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
-
-  - title: "Educations"
-    url: "/#-educations"
-    
-  - title: "Conference"
-    url: "/#-conference"
+  - title: "Professional Services"
+    url: "/#professional-services"
 
   - title: "Skills"
     url: "/#-skills"

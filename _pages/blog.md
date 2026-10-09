@@ -363,7 +363,7 @@ author_profile: true
     </figure>
   </section>
 
-  <h2 class="az-blog__section-title">Articles</h2>
+  <h2 class="az-blog__section-title" id="articles">Articles</h2>
 
   {% if blog_posts and blog_posts.size > 0 %}
     <section class="az-blog__posts">

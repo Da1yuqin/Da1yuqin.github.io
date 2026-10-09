@@ -71,6 +71,7 @@ include:
   - _pages
   - files
 exclude:
+  - AGENTS.md
   - comments-worker
   - "*.sublime-project"
   - "*.sublime-workspace"
