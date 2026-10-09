@@ -185,6 +185,53 @@ author_profile: true
     gap: 20px;
   }
 
+  .az-blog__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #e9e3d9;
+  }
+
+  .az-blog__categories button {
+    margin: 0;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: #70665b;
+    background: transparent;
+    font: inherit;
+    font-size: .9rem;
+    cursor: pointer;
+  }
+
+  .az-blog__categories button[aria-selected="true"] {
+    border-color: #e8d6b5;
+    color: #614c2c;
+    background: #fff3d9;
+  }
+
+  .az-blog__categories button:focus-visible {
+    outline: 2px solid #a47b36;
+    outline-offset: 3px;
+  }
+
+  .az-blog__category-count {
+    margin-left: 6px;
+    opacity: .6;
+    font-size: .8em;
+  }
+
+  .az-blog__category-description {
+    margin: 14px 0 22px;
+    color: #84786a;
+    font-size: .92rem;
+  }
+
+  .az-post[hidden], .az-blog__empty[hidden] {
+    display: none;
+  }
+
   .az-post {
     overflow: hidden;
     border: 1px solid rgba(0,0,0,.06);
@@ -339,6 +386,9 @@ author_profile: true
 </style>
 
 {% assign blog_posts = site.categories.blog | sort: 'date' | reverse %}
+{% assign travel_posts = blog_posts | where: 'blog_category', 'travel' %}
+{% assign planner_posts = blog_posts | where: 'blog_category', 'planner' %}
+{% assign misc_count = blog_posts.size | minus: travel_posts.size | minus: planner_posts.size %}
 
 <div class="az-blog">
   <section class="az-blog__profile">
@@ -365,16 +415,26 @@ author_profile: true
 
   <h2 class="az-blog__section-title" id="articles">Articles</h2>
 
+  <div class="az-blog__categories" role="tablist" aria-label="博客分类">
+    <button type="button" role="tab" id="blog-tab-all" aria-selected="true" aria-controls="blog-posts" data-blog-filter="all" data-description="这里记录了全部的博客">全部<span class="az-blog__category-count" aria-hidden="true">{{ blog_posts.size }}</span></button>
+    <button type="button" role="tab" id="blog-tab-misc" aria-selected="false" aria-controls="blog-posts" tabindex="-1" data-blog-filter="misc" data-description="碎碎念，随便看看">杂七杂八<span class="az-blog__category-count" aria-hidden="true">{{ misc_count }}</span></button>
+    <button type="button" role="tab" id="blog-tab-travel" aria-selected="false" aria-controls="blog-posts" tabindex="-1" data-blog-filter="travel" data-description="探索地球中">地球OL打卡<span class="az-blog__category-count" aria-hidden="true">{{ travel_posts.size }}</span></button>
+    <button type="button" role="tab" id="blog-tab-planner" aria-selected="false" aria-controls="blog-posts" tabindex="-1" data-blog-filter="planner" data-description="J人模式副产物">J人模式副产物<span class="az-blog__category-count" aria-hidden="true">{{ planner_posts.size }}</span></button>
+  </div>
+  <p class="az-blog__category-description" id="blog-category-description" role="status" aria-live="polite">这里记录了全部的博客</p>
+
   {% if blog_posts and blog_posts.size > 0 %}
-    <section class="az-blog__posts">
+    <section class="az-blog__posts" id="blog-posts" role="tabpanel" aria-labelledby="blog-tab-all">
       {% for post in blog_posts %}
         {% assign words = post.content | strip_html | number_of_words %}
         {% assign minutes = words | divided_by: 260 | plus: 1 %}
-        <article class="az-post">
-          <a class="az-post__cover{% if post.cover %} az-post__cover--image{% endif %}" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">{% if post.cover %}<img src="{{ post.cover | relative_url }}" alt="{{ post.title }}" loading="lazy" />{% endif %}</a>
+        {% assign blog_category = 'misc' %}
+        {% if post.blog_category == 'travel' or post.blog_category == 'planner' %}{% assign blog_category = post.blog_category %}{% endif %}
+        <article class="az-post" data-blog-category="{{ blog_category }}">
+          {% if post.cover %}<a class="az-post__cover az-post__cover--image" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}"><img src="{{ post.cover | relative_url }}" alt="{{ post.title }}" loading="lazy" /></a>{% endif %}
           <div class="az-post__body">
             <div class="az-post__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ minutes }} min · {{ words }} words</div>
-            <h3 class="az-post__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <h3 class="az-post__title"><a href="{{ post.url | relative_url }}" target="_self">{{ post.title }}</a></h3>
             {% if post.excerpt %}
               <p class="az-post__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
             {% endif %}
@@ -388,7 +448,48 @@ author_profile: true
       {% endfor %}
     </section>
   {% else %}
-    <div class="az-blog__empty">这里会展示我的博客文章列表。在 <code>_posts/</code> 下新增 Markdown 文件，并设置 <code>categories: [blog]</code> + <code>layout: post</code> 后会自动出现。</div>
+    <div class="az-blog__empty">这里还没有文章。</div>
   {% endif %}
+  <p class="az-blog__empty" id="blog-category-empty" hidden>这个分类还没有文章。</p>
   {% include blog-footprints.html %}
 </div>
+
+<script>
+  (function () {
+    var tabs = Array.from(document.querySelectorAll('[data-blog-filter]'));
+    var posts = Array.from(document.querySelectorAll('[data-blog-category]'));
+    var panel = document.getElementById('blog-posts');
+    var description = document.getElementById('blog-category-description');
+    var empty = document.getElementById('blog-category-empty');
+    function selectTab(tab) {
+      var category = tab.dataset.blogFilter;
+      tabs.forEach(function (item) {
+        var selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+      });
+      var visible = 0;
+      posts.forEach(function (post) {
+        post.hidden = category !== 'all' && post.dataset.blogCategory !== category;
+        if (!post.hidden) visible++;
+      });
+      description.textContent = tab.dataset.description;
+      if (panel) panel.setAttribute('aria-labelledby', tab.id);
+      empty.hidden = visible > 0;
+    }
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener('click', function () { selectTab(tab); });
+      tab.addEventListener('keydown', function (event) {
+        var next;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        tabs[next].focus();
+        selectTab(tabs[next]);
+      });
+    });
+  }());
+</script>
