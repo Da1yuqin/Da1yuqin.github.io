@@ -208,6 +208,16 @@ author_profile: true
     background: rgba(0,0,0,.02);
   }
 
+  .az-post__cover.az-post__cover--image {
+    height: auto;
+  }
+
+  .az-post__cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .az-post__body {
     padding: 20px 24px 24px 24px;
   }
@@ -361,7 +371,7 @@ author_profile: true
         {% assign words = post.content | strip_html | number_of_words %}
         {% assign minutes = words | divided_by: 260 | plus: 1 %}
         <article class="az-post">
-          <a class="az-post__cover" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}"></a>
+          <a class="az-post__cover{% if post.cover %} az-post__cover--image{% endif %}" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">{% if post.cover %}<img src="{{ post.cover | relative_url }}" alt="{{ post.title }}" loading="lazy" />{% endif %}</a>
           <div class="az-post__body">
             <div class="az-post__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ minutes }} min · {{ words }} words</div>
             <h3 class="az-post__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
