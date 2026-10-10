@@ -27,13 +27,13 @@
     form._parent = parent || null; form._anchor = anchor || null;
     const box = form.querySelector('.blog-comments__context');
     box.hidden = !parent && !anchor;
-    box.querySelector('span').textContent = parent ? '回复 ' + (parent.name || '匿名') : anchor ? '批注：' + anchor.exact : '';
+    box.querySelector('span').textContent = parent ? '回复 ' + (parent.name || '匿名') : anchor ? '批注所选正文' : '';
   }
   function bindForm(form) {
     const button = form.querySelector('[type=submit]'), status = form.querySelector('.blog-comments__status');
     button.disabled = !api;
     form.querySelector('[data-cancel-context]').addEventListener('click', () => {
-      setContext(form, null, null); if (form === noteForm) {form.hidden = true; quotePreview.hidden = true;}
+      setContext(form, null, null); if (form === noteForm) {form.hidden = true; quotePreview.hidden = true; noteList.hidden = false;}
     });
     form.addEventListener('change', () => {
       form.querySelector('.blog-comments__privacy').textContent = form.elements.visibility.value === 'private' ? '私密评论仅 Day 可见。' : '公开评论会显示在页面上，所有人可见。';
@@ -53,7 +53,7 @@
         if (visibility === 'public') {
           try { await load(); } catch (_) { status.textContent += ' 列表暂时加载失败，请稍后刷新。'; }
         }
-        if (form === noteForm) { panelStatus.textContent = status.textContent; form.hidden = true; quotePreview.hidden = true; }
+        if (form === noteForm) { panelStatus.textContent = status.textContent; form.hidden = true; quotePreview.hidden = true; noteList.hidden = false; }
       } catch (error) {
         status.textContent = error.name === 'AbortError' || error.message === 'Failed to fetch' ? '连接失败，请稍后重试；输入内容已保留。' : error.message;
       } finally { button.disabled = false; }
@@ -74,7 +74,7 @@
   function replyTo(comment, inNotes) {
     const form = inNotes ? noteForm : mainForm;
     setContext(form, comment, null); form.hidden = false;
-    if (inNotes) { quotePreview.hidden = true; openNotes(false); }
+    if (inNotes) { noteList.hidden = false; quotePreview.hidden = true; openNotes(false); }
     else form.scrollIntoView({block:'center', behavior:'smooth'});
     form.elements.content.focus();
   }
@@ -177,7 +177,7 @@
     section.querySelector('[data-open-notes]').addEventListener('click', () => openNotes());
     selectButton = action('批注', () => {
       if (!pending) return;
-      panelStatus.textContent=''; setContext(noteForm,null,pending); quotePreview.textContent = pending.exact; quotePreview.hidden = false; noteForm.hidden = false;
+      panelStatus.textContent=''; noteList.hidden=true; setContext(noteForm,null,pending); quotePreview.textContent = pending.exact; quotePreview.hidden = false; noteForm.hidden = false;
       selectButton.hidden = true; openNotes(false); noteForm.elements.content.focus();
     });
     selectButton.className = 'day-annotation-selection'; selectButton.hidden = true; document.body.append(selectButton);
