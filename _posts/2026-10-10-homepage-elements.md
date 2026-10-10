@@ -3,6 +3,7 @@ title: "关于首页元素的选择"
 date: 2026-10-10 00:35:00 +0800
 categories: [blog]
 blog_category: misc
+pinned: true
 tags: [随笔, 首页]
 layout: post
 cover: /images/blog-taichi-original.jpg
