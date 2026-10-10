@@ -46,9 +46,9 @@ Yong Deng∗, Guoqing Wang∗, Zhenzhe Ying∗, Xiaofeng Wu∗, Jinzhen Lin, Wen
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Findings</div>{% include site-image.html src='/images/SEAD_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026</div>{% include site-image.html src='/images/SEAD_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
-[ACL26 Findings][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
+[ACL26][SEAD: Self-Evolving Agent for Multi-Turn Service Dialogue](https://arxiv.org/abs/2602.03548)
 
 <a href="https://github.com/Da1yuqin/SEAD"><img loading="lazy" decoding="async" src="https://img.shields.io/github/stars/Da1yuqin/SEAD?style=social" alt="GitHub Stars" /></a>
 <a href="https://github.com/Da1yuqin/SEAD"><img loading="lazy" decoding="async" src="https://img.shields.io/github/forks/Da1yuqin/SEAD?style=social" alt="GitHub Forks" /></a>
@@ -151,7 +151,7 @@ __Yuqin Dai__, Wanlu Zhu, Ronghui Li, Zeping Ren, Xiangzheng Zhou, Xiu Li, Jun L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026 Findings</div>{% include site-image.html src='/images/SAGE_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">EMNLP 2026</div>{% include site-image.html src='/images/SAGE_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
 [EMNLP26][SAGE: A Service Agent Graph-guided Evaluation Benchmark](https://arxiv.org/abs/2604.09285)
 [[Github]](https://anonymous.4open.science/r/SAGE-Bench-4CD3/README.md)
@@ -198,9 +198,9 @@ Ling Shi\*, **Yuqin Dai**\*, Ziyin Wang, Ning Gao, Wei Zhang, Chaozheng Wang, Xi
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026 Findings</div>{% include site-image.html src='/images/GreenPlanner_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div>{% include site-image.html src='/images/GreenPlanner_mainfig.png' alt='论文配图' defer=true observe=true zoom=true sizes='(max-width: 768px) 90vw, 400px' style='width:100%;height:auto;' %}</div></div>
 <div class='paper-box-text' markdown="1">
-[CVPR26 Findings][GreenPlanner: Practical Floorplan Layout Generation via an Energy-Aware and Function-Feasible Generative Framework](https://www.arxiv.org/pdf/2512.00406)
+[CVPR26][GreenPlanner: Practical Floorplan Layout Generation via an Energy-Aware and Function-Feasible Generative Framework](https://www.arxiv.org/pdf/2512.00406)
  
 
 Pengyu Zeng\*, **Yuqin Dai**\*, Jun Yin\*, Jing Zhong, Ziyang Han, Chaoyang Shi, ZhanXiang Jin, Maowei Jiang, Yuxing Han, Shuai Lu†
