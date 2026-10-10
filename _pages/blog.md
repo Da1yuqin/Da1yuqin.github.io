@@ -85,6 +85,9 @@ author_profile: true
 {% assign misc_posts = blog_posts | where_exp: 'post', "post.blog_category != 'travel'" | where_exp: 'post', "post.blog_category != 'planner'" %}
 {% assign misc_count = misc_posts.size %}
 {% assign blog_posts = misc_posts | concat: travel_posts | concat: planner_posts %}
+{% assign pinned_posts = blog_posts | where: 'pinned', true %}
+{% assign unpinned_posts = blog_posts | where_exp: 'post', 'post.pinned != true' %}
+{% assign blog_posts = pinned_posts | concat: unpinned_posts %}
 
 <div class="az-blog">
   <section class="az-blog__profile">
@@ -130,7 +133,7 @@ author_profile: true
         <article class="az-post" data-blog-category="{{ blog_category }}"{% if forloop.index > 5 %} hidden{% endif %}>
           {% if post.cover %}<a class="az-post__cover az-post__cover--image{% if post.cover_frame == 'taichi' %} az-post__cover--taichi{% endif %}" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}">{% include site-image.html src=post.cover alt=post.title defer=true %}</a>{% endif %}
           <div class="az-post__body">
-            <div class="az-post__meta">{{ post.date | date: "%Y-%m-%d" }} · {{ minutes }} min · {{ words }} words</div>
+            <div class="az-post__meta">{% if post.pinned %}置顶 · {% endif %}{{ post.date | date: "%Y-%m-%d" }} · {{ minutes }} min · {{ words }} words</div>
             <h3 class="az-post__title"><a href="{{ post.url | relative_url }}" target="_self">{{ post.title }}</a></h3>
             {% if post.excerpt %}
               <p class="az-post__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
