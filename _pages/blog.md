@@ -84,7 +84,7 @@ author_profile: true
 {% assign planner_posts = blog_posts | where: 'blog_category', 'planner' %}
 {% assign misc_posts = blog_posts | where_exp: 'post', "post.blog_category != 'travel'" | where_exp: 'post', "post.blog_category != 'planner'" %}
 {% assign misc_count = misc_posts.size %}
-{% assign blog_posts = misc_posts | concat: travel_posts | concat: planner_posts %}
+{% assign blog_posts = misc_posts | concat: planner_posts | concat: travel_posts %}
 {% assign pinned_posts = blog_posts | where: 'pinned', true %}
 {% assign unpinned_posts = blog_posts | where_exp: 'post', 'post.pinned != true' %}
 {% assign blog_posts = pinned_posts | concat: unpinned_posts %}
