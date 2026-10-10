@@ -28,7 +28,7 @@ test('private content stays in storage and never reaches public reads', async ()
     const body = await response.json();
     assert.equal(body.comments.length, 1);
     assert.equal(body.comments[0].content, publicBody.content);
-    assert.deepEqual(Object.keys(body.comments[0]).sort(), ['content', 'created_at', 'id', 'name']);
+    assert.deepEqual(Object.keys(body.comments[0]).sort(), ['anchor', 'content', 'created_at', 'id', 'name', 'parent_id']);
     assert.ok(!JSON.stringify(body).includes('只有 Day'));
   }
   assert.equal((await call('', {...publicBody, visibility: 'admin'})).status, 400);
@@ -40,4 +40,41 @@ test('private content stays in storage and never reaches public reads', async ()
   assert.equal((await call('', publicBody)).status, 429);
   assert.equal(db.prepare('SELECT count(*) AS n FROM comments').get().n, 3);
   db.close();
+});
+
+
+test('replies and text annotations enforce parent visibility and page boundaries', async () => {
+  const db = new DatabaseSync(':memory:');
+  db.exec(readFileSync(new URL('./schema.sql', import.meta.url), 'utf8'));
+  const env = {SITE_ORIGIN: 'https://da1yuqin.github.io', COMMENT_LIMIT: {limit: async () => ({success:true})}, DB: {
+    prepare(sql) {return {bind(...values) {return {all: async()=>({results:db.prepare(sql).all(...values)}), run:async()=>db.prepare(sql).run(...values)};}};}
+  }};
+  const post = body => worker.fetch(new Request('https://comments.test/comments', {method:'POST', headers:{Origin:env.SITE_ORIGIN,'Content-Type':'application/json'},body:JSON.stringify(body)}),env);
+  const get = page => worker.fetch(new Request('https://comments.test/comments?page='+encodeURIComponent(page)),env);
+  const base={page:'/blog/test/',name:'访客',content:'讨论',visibility:'public'};
+  assert.equal((await post(base)).status,201);
+  assert.equal((await post({...base,visibility:'private',content:'私密根评论'})).status,201);
+  assert.equal((await post({...base,parent_id:1,content:'公开回复'})).status,201);
+  assert.equal((await post({...base,parent_id:3,content:'多层回复'})).status,201);
+  assert.equal((await post({...base,parent_id:1,visibility:'private',content:'私密回复'})).status,201);
+  const anchor={exact:'一句正文',prefix:'',suffix:'',start:0,end:4};
+  assert.equal((await post({...base,anchor,content:'公开批注'})).status,201);
+  assert.equal((await post({...base,anchor,visibility:'private',content:'私密批注'})).status,201);
+  for(const body of [{...base,parent_id:2},{...base,parent_id:7},{...base,parent_id:1,page:'/blog/other/'},{...base,parent_id:999},{...base,parent_id:'1'},{...base,parent_id:1,anchor},{...base,anchor:{...anchor,end:8}},{...base,anchor:{...anchor,exact:'x'.repeat(1001),end:1001}}]) {
+    assert.equal((await post(body)).status,400);
+  }
+  const data=await (await get(base.page)).json();
+  assert.equal(data.comments.length,4);
+  assert.deepEqual(data.comments.find(c=>c.content==='公开批注').anchor,anchor);
+  assert.equal(data.comments.find(c=>c.content==='公开回复').parent_id,1);
+  assert.equal(data.comments.find(c=>c.content==='多层回复').parent_id,3);
+  assert.ok(!JSON.stringify(data).includes('私密'));
+  assert.equal((await post({...base,page:'/'})).status,201);
+  // Upgrading the old schema keeps the original records intact.
+  const old=new DatabaseSync(':memory:');
+  old.exec('CREATE TABLE comments (id INTEGER PRIMARY KEY, page TEXT, name TEXT, content TEXT, visibility TEXT, created_at TEXT);');
+  old.prepare('INSERT INTO comments VALUES (?, ?, ?, ?, ?, ?)').run(1, '/blog/', '', '保留原留言', 'private', '2026-10-10');
+  old.exec(readFileSync(new URL('./migration-replies.sql',import.meta.url),'utf8'));
+  assert.equal(old.prepare('SELECT content FROM comments').get().content,'保留原留言');
+  old.close(); db.close();
 });

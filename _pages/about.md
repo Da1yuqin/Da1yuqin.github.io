@@ -8,6 +8,7 @@ redirect_from:
   - /about.html
 ---
 
+<div class="day-article-body" data-annotatable markdown="1">
 <span class='anchor' id='about-me'></span>
 {% include_relative includes/intro.md %}
 
@@ -18,3 +19,6 @@ redirect_from:
 {% include_relative includes/honers.md %}
 
 {% include_relative includes/others.md %}
+</div>
+
+{% include blog-footprints.html %}

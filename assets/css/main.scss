@@ -186,8 +186,8 @@ body.post-page .page__content { font-size: 16px; line-height: 1.95; }
 body.post-page .page__content > header h1 { font-size: 32px; line-height: 1.5; margin-top: 0; font-weight: 600; border: 0; padding-bottom: 4px; }
 body.post-page .page__content > header > div { font-size: 12px !important; color: var(--day-muted) !important; }
 body.post-page .page__content > header hr { border: 0; border-top: 1px solid var(--day-line); opacity: 1 !important; }
-body.post-page .page__content > p { margin: 0 0 18px; }
-body.post-page .page__content > p img { max-height: 650px; width: auto; object-fit: contain; display: block; margin: 26px auto; }
+body.post-page .day-article-body > p { margin: 0 0 18px; }
+body.post-page .day-article-body > p img { max-height: 650px; width: auto; object-fit: contain; display: block; margin: 26px auto; }
 :focus-visible { outline: 2px solid var(--day-accent); outline-offset: 4px; }
 @media (max-width: 768px) {
   .masthead__inner-wrap { padding: 10px 12px; }

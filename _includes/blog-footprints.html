@@ -25,11 +25,40 @@
   .blog-footprints__stats { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; font-size: 11px; color: #969a90; }
   .blog-footprints__stats strong { font-weight: normal; }
   .blog-footprints [hidden] { display: none !important; }
+  .blog-comments__link { border: 0; background: transparent; color: #526349; font: inherit; font-size: 12px; padding: 4px 0; cursor: pointer; }
+  .blog-footprints .blog-comments__annotation-hint { font-size: 12px; margin: -4px 0 16px; color: #737b6b; }
+  .blog-comments__annotation-hint button { margin-left: 12px; border-bottom: 1px solid #cdd3c6; }
+  .blog-comments__context { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 12px; padding: 8px 0; color: #737b6b; }
+  .blog-comments__context span { overflow-wrap: anywhere; }
+  .blog-comments__replies { margin: 8px 0 0 12px; padding-left: 12px; border-left: 1px solid #dedfd8; }
+  .blog-comments__replies .blog-comments__item { padding: 12px 0 0; border: 0; }
+  .blog-comments__reply-to { display: block; font-size: 11px; color: #737b6b; }
+  .day-annotation-selection { position: fixed; z-index: 1100; padding: 6px 12px; border: 1px solid #cdd3c6; border-radius: 3px; background: #fff; color: #526349; font: inherit; font-size: 12px; box-shadow: 0 2px 8px #30362e12; cursor: pointer; }
+  .day-annotation-toggle { position: fixed; right: 16px; top: 86px; z-index: 25; border: 1px solid #dedfd8; background: #fcfbf8; color: #526349; font: inherit; font-size: 12px; padding: 7px 12px; cursor: pointer; }
+  ::highlight(day-notes) { background: #efe3a6; color: inherit; }
+  .day-text-highlight { background: #efe3a6; color: inherit; cursor: pointer; }
+  .day-notes { position: fixed; z-index: 1050; right: 0; top: 64px; bottom: 0; width: 330px; max-width: 100vw; padding: 22px; overflow: auto; background: #fcfbf8; border-left: 1px solid #dedfd8; box-sizing: border-box; color: #30362e; font-size: 13px; line-height: 1.65; }
+  .day-notes[hidden], .day-notes [hidden], .day-annotation-toggle[hidden], .day-annotation-selection[hidden] { display: none !important; }
+  .day-notes__header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #dedfd8; padding-bottom: 12px; margin-bottom: 18px; }
+  .day-notes h2 { margin: 0; font-size: 14px; font-family: inherit; font-weight: 500; }
+  .day-notes__intro { color: #737b6b; font-size: 12px; }
+  .day-notes blockquote { border-left: 2px solid #c7b55b; padding: 8px 12px; margin: 12px 0; background: #f6f1d9; font-size: 13px; font-style: normal; overflow-wrap: anywhere; }
+  .day-notes .blog-comments__item { padding: 14px 0; }
+  .day-notes .blog-comments__item p { margin: 8px 0; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .day-notes .blog-comments__form textarea { min-height: 105px; }
+  .day-notes .blog-comments__privacy, .day-notes .blog-comments__status { font-size: 12px; color: #737b6b; margin: 9px 0; }
+  .day-notes__thread { border-bottom: 1px solid #dedfd8; padding-bottom: 14px; margin-bottom: 18px; }
+  .day-notes__quote { width: 100%; text-align: left; border: 0; background: none; color: inherit; padding: 0; font: inherit; cursor: pointer; }
+  .day-notes__notice { font-size: 12px; color: #737b6b; }
+  @media (min-width: 1200px) { body.day-notes-open { padding-right: 330px; } }
+  @media (max-width: 600px) { .day-notes { width: 100%; top: 57px; } .day-annotation-toggle { top: 68px; right: 12px; } }
 </style>
 
-<section class="blog-footprints" id="footprints" aria-labelledby="footprints-title">
+<section class="blog-footprints" data-api="{{ site.blog_comments_api | escape }}" data-page="{{ page.url | escape }}" id="footprints" aria-labelledby="footprints-title">
   <h2 id="footprints-title">评论区</h2>
+  <p class="blog-comments__annotation-hint" hidden>选中正文，可以高亮批注。<button type="button" class="blog-comments__link" data-open-notes>查看批注 <span data-note-count>0</span></button></p>
   <form class="blog-comments__form">
+    <div class="blog-comments__context" hidden><span></span><button type="button" class="blog-comments__link" data-cancel-context>取消</button></div>
     <div class="blog-comments__editor">
     <label class="blog-comments__name"><span class="sr-only">昵称（选填）</span><input name="name" maxlength="40" autocomplete="nickname" placeholder="昵称（选填，匿名也可以）" /></label>
     <label class="blog-comments__content"><span class="sr-only">你的评论</span><textarea name="content" required maxlength="2000" rows="4" placeholder="写下你的想法…"></textarea></label>
@@ -83,63 +112,4 @@
   }());
 </script>
 
-<script>
-  (function () {
-    var section = document.getElementById('footprints');
-    var form = section.querySelector('form');
-    var button = form.querySelector('button');
-    var status = section.querySelector('.blog-comments__status');
-    var privacy = section.querySelector('.blog-comments__privacy');
-    var list = section.querySelector('.blog-comments__list');
-    var api = {{ site.blog_comments_api | default: '' | jsonify }};
-    var page = {{ page.url | jsonify }};
-    form.addEventListener('change', function () {
-      privacy.textContent = form.elements.visibility.value === 'private' ? '私密评论仅 Day 可见。' : '公开评论会显示在下方，所有人可见。';
-    });
-    if (!api) { status.textContent = '评论暂未开放。'; return; }
-    button.disabled = false;
-    async function request(url, options) {
-      var controller = new AbortController();
-      var timeout = setTimeout(function () { controller.abort(); }, 12000);
-      try { return await fetch(url, Object.assign({}, options, {signal: controller.signal})); }
-      finally { clearTimeout(timeout); }
-    }
-    function showComments(comments) {
-      list.replaceChildren();
-      section.querySelector('.blog-comments__empty').hidden = comments.length > 0;
-      comments.forEach(function (comment) {
-        var item = document.createElement('article'); item.className = 'blog-comments__item';
-        var name = document.createElement('strong'); name.textContent = comment.name || '匿名';
-        var time = document.createElement('time'); time.dateTime = comment.created_at;
-        time.textContent = new Date(comment.created_at).toLocaleDateString('zh-CN');
-        var content = document.createElement('p'); content.textContent = comment.content;
-        item.append(name, time, content); list.append(item);
-      });
-    }
-    async function loadComments() {
-      var response = await request(api.replace(/\/$/, '') + '/comments?page=' + encodeURIComponent(page));
-      if (!response.ok) throw new Error('load');
-      var data = await response.json(); showComments(data.comments);
-    }
-    loadComments().catch(function () { if (!status.textContent) status.textContent = '公开评论暂时加载失败，请稍后刷新。'; });
-    form.addEventListener('submit', async function (event) {
-      event.preventDefault(); if (button.disabled || !form.reportValidity()) return;
-      button.disabled = true; status.textContent = '正在发布…';
-      var visibility = form.elements.visibility.value;
-      try {
-        var response = await request(api.replace(/\/$/, '') + '/comments', {
-          method: 'POST', headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({page: page, name: form.elements.name.value, content: form.elements.content.value, visibility: visibility})
-        });
-        var result = await response.json();
-        if (!response.ok) throw new Error(result.error || '发布失败，请稍后重试。');
-        form.elements.content.value = '';
-        status.textContent = visibility === 'private' ? '私密评论已送达，仅 Day 可见。' : '评论已公开发布。';
-        if (visibility === 'public') {
-          try { await loadComments(); } catch (_) { status.textContent += ' 列表暂时加载失败，可稍后刷新。'; }
-        }
-      } catch (error) { status.textContent = error.name === 'AbortError' || error.message === 'Failed to fetch' ? '连接失败，请稍后重试；输入内容已保留。' : error.message; }
-      finally { button.disabled = false; }
-    });
-  }());
-</script>
+<script src="{{ '/assets/js/comments.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
