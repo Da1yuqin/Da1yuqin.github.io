@@ -33,7 +33,7 @@ __我的研究方向包括但不限于__:
 {% include site-image.html src='/images/30001-0150.gif' alt='群舞动作生成演示' defer=true observe=true style='max-width:100%;height:auto;' %}
 
 
-如果您对我的研究方向感兴趣(或者对我感兴趣)并有意向合作, 也随时欢迎联系我😆! 我非常喜欢合作, 会成为你非常好的合作伙伴!
+如果您看到了这个网页，只能说明一件事：我正在找工作（Waiting to be hired 😭！）。毕竟我是一个非常有边界感的人🥺，宣传自己只能是生活所迫了，我的联系方式： daiyq25 [at] mails.tsinghua.edu.cn
 
 <span class='anchor' id='-gzsx'></span>
 
