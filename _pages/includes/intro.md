@@ -38,7 +38,9 @@ __我的研究方向包括但不限于__:
 <span class='anchor' id='-gzsx'></span>
 
 
-# 👨‍👩‍👧‍👦 Internship
+<span class="anchor" id="-internship"></span>
+
+# 👨‍👩‍👧‍👦 Internship {#internship}
 
 <details open>
 <summary style="font-size:1.1em; font-weight:bold; cursor:pointer; padding:8px 0;">

@@ -1,5 +1,7 @@
 
-# 📝 Publications 
+<span class="anchor" id="-publications"></span>
+
+# 📝 Publications {#publications}
 
 ## Tech Reports（2）
 

@@ -1,4 +1,6 @@
-# 🔥 News
+<span class="anchor" id="-news"></span>
+
+# 🔥 News {#news}
 
 ### 2026
 - *2026.08*: 🎉 共一论文 EviNote-RAG、SAGE 被 EMNLP 2026 接收!

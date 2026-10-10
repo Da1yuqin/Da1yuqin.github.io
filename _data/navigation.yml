@@ -7,13 +7,13 @@ main:
     url: "/blog/"
 
   - title: "Internship"
-    url: "/#-internship"
+    url: "/#internship"
 
   - title: "News"
-    url: "/#-news"
+    url: "/#news"
 
   - title: "Publications"
-    url: "/#-publications"
+    url: "/#publications"
 
   - title: "Professional Services"
     url: "/#professional-services"
