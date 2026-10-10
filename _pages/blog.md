@@ -82,9 +82,11 @@ author_profile: true
 {% assign blog_posts = site.categories.blog | sort: 'date' | reverse %}
 {% assign travel_posts = blog_posts | where: 'blog_category', 'travel' | reverse %}
 {% assign planner_posts = blog_posts | where: 'blog_category', 'planner' %}
-{% assign misc_posts = blog_posts | where_exp: 'post', "post.blog_category != 'travel'" | where_exp: 'post', "post.blog_category != 'planner'" %}
+{% assign ne_posts = blog_posts | where: 'blog_category', 'ne' %}
+{% assign misc_posts = blog_posts | where_exp: 'post', "post.blog_category != 'travel'" | where_exp: 'post', "post.blog_category != 'planner'" | where_exp: 'post', "post.blog_category != 'ne'" %}
 {% assign misc_count = misc_posts.size %}
-{% assign blog_posts = misc_posts | concat: planner_posts | concat: travel_posts %}
+{% assign project_posts = planner_posts | concat: ne_posts | sort: 'date' | reverse %}
+{% assign blog_posts = misc_posts | concat: project_posts | concat: travel_posts %}
 {% assign pinned_posts = blog_posts | where: 'pinned', true %}
 {% assign unpinned_posts = blog_posts | where_exp: 'post', 'post.pinned != true' %}
 {% assign blog_posts = pinned_posts | concat: unpinned_posts %}
@@ -120,6 +122,7 @@ author_profile: true
     <button type="button" role="tab" id="blog-tab-misc" aria-selected="false" aria-controls="blog-posts" tabindex="-1" data-blog-filter="misc" data-description="碎碎念，随便看看">杂七杂八<span class="az-blog__category-count" aria-hidden="true">{{ misc_count }}</span></button>
     <button type="button" role="tab" id="blog-tab-travel" aria-selected="false" aria-controls="blog-posts" tabindex="-1" data-blog-filter="travel" data-description="探索地球中">地球OL打卡<span class="az-blog__category-count" aria-hidden="true">{{ travel_posts.size }}</span></button>
     <button type="button" role="tab" id="blog-tab-planner" aria-selected="false" aria-controls="blog-posts" tabindex="-1" data-blog-filter="planner" data-description="其实，我也有努力工作">J人模式副产物<span class="az-blog__category-count" aria-hidden="true">{{ planner_posts.size }}</span></button>
+    <button type="button" role="tab" id="blog-tab-ne" aria-selected="false" aria-controls="blog-posts" tabindex="-1" data-blog-filter="ne" data-description="">Ne 大爆发<span class="az-blog__category-count" aria-hidden="true">{{ ne_posts.size }}</span></button>
   </div>
   <p class="az-blog__category-description" id="blog-category-description" role="status" aria-live="polite">这里记录了全部的博客</p>
 
@@ -129,7 +132,7 @@ author_profile: true
         {% assign words = post.content | strip_html | number_of_words %}
         {% assign minutes = words | divided_by: 260 | plus: 1 %}
         {% assign blog_category = 'misc' %}
-        {% if post.blog_category == 'travel' or post.blog_category == 'planner' %}{% assign blog_category = post.blog_category %}{% endif %}
+        {% if post.blog_category == 'travel' or post.blog_category == 'planner' or post.blog_category == 'ne' %}{% assign blog_category = post.blog_category %}{% endif %}
         <article class="az-post" data-blog-category="{{ blog_category }}"{% if forloop.index > 5 %} hidden{% endif %}>
           {% if post.cover %}<a class="az-post__cover az-post__cover--image{% if post.cover_frame == 'taichi' %} az-post__cover--taichi{% endif %}" href="{{ post.url | relative_url }}" target="_self" aria-label="{{ post.title }}">{% include site-image.html src=post.cover alt=post.title defer=true %}</a>{% endif %}
           <div class="az-post__body">

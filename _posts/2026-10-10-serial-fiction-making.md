@@ -3,7 +3,7 @@ title: "🟢 [doing] 个人联文连载网站制作中"
 date: 2026-10-10 00:41:00 +0800
 permalink: /blog/serial-fiction-making/
 categories: [blog]
-blog_category: planner
+blog_category: ne
 tags: [联文, 连载]
 layout: post
 excerpt: "和大黄狗蛋一起 18 岁写的联文，最近计划重新开始连载🎉"
