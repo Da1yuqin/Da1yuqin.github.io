@@ -4,8 +4,13 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
+          {% if site.homepage_enabled == false %}
+          <li class="masthead__menu-item masthead__menu-item--lg"><button type="button" disabled aria-label="招聘季限定" style="display: inline-block; float: none; position: static; width: auto; height: auto; margin: 0; padding: 0; border: 0; background: transparent; color: #a5a79f; font: inherit; cursor: not-allowed; box-shadow: none;">招聘季限定</button></li>
+          {% else %}
           <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="{% if page.url == '/' %}#about-me{% else %}{{ '/#about-me' | relative_url }}{% endif %}" target="_self">Homepage</a></li>
+          {% endif %}
           {% for link in site.data.navigation.main %}
+            {% if site.homepage_enabled != false or link.url == '/blog/' %}
             {% assign navigation_url = link.url | relative_url %}
             {% if page.url == '/' and link.url contains '/#' %}
               {% assign navigation_url = link.url | remove_first: '/' %}
@@ -13,6 +18,7 @@
               {% assign navigation_url = '#articles' %}
             {% endif %}
             <li class="masthead__menu-item"><a href="{{ navigation_url }}" target="_self">{{ link.title }}</a></li>
+            {% endif %}
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>

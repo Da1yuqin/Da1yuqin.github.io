@@ -6,6 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
+homepage_enabled: false
 title                    : "Dai Yuqin(戴语琴, Harper)"
 description              : "清华大学"
 repository               : "Da1yuqin/Da1yuqin.github.io"
@@ -71,6 +72,8 @@ include:
   - _pages
   - files
 exclude:
+  - _pages/about.md
+  - _pages/includes
   - optimize_images.py
   - AGENTS.md
   - comments-worker
