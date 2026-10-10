@@ -15,6 +15,9 @@
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if page.permalink == '/' %}
+      <p class="author__status"><span class="author__status-dot" aria-hidden="true"></span>求职中</p>
+    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">
