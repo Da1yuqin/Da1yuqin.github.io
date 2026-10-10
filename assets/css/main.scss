@@ -171,6 +171,8 @@ a { text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .sidebar .author__name { font-family: $serif; font-size: 21px; color: var(--day-ink); }
 .author__avatar img { border: 0; padding: 0; margin-left: 0; }
 .author__bio, .author__urls { font-size: 13px; line-height: 1.8; }
+.author__status { display: flex; align-items: center; gap: 7px; margin: 8px 0 0; font-size: 13px; font-weight: 500; line-height: 1.6; }
+.author__status-dot { flex: none; width: 11px; height: 11px; border-radius: 50%; background: #19d982; }
 .page__content { line-height: 1.85; }
 .page__content h1 { margin-top: 2.4em; font-size: 26px; font-weight: 600; border-color: var(--day-line); }
 .page__content h2 { font-size: 22px; font-weight: 600; }
