@@ -6,7 +6,7 @@ categories: [blog]
 blog_category: planner
 tags: [学术写作, PaperBank]
 layout: post
-cover: /images/blog-paperbank-making.jpg
+cover: /images/blog-paperbank-making-large.png
 excerpt: "为什么学术写作没有人系统地教啊！帮大家节省时间，就是为我节省时间。"
 ---
 
@@ -17,7 +17,7 @@ excerpt: "为什么学术写作没有人系统地教啊！帮大家节省时间�
 改论文的时候，那令人匪夷所思的错误（也理解，毕竟谁拉的第一坨不离谱）、一眼 AI 的痕迹，与令人震惊的叙述逻辑，看得我如痴如醉，一改就忘了时间、忘了假期（主要我可能真的看不懂），因此帮大家节省时间，就是为我节省时间。
 
 <figure>
-  <img src="{{ '/images/blog-paperbank-making.jpg' | relative_url }}" alt="制作中的 PaperBank：一天拉完草稿、光速出美图、Refine 和 AI 工具四章，附写作 skill 与中英例子" loading="lazy" style="width:100%;height:auto;" />
+  <img src="{{ '/images/blog-paperbank-making-large.png' | relative_url }}" alt="制作中的 PaperBank：一天拉完草稿、光速出美图、Refine 和 AI 工具四章，附写作 skill 与中英例子" loading="lazy" style="width:100%;height:auto;" />
   <figcaption>制作中的 PaperBank。</figcaption>
 </figure>
 
