@@ -169,3 +169,11 @@ html[data-reading-mode=storyboard] .scene-illustration{margin-top:20px}
 .original-input-copy{white-space:pre-wrap;overflow-wrap:anywhere;font:16px/2.1 var(--serif)}
 html[data-reading-mode=storyboard] .original-input{display:none}
 @media(max-width:760px){.original-input{padding-top:38px;padding-bottom:45px}.original-input-copy{font-size:15px}}
+
+.roster-continuity{margin:14px 0 0;padding-top:12px;border-top:1px dashed var(--line);font:11px/1.9 var(--sans);color:var(--gold)}
+
+.cinema-credit{display:block;margin:12px 0;color:var(--muted);font:11px/1.9 var(--sans);letter-spacing:.02em}
+.cinema-credit a{color:var(--gold);text-underline-offset:3px}
+.cinema-credit span{color:var(--gold)}
+.cover-reference{max-width:1280px;margin:12px auto 0}
+.scene-illustration .cinema-credit{margin:10px 0 0}

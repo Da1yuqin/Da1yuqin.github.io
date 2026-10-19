@@ -163,3 +163,6 @@ img { display: block; max-width: 100%; }
 .collection-index a{display:flex;justify-content:space-between;gap:12px;padding:13px 0;text-decoration:none;border-bottom:1px solid var(--line);font:14px/1.8 var(--serif)}
 .collection-index a:hover{color:var(--gold)}
 .collection-index a span{color:var(--gold);font:12px/1.8 var(--sans)}
+
+.cinema-credit{display:block;margin:9px 0 15px;color:var(--muted,#68736b);font-size:11px;line-height:1.85}
+.cinema-credit a{text-underline-offset:3px;color:inherit}
