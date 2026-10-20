@@ -167,6 +167,7 @@
     const securityStatus = byId("security-status");
     let stories = [];
     let invites = [];
+    let blogPosts = [];
     let editing = "";
     let security = { totpEnabled: false };
     const field = (data, name) => String(data.get(name) || "").trim();
@@ -258,18 +259,28 @@
     }
     function renderPermissions(selected = []) {
       permissionList.replaceChildren();
-      for (const story of stories) {
-        const label = document.createElement("label");
-        label.className = "access-choice";
-        const input = document.createElement("input");
-        input.type = "checkbox";
-        input.name = "allowedStories";
-        input.value = story.slug;
-        input.checked = selected.includes(story.slug);
-        const text = document.createElement("span");
-        text.textContent = story.title;
-        label.append(input, text);
-        permissionList.append(label);
+      for (const [kind, heading] of [["story", "跑团故事"], ["blog", "博客文章"]]) {
+        const entries = stories.filter(story => (story.kind === "blog" ? "blog" : "story") === kind);
+        if (!entries.length) continue;
+        const group = document.createElement("div");
+        group.className = "access-permission-group";
+        const title = document.createElement("h4");
+        title.textContent = heading;
+        group.append(title);
+        for (const story of entries) {
+          const label = document.createElement("label");
+          label.className = "access-choice";
+          const input = document.createElement("input");
+          input.type = "checkbox";
+          input.name = "allowedStories";
+          input.value = story.slug;
+          input.checked = selected.includes(story.slug);
+          const text = document.createElement("span");
+          text.textContent = story.title;
+          label.append(input, text);
+          group.append(label);
+        }
+        permissionList.append(group);
       }
     }
     function resetEditor() {
@@ -339,7 +350,7 @@
         codeRow.className = "invite-code-row";
         const permitted = document.createElement("p");
         permitted.className = "invite-permissions";
-        permitted.textContent = invite.allowedStories.map(slug => stories.find(story => story.slug === slug)?.title || slug).join(" · ") || "未开放故事";
+        permitted.textContent = invite.allowedStories.map(slug => stories.find(story => story.slug === slug)?.title || slug).join(" · ") || "未开放内容";
         const bottom = document.createElement("div");
         bottom.className = "invite-card-bottom";
         const expiry = document.createElement("span");
@@ -412,6 +423,40 @@
         list.append(card);
       }
     }
+    function renderBlogPosts() {
+      const host = byId("admin-blog-list");
+      host.replaceChildren();
+      byId("admin-blog-count").textContent = `${blogPosts.length} 篇`;
+      for (const post of blogPosts) {
+        const card = document.createElement("article");
+        card.className = "invite-card blog-visibility-card";
+        const head = document.createElement("div");
+        head.className = "invite-card-head";
+        const title = document.createElement("h3");
+        title.textContent = post.title;
+        const state = document.createElement("span");
+        state.className = "invite-state";
+        state.dataset.active = String(post.visibility === "public");
+        state.textContent = post.visibility === "public" ? "公开" : "私密";
+        head.append(title, state);
+        const route = document.createElement("p");
+        route.className = "access-help";
+        route.textContent = post.route;
+        const change = actionButton(post.visibility === "public" ? "设为私密" : "设为公开", async () => {
+          pending(card, true);
+          status(byId("admin-blog-status"), "正在保存……");
+          try {
+            await request("/api/admin/blog/posts", "PATCH", { slug: post.slug, visibility: post.visibility === "public" ? "private" : "public" });
+            blogPosts = (await request("/api/admin/blog/posts")).posts;
+            renderBlogPosts();
+            status(byId("admin-blog-status"), "文章公开状态已保存。", "success");
+          } catch (error) { await adminError(error, byId("admin-blog-status")); }
+          finally { pending(card, false); }
+        });
+        card.append(head, route, change);
+        host.append(card);
+      }
+    }
     function renderSecurity() {
       const enabled = security.totpEnabled;
       byId("security-state").textContent = enabled ? "已启用" : "未绑定";
@@ -461,21 +506,25 @@
       byId("admin-recovery-panel").scrollIntoView({ behavior: "smooth", block: "center" });
     }
     async function openDashboard(session) {
-      const [result, settings] = await Promise.all([request("/api/admin/invites"), request("/api/admin/security")]);
+      const [result, settings, blog] = await Promise.all([request("/api/admin/invites"), request("/api/admin/security"), request("/api/admin/blog/posts")]);
       stories = result.stories;
       invites = result.invites;
       security = settings;
+      blogPosts = blog.posts;
       byId("admin-username").textContent = session.username || "管理员";
       resetEditor();
       clearSetup();
       renderInvites();
       renderSecurity();
+      renderBlogPosts();
       loginPanel.hidden = true;
       dashboard.hidden = false;
       loginForm.reset();
       syncFactor(loginForm);
       status(listStatus);
       status(securityStatus);
+      status(byId("admin-blog-status"));
+      if (location.hash === "#blog-posts") byId("blog-posts").scrollIntoView({ block: "start" });
     }
     loginForm.addEventListener("submit", async event => {
       event.preventDefault();
@@ -513,7 +562,7 @@
       event.preventDefault();
       const data = new FormData(inviteForm);
       const allowedStories = data.getAll("allowedStories");
-      if (!allowedStories.length) { status(inviteStatus, "请至少选择一篇故事。", "error"); return; }
+      if (!allowedStories.length) { status(inviteStatus, "请至少选择一篇内容。", "error"); return; }
       const editingId = editing;
       const expires = field(data, "expiresAt");
       const payload = { label: field(data, "label"), allowedStories };

@@ -33,6 +33,8 @@
 .access-status[data-kind="error"] { color: #944737; }
 .access-status[data-kind="success"] { color: #35604b; }
 .access-choice { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; cursor: pointer; }
+.access-permission-group + .access-permission-group { margin-top: 15px; padding-top: 13px; border-top: 1px solid var(--line); }
+.access-permission-group > h4 { margin: 0 0 5px; color: var(--gold); font: 500 12px/1.7 var(--sans); }
 .access-form-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
 .access-text-button { padding: 4px 0; border: 0; color: var(--green); background: transparent; font: 12px/1.7 var(--sans); cursor: pointer; text-underline-offset: 4px; }
 .access-text-button:hover { text-decoration: underline; }
@@ -109,6 +111,10 @@
 .admin-password-form .access-form-actions { margin: 0; }
 .admin-password-form .access-status { grid-column: 1 / -1; margin: 0; }
 .admin-security-panel { margin-top: 34px; padding: 26px; border: 1px solid var(--line); background: #faf7f0; }
+.admin-blog-panel { margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+.admin-blog-panel .admin-intro { margin-top: 10px; font-size: 12px; }
+.admin-blog-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.blog-visibility-card > .access-text-button { margin-top: 12px; }
 .admin-security-panel .admin-intro { margin: 10px 0 0; font-size: 12px; }
 .security-password-form { display: flex; align-items: end; flex-wrap: wrap; gap: 14px; max-width: 600px; margin-top: 10px; }
 .security-password-form .access-field { flex: 1 1 230px; }
@@ -158,6 +164,7 @@
   .invite-card { padding-inline: 18px; }
   .admin-security-panel, .admin-recovery-panel { padding: 23px; }
   .totp-setup { grid-template-columns: minmax(0, 1fr); gap: 25px; }
+  .admin-blog-list { grid-template-columns: minmax(0, 1fr); }
   .gate-main { grid-template-columns: minmax(0, 1fr); align-content: center; gap: 25px; padding-block: 27px 30px; }
   .gate-cover { width: min(480px, 100%); margin-inline: auto; padding: 5px; box-shadow: 4px 4px 0 #d7cdb63d; }
   .gate-panel { width: min(480px, 100%); max-width: none; margin-inline: auto; }

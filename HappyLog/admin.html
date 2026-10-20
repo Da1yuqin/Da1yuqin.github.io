@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#3d5149">
   <meta name="robots" content="noindex, nofollow">
   <title>阅读邀请 · happy 跑团</title>
-  <link rel="stylesheet" href="./access.css?v=075750538d">
+  <link rel="stylesheet" href="./access.css?v=b76262d908">
   <script src="./access-config.js?v=3eb0b67e93"></script>
   <script src="./qrcode.js?v=79ec86f828" defer></script>
-  <script src="./access.js?v=3584940c88" defer></script>
+  <script src="./access.js?v=234142de52" defer></script>
 </head>
 <body class="admin-body" data-access="admin">
   <header class="admin-header admin-width">
@@ -55,7 +55,7 @@
                 <input id="custom-invite-code" name="code" minlength="6" maxlength="128" autocomplete="off" spellcheck="false" placeholder="自行填写，或留空自动生成" aria-describedby="invite-code-help">
                 <p class="access-help" id="invite-code-help">留空自动生成；自填需为 6 至 128 个非空白字符。</p>
               </div>
-              <fieldset><legend>可阅读的故事</legend><div id="invite-story-options"></div></fieldset>
+              <fieldset><legend>可阅读内容</legend><div id="invite-story-options"></div></fieldset>
               <label for="invite-expiry">到期时间 <small>留空长期有效</small></label>
               <input id="invite-expiry" name="expiresAt" type="datetime-local" step="1" aria-describedby="invite-timezone">
               <p class="access-help" id="invite-timezone"></p>
@@ -77,6 +77,12 @@
           <div class="invite-list" id="invite-list"></div>
         </section>
       </div>
+      <section class="admin-blog-panel" id="blog-posts" aria-labelledby="admin-blog-title">
+        <div class="admin-list-heading"><h2 id="admin-blog-title">博客文章</h2><span id="admin-blog-count"></span></div>
+        <p class="admin-intro">公开文章可以直接阅读；私密文章需要持有对应篇目权限的邀请码。</p>
+        <p class="access-status" id="admin-blog-status" role="status" aria-live="polite"></p>
+        <div class="admin-blog-list" id="admin-blog-list"></div>
+      </section>
       <section class="admin-security-panel" aria-labelledby="security-title">
         <div class="admin-list-heading"><h2 id="security-title">管理员双重验证</h2><span class="invite-state" id="security-state">正在读取</span></div>
         <p class="admin-intro" id="security-description">绑定验证器后，登录时还需要六位验证码。</p>
@@ -105,8 +111,8 @@
         <summary>更改管理员密码</summary>
         <form class="access-form admin-password-form" id="admin-password-form">
           <div class="access-field"><label for="current-password">当前密码</label><input id="current-password" name="currentPassword" type="password" autocomplete="current-password" maxlength="256" required></div>
-          <div class="access-field"><label for="new-password">新密码 <small>至少 10 个字符</small></label><input id="new-password" name="newPassword" type="password" autocomplete="new-password" minlength="10" maxlength="256" required></div>
-          <div class="access-field"><label for="confirm-password">再次填写新密码</label><input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" minlength="10" maxlength="256" required></div>
+          <div class="access-field"><label for="new-password">新密码 <small>至少 5 个字符</small></label><input id="new-password" name="newPassword" type="password" autocomplete="new-password" minlength="5" maxlength="256" required></div>
+          <div class="access-field"><label for="confirm-password">再次填写新密码</label><input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" minlength="5" maxlength="256" required></div>
           <div class="access-form-actions"><button type="submit">更改密码</button></div>
           <p class="access-status" id="password-status" role="status" aria-live="polite"></p>
         </form>
