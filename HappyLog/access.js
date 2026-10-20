@@ -17,7 +17,11 @@
     return base + (base.endsWith("/api") ? path.replace(/^\/api(?=\/)/, "") : path);
   };
   class AccessError extends Error {
-    constructor(message, status = 0) { super(message); this.status = status; }
+    constructor(message, status = 0, details = {}) {
+      super(message);
+      this.status = status;
+      this.requiresTotp = Boolean(details.requiresTotp);
+    }
   }
   async function request(path, method = "GET", body) {
     const headers = { Accept: "application/json" };
@@ -33,7 +37,7 @@
     let result;
     try { result = await response.json(); }
     catch { throw new AccessError("服务返回异常，请稍后再试。", response.status); }
-    if (!response.ok) throw new AccessError(result.error || "操作没有完成，请重试。", response.status);
+    if (!response.ok) throw new AccessError(result.error || "操作没有完成，请重试。", response.status, result);
     return result;
   }
   const status = (node, message = "", kind = "") => {
@@ -146,31 +150,111 @@
   }
 
   async function admin() {
-    const loginPanel = document.getElementById("admin-login-panel");
-    const dashboard = document.getElementById("admin-dashboard");
-    const loginForm = document.getElementById("admin-login-form");
-    const loginStatus = document.getElementById("admin-login-status");
-    const inviteForm = document.getElementById("invite-form");
-    const inviteStatus = document.getElementById("invite-status");
-    const listStatus = document.getElementById("invite-list-status");
-    const list = document.getElementById("invite-list");
-    const permissionList = document.getElementById("invite-story-options");
+    const byId = id => document.getElementById(id);
+    const loginPanel = byId("admin-login-panel");
+    const dashboard = byId("admin-dashboard");
+    const loginForm = byId("admin-login-form");
+    const loginStatus = byId("admin-login-status");
+    const inviteForm = byId("invite-form");
+    const inviteStatus = byId("invite-status");
+    const listStatus = byId("invite-list-status");
+    const list = byId("invite-list");
+    const permissionList = byId("invite-story-options");
+    const passwordForm = byId("admin-password-form");
+    const startForm = byId("totp-start-form");
+    const confirmForm = byId("totp-confirm-form");
+    const disableForm = byId("totp-disable-form");
+    const securityStatus = byId("security-status");
     let stories = [];
     let invites = [];
     let editing = "";
-    const showLogin = (message = "", kind = "") => {
+    let security = { totpEnabled: false };
+    const field = (data, name) => String(data.get(name) || "").trim();
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const dateLabel = value => new Date(value).toLocaleString("zh-CN", {
+      year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false, timeZoneName: "longOffset"
+    }) + ` (${timezone})`;
+    byId("invite-timezone").textContent = `当前时区：${timezone}。留空则长期有效。`;
+    function localDate(value) {
+      if (!value) return "";
+      const date = new Date(value);
+      if (!Number.isFinite(date.getTime())) return "";
+      return new Date(date.getTime() - date.getTimezoneOffset() * 60000).toISOString().slice(0, 19);
+    }
+    function syncFactor(form) {
+      const selected = form.querySelector('input[name="factor"]:checked')?.value || "otp";
+      const busy = form.getAttribute("aria-busy") === "true";
+      const required = form === disableForm || form.dataset.requiresTotp === "true";
+      form.querySelectorAll("[data-factor-field]").forEach(group => {
+        const active = group.dataset.factorField === selected;
+        group.hidden = !active;
+        group.querySelectorAll("input").forEach(input => {
+          input.disabled = !active || busy;
+          input.required = active && required;
+        });
+      });
+    }
+    for (const form of [loginForm, disableForm]) {
+      form.querySelectorAll('input[name="factor"]').forEach(input => input.addEventListener("change", () => syncFactor(form)));
+      syncFactor(form);
+    }
+    function clearSetup() {
+      byId("totp-setup").hidden = true;
+      byId("totp-qr").replaceChildren();
+      byId("totp-secret").textContent = "";
+      byId("totp-setup-expiry").textContent = "";
+      startForm.reset();
+      confirmForm.reset();
+      status(byId("totp-confirm-status"));
+      startForm.hidden = security.totpEnabled;
+    }
+    function clearRecoveryCodes() {
+      byId("admin-recovery-panel").hidden = true;
+      byId("recovery-codes").replaceChildren();
+      status(byId("recovery-copy-status"));
+    }
+    function showLogin(message = "", kind = "") {
       loginPanel.hidden = false;
       dashboard.hidden = true;
       list.replaceChildren();
       clearCreatedCode();
-      loginForm.reset();
+      clearSetup();
+      clearRecoveryCodes();
+      for (const form of [loginForm, inviteForm, passwordForm, disableForm]) form.reset();
+      loginForm.dataset.requiresTotp = "false";
+      byId("login-factor-details").open = false;
+      syncFactor(loginForm);
+      syncFactor(disableForm);
       status(loginStatus, message, kind);
-    };
-    function adminError(error, node) {
+    }
+    async function adminError(error, node) {
+      if (error.status === 401) {
+        try {
+          const session = await request("/api/session");
+          if (session.authenticated && session.role === "admin") { status(node, error.message, "error"); return; }
+        } catch { status(node, error.message, "error"); return; }
+      }
       if (error.status === 401 || error.status === 403) {
         saveToken("");
         showLogin("管理凭证已失效，请重新登录。", "error");
       } else status(node, error.message, "error");
+    }
+    function selectForCopy(node) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(node);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+    async function copyText(text, visibleNode, message) {
+      try {
+        await navigator.clipboard.writeText(text);
+        status(message, "已复制。", "success");
+      } catch {
+        visibleNode.hidden = false;
+        selectForCopy(visibleNode);
+        status(message, "已选中内容，请手动复制。");
+      }
     }
     function renderPermissions(selected = []) {
       permissionList.replaceChildren();
@@ -192,42 +276,46 @@
       editing = "";
       inviteForm.reset();
       renderPermissions();
-      document.getElementById("invite-form-title").textContent = "创建邀请码";
-      document.getElementById("invite-submit").textContent = "创建邀请码";
-      document.getElementById("invite-code-field").hidden = false;
-      inviteForm.elements.code.disabled = false;
-      document.getElementById("invite-cancel").hidden = true;
+      byId("invite-form-title").textContent = "创建邀请码";
+      byId("invite-submit").textContent = "创建邀请码";
+      byId("invite-code-label").textContent = "邀请码 · 可自填";
+      byId("invite-code-help").textContent = "留空自动生成；自填需为 6 至 128 个非空白字符。";
+      inviteForm.elements.code.placeholder = "自行填写，或留空自动生成";
+      byId("invite-cancel").hidden = true;
       status(inviteStatus);
     }
-    function localDate(value) {
-      if (!value) return "";
-      const date = new Date(value);
-      if (!Number.isFinite(date.getTime())) return "";
-      return new Date(date.getTime() - date.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
-    }
-    const dateLabel = value => value ? new Date(value).toLocaleString("zh-CN", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" }) : "长期有效";
     function editInvite(invite) {
       clearCreatedCode();
       editing = invite.id;
       inviteForm.elements.label.value = invite.label || "";
+      inviteForm.elements.code.value = "";
       inviteForm.elements.expiresAt.value = localDate(invite.expiresAt);
       renderPermissions(invite.allowedStories);
-      document.getElementById("invite-form-title").textContent = "编辑邀请码";
-      document.getElementById("invite-submit").textContent = "保存修改";
-      document.getElementById("invite-code-field").hidden = true;
-      inviteForm.elements.code.disabled = true;
-      document.getElementById("invite-cancel").hidden = false;
+      byId("invite-form-title").textContent = "编辑邀请码";
+      byId("invite-submit").textContent = "保存修改";
+      byId("invite-code-label").textContent = "重新设置邀请码";
+      byId("invite-code-help").textContent = "留空保留原码；填写新码后，原码及其已有阅读凭证将失效。";
+      inviteForm.elements.code.placeholder = "输入新邀请码，或留空保留原码";
+      byId("invite-cancel").hidden = false;
       status(inviteStatus, `正在编辑 ${invite.codeHint}`);
       inviteForm.scrollIntoView({ behavior: "smooth", block: "center" });
       inviteForm.elements.label.focus({ preventScroll: true });
     }
+    function actionButton(label, handler) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "access-text-button";
+      button.textContent = label;
+      button.addEventListener("click", handler);
+      return button;
+    }
     function renderInvites() {
       list.replaceChildren();
-      document.getElementById("invite-count").textContent = `${invites.length} 个`;
+      byId("invite-count").textContent = `${invites.length} 个`;
       if (!invites.length) {
         const empty = document.createElement("p");
         empty.className = "access-empty";
-        empty.textContent = "还没有邀请码。从左侧创建第一张阅读邀请。";
+        empty.textContent = "还没有邀请码。从创建表单发出第一份阅读邀请。";
         list.append(empty);
         return;
       }
@@ -247,120 +335,269 @@
         const hint = document.createElement("p");
         hint.className = "invite-hint";
         hint.textContent = invite.codeHint;
+        const codeRow = document.createElement("div");
+        codeRow.className = "invite-code-row";
         const permitted = document.createElement("p");
         permitted.className = "invite-permissions";
         permitted.textContent = invite.allowedStories.map(slug => stories.find(story => story.slug === slug)?.title || slug).join(" · ") || "未开放故事";
         const bottom = document.createElement("div");
         bottom.className = "invite-card-bottom";
         const expiry = document.createElement("span");
-        expiry.textContent = invite.expiresAt ? `到期：${dateLabel(invite.expiresAt)}` : "长期有效";
+        expiry.textContent = `到期：${invite.expiresAt ? dateLabel(invite.expiresAt) : "长期有效"}`;
         const actions = document.createElement("div");
         actions.className = "invite-actions";
-        const edit = document.createElement("button");
-        edit.type = "button";
-        edit.className = "access-text-button";
-        edit.textContent = "编辑";
-        edit.addEventListener("click", () => editInvite(invite));
-        const toggle = document.createElement("button");
-        toggle.type = "button";
-        toggle.className = "access-text-button";
-        toggle.textContent = invite.active ? "停用" : "启用";
-        toggle.addEventListener("click", async () => {
+        const message = document.createElement("p");
+        message.className = "access-status invite-card-status";
+        message.setAttribute("role", "status");
+        message.setAttribute("aria-live", "polite");
+        if (invite.codeAvailable === false) message.textContent = "旧邀请码需重新设置后才可复制。";
+        const fallbackCode = document.createElement("code");
+        fallbackCode.className = "invite-copy-code";
+        fallbackCode.hidden = true;
+        const copy = actionButton("复制", async () => {
+          copy.disabled = true;
+          fallbackCode.hidden = true;
+          fallbackCode.textContent = "";
+          status(message, "正在读取邀请码……");
+          try {
+            const result = await request(`/api/admin/invites/${encodeURIComponent(invite.id)}/code`);
+            fallbackCode.textContent = result.code;
+            await copyText(result.code, fallbackCode, message);
+            if (fallbackCode.hidden) fallbackCode.textContent = "";
+          } catch (error) {
+            if (error.status === 409) status(message, "重新设置邀请码后可复制。", "error");
+            else await adminError(error, message);
+          } finally { copy.disabled = false; }
+        });
+        copy.setAttribute("aria-label", "复制邀请码");
+        codeRow.append(hint, copy);
+        const edit = actionButton("编辑", () => editInvite(invite));
+        const toggle = actionButton(invite.active ? "停用" : "启用", async () => {
           toggle.disabled = true;
-          status(listStatus, "正在保存……");
+          status(message, "正在保存……");
           try {
             const result = await request("/api/admin/invites", "PATCH", { id: invite.id, active: !invite.active });
             invites = invites.map(item => item.id === invite.id ? result.invite : item);
             renderInvites();
             status(listStatus, result.invite.active ? "邀请码已启用。" : "邀请码已停用，已有阅读凭证也将失效。", "success");
-          } catch (error) { adminError(error, listStatus); }
+          } catch (error) { await adminError(error, message); }
           finally { toggle.disabled = false; }
         });
-        actions.append(edit, toggle);
+        const confirmation = document.createElement("div");
+        confirmation.className = "invite-delete-confirmation";
+        confirmation.hidden = true;
+        const question = document.createElement("p");
+        question.textContent = "删除这份邀请？它将从列表移除，原有阅读权限也将停止。";
+        const confirmDelete = actionButton("确认删除", async () => {
+          pending(card, true);
+          status(message, "正在删除……");
+          try {
+            await request(`/api/admin/invites/${encodeURIComponent(invite.id)}`, "DELETE");
+            invites = invites.filter(item => item.id !== invite.id);
+            if (editing === invite.id) resetEditor();
+            clearCreatedCode();
+            renderInvites();
+            status(listStatus, "邀请码已删除。", "success");
+          } catch (error) { await adminError(error, message); }
+          finally { pending(card, false); }
+        });
+        const cancelDelete = actionButton("取消", () => { confirmation.hidden = true; remove.focus(); });
+        const remove = actionButton("删除", () => { confirmation.hidden = false; confirmDelete.focus(); });
+        remove.classList.add("access-danger");
+        confirmDelete.classList.add("access-danger");
+        confirmation.append(question, confirmDelete, cancelDelete);
+        actions.append(edit, toggle, remove);
         bottom.append(expiry, actions);
-        card.append(head, hint, permitted, bottom);
+        card.append(head, codeRow, permitted, bottom, fallbackCode, confirmation, message);
         list.append(card);
       }
     }
+    function renderSecurity() {
+      const enabled = security.totpEnabled;
+      byId("security-state").textContent = enabled ? "已启用" : "未绑定";
+      byId("security-state").dataset.active = String(enabled);
+      byId("security-description").textContent = enabled
+        ? `已使用验证器保护管理员登录。${Number.isInteger(security.recoveryCodesRemaining) ? `剩余恢复码：${security.recoveryCodesRemaining} 个。` : ""}`
+        : security.pendingSetup ? "上次绑定尚未完成。验证当前密码后，可以重新生成二维码。" : "绑定验证器后，登录时除密码外，还需要六位验证码或一次性恢复码。";
+      startForm.hidden = enabled;
+      byId("totp-disable").hidden = !enabled;
+    }
+    function renderQr(uri) {
+      if (typeof window.qrcode !== "function") throw new Error("QR unavailable");
+      const qr = window.qrcode(0, "M");
+      qr.addData(uri);
+      qr.make();
+      const count = qr.getModuleCount();
+      const size = count + 8;
+      const namespace = "http://www.w3.org/2000/svg";
+      const svg = document.createElementNS(namespace, "svg");
+      svg.setAttribute("viewBox", `0 0 ${size} ${size}`);
+      svg.setAttribute("role", "img");
+      svg.setAttribute("aria-label", "绑定管理员验证器的二维码");
+      const background = document.createElementNS(namespace, "rect");
+      background.setAttribute("width", String(size));
+      background.setAttribute("height", String(size));
+      background.setAttribute("fill", "#fff");
+      const pixels = document.createElementNS(namespace, "path");
+      let path = "";
+      for (let row = 0; row < count; row++) for (let column = 0; column < count; column++) {
+        if (qr.isDark(row, column)) path += `M${column + 4} ${row + 4}h1v1h-1z`;
+      }
+      pixels.setAttribute("d", path);
+      pixels.setAttribute("fill", "#17221c");
+      pixels.setAttribute("shape-rendering", "crispEdges");
+      svg.append(background, pixels);
+      byId("totp-qr").replaceChildren(svg);
+    }
+    function showRecoveryCodes(codes) {
+      const container = byId("recovery-codes");
+      container.replaceChildren();
+      for (const value of codes) {
+        const code = document.createElement("code");
+        code.textContent = value;
+        container.append(code);
+      }
+      byId("admin-recovery-panel").hidden = false;
+      byId("admin-recovery-panel").scrollIntoView({ behavior: "smooth", block: "center" });
+    }
     async function openDashboard(session) {
-      const result = await request("/api/admin/invites");
+      const [result, settings] = await Promise.all([request("/api/admin/invites"), request("/api/admin/security")]);
       stories = result.stories;
       invites = result.invites;
-      document.getElementById("admin-username").textContent = session.username || "管理员";
+      security = settings;
+      byId("admin-username").textContent = session.username || "管理员";
       resetEditor();
+      clearSetup();
       renderInvites();
+      renderSecurity();
       loginPanel.hidden = true;
       dashboard.hidden = false;
       loginForm.reset();
+      syncFactor(loginForm);
       status(listStatus);
+      status(securityStatus);
     }
     loginForm.addEventListener("submit", async event => {
       event.preventDefault();
       const data = new FormData(loginForm);
+      const payload = { username: field(data, "username"), password: String(data.get("password") || "") };
+      if (field(data, "factor") === "recovery") {
+        if (field(data, "recoveryCode")) payload.recoveryCode = field(data, "recoveryCode");
+      } else if (field(data, "otp")) payload.otp = field(data, "otp");
       pending(loginForm, true);
       status(loginStatus, "正在登录……");
       try {
-        const result = await request("/api/admin/login", "POST", { username: data.get("username").trim(), password: data.get("password") });
+        const result = await request("/api/admin/login", "POST", payload);
         saveToken(result.token);
         await openDashboard(result);
-      } catch (error) { status(loginStatus, error.message, "error"); }
-      finally { pending(loginForm, false); }
+      } catch (error) {
+        if (error.requiresTotp) {
+          loginForm.dataset.requiresTotp = "true";
+          byId("login-factor-details").open = true;
+        }
+        status(loginStatus, error.message, "error");
+      } finally {
+        pending(loginForm, false);
+        syncFactor(loginForm);
+        if (loginForm.dataset.requiresTotp === "true" && !loginPanel.hidden) loginForm.querySelector('[data-factor-field]:not([hidden]) input')?.focus();
+      }
     });
-    document.getElementById("admin-logout").addEventListener("click", async event => {
+    byId("admin-logout").addEventListener("click", async event => {
       event.currentTarget.disabled = true;
       try { await logout(); showLogin("已退出管理。"); }
       catch { showLogin("本机已退出管理。"); }
       finally { event.target.disabled = false; }
     });
-    document.getElementById("invite-cancel").addEventListener("click", resetEditor);
+    byId("invite-cancel").addEventListener("click", resetEditor);
     inviteForm.addEventListener("submit", async event => {
       event.preventDefault();
       const data = new FormData(inviteForm);
       const allowedStories = data.getAll("allowedStories");
       if (!allowedStories.length) { status(inviteStatus, "请至少选择一篇故事。", "error"); return; }
-      const expires = data.get("expiresAt");
-      const payload = { label: data.get("label").trim(), allowedStories, expiresAt: expires ? new Date(expires).toISOString() : null };
-      if (editing) payload.id = editing;
-      else if (data.get("code").trim()) payload.code = data.get("code").trim();
+      const editingId = editing;
+      const expires = field(data, "expiresAt");
+      const payload = { label: field(data, "label"), allowedStories };
+      if (!editingId || expires !== localDate(invites.find(item => item.id === editingId)?.expiresAt)) payload.expiresAt = expires ? new Date(expires).toISOString() : null;
+      if (editingId) payload.id = editingId;
+      if (field(data, "code")) payload.code = field(data, "code");
       pending(inviteForm, true);
       status(inviteStatus, "正在保存……");
       try {
-        const wasEditing = Boolean(editing);
+        const wasEditing = Boolean(editingId);
         const result = await request("/api/admin/invites", wasEditing ? "PATCH" : "POST", payload);
         const { code, ...savedInvite } = result.invite;
-        if (wasEditing) invites = invites.map(item => item.id === editing ? savedInvite : item);
+        if (wasEditing) invites = invites.map(item => item.id === editingId ? savedInvite : item);
         else invites.unshift(savedInvite);
-        resetEditor();
+        if (editing === editingId) resetEditor();
         renderInvites();
-        status(inviteStatus, wasEditing ? "修改已保存。" : "邀请码已创建，请保存下方完整邀请码。", "success");
-        if (!wasEditing && code) {
-          status(document.getElementById("copy-status"));
-          document.getElementById("created-invite-code").textContent = code;
-          document.getElementById("created-invite").hidden = false;
+        status(inviteStatus, wasEditing ? "修改已保存。" : "邀请码已创建，可以复制给朋友了。", "success");
+        if (code) {
+          status(byId("copy-status"));
+          byId("created-invite-code").textContent = code;
+          byId("created-invite").hidden = false;
         }
-      } catch (error) { adminError(error, inviteStatus); }
-      finally {
-        pending(inviteForm, false);
-        inviteForm.elements.code.disabled = Boolean(editing);
-      }
+      } catch (error) { await adminError(error, inviteStatus); }
+      finally { pending(inviteForm, false); }
     });
-    document.getElementById("copy-invite-code").addEventListener("click", async () => {
-      const code = document.getElementById("created-invite-code");
+    byId("copy-invite-code").addEventListener("click", () => copyText(byId("created-invite-code").textContent, byId("created-invite-code"), byId("copy-status")));
+    byId("dismiss-invite-code").addEventListener("click", clearCreatedCode);
+    startForm.addEventListener("submit", async event => {
+      event.preventDefault();
+      const data = new FormData(startForm);
+      pending(startForm, true);
+      clearRecoveryCodes();
+      status(securityStatus, "正在生成绑定信息……");
       try {
-        await navigator.clipboard.writeText(code.textContent);
-        status(document.getElementById("copy-status"), "已复制。", "success");
-      } catch {
-        const selection = window.getSelection();
-        const range = document.createRange();
-        range.selectNodeContents(code);
-        selection.removeAllRanges();
-        selection.addRange(range);
-        status(document.getElementById("copy-status"), "已选中邀请码，请手动复制。");
-      }
+        const result = await request("/api/admin/totp/setup", "POST", { currentPassword: String(data.get("currentPassword") || "") });
+        startForm.reset();
+        byId("totp-secret").textContent = result.secret;
+        byId("totp-setup-expiry").textContent = `本次绑定到期：${dateLabel(result.expiresAt)}`;
+        byId("totp-setup").hidden = false;
+        startForm.hidden = true;
+        try { renderQr(result.otpauthUri); status(securityStatus, "扫描二维码后，输入验证器中的六位验证码。"); }
+        catch { byId("totp-qr").replaceChildren(); status(securityStatus, "二维码暂时无法生成，请使用下方手动密钥绑定。"); }
+        byId("totp-confirm-code").focus();
+      } catch (error) { await adminError(error, securityStatus); }
+      finally { pending(startForm, false); }
     });
-    document.getElementById("dismiss-invite-code").addEventListener("click", clearCreatedCode);
-    const passwordForm = document.getElementById("admin-password-form");
-    const passwordStatus = document.getElementById("password-status");
+    byId("totp-setup-cancel").addEventListener("click", () => { clearSetup(); status(securityStatus, "已收起绑定信息。需要时可以重新开始。"); });
+    confirmForm.addEventListener("submit", async event => {
+      event.preventDefault();
+      const code = field(new FormData(confirmForm), "code");
+      pending(confirmForm, true);
+      status(byId("totp-confirm-status"), "正在确认……");
+      try {
+        const result = await request("/api/admin/totp/confirm", "POST", { code });
+        saveToken(result.token);
+        security = { totpEnabled: true, recoveryCodesRemaining: result.recoveryCodes.length };
+        clearSetup();
+        renderSecurity();
+        status(securityStatus, "双重验证已启用。请保存下方恢复码。", "success");
+        showRecoveryCodes(result.recoveryCodes);
+      } catch (error) { await adminError(error, byId("totp-confirm-status")); }
+      finally { pending(confirmForm, false); }
+    });
+    disableForm.addEventListener("submit", async event => {
+      event.preventDefault();
+      const data = new FormData(disableForm);
+      const payload = { currentPassword: String(data.get("currentPassword") || "") };
+      if (field(data, "factor") === "recovery") payload.recoveryCode = field(data, "recoveryCode");
+      else payload.code = field(data, "code");
+      pending(disableForm, true);
+      status(byId("totp-disable-status"), "正在解绑……");
+      try {
+        await request("/api/admin/totp/disable", "POST", payload);
+        saveToken("");
+        showLogin("验证器已解绑，所有管理会话已退出。请重新登录。", "success");
+      } catch (error) { await adminError(error, byId("totp-disable-status")); }
+      finally { pending(disableForm, false); syncFactor(disableForm); }
+    });
+    byId("copy-recovery-codes").addEventListener("click", () => {
+      const text = [...byId("recovery-codes").querySelectorAll("code")].map(node => node.textContent).join("\n");
+      copyText(text, byId("recovery-codes"), byId("recovery-copy-status"));
+    });
+    byId("dismiss-recovery-codes").addEventListener("click", clearRecoveryCodes);
+    const passwordStatus = byId("password-status");
     passwordForm.addEventListener("submit", async event => {
       event.preventDefault();
       const data = new FormData(passwordForm);
@@ -369,13 +606,9 @@
       status(passwordStatus, "正在更改……");
       try {
         await request("/api/admin/password", "POST", { currentPassword: data.get("currentPassword"), newPassword: data.get("newPassword") });
-        passwordForm.reset();
         saveToken("");
         showLogin("密码已更改。所有管理会话已退出，请使用新密码登录。", "success");
-      } catch (error) {
-        if (error.message === "当前密码不正确。") status(passwordStatus, error.message, "error");
-        else adminError(error, passwordStatus);
-      }
+      } catch (error) { await adminError(error, passwordStatus); }
       finally { pending(passwordForm, false); }
     });
     if (token) {
@@ -388,8 +621,8 @@
           if (!session.authenticated) saveToken("");
           showLogin(session.authenticated ? "请使用管理员账号登录。" : "请登录管理。");
         }
-      } catch (error) { adminError(error, loginStatus); }
-      finally { pending(loginForm, false); }
+      } catch (error) { await adminError(error, loginStatus); }
+      finally { pending(loginForm, false); syncFactor(loginForm); }
     }
   }
 

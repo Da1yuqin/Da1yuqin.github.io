@@ -13,10 +13,11 @@
 .access-form { font-family: var(--sans); }
 .access-form label, .access-form legend { color: var(--ink); font-size: 13px; line-height: 1.6; }
 .access-form > label { display: block; margin: 19px 0 7px; }
-.access-form input:not([type="checkbox"]) { box-sizing: border-box; width: 100%; min-width: 0; min-height: 46px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 3px; outline: none; color: var(--ink); background: #fffcf6; font: 15px/1.5 var(--sans); }
+.access-form input:not([type="checkbox"]):not([type="radio"]) { box-sizing: border-box; width: 100%; min-width: 0; min-height: 46px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 3px; outline: none; color: var(--ink); background: #fffcf6; font: 15px/1.5 var(--sans); }
 .access-form input::placeholder { color: #90968d; }
 .access-form input:focus-visible { border-color: var(--green); box-shadow: 0 0 0 3px #3d514918; }
 .access-form input[type="checkbox"] { width: 17px; height: 17px; margin: 2px 0 0; accent-color: var(--green); flex: 0 0 auto; }
+.access-form input[type="radio"] { width: 15px; height: 15px; margin: 0; accent-color: var(--green); }
 .access-form fieldset { min-width: 0; margin: 22px 0 0; padding: 0; border: 0; }
 .access-form legend { margin-bottom: 9px; padding: 0; }
 .access-form small { color: var(--muted); font-size: 11px; }
@@ -36,6 +37,14 @@
 .access-text-button { padding: 4px 0; border: 0; color: var(--green); background: transparent; font: 12px/1.7 var(--sans); cursor: pointer; text-underline-offset: 4px; }
 .access-text-button:hover { text-decoration: underline; }
 .access-empty { margin: 26px 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.access-help { margin: 7px 0 0; color: var(--muted); font: 11px/1.8 var(--sans); overflow-wrap: anywhere; }
+.access-field > label { display: block; margin-bottom: 7px; }
+.access-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.access-factor-details { margin-top: 20px; padding-top: 13px; border-top: 1px solid var(--line); }
+.access-factor-details > summary, .totp-manual > summary, .totp-disable > summary { width: fit-content; color: var(--muted); font: 12px/1.8 var(--sans); cursor: pointer; }
+.access-form .access-factor-choice { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 15px 0; }
+.access-factor-choice > label { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; font-size: 12px; }
+.access-factor-choice > legend { width: 100%; }
 .access-reader-bar { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px 20px; padding: 7px clamp(20px, 5vw, 80px); border-bottom: 1px solid var(--line); color: var(--muted); background: var(--paper); font: 11px/1.7 var(--sans); }
 .access-reader-bar .access-text-button { font-size: 11px; }
 .admin-body { box-sizing: border-box; min-height: 100svh; margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
@@ -73,10 +82,18 @@
 .invite-state { flex: 0 0 auto; padding: 2px 7px; border: 1px solid #b9c6b9; border-radius: 2px; color: #45604e; font-size: 10px; line-height: 1.6; }
 .invite-state[data-active="false"] { border-color: #cfc7b9; color: #8a8377; }
 .invite-hint { margin: 7px 0 12px; color: var(--gold); font: 13px/1.5 ui-monospace, "SFMono-Regular", Consolas, monospace; letter-spacing: .09em; }
+.invite-code-row { display: flex; align-items: center; flex-wrap: wrap; gap: 7px 14px; margin: 7px 0 12px; }
+.invite-code-row .invite-hint { margin: 0; }
 .invite-permissions { margin: 0; color: var(--muted); font: 12px/1.9 var(--sans); }
 .invite-card-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; padding-top: 10px; border-top: 1px solid #d7cdb680; }
-.invite-card-bottom > span { color: var(--muted); font-size: 10px; }
-.invite-actions { display: flex; gap: 18px; }
+.invite-card-bottom > span { flex-basis: 100%; color: var(--muted); font-size: 11px; line-height: 1.8; overflow-wrap: anywhere; }
+.invite-actions { display: flex; flex-wrap: wrap; gap: 7px 18px; }
+.invite-card-status:empty { display: none; }
+.invite-copy-code { display: block; margin-top: 13px; padding: 10px 12px; border: 1px solid var(--line); background: #faf7ef; font: 13px/1.7 ui-monospace, "SFMono-Regular", Consolas, monospace; overflow-wrap: anywhere; user-select: all; }
+.access-danger { color: #944737; }
+.invite-delete-confirmation { margin-top: 14px; padding: 13px 15px; border-left: 2px solid #b7816a; background: #ede0d866; }
+.invite-delete-confirmation > p { margin: 0 0 8px; color: #805440; font: 12px/1.8 var(--sans); }
+.invite-delete-confirmation > button + button { margin-left: 22px; }
 .created-invite { margin-top: 20px; padding: 21px 22px; color: #faf7ed; background: var(--green); }
 .created-invite h3 { margin: 0 0 10px; font: 400 16px/1.5 var(--serif); }
 .created-invite code { display: block; margin: 10px 0; font: 600 20px/1.6 ui-monospace, "SFMono-Regular", Consolas, monospace; letter-spacing: .04em; overflow-wrap: anywhere; user-select: all; }
@@ -91,6 +108,29 @@
 .admin-password-form .access-field label { display: block; margin-bottom: 7px; }
 .admin-password-form .access-form-actions { margin: 0; }
 .admin-password-form .access-status { grid-column: 1 / -1; margin: 0; }
+.admin-security-panel { margin-top: 34px; padding: 26px; border: 1px solid var(--line); background: #faf7f0; }
+.admin-security-panel .admin-intro { margin: 10px 0 0; font-size: 12px; }
+.security-password-form { display: flex; align-items: end; flex-wrap: wrap; gap: 14px; max-width: 600px; margin-top: 10px; }
+.security-password-form .access-field { flex: 1 1 230px; }
+.security-password-form .access-form-actions { margin: 0; }
+.totp-setup { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 34px; align-items: start; max-width: 850px; margin-top: 24px; }
+.totp-setup h3 { margin: 0 0 15px; font: 500 14px/1.8 var(--sans); }
+.totp-qr { width: min(236px, 100%); background: white; }
+.totp-qr:empty { display: none; }
+.totp-qr > svg { display: block; width: 100%; height: auto; }
+.totp-manual { margin-top: 12px; }
+.totp-manual code { display: block; max-width: 100%; padding: 10px 0 0; font: 13px/1.8 ui-monospace, "SFMono-Regular", Consolas, monospace; overflow-wrap: anywhere; user-select: all; }
+.totp-disable { max-width: 470px; margin-top: 15px; }
+.totp-disable > form { margin-top: 15px; }
+.admin-recovery-panel { margin-top: 30px; padding: 27px; border: 1px solid var(--green); color: #fbf8ef; background: var(--green); }
+.admin-recovery-panel .admin-eyebrow { color: #c9ba99; }
+.admin-recovery-panel h2 { margin: 0 0 12px; font: 400 23px/1.6 var(--serif); }
+.admin-recovery-panel > p:not(.admin-eyebrow) { max-width: 700px; color: #dde3d8; font: 12px/1.9 var(--sans); }
+.recovery-codes { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; max-width: 780px; margin: 20px 0; }
+.recovery-codes code { padding: 9px 12px; border: 1px solid #b9c4b366; background: #ffffff08; font: 14px/1.6 ui-monospace, "SFMono-Regular", Consolas, monospace; overflow-wrap: anywhere; user-select: all; }
+.admin-recovery-panel .access-button { border-color: #becab8; background: transparent; color: #fbf8ef; }
+.admin-recovery-panel .access-button:hover { background: #ffffff12; }
+.admin-recovery-panel .access-status { color: #dde3d8; }
 .admin-footer { padding-block: 20px; border-top: 1px solid var(--line); color: var(--muted); font: 11px/1.8 var(--sans); }
 .gate-body { display: flex; flex-direction: column; min-height: 100svh; margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 .gate-body *, .gate-body *::before, .gate-body *::after { box-sizing: border-box; }
@@ -116,6 +156,8 @@
   .admin-password-form { grid-template-columns: 1fr; }
   .admin-password-form .access-form-actions { margin-top: 3px; }
   .invite-card { padding-inline: 18px; }
+  .admin-security-panel, .admin-recovery-panel { padding: 23px; }
+  .totp-setup { grid-template-columns: minmax(0, 1fr); gap: 25px; }
   .gate-main { grid-template-columns: minmax(0, 1fr); align-content: center; gap: 25px; padding-block: 27px 30px; }
   .gate-cover { width: min(480px, 100%); margin-inline: auto; padding: 5px; box-shadow: 4px 4px 0 #d7cdb63d; }
   .gate-panel { width: min(480px, 100%); max-width: none; margin-inline: auto; }

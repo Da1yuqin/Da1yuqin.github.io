@@ -6,9 +6,10 @@
   <meta name="theme-color" content="#3d5149">
   <meta name="robots" content="noindex, nofollow">
   <title>阅读邀请 · happy 跑团</title>
-  <link rel="stylesheet" href="./access.css?v=3044f33234">
+  <link rel="stylesheet" href="./access.css?v=075750538d">
   <script src="./access-config.js?v=3eb0b67e93"></script>
-  <script src="./access.js?v=8e2b3b4ef7" defer></script>
+  <script src="./qrcode.js?v=79ec86f828" defer></script>
+  <script src="./access.js?v=3584940c88" defer></script>
 </head>
 <body class="admin-body" data-access="admin">
   <header class="admin-header admin-width">
@@ -25,6 +26,12 @@
         <input id="admin-username-input" name="username" autocomplete="username" maxlength="80" required>
         <label for="admin-password">密码</label>
         <input id="admin-password" name="password" type="password" autocomplete="current-password" maxlength="256" required>
+        <details class="access-factor-details" id="login-factor-details">
+          <summary>已绑定验证器？填写验证码或恢复码</summary>
+          <fieldset class="access-factor-choice"><legend class="access-visually-hidden">登录验证方式</legend><label><input type="radio" name="factor" value="otp" checked>六位验证码</label><label><input type="radio" name="factor" value="recovery">恢复码</label></fieldset>
+          <div class="access-field" data-factor-field="otp"><label for="login-otp">验证器中的六位验证码</label><input id="login-otp" name="otp" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="000000"></div>
+          <div class="access-field" data-factor-field="recovery" hidden><label for="login-recovery-code">一次性恢复码</label><input id="login-recovery-code" name="recoveryCode" autocomplete="off" spellcheck="false" maxlength="128" disabled></div>
+        </details>
         <div class="access-form-actions"><button type="submit">登录管理</button></div>
         <p class="access-status" id="admin-login-status" role="status" aria-live="polite"></p>
       </form>
@@ -39,17 +46,19 @@
         <div>
           <section class="admin-panel" aria-labelledby="invite-form-title">
             <h2 id="invite-form-title">创建邀请码</h2>
-            <p class="admin-intro">选择可以阅读的故事，再把邀请码交给朋友。</p>
+            <p class="admin-intro">邀请码可以自己填写；留空时会自动生成。选好篇目后，复制给朋友即可。</p>
             <form class="access-form" id="invite-form">
               <label for="invite-label">备注 <small>方便自己辨认</small></label>
               <input id="invite-label" name="label" maxlength="80" placeholder="例如：周末跑团的朋友">
               <div id="invite-code-field">
-                <label for="custom-invite-code" class="access-choice">自定义邀请码 <small>留空自动生成</small></label>
-                <input id="custom-invite-code" name="code" minlength="6" maxlength="128" autocomplete="off" spellcheck="false" placeholder="至少 6 个非空白字符">
+                <label for="custom-invite-code" class="access-choice"><span id="invite-code-label">邀请码 · 可自填</span></label>
+                <input id="custom-invite-code" name="code" minlength="6" maxlength="128" autocomplete="off" spellcheck="false" placeholder="自行填写，或留空自动生成" aria-describedby="invite-code-help">
+                <p class="access-help" id="invite-code-help">留空自动生成；自填需为 6 至 128 个非空白字符。</p>
               </div>
               <fieldset><legend>可阅读的故事</legend><div id="invite-story-options"></div></fieldset>
-              <label for="invite-expiry">到期时间 <small>留空长期有效 · 当前时区</small></label>
-              <input id="invite-expiry" name="expiresAt" type="datetime-local">
+              <label for="invite-expiry">到期时间 <small>留空长期有效</small></label>
+              <input id="invite-expiry" name="expiresAt" type="datetime-local" step="1" aria-describedby="invite-timezone">
+              <p class="access-help" id="invite-timezone"></p>
               <div class="access-form-actions"><button id="invite-submit" type="submit">创建邀请码</button><button id="invite-cancel" class="access-secondary" type="button" hidden>取消编辑</button></div>
               <p class="access-status" id="invite-status" role="status" aria-live="polite"></p>
             </form>
@@ -57,7 +66,7 @@
           <section class="created-invite" id="created-invite" aria-labelledby="created-invite-title" hidden>
             <h3 id="created-invite-title">这份邀请，准备好了。</h3>
             <code id="created-invite-code"></code>
-            <p>完整邀请码仅在此处显示一次，请复制并妥善保存。</p>
+            <p>复制后即可发给朋友，也可以随时从邀请卡片复制。</p>
             <div class="access-form-actions"><button class="access-button" id="copy-invite-code" type="button">复制邀请码</button><button class="access-button" id="dismiss-invite-code" type="button">已保存，收起</button></div>
             <p class="access-status" id="copy-status" role="status" aria-live="polite"></p>
           </section>
@@ -68,6 +77,30 @@
           <div class="invite-list" id="invite-list"></div>
         </section>
       </div>
+      <section class="admin-security-panel" aria-labelledby="security-title">
+        <div class="admin-list-heading"><h2 id="security-title">管理员双重验证</h2><span class="invite-state" id="security-state">正在读取</span></div>
+        <p class="admin-intro" id="security-description">绑定验证器后，登录时还需要六位验证码。</p>
+        <p class="access-status" id="security-status" role="status" aria-live="polite"></p>
+        <form class="access-form security-password-form" id="totp-start-form">
+          <div class="access-field"><label for="totp-setup-password">确认当前密码</label><input id="totp-setup-password" name="currentPassword" type="password" autocomplete="current-password" maxlength="256" required></div>
+          <div class="access-form-actions"><button type="submit">开始绑定验证器</button></div>
+        </form>
+        <section class="totp-setup" id="totp-setup" aria-labelledby="totp-setup-title" hidden>
+          <div class="totp-scan"><h3 id="totp-setup-title">1. 用验证器扫描二维码</h3><div class="totp-qr" id="totp-qr"></div><p class="access-help" id="totp-setup-expiry"></p><details class="totp-manual"><summary>无法扫码？手动输入密钥</summary><code id="totp-secret"></code><p class="access-help">在验证器中选择基于时间的验证码（TOTP），输入以上密钥。</p></details></div>
+          <form class="access-form" id="totp-confirm-form"><h3>2. 输入生成的六位验证码</h3><label for="totp-confirm-code">六位验证码</label><input id="totp-confirm-code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="000000" required><div class="access-form-actions"><button type="submit">确认并启用</button><button type="button" class="access-secondary" id="totp-setup-cancel">取消设置</button></div><p class="access-status" id="totp-confirm-status" role="status" aria-live="polite"></p></form>
+        </section>
+        <details class="totp-disable" id="totp-disable" hidden>
+          <summary>解绑验证器</summary>
+          <form class="access-form" id="totp-disable-form">
+            <p class="access-help">解绑后，所有管理员会话将退出。需要重新登录。</p>
+            <label for="totp-disable-password">当前密码</label><input id="totp-disable-password" name="currentPassword" type="password" autocomplete="current-password" maxlength="256" required>
+            <fieldset class="access-factor-choice"><legend>选择验证方式</legend><label><input type="radio" name="factor" value="otp" checked>六位验证码</label><label><input type="radio" name="factor" value="recovery">恢复码</label></fieldset>
+            <div class="access-field" data-factor-field="otp"><label for="totp-disable-code">六位验证码</label><input id="totp-disable-code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required></div>
+            <div class="access-field" data-factor-field="recovery" hidden><label for="totp-disable-recovery">一次性恢复码</label><input id="totp-disable-recovery" name="recoveryCode" autocomplete="off" spellcheck="false" maxlength="128" disabled></div>
+            <div class="access-form-actions"><button type="submit" class="access-secondary">确认解绑</button></div><p class="access-status" id="totp-disable-status" role="status" aria-live="polite"></p>
+          </form>
+        </details>
+      </section>
       <details class="admin-password-panel">
         <summary>更改管理员密码</summary>
         <form class="access-form admin-password-form" id="admin-password-form">
@@ -78,6 +111,13 @@
           <p class="access-status" id="password-status" role="status" aria-live="polite"></p>
         </form>
       </details>
+    </section>
+    <section class="admin-recovery-panel" id="admin-recovery-panel" aria-labelledby="recovery-title" hidden>
+      <p class="admin-eyebrow">请离线保存</p><h2 id="recovery-title">验证器已绑定，保存恢复码</h2>
+      <p>每个恢复码只能使用一次。在无法使用验证器时，它们可以帮助你登录。完整恢复码仅展示这一次，刷新后无法再次查看。</p>
+      <div class="recovery-codes" id="recovery-codes"></div>
+      <div class="access-form-actions"><button class="access-button" id="copy-recovery-codes" type="button">复制全部恢复码</button><button class="access-button access-secondary" id="dismiss-recovery-codes" type="button">我已保存，收起</button></div>
+      <p class="access-status" id="recovery-copy-status" role="status" aria-live="polite"></p>
     </section>
     <noscript><p class="access-status">请启用 JavaScript 后登录管理。</p></noscript>
   </main>
