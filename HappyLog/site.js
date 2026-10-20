@@ -119,14 +119,15 @@
     currentPhoto = (index + photoButtons.length) % photoButtons.length;
     const button = photoButtons[currentPhoto];
     const image = button.querySelector("img");
-    fullPhoto.src = image.src;
+    fullPhoto.src = image.dataset.originalSrc || image.src;
     fullPhoto.alt = image.alt;
     caption.textContent = button.closest("figure").querySelector("figcaption").textContent.trim();
     counter.textContent = String(currentPhoto + 1).padStart(2, "0") + " / " + String(photoButtons.length).padStart(2, "0");
   };
   photoButtons.forEach((button, index) => button.addEventListener("click", () => {
     if (typeof dialog.showModal !== "function") {
-      window.open(button.querySelector("img").src, "_blank", "noopener,noreferrer");
+      const image = button.querySelector("img");
+      window.open(image.dataset.originalSrc || image.src, "_blank", "noopener,noreferrer");
       return;
     }
     returnFocus = button;

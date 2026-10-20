@@ -165,11 +165,95 @@
     const confirmForm = byId("totp-confirm-form");
     const disableForm = byId("totp-disable-form");
     const securityStatus = byId("security-status");
+    const loadingPanel = document.createElement("div");
+    loadingPanel.className = "admin-loading";
+    loadingPanel.hidden = true;
+    loadingPanel.setAttribute("role", "status");
+    loadingPanel.setAttribute("aria-live", "polite");
+    const loadingSpinner = document.createElement("span");
+    loadingSpinner.className = "admin-loading-spinner";
+    loadingSpinner.setAttribute("aria-hidden", "true");
+    const loadingMessage = document.createElement("span");
+    const loadingRetry = document.createElement("button");
+    loadingRetry.className = "access-text-button";
+    loadingRetry.type = "button";
+    loadingRetry.textContent = "重新载入";
+    loadingRetry.hidden = true;
+    loadingPanel.append(loadingSpinner, loadingMessage, loadingRetry);
+    loginPanel.before(loadingPanel);
+    let loadingSession = null;
+    function setAdminLoading(busy, message = "", retry = false) {
+      loadingPanel.hidden = !busy && !message;
+      loadingPanel.dataset.state = busy ? "loading" : "error";
+      loadingMessage.textContent = message;
+      loadingRetry.hidden = !retry;
+      loadingRetry.disabled = busy;
+      dashboard.setAttribute("aria-busy", String(busy));
+    }
     let stories = [];
     let invites = [];
     let blogPosts = [];
     let editing = "";
     let security = { totpEnabled: false };
+    const sectionIds = ["overview", "blog-posts", "story-library", "invites", "account-security"];
+    const storyEntries = () => stories.filter(story => story.kind !== "blog" && !String(story.slug).startsWith("blog-"));
+    function renderOverview() {
+      const values = {
+        "stat-blog-total": blogPosts.length,
+        "stat-blog-public": blogPosts.filter(post => post.visibility === "public").length,
+        "stat-blog-private": blogPosts.filter(post => post.visibility === "private").length,
+        "stat-story-total": storyEntries().length,
+        "stat-invite-active": invites.filter(invite => invite.active && (!invite.expiresAt || new Date(invite.expiresAt).getTime() > Date.now())).length
+      };
+      for (const [id, value] of Object.entries(values)) if (byId(id)) byId(id).textContent = String(value);
+    }
+    function syncSectionNavigation() {
+      const section = sectionIds.includes(location.hash.slice(1)) ? location.hash.slice(1) : "overview";
+      dashboard.querySelectorAll(".admin-section-nav a").forEach(link => {
+        if (link.hash === `#${section}`) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    }
+    function contentLink(route, label) {
+      let url;
+      try { url = new URL(route, location.href); } catch {}
+      const link = document.createElement(url && ["http:", "https:"].includes(url.protocol) ? "a" : "span");
+      link.className = "admin-content-link";
+      link.textContent = label;
+      if (link.tagName === "A") link.href = url.href;
+      return link;
+    }
+    function renderStories() {
+      const entries = storyEntries();
+      const host = byId("admin-story-list");
+      if (!host) return;
+      host.replaceChildren();
+      byId("admin-story-count").textContent = `${entries.length} 篇`;
+      entries.forEach((story, index) => {
+        const card = document.createElement("article");
+        card.className = "admin-story-card";
+        const number = document.createElement("span");
+        number.className = "admin-story-number";
+        number.textContent = String(index + 1).padStart(2, "0");
+        const detail = document.createElement("div");
+        const title = document.createElement("h3");
+        title.textContent = story.title;
+        const route = !story.route || story.route === `/${story.slug}.html` ? `/HappyLog/${encodeURIComponent(story.slug)}.html` : story.route;
+        const path = document.createElement("p");
+        path.className = "access-help";
+        path.textContent = route;
+        detail.append(title, path);
+        card.append(number, detail, contentLink(route, "打开阅读 →"));
+        host.append(card);
+      });
+      if (!entries.length) {
+        const empty = document.createElement("p");
+        empty.className = "access-empty";
+        empty.textContent = "还没有跑团故事。";
+        host.append(empty);
+      }
+      renderOverview();
+    }
     const field = (data, name) => String(data.get(name) || "").trim();
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const dateLabel = value => new Date(value).toLocaleString("zh-CN", {
@@ -215,6 +299,8 @@
       status(byId("recovery-copy-status"));
     }
     function showLogin(message = "", kind = "") {
+      loadingSession = null;
+      setAdminLoading(false);
       loginPanel.hidden = false;
       dashboard.hidden = true;
       list.replaceChildren();
@@ -323,6 +409,7 @@
     function renderInvites() {
       list.replaceChildren();
       byId("invite-count").textContent = `${invites.length} 个`;
+      renderOverview();
       if (!invites.length) {
         const empty = document.createElement("p");
         empty.className = "access-empty";
@@ -441,7 +528,7 @@
         head.append(title, state);
         const route = document.createElement("p");
         route.className = "access-help";
-        route.textContent = post.route;
+        route.append(contentLink(post.route, post.route || "查看文章 →"));
         const change = actionButton(post.visibility === "public" ? "设为私密" : "设为公开", async () => {
           pending(card, true);
           status(byId("admin-blog-status"), "正在保存……");
@@ -456,6 +543,7 @@
         card.append(head, route, change);
         host.append(card);
       }
+      renderOverview();
     }
     function renderSecurity() {
       const enabled = security.totpEnabled;
@@ -506,6 +594,9 @@
       byId("admin-recovery-panel").scrollIntoView({ behavior: "smooth", block: "center" });
     }
     async function openDashboard(session) {
+      loadingSession = session;
+      setAdminLoading(true, "正在载入管理总览……");
+      try {
       const [result, settings, blog] = await Promise.all([request("/api/admin/invites"), request("/api/admin/security"), request("/api/admin/blog/posts")]);
       stories = result.stories;
       invites = result.invites;
@@ -517,6 +608,7 @@
       renderInvites();
       renderSecurity();
       renderBlogPosts();
+      renderStories();
       loginPanel.hidden = true;
       dashboard.hidden = false;
       loginForm.reset();
@@ -524,8 +616,25 @@
       status(listStatus);
       status(securityStatus);
       status(byId("admin-blog-status"));
-      if (location.hash === "#blog-posts") byId("blog-posts").scrollIntoView({ block: "start" });
+      syncSectionNavigation();
+      if (sectionIds.includes(location.hash.slice(1))) byId(location.hash.slice(1)).scrollIntoView({ block: "start" });
+      setAdminLoading(false);
+      } catch (error) {
+        setAdminLoading(false, error.message, true);
+        throw error;
+      }
     }
+    loadingRetry.addEventListener("click", async () => {
+      loadingRetry.disabled = true;
+      try {
+        const session = loadingSession || await request("/api/session");
+        if (session.role === "admin") await openDashboard(session);
+        else showLogin("请使用管理员账号登录。");
+      } catch (error) {
+        setAdminLoading(false, error.message, true);
+        await adminError(error, loadingMessage);
+      } finally { loadingRetry.disabled = false; }
+    });
     loginForm.addEventListener("submit", async event => {
       event.preventDefault();
       const data = new FormData(loginForm);
@@ -660,9 +769,15 @@
       } catch (error) { await adminError(error, passwordStatus); }
       finally { pending(passwordForm, false); }
     });
+    window.addEventListener("hashchange", syncSectionNavigation);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible" && !dashboard.hidden) renderOverview();
+    });
+    window.setInterval(() => { if (!dashboard.hidden) renderOverview(); }, 60000);
     if (token) {
       pending(loginForm, true);
       status(loginStatus, "正在恢复管理会话……");
+      setAdminLoading(true, "正在确认管理会话……");
       try {
         const session = await request("/api/session");
         if (session.authenticated && session.role === "admin") await openDashboard(session);
@@ -670,7 +785,10 @@
           if (!session.authenticated) saveToken("");
           showLogin(session.authenticated ? "请使用管理员账号登录。" : "请登录管理。");
         }
-      } catch (error) { await adminError(error, loginStatus); }
+      } catch (error) {
+        setAdminLoading(false, error.message, true);
+        await adminError(error, loginStatus);
+      }
       finally { pending(loginForm, false); syncFactor(loginForm); }
     }
   }
