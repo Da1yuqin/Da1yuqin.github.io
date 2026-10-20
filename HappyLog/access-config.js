@@ -1,1 +1,1 @@
-window.HAPPYLOG_API_BASE = "https://ragged-man-jane-snow.cr4gz7cdb9.chatgpt.site";
+window.HAPPYLOG_API_BASE = "https://day-comments.thpv54ng76.workers.dev";
