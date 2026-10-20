@@ -184,3 +184,26 @@
   .gate-panel .access-input-row > button { padding-inline: 13px; }
 }
 @media (prefers-reduced-motion: reduce) { .access-form button, .access-button { transition: none; } }
+/* Article editing uses the same quiet colors and spacing as the Blog management page. */
+.blog-admin-body .article-card-actions { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 13px; }
+.blog-admin-body .article-card-actions .access-text-button { margin: 0; }
+.blog-admin-body .admin-article-editor { margin-top: 30px; padding: 24px; border: 1px solid var(--line); background: #fffefa; scroll-margin-top: 90px; }
+.blog-admin-body .admin-article-editor[hidden], .blog-admin-body .article-editor-content[hidden], .blog-admin-body .article-editor-source[hidden], .blog-admin-body .article-editor-tools[hidden] { display: none !important; }
+.blog-admin-body .admin-article-editor h3 { margin: 0; padding: 0; border: 0; font: 500 22px/1.5 var(--serif); }
+.blog-admin-body .admin-article-editor .admin-list-heading { align-items: center; }
+.blog-admin-body .admin-article-editor .access-form > label:first-of-type { margin-top: 20px; }
+.blog-admin-body .article-editor-mode { display: flex; gap: 20px; padding: 18px 0 12px; }
+.blog-admin-body .article-editor-mode [aria-pressed="true"] { color: var(--green); font-weight: 600; text-decoration: underline; text-underline-offset: 5px; }
+.blog-admin-body .article-editor-tools { display: flex; gap: 5px; flex-wrap: wrap; padding: 9px; border: 1px solid #cbd1c3; border-bottom: 0; background: #f4f5ed; }
+.blog-admin-body .article-editor-tools button { min-width: 30px; padding: 5px 9px; border: 1px solid transparent; background: transparent; color: var(--ink); font: 12px/1.7 var(--sans); cursor: pointer; }
+.blog-admin-body .article-editor-tools button:hover { border-color: var(--line); background: #e9ede3; }
+.blog-admin-body .article-editor-content, .blog-admin-body .article-editor-source { box-sizing: border-box; width: 100%; min-height: 430px; max-height: 70svh; margin: 0; overflow: auto; padding: 20px; border: 1px solid #cbd1c3; border-radius: 0; background: #fffefa; color: var(--ink); font: 15px/1.95 var(--sans); overflow-wrap: anywhere; }
+.blog-admin-body .article-editor-content:focus-visible, .blog-admin-body .article-editor-source:focus-visible { outline: 2px solid #8e9d80; outline-offset: 2px; }
+.blog-admin-body .article-editor-content img { max-width: 100%; height: auto; }
+.blog-admin-body .article-editor-content figure { margin-inline: 0; }
+.blog-admin-body .article-editor-content h2 { font: 500 24px/1.7 var(--serif); }
+.blog-admin-body .article-editor-content blockquote { padding-left: 16px; border-left: 2px solid #b7c0ac; color: #68725f; }
+.blog-admin-body .article-editor-source { font: 12px/1.8 ui-monospace, "SFMono-Regular", Consolas, monospace; resize: vertical; white-space: pre-wrap; }
+.blog-admin-body .admin-article-editor .access-form-actions { align-items: center; }
+.blog-admin-body .admin-article-editor .access-text-button { margin-top: 0; }
+@media (max-width: 640px) { .blog-admin-body .admin-article-editor { padding: 18px 15px; } .blog-admin-body .article-editor-content, .blog-admin-body .article-editor-source { padding: 14px; min-height: 360px; } }

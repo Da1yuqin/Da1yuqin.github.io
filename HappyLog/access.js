@@ -6,11 +6,13 @@
   let token = "";
   try { token = sessionStorage.getItem(tokenKey) || ""; } catch {}
   const saveToken = value => {
+    const changed = token !== (value || "");
     token = value || "";
     try {
       if (token) sessionStorage.setItem(tokenKey, token);
       else sessionStorage.removeItem(tokenKey);
     } catch {}
+    if (changed) document.dispatchEvent(new Event("day-session-changed"));
   };
   const apiUrl = path => {
     const base = String(window.HAPPYLOG_API_BASE || "").replace(/\/+$/, "");
@@ -194,6 +196,12 @@
     let invites = [];
     let blogPosts = [];
     let editing = "";
+    let articlePost = null;
+    let articleDraft = null;
+    let articleDirty = false;
+    let articleMode = "visual";
+    let articleLoading = false;
+    let articleVersion = 0;
     let security = { totpEnabled: false };
     const sectionIds = ["overview", "blog-posts", "story-library", "invites", "account-security"];
     const storyEntries = () => stories.filter(story => story.kind !== "blog" && !String(story.slug).startsWith("blog-"));
@@ -208,7 +216,7 @@
       for (const [id, value] of Object.entries(values)) if (byId(id)) byId(id).textContent = String(value);
     }
     function syncSectionNavigation() {
-      const section = sectionIds.includes(location.hash.slice(1)) ? location.hash.slice(1) : "overview";
+      const section = location.hash.startsWith("#edit=") ? "blog-posts" : sectionIds.includes(location.hash.slice(1)) ? location.hash.slice(1) : "overview";
       dashboard.querySelectorAll(".admin-section-nav a").forEach(link => {
         if (link.hash === `#${section}`) link.setAttribute("aria-current", "location");
         else link.removeAttribute("aria-current");
@@ -303,6 +311,11 @@
       setAdminLoading(false);
       loginPanel.hidden = false;
       dashboard.hidden = true;
+      if (articlePost && articleDirty) articleDraft = { ...articlePost, title: byId("article-editor-title").value, html: currentArticleHtml() };
+      clearArticleEditor();
+      blogPosts = [];
+      byId("admin-blog-list").replaceChildren();
+      byId("admin-story-list").replaceChildren();
       list.replaceChildren();
       clearCreatedCode();
       clearSetup();
@@ -540,11 +553,197 @@
           } catch (error) { await adminError(error, byId("admin-blog-status")); }
           finally { pending(card, false); }
         });
-        card.append(head, route, change);
+        const actions = document.createElement("div");
+        actions.className = "article-card-actions";
+        const editArticle = actionButton("编辑文章", () => { location.hash = `edit=${encodeURIComponent(post.slug)}`; });
+        actions.append(editArticle, change);
+        card.append(head, route, actions);
         host.append(card);
       }
       renderOverview();
     }
+    function currentArticleHtml() {
+      if (articleMode === "html") return byId("article-editor-source").value;
+      const content = byId("article-editor-visual").cloneNode(true);
+      content.querySelectorAll(".day-image-loader,.day-image-retry").forEach(node => node.remove());
+      content.querySelectorAll("img").forEach(image => {
+        image.classList.remove("day-image-managed", "day-image-loading");
+        image.removeAttribute("aria-busy");
+        if (!image.className) image.removeAttribute("class");
+      });
+      content.querySelectorAll("span.day-image-frame").forEach(frame => frame.replaceWith(...frame.childNodes));
+      return content.innerHTML;
+    }
+    function clearArticleEditor() {
+      ++articleVersion;
+      articlePost = null;
+      articleDirty = false;
+      articleLoading = false;
+      byId("admin-article-editor").hidden = true;
+      byId("article-editor-title").value = "";
+      byId("article-editor-visual").replaceChildren();
+      byId("article-editor-source").value = "";
+      byId("article-editor-meta").textContent = "";
+      byId("article-editor-open").href = "#";
+      status(byId("article-editor-status"));
+    }
+    function safeEditorHtml(html) {
+      // Source mode can be previewed without activating scripts, frames, or event handlers.
+      // The service applies its canonical HTML policy again when saving.
+      const doc = new DOMParser().parseFromString(String(html), "text/html");
+      doc.querySelectorAll("script,iframe,object,embed,base,meta,link,form,input,button,textarea,select,svg,math").forEach(node => node.remove());
+      doc.querySelectorAll("*").forEach(node => {
+        [...node.attributes].forEach(attribute => {
+          const name = attribute.name.toLowerCase();
+          if (name.startsWith("on") || ["srcdoc", "contenteditable", "autofocus"].includes(name)) node.removeAttribute(attribute.name);
+          if (["href", "src", "xlink:href", "action"].includes(name) && /^[\s\u0000-\u001f]*(?:javascript|vbscript|data):/i.test(attribute.value)) node.removeAttribute(attribute.name);
+          if (name === "style" && /url\s*\(|expression\s*\(|@import/i.test(attribute.value)) node.removeAttribute(attribute.name);
+        });
+      });
+      return doc.body.innerHTML;
+    }
+    function setArticleMode(mode) {
+      const visual = byId("article-editor-visual"), source = byId("article-editor-source");
+      if (mode !== articleMode) {
+        if (mode === "html") source.value = currentArticleHtml();
+        else visual.innerHTML = safeEditorHtml(source.value);
+      }
+      articleMode = mode;
+      visual.hidden = mode !== "visual";
+      visual.contentEditable = "true";
+      source.hidden = mode !== "html";
+      byId("article-editor-tools").hidden = mode !== "visual";
+      byId("article-mode-visual").setAttribute("aria-pressed", String(mode === "visual"));
+      byId("article-mode-html").setAttribute("aria-pressed", String(mode === "html"));
+    }
+    function showArticle(post, message = "") {
+      articlePost = post;
+      byId("article-editor-heading").textContent = "编辑文章";
+      byId("article-editor-title").value = post.title || "";
+      byId("article-editor-visual").innerHTML = safeEditorHtml(post.html || "");
+      byId("article-editor-source").value = post.html || "";
+      articleMode = "html";
+      setArticleMode("visual");
+      const route = post.route || blogPosts.find(item => item.slug === post.slug)?.route;
+      const link = contentLink(route, "");
+      byId("article-editor-open").href = link.href || "#";
+      byId("article-editor-meta").textContent = `${post.visibility === "private" ? "私密文章" : "公开文章"} · 版本 ${post.revision ?? 0}`;
+      byId("article-editor-reload").hidden = true;
+      byId("admin-article-editor").hidden = false;
+      articleDirty = false;
+      status(byId("article-editor-status"), message);
+    }
+    async function openArticle(slug, reload = false) {
+      if (articleLoading || !slug || dashboard.hidden) return;
+      if (articlePost?.slug === slug && !reload) return;
+      if (articleDirty && !confirm("当前文章有未保存的修改。离开编辑会丢弃这些修改，继续吗？")) {
+        history.replaceState(null, "", `#edit=${encodeURIComponent(articlePost.slug)}`);
+        return;
+      }
+      articleLoading = true;
+      const version = ++articleVersion;
+      status(byId("admin-blog-status"), "正在载入文章……");
+      try {
+        const result = await request(`/api/admin/blog/posts/${encodeURIComponent(slug)}`);
+        if (version !== articleVersion || dashboard.hidden) return;
+        if (!result.post || typeof result.post.html !== "string") throw new Error("文章正文没有载入成功。");
+        showArticle(result.post);
+        if (articleDraft?.slug === slug) {
+          const draft = articleDraft;
+          showArticle({ ...result.post, ...draft }, "已恢复本次会话尚未保存的输入。保存时会检查版本，避免覆盖其他修改。");
+          articleDirty = true;
+          articleDraft = null;
+        }
+        status(byId("admin-blog-status"));
+        byId("admin-article-editor").scrollIntoView({ block: "start" });
+        byId("article-editor-title").focus({ preventScroll: true });
+      } catch (error) { await adminError(error, byId("admin-blog-status")); }
+      finally { if (version === articleVersion) articleLoading = false; }
+    }
+    function articleFromHash() {
+      if (!location.hash.startsWith("#edit=")) return;
+      let slug;
+      try { slug = decodeURIComponent(location.hash.slice(6)); } catch { return; }
+      openArticle(slug);
+    }
+    byId("article-mode-visual").addEventListener("click", () => setArticleMode("visual"));
+    byId("article-mode-html").addEventListener("click", () => setArticleMode("html"));
+    ["article-editor-title", "article-editor-visual", "article-editor-source"].forEach(id => byId(id).addEventListener("input", () => { articleDirty = true; }));
+    byId("article-editor-tools").addEventListener("mousedown", event => { if (event.target.closest("button")) event.preventDefault(); });
+    byId("article-editor-tools").addEventListener("click", event => {
+      const button = event.target.closest("[data-editor-command]");
+      if (!button) return;
+      const visual = byId("article-editor-visual");
+      const selection = window.getSelection();
+      if (!selection?.rangeCount || !visual.contains(selection.anchorNode)) visual.focus();
+      const command = button.dataset.editorCommand;
+      if (command === "link") {
+        const value = prompt("链接地址（https://…）");
+        if (!value) return;
+        let url;
+        try { url = new URL(value, location.origin); } catch { return; }
+        if (!["https:", "http:", "mailto:"].includes(url.protocol)) return;
+        document.execCommand("createLink", false, url.href);
+      } else if (["heading", "paragraph", "quote"].includes(command)) document.execCommand("formatBlock", false, { heading: "h2", paragraph: "p", quote: "blockquote" }[command]);
+      else document.execCommand(command, false);
+      articleDirty = true;
+    });
+    byId("article-editor-visual").addEventListener("paste", event => {
+      const html = event.clipboardData?.getData("text/html");
+      if (!html) return;
+      event.preventDefault();
+      document.execCommand("insertHTML", false, safeEditorHtml(html));
+      articleDirty = true;
+    });
+    byId("article-editor-form").addEventListener("submit", async event => {
+      event.preventDefault();
+      if (!articlePost || articleLoading) return;
+      articleLoading = true;
+      const post = articlePost;
+      const form = event.currentTarget;
+      const title = byId("article-editor-title").value.trim();
+      if (!title) { articleLoading = false; byId("article-editor-title").focus(); return; }
+      const html = currentArticleHtml();
+      pending(form, true);
+      byId("article-editor-close").disabled = true;
+      byId("article-editor-visual").contentEditable = "false";
+      byId("article-editor-source").disabled = true;
+      status(byId("article-editor-status"), "正在保存文章……");
+      try {
+        const result = await request(`/api/admin/blog/posts/${encodeURIComponent(post.slug)}`, "PUT", { title, html, revision: post.revision ?? 0 });
+        if (!result.saved || !result.post || typeof result.post.html !== "string") throw new Error("没有收到保存确认，当前输入已保留。");
+        const updated = result.post;
+        blogPosts = blogPosts.map(item => item.slug === post.slug ? { ...item, ...updated } : item);
+        renderBlogPosts();
+        showArticle(updated, "已保存，文章页面现在就可以看到更改。");
+        byId("article-editor-status").dataset.kind = "success";
+        articleDraft = null;
+      } catch (error) {
+        if (error.status === 409) {
+          status(byId("article-editor-status"), "文章已在别处更新。本次输入已保留；请先复制当前 HTML，再载入最新版本合并修改。", "error");
+          byId("article-editor-reload").hidden = false;
+        } else await adminError(error, byId("article-editor-status"));
+      } finally {
+        pending(form, false);
+        byId("article-editor-close").disabled = false;
+        byId("article-editor-visual").contentEditable = "true";
+        byId("article-editor-source").disabled = false;
+        articleLoading = false;
+      }
+    });
+    byId("article-editor-close").addEventListener("click", () => {
+      if (articleLoading) return;
+      if (articleDirty && !confirm("有尚未保存的修改，确定关闭编辑吗？")) return;
+      articleDraft = null;
+      clearArticleEditor();
+      location.hash = "blog-posts";
+    });
+    byId("article-editor-reload").addEventListener("click", () => openArticle(articlePost?.slug, true));
+    byId("article-editor-copy").addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(currentArticleHtml()); status(byId("article-editor-status"), "当前 HTML 已复制。"); }
+      catch { setArticleMode("html"); byId("article-editor-source").focus(); byId("article-editor-source").select(); status(byId("article-editor-status"), "已选中 HTML，请手动复制。"); }
+    });
+    window.addEventListener("beforeunload", event => { if (articleDirty) { event.preventDefault(); event.returnValue = ""; } });
     function renderSecurity() {
       const enabled = security.totpEnabled;
       byId("security-state").textContent = enabled ? "已启用" : "未绑定";
@@ -617,6 +816,7 @@
       status(securityStatus);
       status(byId("admin-blog-status"));
       syncSectionNavigation();
+      articleFromHash();
       if (sectionIds.includes(location.hash.slice(1))) byId(location.hash.slice(1)).scrollIntoView({ block: "start" });
       setAdminLoading(false);
       } catch (error) {
@@ -661,6 +861,9 @@
       }
     });
     byId("admin-logout").addEventListener("click", async event => {
+      if (articleDirty && !confirm("有尚未保存的文章修改，确定退出管理吗？")) return;
+      articleDirty = false;
+      articleDraft = null;
       event.currentTarget.disabled = true;
       try { await logout(); showLogin("已退出管理。"); }
       catch { showLogin("本机已退出管理。"); }
@@ -769,7 +972,7 @@
       } catch (error) { await adminError(error, passwordStatus); }
       finally { pending(passwordForm, false); }
     });
-    window.addEventListener("hashchange", syncSectionNavigation);
+    window.addEventListener("hashchange", () => { syncSectionNavigation(); articleFromHash(); });
     document.addEventListener("visibilitychange", () => {
       if (document.visibilityState === "visible" && !dashboard.hidden) renderOverview();
     });
