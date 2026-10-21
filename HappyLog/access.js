@@ -80,27 +80,34 @@
     if (header) header.after(bar);
     else document.body.prepend(bar);
     let checking = false;
+    const leaveReader = () => {
+      document.dispatchEvent(new Event("day-reader-unloaded"));
+      location.reload();
+    };
     async function checkSession() {
       if (checking) return;
-      if (!token) { location.reload(); return; }
+      if (!token) { leaveReader(); return; }
       checking = true;
       try {
         const session = await request("/api/session");
-        if (!session.authenticated) { saveToken(""); location.reload(); return; }
-        if (session.role !== "admin" && !session.allowedStories.includes(document.body.dataset.story)) { location.reload(); return; }
+        if (!session.authenticated) { saveToken(""); leaveReader(); return; }
+        if (session.role !== "admin" && !session.allowedStories.includes(document.body.dataset.story)) { leaveReader(); return; }
         message.textContent = session.role === "admin" ? `${session.username || "管理员"} · 阅读中` : "已获阅读权限";
       } catch (error) {
-        if (error.status === 401 || error.status === 403) { saveToken(""); location.reload(); }
+        if (error.status === 401 || error.status === 403) { saveToken(""); leaveReader(); }
         else message.textContent = "暂时无法确认登录状态，返回此页时会重新检查。";
       } finally { checking = false; }
     }
     exit.addEventListener("click", async () => {
       exit.disabled = true;
+      document.dispatchEvent(new Event("day-reader-unloaded"));
       try { await logout(); }
-      finally { saveToken(""); location.reload(); }
+      finally { saveToken(""); leaveReader(); }
     });
     window.addEventListener("pageshow", event => { if (event.persisted) checkSession(); });
+    document.addEventListener("day-reader-access-denied", leaveReader);
     document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") checkSession(); });
+    setInterval(() => { if (document.visibilityState === "visible") checkSession(); }, 30000);
     checkSession();
   }
 
