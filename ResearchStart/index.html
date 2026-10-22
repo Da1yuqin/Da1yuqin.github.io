@@ -5,93 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>科研入门 · ResearchStart</title>
   <meta name="description" content="给科研新手的入门指南。第一章：先和老师讨论选题，再围绕问题找论文、读论文、做笔记。附 StarPaper 与 StrongResponse。">
-  <meta name="theme-color" content="#f8f7f2">
+  <meta name="theme-color" content="#3451b2">
   <link rel="canonical" href="https://da1yuqin.github.io/ResearchStart/">
   <meta property="og:title" content="科研入门 · ResearchStart">
   <meta property="og:description" content="先选题，再阅读。从课题组已有的积累出发，读懂一个具体问题。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://da1yuqin.github.io/ResearchStart/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/app.js" defer></script>
-  <script src="assets/comments.js" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=starpaper-template-20261022">
+  <script src="assets/app.js?v=starpaper-template-20261022" defer></script>
+  <script src="assets/comments.js?v=starpaper-template-20261022" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
   <header class="topbar">
-    <button class="icon-button mobile-menu" id="menu-toggle" type="button" aria-label="打开目录" aria-controls="sidebar" aria-expanded="false" hidden>☰</button>
-    <a class="brand" href="./"><img src="assets/favicon.svg" alt="" width="26" height="26"><span>ResearchStart</span></a>
-    <div class="search" hidden><label for="search" class="sr-only">搜索指南</label><input id="search" type="search" placeholder="搜索选题、阅读、笔记…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div>
-    <a class="blog-link" href="https://da1yuqin.github.io/blog/">Day / Journal ↗</a>
-    <button class="icon-button" id="theme-toggle" type="button" aria-label="切换到深色模式" aria-pressed="false" hidden>◐</button>
+    <button id="mobile-toggle" class="mobile-toggle js-only" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="目录">☰</button>
+    <a class="brand" href="./"><span class="logo" aria-hidden="true">🌠</span>ResearchStart</a>
+    <div class="search js-only"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="搜索指南" placeholder="搜索选题、阅读、笔记…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div>
+    <a class="repo-link" href="https://github.com/Da1yuqin/Da1yuqin.github.io/tree/main/ResearchStart">GitHub ↗</a>
+    <button class="theme js-only" id="theme-toggle" type="button" aria-label="切换深色模式" aria-pressed="false">☼</button>
   </header>
 
-  <button class="menu-shade" id="menu-shade" type="button" aria-label="关闭目录" hidden></button>
-  <aside class="sidebar" id="sidebar" aria-label="阅读目录">
-    <p class="side-label">科研新手入门</p>
-    <nav aria-label="章节目录">
-      <a class="chapter-link" href="#reading"><span>01</span>阅读论文</a>
-      <a href="#choose-topic">1.1 先选题，再阅读</a>
-      <a href="#find-papers">1.2 从哪里找论文</a>
-      <a href="#read-a-paper">1.3 一篇论文怎么读</a>
-      <a href="#reading-notes">1.4 留下自己的笔记</a>
-      <a class="chapter-link resource-nav" href="#resources"><span>↗</span>写作与审稿回复</a>
-      <a href="#footprints">评论与批注</a>
+  <aside class="sidebar js-only" id="sidebar" aria-label="阅读目录">
+    <h2>科研新手入门</h2>
+    <nav class="primary-nav" aria-label="主目录">
+      <details class="nav-chapter" open>
+        <summary>1. 阅读论文</summary>
+        <nav class="subchapter-nav" aria-label="阅读论文章节目录">
+          <a href="#reading">第一章概览</a>
+          <a href="#choose-topic">1.1 先选题，再阅读</a>
+          <a href="#find-papers">1.2 从哪里找论文</a>
+          <a href="#read-a-paper">1.3 一篇论文怎么读</a>
+          <a href="#reading-notes">1.4 留下自己的笔记</a>
+        </nav>
+      </details>
+      <details class="nav-chapter" open>
+        <summary>2. 写作与审稿回复</summary>
+        <nav class="subchapter-nav" aria-label="相关指南目录">
+          <a href="#resources">StarPaper 与 StrongResponse</a>
+        </nav>
+      </details>
     </nav>
-    <div class="sidebar-note"><span class="small-rule"></span><p>带着问题读，<br>读完再回到问题。</p><p class="side-small">选中正文可以留下批注。</p></div>
+    <p class="filter-note">带着问题读，读完再回到问题。<br>选中正文可以留下批注。</p>
+    <div class="side-tools"><button class="reset" data-reset>清空搜索</button></div>
+    <a class="side-source" href="#resources">相关指南 ↗</a> · <a class="side-source" href="#footprints">评论与批注 ↗</a>
   </aside>
 
-  <main id="main">
-    <div class="document">
+  <main id="main" class="main">
+    <div class="doc">
       <div data-annotatable>
-        <header class="opening" id="top">
-          <p class="eyebrow">A SMALL GUIDE TO RESEARCH</p>
-          <h1>科研入门<span class="title-dot">。</span></h1>
-          <p class="lead">先选一个问题，再开始读论文。</p>
-          <p class="opening-description">刚开始做科研，常常是不知道从哪篇论文读起。这里从选题和阅读开始，把能动手做的事一步步写清楚。</p>
-          <div class="opening-meta"><span>给刚开始做科研的你</span><span>第一章 · 阅读论文</span></div>
-        </header>
-
-        <section class="chapter-intro" id="reading">
-          <div class="chapter-number" aria-hidden="true">01</div>
-          <div><p class="eyebrow">第一章</p><h2>阅读论文</h2><p>先和老师讨论一个适合起步的题目，再围绕它阅读。论文不必一开始就逐字读懂，但要逐渐说清楚：作者研究了什么，为什么这样做，证据是否支持结论。</p></div>
+        <section class="doc-head" id="top">
+          <h1>科研入门</h1>
+          <p class="site-subtitle">ResearchStart · 给刚开始做科研的你</p>
+          <section class="preface" id="preface">
+            <h2>写在前头</h2>
+            <p>先选一个问题，再开始读论文。</p>
+            <p>刚开始做科研，常常是不知道从哪篇论文读起。这里从选题和阅读开始，把能动手做的事一步步写清楚。</p>
+            <p class="doc-links"><a href="https://da1yuqin.github.io/blog/">Day / Journal ↗</a></p>
+          </section>
+          <nav class="chapter-overview" aria-labelledby="overview-title">
+            <h2 id="overview-title">目录与用途</h2>
+            <ol>
+              <li><a href="#reading">1. 阅读论文</a><span>先选题，再阅读</span></li>
+              <li><a href="#resources">2. 写作与审稿回复</a><span><a href="https://da1yuqin.github.io/StarPaper/">StarPaper</a> · <a href="https://da1yuqin.github.io/StrongResponse/">StrongResponse</a></span></li>
+            </ol>
+          </nav>
         </section>
 
-        <div class="search-feedback" id="search-feedback" role="status" aria-live="polite" data-annotation-exclude hidden></div>
+        <section class="major-chapter quick-start" id="reading">
+          <h2>1. 阅读论文</h2>
+          <p>先和老师讨论一个适合起步的题目，再围绕它阅读。论文不必一开始就逐字读懂，但要逐渐说清楚：作者研究了什么，为什么这样做，证据是否支持结论。</p>
+          <p data-annotation-exclude class="stat js-only" id="count" role="status" aria-live="polite"></p>
+          <noscript><p>正文与例子可直接阅读；搜索需要 JavaScript。</p></noscript>
+          <div id="entries">
 
-        <section class="lesson" id="choose-topic" data-searchable>
-          <div class="lesson-heading"><span class="section-number">1.1</span><h3>先选题，再阅读</h3></div>
+        <section class="paragraph-lesson" id="choose-topic" data-searchable>
+          <h3>1.1 先选题，再阅读</h3>
           <p>优先从<strong>课题组已有积累的方向</strong>里选择起点。和老师讨论：组里已经做过什么，有哪些数据、方法和经验可以接着用，目前还有什么具体问题值得研究。</p>
           <p>一开始不必把题目定得很死。先确定一个能指导阅读的小问题，读过一些论文后，再和老师一起调整。这样更容易判断一篇论文与你有什么关系。</p>
-          <aside class="margin-note"><span>和老师讨论时，可以带上</span><ul><li>我目前想研究的具体问题。</li><li>课题组有哪些相关积累可以借鉴。</li><li>建议先读哪几篇代表性论文。</li></ul></aside>
+          <aside class="example"><p><strong>和老师讨论时，可以带上</strong></p><ul><li>我目前想研究的具体问题。</li><li>课题组有哪些相关积累可以借鉴。</li><li>建议先读哪几篇代表性论文。</li></ul></aside>
           <p>例如，假设你关心“人们为什么不愿意步行去附近的公园”，就可以围绕距离、道路环境和路线选择找论文，而不是从所有城市研究里漫无目的地读起。</p>
         </section>
 
-        <section class="lesson" id="find-papers" data-searchable>
-          <div class="lesson-heading"><span class="section-number">1.2</span><h3>从哪里找论文</h3></div>
+        <section class="paragraph-lesson" id="find-papers" data-searchable>
+          <h3>1.2 从哪里找论文</h3>
           <p>先请老师、师兄师姐推荐几篇代表性论文或综述，了解这个方向常见的问题与方法。再沿着论文的参考文献往前找，沿着后续引用往后找，逐渐建立自己的阅读清单。</p>
           <p>平时也可以关注<strong>公众号、小红书</strong>，发现新论文、研究话题和别人的阅读经验。看到感兴趣的内容后，找到原论文，核对作者实际研究的对象、方法和结论。</p>
-          <div class="reading-route" aria-label="找论文的顺序"><span>老师与课题组推荐</span><span aria-hidden="true">→</span><span>代表性论文与综述</span><span aria-hidden="true">→</span><span>参考文献与后续引用</span></div>
-          <p class="quiet">社交平台适合提供线索；具体判断仍要回到论文。检索时记下题名、作者、年份和原文链接，方便以后找回。</p>
+          <p class="short-example" aria-label="找论文的顺序"><span>老师与课题组推荐</span><span aria-hidden="true">→</span><span>代表性论文与综述</span><span aria-hidden="true">→</span><span>参考文献与后续引用</span></p>
+          <p class="lesson-context">社交平台适合提供线索；具体判断仍要回到论文。检索时记下题名、作者、年份和原文链接，方便以后找回。</p>
         </section>
 
-        <section class="lesson" id="read-a-paper" data-searchable>
-          <div class="lesson-heading"><span class="section-number">1.3</span><h3>一篇论文怎么读</h3></div>
+        <section class="paragraph-lesson" id="read-a-paper" data-searchable>
+          <h3>1.3 一篇论文怎么读</h3>
           <p>可以分几次读，每次解决不同的问题。遇到暂时不懂的公式或术语，先做标记，等确认它与自己的问题有关，再回头细看。</p>
-          <ol class="reading-passes">
-            <li><span class="pass-number">一</span><div><h4>先判断，值不值得继续读</h4><p>看标题、摘要、引言和主要图表，初步弄清作者在解决什么问题、为什么值得研究、得到了什么结论，再判断它与你的选题是否相关。</p></div></li>
-            <li><span class="pass-number">二</span><div><h4>再理解，结论是怎么得到的</h4><p>沿着“问题、方法、证据”读。作者用了什么数据，输入和输出分别是什么？方法是已有的、改造的，还是新提出的？作者和谁比较，哪些实验支持了结论？</p></div></li>
-            <li><span class="pass-number">三</span><div><h4>最后想，它能帮到我的哪一步</h4><p>选一个具体案例，用自己的话讲清论文做了什么。再记下可以借鉴的研究思路、仍不明白的地方，以及下次想和老师讨论的问题。</p></div></li>
+          <ol class="compact-rules">
+            <li><div><h4>先判断，值不值得继续读</h4><p>看标题、摘要、引言和主要图表，初步弄清作者在解决什么问题、为什么值得研究、得到了什么结论，再判断它与你的选题是否相关。</p></div></li>
+            <li><div><h4>再理解，结论是怎么得到的</h4><p>沿着“问题、方法、证据”读。作者用了什么数据，输入和输出分别是什么？方法是已有的、改造的，还是新提出的？作者和谁比较，哪些实验支持了结论？</p></div></li>
+            <li><div><h4>最后想，它能帮到我的哪一步</h4><p>选一个具体案例，用自己的话讲清论文做了什么。再记下可以借鉴的研究思路、仍不明白的地方，以及下次想和老师讨论的问题。</p></div></li>
           </ol>
           <p>读不懂时，把困惑具体到一句话、一张图或一个步骤，再去查资料、向组里请教。也可以让 AI 帮忙解释，但数据、引文和关键结论要对照原文检查。</p>
         </section>
 
-        <section class="lesson" id="reading-notes" data-searchable>
-          <div class="lesson-heading"><span class="section-number">1.4</span><h3>留下自己的笔记</h3></div>
+        <section class="paragraph-lesson" id="reading-notes" data-searchable>
+          <h3>1.4 留下自己的笔记</h3>
           <p>笔记不用抄满整篇论文。先留下能帮助自己回忆和讨论的信息，尤其是“它与我的问题有什么关系”。把作者的结论和自己的想法分开记。</p>
-          <div class="note-sheet">
-            <div class="note-sheet-header" data-annotation-exclude><span>一篇论文，一页笔记</span><button id="copy-note" type="button" hidden>复制模板</button></div>
-            <pre id="note-template">论文题名 / 作者 / 年份 / 原文链接：
+          <details class="prompt" open><summary>一篇论文，一页笔记</summary>
+          <pre id="note-template">论文题名 / 作者 / 年份 / 原文链接：
 
 它研究什么问题？为什么要研究？
 用了什么数据？输入与输出是什么？
@@ -103,40 +122,51 @@
 
 与我的选题有什么关系？
 我还没弄懂什么？下次想和老师讨论什么？</pre>
-          </div>
-          <p class="copy-status quiet" id="copy-status" role="status" aria-live="polite" data-annotation-exclude></p>
+          <button class="copy js-only" id="copy-note" type="button" data-copy-label="复制模板" data-annotation-exclude>复制模板</button></details>
+          <p class="lesson-context" id="copy-status" role="status" aria-live="polite" data-annotation-exclude></p>
           <p>读完后试着离开原文，讲一遍这篇论文。能把问题、做法和证据连起来，才更容易知道自己理解到了哪里。</p>
         </section>
 
-        <section class="resources" id="resources" data-searchable>
-          <p class="eyebrow">接着用得上的工具</p><h2>从阅读，走向写作与交流</h2>
-          <p>研究推进到写作和审稿回复时，可以接着看这两份指南。</p>
-          <div class="resource-list">
-            <a class="resource" href="https://da1yuqin.github.io/StarPaper/"><span class="resource-symbol" aria-hidden="true">✦</span><div><h3>StarPaper <span>↗</span></h3><p>论文写作与学术绘图指南。把研究问题、方法与实验组织成清楚的论文。</p></div><span class="resource-stage">写作 / 绘图</span></a>
-            <a class="resource" href="https://da1yuqin.github.io/StrongResponse/"><span class="resource-symbol" aria-hidden="true">↗</span><div><h3>StrongResponse <span>↗</span></h3><p>审稿回复指南。理解审稿意见，组织回应，把修改与证据讲清楚。</p></div><span class="resource-stage">审稿回复</span></a>
           </div>
+          <div data-annotation-exclude id="empty" class="empty" hidden><p>没有找到。换个短词试试。</p><button class="reset" data-reset>清空搜索</button></div>
+        </section>
+
+        <section class="toolbox major-chapter paragraph-lesson" id="resources" data-searchable>
+          <p class="eyebrow">接着用得上的工具</p><h2>2. 从阅读，走向写作与交流</h2>
+          <p>研究推进到写作和审稿回复时，可以接着看这两份指南。</p>
+          <section class="tool-group"><h3>StarPaper 与 StrongResponse</h3>
+          <ul class="tool-list">
+            <li class="tool-item"><p><strong><a href="https://da1yuqin.github.io/StarPaper/">StarPaper ↗</a></strong> · 写作 / 绘图</p><p>论文写作与学术绘图指南。把研究问题、方法与实验组织成清楚的论文。</p></li>
+            <li class="tool-item"><p><strong><a href="https://da1yuqin.github.io/StrongResponse/">StrongResponse ↗</a></strong> · 审稿回复</p><p>审稿回复指南。理解审稿意见，组织回应，把修改与证据讲清楚。</p></li>
+          </ul>
+          </section>
         </section>
       </div>
 
       <section class="blog-footprints" data-api="https://day-blog-comments.pages.dev" data-page="/ResearchStart/" id="footprints" aria-labelledby="footprints-title">
-        <p class="eyebrow">一起把这份指南写得更清楚</p><h2 id="footprints-title">评论与批注</h2>
-        <p class="blog-comments__annotation-hint" hidden>选中一句正文，可以高亮批注。<button type="button" class="blog-comments__link" data-open-notes>查看批注 <span data-note-count>0</span></button></p>
-        <form class="blog-comments__form">
-          <div class="blog-comments__context" hidden><span></span><button type="button" class="blog-comments__link" data-cancel-context>取消</button></div>
-          <div class="blog-comments__editor">
-            <label class="blog-comments__name"><span class="sr-only">昵称（选填）</span><input name="name" maxlength="40" autocomplete="nickname" placeholder="昵称（选填，匿名也可以）"></label>
-            <label class="blog-comments__content"><span class="sr-only">你的评论</span><textarea name="content" required maxlength="2000" rows="4" placeholder="有什么不明白的，或想补充的？"></textarea></label>
-            <div class="blog-comments__actions"><button class="blog-footprints__button" type="submit" disabled>发布评论</button></div>
-          </div>
-          <p class="blog-comments__privacy">评论与批注公开显示，请勿填写私人信息。</p>
-          <p class="blog-comments__status" role="status" aria-live="polite"></p>
-        </form>
-        <div class="blog-comments__list" aria-live="polite"></div>
-        <p class="blog-comments__empty" hidden>还没有评论，欢迎留下你的第一个问题。</p>
-        <noscript><p>正文可以直接阅读。搜索、评论与批注需要启用 JavaScript。</p></noscript>
-      </section>
-      <footer><a class="footer-brand" href="#top">ResearchStart</a><span>科研入门 · Day</span><a href="https://da1yuqin.github.io/blog/">更多文章 ↗</a><a href="#top">回到顶部 ↑</a></footer>
+  <h2 id="footprints-title">评论与批注</h2>
+  <p class="blog-comments__annotation-hint" hidden>选中正文，可以高亮批注。<button type="button" class="blog-comments__link" data-open-notes>查看批注 <span data-note-count>0</span></button></p>
+  <form class="blog-comments__form">
+    <div class="blog-comments__context" hidden><span></span><button type="button" class="blog-comments__link" data-cancel-context>取消</button></div>
+    <div class="blog-comments__editor">
+    <label class="blog-comments__name"><span class="sr-only">昵称（选填）</span><input name="name" maxlength="40" autocomplete="nickname" placeholder="昵称（选填，匿名也可以）" /></label>
+    <label class="blog-comments__content"><span class="sr-only">你的评论</span><textarea name="content" required maxlength="2000" rows="4" placeholder="写下你的想法…"></textarea></label>
+    <div class="blog-comments__actions">
+      <button class="blog-footprints__button" type="submit" disabled>发布评论</button>
+    </div>
+    </div>
+    <p class="blog-comments__privacy">评论与批注公开显示，请勿填写私人信息。</p>
+    <p class="blog-comments__status" role="status" aria-live="polite"></p>
+  </form>
+  <div class="blog-comments__list" aria-live="polite"></div>
+  <p class="blog-comments__empty" hidden>暂无评论。</p>
+  </section>
+      <footer class="footer">
+        <p class="share-note">ResearchStart · 科研入门 · Day</p>
+        <p><a href="https://da1yuqin.github.io/blog/">更多文章 ↗</a> · <a href="https://da1yuqin.github.io/StarPaper/">StarPaper ↗</a> · <a href="https://da1yuqin.github.io/StrongResponse/">StrongResponse ↗</a> · <a href="#top">回到顶部</a></p>
+      </footer>
     </div>
   </main>
+<button type="button" class="back-to-top js-only" id="back-to-top" aria-label="回到顶部" title="回到顶部" data-annotation-exclude hidden><span aria-hidden="true">↑</span><span>顶部</span></button>
 </body>
 </html>
