@@ -17,7 +17,7 @@ AC letter 最后写。先让 AC 看到审稿人的正面评价、评分和真实
 - 适用时补一句真实的代码开放或可复现状态；尚未完成的只能写真实承诺，不能冒充已发布。结尾使用：We hope these clarifications support a fair and informed assessment.
 
 <a id="follow-up-template-2"></a>
-### 6.2 AC letter 模板
+### 7.2 AC letter 模板
 
 ```markdown
 We thank all reviewers for their time and feedback. Reviewer [ID] (Overall [score], Confidence [confidence]) described [specific contribution] as “[exact positive quotation from the review].” [Optional genuine update: Following our rebuttal, Reviewer [ID] updated the Overall score from [old score] to [new score] and wrote, “[exact acknowledgement from the discussion].”]
