@@ -5,6 +5,11 @@
 <details><summary>更新记录</summary>
 
 
+**2026-11-03 17:49 · 新增“心态准备”章节 · skill 更新**
+
+- 将作者关于 rebuttal 心态、回复姿态、阅读感受与感谢的原话整理为独立章节，按主题分组、分段引用，保留“（恨铁不成钢）”括注。
+- 同步 Markdown 与 Rebuttal 技能包；原有审稿人画像、实验整理和 AC letter 内容保留。
+
 **2026-10-31 15:23 · AC letter 逐句格式与旁批 · skill 更新**
 
 - 补充可选开场总览、逐位审稿人三句结构和可选结论，先写肯定意见，再写关切与我们的回应。
@@ -81,9 +86,9 @@
 
 ## 三个独立 skill
 
-- **审稿人画像与模拟**：逆推关切与偏好，按画像模拟审核并给反馈。 [下载 ZIP](../assets/rebuttal-reviewer-profile-skill.zip?v=202610311523520800) · [SKILL.md](../skills/rebuttal-reviewer-profile/SKILL.md)
-- **Rebuttal**：先整理合作初稿与实验清单，再起草完整或限字回复，根据模拟意见修改。 [下载 ZIP](../assets/rebuttal-skill.zip?v=202610311523520800) · [SKILL.md](../skills/rebuttal/SKILL.md)
-- **AC letter**：整理审稿人正面评价、评分、真实改分和核心回应。 [下载 ZIP](../assets/ac-letter-skill.zip?v=202610311523520800) · [SKILL.md](../skills/ac-letter/SKILL.md)
+- **审稿人画像与模拟**：逆推关切与偏好，按画像模拟审核并给反馈。 [下载 ZIP](../assets/rebuttal-reviewer-profile-skill.zip?v=202611031749170800) · [SKILL.md](../skills/rebuttal-reviewer-profile/SKILL.md)
+- **Rebuttal**：先整理合作初稿与实验清单，再起草完整或限字回复，根据模拟意见修改。 [下载 ZIP](../assets/rebuttal-skill.zip?v=202611031749170800) · [SKILL.md](../skills/rebuttal/SKILL.md)
+- **AC letter**：整理审稿人正面评价、评分、真实改分和核心回应。 [下载 ZIP](../assets/ac-letter-skill.zip?v=202611031749170800) · [SKILL.md](../skills/ac-letter/SKILL.md)
 
 ## 给 Codex 的提示词
 
@@ -94,6 +99,38 @@
 3. 全部回复完成并经人工确认后，读取 ac-letter/SKILL.md，用真实 review、二轮记录、评分和已完成的回应写 AC letter。
 当轮规则【】；允许修改的文件【】。没有依据不编结果，模拟改分不冒充真实改分；补实验、改稿和提交另按作者授权。
 ```
+
+<a id="mindset"></a>
+## 0. 心态准备
+
+“Reveiw虐你千百遍，你也待ta如初恋。”
+
+
+### 别辜负好心审稿人
+
+“不是所有人都配拥有好心审稿人。”
+
+“有的人真的不是我说你：没有满足他的要求，也不给情绪价值，你还不如不re呢，反正都是降分。”（恨铁不成钢）
+
+### 情绪给出去了，对自己的要求也要跟上
+
+“Rebuttal 的时候心情肯定不会好的，因为你的情绪价值都给出去了。也很容易和团队小伙伴吵架（虽然我没有吵过，因为我情绪稳定）。”
+
+“但是 rebuttal 期间自我攻击肯定是要拉满的。时刻问：你凭什么不回复/不解释/不做实验/不好好说话……”
+
+### 把回复的姿态放低
+
+“要用那种贬低自己的姿态去说。”
+
+### 先让他愿意看，再让他轻松看懂
+
+“审稿的时候去博一个 0.1s 审稿人看到你文字的机会，给它一种稍微瞄了一眼就觉得自己的问题被很好解决了的感觉。”
+
+“然后仔细阅读发现逻辑流畅而且完全不费力理解的感觉。”
+
+### 开头和结尾的感谢，也要认真写
+
+“最后他实在不愿意涨分，看到你开头结尾的感谢一开心，才可能涨分。”
 
 <a id="reviewer-profile"></a>
 ## 1. 了解你的审稿人
